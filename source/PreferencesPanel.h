@@ -18,10 +18,12 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #include "ClickZone.h"
 #include "Command.h"
 #include "Point.h"
+#include "Table.h"
 
 #include <string>
 #include <vector>
 
+using namespace std;
 
 
 // UI panel for editing preferences, especially the key mappings.
@@ -47,6 +49,7 @@ private:
 	void DrawControls();
 	void DrawSettings();
 	void DrawPlugins();
+	void DrawSinglePlugin(const pair<string, string> &plugin, Table &table, int firstY);
 	
 	void Exit();
 	

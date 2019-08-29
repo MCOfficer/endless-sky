@@ -21,6 +21,7 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #include "GameData.h"
 #include "Information.h"
 #include "Interface.h"
+#include "Networking.h"
 #include "Preferences.h"
 #include "Screen.h"
 #include "Sprite.h"
@@ -35,6 +36,7 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #include <SDL2/SDL.h>
 
 #include <algorithm>
+#include <iostream>
 
 using namespace std;
 
@@ -52,6 +54,9 @@ namespace {
 	const string REACTIVATE_HELP = "Reactivate first-time help";
 	const string SCROLL_SPEED = "Scroll speed";
 	const string FIGHTER_REPAIR = "Repair fighters in";
+	
+	// TODO (MCOfficer): Change this before merge
+	const string PLUGIN_INDEX_URL = "https://raw.githubusercontent.com/MCOfficer/endless-sky/plugin_manager/plugins.txt";
 }
 
 
@@ -63,8 +68,13 @@ PreferencesPanel::PreferencesPanel()
 		selectedPlugin = GameData::PluginAboutText().begin()->first;
 	
 	SetIsFullScreen(true);
+	
+	std::string buffer;
+	//TODO (MCOfficer): Consider making this async. Right now there is an ever-so-small lag when opening the settings.
+	bool result = Networking::DownloadToString(PLUGIN_INDEX_URL, &buffer);
+	//TODO (MCOfficer): Remove
+	Files::LogError(buffer);
 }
-
 
 
 // Draw this panel.
@@ -568,6 +578,24 @@ void PreferencesPanel::DrawPlugins()
 	const Font &font = FontSet::Get(14);
 	for(const pair<string, string> &plugin : GameData::PluginAboutText())
 	{
+		DrawSinglePlugin(plugin, table, firstY);
+	}
+	
+	table.DrawGap(5);
+	table.DrawUnderline(medium);
+	table.Draw("Available plugins:", bright);
+	table.DrawGap(5);
+}
+
+void PreferencesPanel::DrawSinglePlugin(const pair<string, string> &plugin, Table &table, int firstY)
+{
+		// TODO (@MCOfficer): Make these global or otherwise pull them out of this function. Use #4486 when merged
+		const Color &back = *GameData::Colors().Get("faint"); 
+		const Color &medium = *GameData::Colors().Get("medium");
+		const Color &bright = *GameData::Colors().Get("bright");
+		const int MAX_TEXT_WIDTH = 230;
+		const Font &font = FontSet::Get(14);
+		
 		pluginZones.emplace_back(table.GetCenterPoint(), table.GetRowSize(), plugin.first);
 		
 		bool isSelected = (plugin.first == selectedPlugin);
@@ -592,7 +620,6 @@ void PreferencesPanel::DrawPlugins()
 			wrap.Wrap(plugin.second.empty() ? EMPTY : plugin.second);
 			wrap.Draw(top, medium);
 		}
-	}
 }
 
 

@@ -23,12 +23,10 @@ namespace {
 	// Linux can use a built-in function, but this function appears to be needed in Microsoft Windows environments
 	size_t writeToFile(void *buffer, size_t size, size_t nmemb, FILE *ofile)
 	{
-		Files::LogError((char*)buffer);
 		return fwrite(buffer, size, nmemb, ofile);
 	}
 	size_t writeToString(void *buffer, size_t size, size_t nmemb, std::string *userp)
 	{
-		Files::LogError((char*)buffer);
 		userp->append((char*)buffer, size * nmemb);
 		return size * nmemb;
 	}
@@ -75,6 +73,9 @@ bool Networking::DownloadData(const std::string &url, void *destPtr, bool toFile
 	
 	// Allow redirects, e.g. for downloads from Github
 	curl_easy_setopt(curlDl, CURLOPT_FOLLOWLOCATION, 1L);
+	
+	// TODO (@MCOfficer): This is bad, for obvious reasons.
+	curl_easy_setopt(curlDl, CURLOPT_SSL_VERIFYPEER, 0L);
 	
 	char errbuf[CURL_ERROR_SIZE];
 	curl_easy_setopt(curlDl, CURLOPT_ERRORBUFFER, errbuf);
