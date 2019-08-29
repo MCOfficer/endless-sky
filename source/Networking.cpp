@@ -17,6 +17,7 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #include <curl/curl.h>
 
 #include <string>
+#include <cstring>
 
 namespace {
 	// Linux can use a built-in function, but this function appears to be needed in Microsoft Windows environments
