@@ -1,0 +1,6 @@
+plugin "World Forge"
+	url "https://github.com/EndlessSkyCommunity/world-forge.git"
+	checkout "22f036fcff384dcdd41c583783597eb994b9ab7a"
+	version "2019-07-02.22f036f" # Optional, will be replaced with `checkout` if it doesn't exist
+	iconUrl "https://github.com/EndlessSkyCommunity/world-forge/raw/master/icon.png"
+	description "A plugin for Endless Sky that allows the player to access everything in the game in one place. Includes features that the all-content plugin does not have such as the ability to boost your combat rating and change your friendly/hostile status with factions of the game without having to save-edit. Intended to help content creators test their plugins."
