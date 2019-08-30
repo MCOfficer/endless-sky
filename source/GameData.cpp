@@ -41,6 +41,7 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #include "Person.h"
 #include "Phrase.h"
 #include "Planet.h"
+#include "Plugin.h"
 #include "PointerShader.h"
 #include "Politics.h"
 #include "Random.h"
@@ -79,6 +80,7 @@ namespace {
 	Set<Person> persons;
 	Set<Phrase> phrases;
 	Set<Planet> planets;
+	Set<Plugin> plugins;
 	Set<Ship> ships;
 	Set<System> systems;
 	
@@ -109,7 +111,7 @@ namespace {
 	
 	map<string, string> tooltips;
 	map<string, string> helpMessages;
-	map<string, string> plugins;
+	map<string, string> localPlugins;
 	
 	SpriteQueue spriteQueue;
 	
@@ -683,6 +685,10 @@ const Set<Planet> &GameData::Planets()
 	return planets;
 }
 
+const Set<Plugin> &GameData::Plugins()
+{
+	return plugins;
+}
 
 
 const Set<Ship> &GameData::Ships()
@@ -851,7 +857,7 @@ const map<string, string> &GameData::HelpTemplates()
 
 const map<string, string> &GameData::PluginAboutText()
 {
-	return plugins;
+	return localPlugins;
 }
 
 
@@ -861,15 +867,15 @@ void GameData::LoadSources()
 	sources.clear();
 	sources.push_back(Files::Resources());
 	
-	vector<string> globalPlugins = Files::ListDirectories(Files::Resources() + "plugins/");
-	for(const string &path : globalPlugins)
+	vector<string> resourcesPlugins = Files::ListDirectories(Files::Resources() + "plugins/");
+	for(const string &path : resourcesPlugins)
 	{
 		if(Files::Exists(path + "data") || Files::Exists(path + "images") || Files::Exists(path + "sounds"))
 			sources.push_back(path);
 	}
 	
-	vector<string> localPlugins = Files::ListDirectories(Files::Config() + "plugins/");
-	for(const string &path : localPlugins)
+	vector<string> configPlugins = Files::ListDirectories(Files::Config() + "plugins/");
+	for(const string &path : configPlugins)
 	{
 		if(Files::Exists(path + "data") || Files::Exists(path + "images") || Files::Exists(path + "sounds"))
 			sources.push_back(path);
@@ -883,7 +889,7 @@ void GameData::LoadSources()
 		string name = it->substr(pos, it->length() - 1 - pos);
 		
 		// Load the about text and the icon, if any.
-		plugins[name] = Files::Read(*it + "about.txt");
+		localPlugins[name] = Files::Read(*it + "about.txt");
 		
 		// Create an image set for the plugin icon.
 		shared_ptr<ImageSet> icon(new ImageSet(name));

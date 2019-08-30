@@ -1,5 +1,5 @@
 /* Networking.cpp
-Copyright (c) 2019 by MCOfficer
+Copyright (c) 2019 by MCOfficer & Peter van der Meer
 
 Endless Sky is free software: you can redistribute it and/or modify it under the
 terms of the GNU General Public License as published by the Free Software
@@ -25,12 +25,12 @@ namespace {
 	{
 		return fwrite(buffer, size, nmemb, ofile);
 	}
+	
 	size_t writeToString(void *buffer, size_t size, size_t nmemb, std::string *userp)
 	{
 		userp->append((char*)buffer, size * nmemb);
 		return size * nmemb;
 	}
-	
 }
 
 bool Networking::DownloadToFile(const std::string &url, const std::string &destinationFile)

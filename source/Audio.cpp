@@ -142,7 +142,7 @@ void Audio::Init(const vector<string> &sources)
 	alDistanceModel(AL_INVERSE_DISTANCE_CLAMPED);
 	alDopplerFactor(0.);
 	
-	// Get all the sound files in the game data and all plugins.
+	// Get all the sound files in the game data and all installed plugins.
 	for(const string &source : sources)
 	{
 		string root = source + "sounds/";
