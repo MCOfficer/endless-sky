@@ -57,6 +57,11 @@ namespace {
 	
 	// TODO (MCOfficer): Change this before merge
 	const string PLUGIN_INDEX_URL = "https://raw.githubusercontent.com/MCOfficer/endless-sky/plugin_manager/plugins.txt";
+	const Color &COLOR_FAINT = *GameData::Colors().Get("faint"); 
+	const Color &COLOR_MEDIUM = *GameData::Colors().Get("medium");
+	const Color &COLOR_BRIGHT = *GameData::Colors().Get("bright");
+	const int PLUGIN_MAX_TEXT_WIDTH = 230;
+	const Font &PLUGIN_FONT = FontSet::Get(14);
 }
 
 
@@ -560,48 +565,35 @@ void PreferencesPanel::DrawSettings()
 
 void PreferencesPanel::DrawPlugins()
 {
-	const Color &back = *GameData::Colors().Get("faint");
-	const Color &medium = *GameData::Colors().Get("medium");
-	const Color &bright = *GameData::Colors().Get("bright");
-	
 	Table table;
 	table.AddColumn(-115, Table::LEFT);
 	table.SetUnderline(-120, 120);
 	
 	int firstY = -238;
 	table.DrawAt(Point(-130, firstY));
-	table.DrawUnderline(medium);
-	table.Draw("Installed plugins:", bright);
+	table.DrawUnderline(COLOR_MEDIUM);
+	table.Draw("Installed plugins:", COLOR_BRIGHT);
 	table.DrawGap(5);
-	
-	const int MAX_TEXT_WIDTH = 230;
-	const Font &font = FontSet::Get(14);
+
 	for(const pair<string, string> &plugin : GameData::PluginAboutText())
 	{
 		DrawSinglePlugin(plugin, table, firstY);
 	}
 	
 	table.DrawGap(5);
-	table.DrawUnderline(medium);
-	table.Draw("Available plugins:", bright);
+	table.DrawUnderline(COLOR_MEDIUM);
+	table.Draw("Available plugins:", COLOR_BRIGHT);
 	table.DrawGap(5);
 }
 
 void PreferencesPanel::DrawSinglePlugin(const pair<string, string> &plugin, Table &table, int firstY)
 {
-		// TODO (@MCOfficer): Make these global or otherwise pull them out of this function. Use #4486 when merged
-		const Color &back = *GameData::Colors().Get("faint"); 
-		const Color &medium = *GameData::Colors().Get("medium");
-		const Color &bright = *GameData::Colors().Get("bright");
-		const int MAX_TEXT_WIDTH = 230;
-		const Font &font = FontSet::Get(14);
-		
 		pluginZones.emplace_back(table.GetCenterPoint(), table.GetRowSize(), plugin.first);
 		
 		bool isSelected = (plugin.first == selectedPlugin);
 		if(isSelected || plugin.first == hoverPlugin)
-			table.DrawHighlight(back);
-		table.Draw(font.TruncateMiddle(plugin.first, MAX_TEXT_WIDTH), isSelected ? bright : medium);
+			table.DrawHighlight(COLOR_FAINT);
+		table.Draw(PLUGIN_FONT.TruncateMiddle(plugin.first, PLUGIN_MAX_TEXT_WIDTH), isSelected ? COLOR_BRIGHT : COLOR_MEDIUM);
 		
 		if(isSelected)
 		{
@@ -614,11 +606,11 @@ void PreferencesPanel::DrawSinglePlugin(const pair<string, string> &plugin, Tabl
 				top.Y() += sprite->Height() + 10.;
 			}
 			
-			WrappedText wrap(font);
-			wrap.SetWrapWidth(MAX_TEXT_WIDTH);
+			WrappedText wrap(PLUGIN_FONT);
+			wrap.SetWrapWidth(PLUGIN_MAX_TEXT_WIDTH);
 			static const string EMPTY = "(No description given.)";
 			wrap.Wrap(plugin.second.empty() ? EMPTY : plugin.second);
-			wrap.Draw(top, medium);
+			wrap.Draw(top, COLOR_MEDIUM);
 		}
 }
 
