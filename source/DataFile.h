@@ -33,9 +33,11 @@ public:
 	DataFile() = default;
 	explicit DataFile(const std::string &path);
 	explicit DataFile(std::istream &in);
+	explicit DataFile(std::string &str);
 	
 	void Load(const std::string &path);
 	void Load(std::istream &in);
+	void Load(std::string &str);
 	
 	// Functions for iterating through all DataNodes in this file.
 	std::list<DataNode>::const_iterator begin() const;

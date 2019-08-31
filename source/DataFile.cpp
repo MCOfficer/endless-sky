@@ -34,6 +34,14 @@ DataFile::DataFile(istream &in)
 
 
 
+//Constructor, taking a string.
+DataFile::DataFile(string &str)
+{
+	Load(str);
+}
+
+
+
 // Load from a file path (in UTF-8).
 void DataFile::Load(const string &path)
 {
@@ -41,15 +49,11 @@ void DataFile::Load(const string &path)
 	if(data.empty())
 		return;
 	
-	// As a sentinel, make sure the file always ends in a newline.
-	if(data.empty() || data.back() != '\n')
-		data.push_back('\n');
-	
 	// Note what file this node is in, so it will show up in error traces.
 	root.tokens.push_back("file");
 	root.tokens.push_back(path);
 	
-	Load(&*data.begin(), &*data.end());
+	Load(data);
 }
 
 
@@ -72,6 +76,18 @@ void DataFile::Load(istream &in)
 		data.push_back('\n');
 	
 	Load(&*data.begin(), &*data.end());
+}
+
+
+
+//Constructor, taking a string.
+void DataFile::Load(string &str)
+{
+	// As a sentinel, make sure the file always ends in a newline.
+	if(str.empty() || str.back() != '\n')
+		str.push_back('\n');
+	
+	Load(&*str.begin(), &*str.end());
 }
 
 
