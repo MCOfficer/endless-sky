@@ -14,6 +14,7 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 #include "Audio.h"
 #include "Color.h"
+#include "DataFile.h"
 #include "Dialog.h"
 #include "Files.h"
 #include "Font.h"
@@ -22,6 +23,7 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #include "Information.h"
 #include "Interface.h"
 #include "Networking.h"
+#include "Plugin.h"
 #include "Preferences.h"
 #include "Screen.h"
 #include "Sprite.h"
@@ -57,11 +59,6 @@ namespace {
 	
 	// TODO (MCOfficer): Change this before merge
 	const string PLUGIN_INDEX_URL = "https://raw.githubusercontent.com/MCOfficer/endless-sky/plugin_manager/plugins.txt";
-	const Color &COLOR_FAINT = *GameData::Colors().Get("faint"); 
-	const Color &COLOR_MEDIUM = *GameData::Colors().Get("medium");
-	const Color &COLOR_BRIGHT = *GameData::Colors().Get("bright");
-	const int PLUGIN_MAX_TEXT_WIDTH = 230;
-	const Font &PLUGIN_FONT = FontSet::Get(14);
 }
 
 
@@ -79,6 +76,16 @@ PreferencesPanel::PreferencesPanel()
 	bool result = Networking::DownloadToString(PLUGIN_INDEX_URL, &buffer);
 	//TODO (MCOfficer): Remove
 	Files::LogError(buffer);
+	DataFile pluginIndex = DataFile(buffer);
+	
+	for(const DataNode &node : pluginIndex)
+	{
+		Files::LogError(node.Token(0));
+		if(node.Token(0) == "plugin")
+			plugins.Get(node.Token(1))->Load(node);
+		else
+			node.PrintTrace("Skipping unrecognized attribute:");
+	}
 }
 
 
@@ -565,39 +572,50 @@ void PreferencesPanel::DrawSettings()
 
 void PreferencesPanel::DrawPlugins()
 {
+	const Color &medium = *GameData::Colors().Get("medium");
+	const Color &bright = *GameData::Colors().Get("bright");
+
 	Table table;
 	table.AddColumn(-115, Table::LEFT);
 	table.SetUnderline(-120, 120);
 	
 	int firstY = -238;
 	table.DrawAt(Point(-130, firstY));
-	table.DrawUnderline(COLOR_MEDIUM);
-	table.Draw("Installed plugins:", COLOR_BRIGHT);
+	table.DrawUnderline(medium);
+	table.Draw("Installed plugins:", bright);
 	table.DrawGap(5);
 
 	for(const pair<string, string> &plugin : GameData::PluginAboutText())
 	{
-		DrawSinglePlugin(plugin, table, firstY);
+		DrawSinglePlugin(plugin.first, plugin.second, table, firstY);
 	}
 	
 	table.DrawGap(5);
-	table.DrawUnderline(COLOR_MEDIUM);
-	table.Draw("Available plugins:", COLOR_BRIGHT);
+	table.DrawUnderline(medium);
+	table.Draw("Available plugins:", bright);
 	table.DrawGap(5);
+	
+	for(const pair<string, Plugin> &it : plugins)
+	 {
+		DrawSinglePlugin(it.first, it.second.Description(), table, firstY);
+	}
 }
 
-void PreferencesPanel::DrawSinglePlugin(const pair<string, string> &plugin, Table &table, int firstY)
+void PreferencesPanel::DrawSinglePlugin(const string &name, const string &about, Table &table, int firstY)
 {
-		pluginZones.emplace_back(table.GetCenterPoint(), table.GetRowSize(), plugin.first);
+		const int maxTextWidth = 230;
+		const Font &font = FontSet::Get(14);
+	
+		pluginZones.emplace_back(table.GetCenterPoint(), table.GetRowSize(), name);
 		
-		bool isSelected = (plugin.first == selectedPlugin);
-		if(isSelected || plugin.first == hoverPlugin)
-			table.DrawHighlight(COLOR_FAINT);
-		table.Draw(PLUGIN_FONT.TruncateMiddle(plugin.first, PLUGIN_MAX_TEXT_WIDTH), isSelected ? COLOR_BRIGHT : COLOR_MEDIUM);
+		bool isSelected = (name == selectedPlugin);
+		if(isSelected || name == hoverPlugin)
+			table.DrawHighlight(*GameData::Colors().Get("faint"));
+		table.Draw(font.TruncateMiddle(name, maxTextWidth), *GameData::Colors().Get(isSelected ? "bright" : "medium"));
 		
 		if(isSelected)
 		{
-			const Sprite *sprite = SpriteSet::Get(plugin.first);
+			const Sprite *sprite = SpriteSet::Get(name);
 			Point top(15., firstY);
 			if(sprite)
 			{
@@ -606,11 +624,11 @@ void PreferencesPanel::DrawSinglePlugin(const pair<string, string> &plugin, Tabl
 				top.Y() += sprite->Height() + 10.;
 			}
 			
-			WrappedText wrap(PLUGIN_FONT);
-			wrap.SetWrapWidth(PLUGIN_MAX_TEXT_WIDTH);
+			WrappedText wrap(font);
+			wrap.SetWrapWidth(maxTextWidth);
 			static const string EMPTY = "(No description given.)";
-			wrap.Wrap(plugin.second.empty() ? EMPTY : plugin.second);
-			wrap.Draw(top, COLOR_MEDIUM);
+			wrap.Wrap(about.empty() ? EMPTY : about);
+			wrap.Draw(top, *GameData::Colors().Get("medium"));
 		}
 }
 

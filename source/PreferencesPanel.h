@@ -13,11 +13,12 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #ifndef PREFERENCES_PANEL_H_
 #define PREFERENCES_PANEL_H_
 
-#include "Panel.h"
 
 #include "ClickZone.h"
 #include "Command.h"
+#include "Panel.h"
 #include "Point.h"
+#include "Set.h"
 #include "Table.h"
 
 #include <string>
@@ -25,6 +26,7 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 using namespace std;
 
+class Plugin;
 
 // UI panel for editing preferences, especially the key mappings.
 class PreferencesPanel : public Panel {
@@ -49,7 +51,7 @@ private:
 	void DrawControls();
 	void DrawSettings();
 	void DrawPlugins();
-	void DrawSinglePlugin(const pair<string, string> &plugin, Table &table, int firstY);
+	void DrawSinglePlugin(const string &name, const string &about, Table &table, int firstY);
 	
 	void Exit();
 	
@@ -69,6 +71,8 @@ private:
 	std::vector<ClickZone<Command>> zones;
 	std::vector<ClickZone<std::string>> prefZones;
 	std::vector<ClickZone<std::string>> pluginZones;
+	
+	Set<Plugin> plugins;
 };
 
 
