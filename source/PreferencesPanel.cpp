@@ -596,7 +596,7 @@ void PreferencesPanel::DrawPlugins()
 	table.DrawGap(5);
 	
 	for(const pair<string, Plugin> &it : plugins)
-	 {
+	{
 		DrawSinglePlugin(it.first, it.second.Description(), table, firstY);
 	}
 }

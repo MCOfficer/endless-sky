@@ -53,6 +53,7 @@
 					<Add library="C:\dev32\lib\libopenal32.dll.a" />
 					<Add library="C:\dev32\lib\libglew32.dll.a" />
 					<Add library="C:\dev32\lib\libcurl32.dll.a" />
+					<Add library="C:\dev32\lib\libgit2.dll.a" />
 					<Add directory="C:/dev32/lib" />
 				</Linker>
 			</Target>
@@ -75,6 +76,7 @@
 			<Add library="C:\dev64\lib\libopenal32.dll.a" />
 			<Add library="C:\dev64\lib\libglew32.dll.a" />
 			<Add library="C:\dev64\lib\libcurl.dll.a" />
+			<Add library="C:\dev64\lib\libgit2.dll.a" />
 			<Add directory="C:/dev64/lib" />
 		</Linker>
 		<Unit filename="source/AI.cpp" />
@@ -166,6 +168,8 @@
 		<Unit filename="source/GameData.h" />
 		<Unit filename="source/GameEvent.cpp" />
 		<Unit filename="source/GameEvent.h" />
+		<Unit filename="source/Git.cpp" />
+		<Unit filename="source/Git.h" />
 		<Unit filename="source/Government.cpp" />
 		<Unit filename="source/Government.h" />
 		<Unit filename="source/HailPanel.cpp" />
@@ -254,6 +258,8 @@
 		<Unit filename="source/PlayerInfo.h" />
 		<Unit filename="source/PlayerInfoPanel.cpp" />
 		<Unit filename="source/PlayerInfoPanel.h" />
+		<Unit filename="source/Plugin.cpp" />
+		<Unit filename="source/Plugin.h" />
 		<Unit filename="source/Point.cpp" />
 		<Unit filename="source/Point.h" />
 		<Unit filename="source/PointerShader.cpp" />
