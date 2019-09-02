@@ -15,6 +15,7 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 void Plugin::Load(const DataNode &node)
 {
+	name = node.Token(1);
 	for(const DataNode &child : node)
 	{
 		if(child.Token(0) == "url" && child.Size() >= 2)
@@ -30,6 +31,11 @@ void Plugin::Load(const DataNode &node)
 		else
 			child.PrintTrace("Skipping unrecognized attribute:");
 	}
+}
+
+const std::string &Plugin::Name() const
+{
+	return name;
 }
 
 const std::string &Plugin::Url() const
@@ -55,4 +61,9 @@ const std::string &Plugin::IconUrl() const
 const std::string &Plugin::Description() const
 {
 	return description;
+}
+
+const bool Plugin::isAvailable() const
+{
+	return &Url() != nullptr;
 }

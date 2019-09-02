@@ -22,13 +22,16 @@ class Plugin
 	public:
 		void Load(const DataNode &node);
 		
+		const std::string &Name() const;
 		const std::string &Url() const;
 		const std::string &Checkout() const;
 		const std::string &Version() const;
 		const std::string &IconUrl() const;
 		const std::string &Description() const;
+		const bool isAvailable() const;
 
 	private:
+		std::string name;
 		std::string url;
 		std::string checkout;
 		std::string version;
