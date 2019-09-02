@@ -11,12 +11,13 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 */
 
 #include <git2.h>
-#include <git2/repository.h>
+#include <git2/checkout.h>
 #include <git2/remote.h>
+#include <git2/repository.h>
 
 #include "Git.h"
 
-static bool Open(std::string &directory)
+static git_repository* Open(std::string &directory)
 {
 	git_repository* repo;
 	if(git_repository_open(&repo, directory.c_str()) != 0)
@@ -32,23 +33,31 @@ static bool Clone(std::string &url, std::string &directory)
 
 static bool HardReset(std::string &directory, std::string &revision)
 {
-	git_repository repo = Open(directory);
-	if (!git_repository)
+	git_repository* repo = Open(directory);
+	if(!repo)
 		return false;
 	
 	git_strarray* remotes;
 	if(git_remote_list(remotes, repo) != 0)
 		return false;
 	
-	for(auto remote : remotes)
+	for(int i=0; i < remotes->count; i++)
 	{
-		git_remote_fetch(remote, NULL, GIT_FETCH_OPTIONS_INIT, NULL);
+		git_remote* remote;
+		if(git_remote_lookup(&remote, repo, remotes->strings[i]) != 0)
+			return false;
+		if(git_remote_fetch(remote, NULL, NULL, NULL) != 0)
+			return false;
 	}
 	git_strarray_free(remotes);
 	
-	git_object* revision;
-	if (git_revparse_single(revision, repo, revision.c_str()) != 0)
+	git_object* revisionObject;
+	if (git_revparse_single(&revisionObject, repo, revision.c_str()) != 0)
 		return false;
 	
-	return git_reset(repo, revision, GIT_RESET_HARD, GIT_CHECKOUT_FORCE) == 0;
+	git_checkout_options* checkoutOptions;
+	if(git_checkout_init_options(checkoutOptions, GIT_CHECKOUT_OPTIONS_VERSION) != 0)
+		return false;
+	
+	return git_reset(repo, revisionObject, GIT_RESET_HARD, checkoutOptions) == 0;
 }

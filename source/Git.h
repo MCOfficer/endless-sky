@@ -20,7 +20,7 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 class Git
 {
 	public:
-		static git_repository Open(std::string directory);
+		static git_repository* Open(std::string directory);
 		static bool Clone(std::string &url, std::string &directory);
 		static bool HardReset(std::string &directory, std::string &revision);
 	protected:
