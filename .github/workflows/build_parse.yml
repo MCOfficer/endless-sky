@@ -82,7 +82,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install dependencies
-      run: choco install sccache
+      run: |
+          iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+          scoop install sccache
     - name: Fetch development libraries
       run: |
         Invoke-WebRequest https://endless-sky.github.io/win64-dev.zip -OutFile win64-dev.zip
