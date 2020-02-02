@@ -69,7 +69,7 @@ jobs:
     - name: Execute test_parse
       run: ./tests/test_parse.sh ./endless-sky
     - name: Execute available testcases
-      run: ./tests/run_tests_headless.sh
+      run: ./tests/run_tests_headless.sh || cat ~/.local/share/endless-sky/errors.txt
 
 
   windows:
