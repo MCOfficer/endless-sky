@@ -68,6 +68,8 @@ jobs:
       run: scons -j $(nproc);
     - name: Execute test_parse
       run: ./tests/test_parse.sh ./endless-sky
+    - name: Debugging with tmate
+      uses: mxschmitt/action-tmate@v1.0.2
     - name: Execute available testcases
       run: ./tests/run_tests_headless.sh || cat ~/.local/share/endless-sky/errors.txt
 
