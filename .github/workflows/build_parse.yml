@@ -95,7 +95,9 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest]
-        mingw: [4.8.5, 8.1.0]
+        mingw: 
+          - 4.8.5
+          - "" # Latest
     env:
       SCCACHE_DIR: ./sccache/
       DIR_MINGW64: C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32
@@ -113,12 +115,13 @@ jobs:
       - name: Move restored artifact
         if: steps.cache-artifact.outputs.cache-hit == 'true'
         run: mv artifact/${{ env.ARTIFACT }} .
-      - name: Install sccache
+      - name: Install dependencies
         if: steps.cache-artifact.outputs.cache-hit != 'true'
-        run: choco install sccache
-      - name: Install MinGW
-        if: steps.cache-artifact.outputs.cache-hit != 'true'
-        run: choco install -y --no-progress --allow-downgrade mingw --version=${{ matrix.mingw }}
+        run: |
+          Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+          Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+          scoop bucket add MCOfficer https://github.com/MCOfficer/scoop-bucket/
+          scoop install sccache gcc${{ matrix.mingw }}
       - name: Fetch development libraries
         if: steps.cache-artifact.outputs.cache-hit != 'true'
         run: |
@@ -141,9 +144,9 @@ jobs:
           make -e -f .winmake -j ($(Get-CIMInstance -Class 'CIM_Processor').NumberOfLogicalProcessors)
           COPY .\bin\pkgd\EndlessSky.exe EndlessSky.exe
           COPY ".\dev64\bin\*.dll" .
-          COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libgcc_s_seh-1.dll .
-          COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libstdc++-6.dll .
-          COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libwinpthread-1.dll .
+          COPY ~\scoop\apps\gcc\current\x86_64-w64-mingw32\lib\libgcc_s_seh-1.dll .
+          COPY ~\scoop\apps\gcc\current\x86_64-w64-mingw32\lib\libstdc++-6.dll .
+          COPY ~\scoop\apps\gcc\current\x86_64-w64-mingw32\lib\libwinpthread-1.dll .
       - name: Upload artifact
         uses: actions/upload-artifact@v1.0.0
         with:
