@@ -141,11 +141,9 @@ jobs:
       - name: Compile
         if: steps.cache-artifact.outputs.cache-hit != 'true'
         run: |
-          env
           $env:PATH="$env:USERPROFILE\scoop\shims;$env:PATH"
           Write-Host $env:PATH
-          which sccache
-          which g++
+          which make
           make -e -f .winmake -j ($(Get-CIMInstance -Class 'CIM_Processor').NumberOfLogicalProcessors)
           COPY .\bin\pkgd\EndlessSky.exe EndlessSky.exe
           COPY ".\dev64\bin\*.dll" .
