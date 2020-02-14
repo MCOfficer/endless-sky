@@ -142,14 +142,16 @@ jobs:
         if: steps.cache-artifact.outputs.cache-hit != 'true'
         run: |
           Write-Host $env:PATH
-          $env:PATH="~\scoop\shims;$env:PATH"
+          $env:PATH="$env:HOME\scoop\shims;$env:PATH"
           Write-Host $env:PATH
-          make -e -f .winmake -j ($(Get-CIMInstance -Class 'CIM_Processor').NumberOfLogicalProcessors) -d
+          which sccache
+          which g++
+          make -e -f .winmake -j ($(Get-CIMInstance -Class 'CIM_Processor').NumberOfLogicalProcessors)
           COPY .\bin\pkgd\EndlessSky.exe EndlessSky.exe
           COPY ".\dev64\bin\*.dll" .
-          COPY ~\scoop\apps\gcc\current\x86_64-w64-mingw32\lib\libgcc_s_seh-1.dll .
-          COPY ~\scoop\apps\gcc\current\x86_64-w64-mingw32\lib\libstdc++-6.dll .
-          COPY ~\scoop\apps\gcc\current\x86_64-w64-mingw32\lib\libwinpthread-1.dll .
+          COPY $env:HOME\scoop\apps\gcc\current\x86_64-w64-mingw32\lib\libgcc_s_seh-1.dll .
+          COPY $env:HOME\scoop\apps\gcc\current\x86_64-w64-mingw32\lib\libstdc++-6.dll .
+          COPY $env:HOME\scoop\apps\gcc\current\x86_64-w64-mingw32\lib\libwinpthread-1.dll .
       - name: Upload artifact
         uses: actions/upload-artifact@v1.0.0
         with:
