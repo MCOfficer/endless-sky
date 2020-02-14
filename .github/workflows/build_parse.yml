@@ -142,8 +142,10 @@ jobs:
         if: steps.cache-artifact.outputs.cache-hit != 'true'
         run: |
           $env:PATH="$env:USERPROFILE\scoop\shims;$env:PATH"
+          $env:PATH=($env:PATH.Split(';') | Where-Object { $_ -ne 'C:\ProgramData\Chocolatey\bin' }) -join ';'
           Write-Host $env:PATH
           which make
+          which g++
           make -e -f .winmake -j ($(Get-CIMInstance -Class 'CIM_Processor').NumberOfLogicalProcessors)
           COPY .\bin\pkgd\EndlessSky.exe EndlessSky.exe
           COPY ".\dev64\bin\*.dll" .
