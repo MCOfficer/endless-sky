@@ -149,7 +149,7 @@ jobs:
           COPY ".\dev64\bin\*.dll" .
           COPY $env:USERPROFILE\scoop\apps\gcc${{ matrix.mingw }}\current\x86_64-w64-mingw32\lib\libgcc_s_seh-1.dll .
           COPY $env:USERPROFILE\scoop\apps\gcc${{ matrix.mingw }}\current\x86_64-w64-mingw32\lib\libstdc++-6.dll .
-          COPY $env:HUSERPROFILEOME\scoop\apps\gcc${{ matrix.mingw }}\current\x86_64-w64-mingw32\lib\libwinpthread-1.dll .
+          COPY $env:USERPROFILE\scoop\apps\gcc${{ matrix.mingw }}\current\x86_64-w64-mingw32\lib\libwinpthread-1.dll .
       - name: Upload artifact
         uses: actions/upload-artifact@v1.0.0
         with:
