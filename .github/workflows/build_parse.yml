@@ -156,7 +156,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v1.0.0
         with:
-          name: binary-${{ matrix.os }}-mingw${{ matrix.mingw }}
+          name: binaries-${{ matrix.os }}-mingw${{ matrix.mingw }}
           path: ${{ env.ARTIFACT }}
       - name: Move artifact for caching
         if: steps.cache-artifact.outputs.cache-hit != 'true'
@@ -234,14 +234,16 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest]
-        mingw: [4.8.5, 8.1.0]
+        mingw: 
+          - 4.8.5 
+          - "" # latest
     needs: build_windows
     steps:
       - uses: actions/checkout@v2
       - name: Download artifact
         uses: actions/download-artifact@v1.0.0
         with:
-          name: binary-${{ matrix.os }}-mingw${{ matrix.mingw }}
+          name: binaries-${{ matrix.os }}-mingw${{ matrix.mingw }}
           path: .
       - name: Extract artifact
         run: tar -xf EndlessSky.tar
