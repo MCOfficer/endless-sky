@@ -100,8 +100,8 @@ jobs:
           - "" # Latest
     env:
       SCCACHE_DIR: ./sccache/
-      DIR_MINGW64: C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32
-      DIR_ESLIB: .\dev64
+      DIR_MINGW64: C:/Users/runneradmin/scoop/apps/gcc${{ matrix.mingw }}/current/x86_64-w64-mingw32
+      DIR_ESLIB: ./dev64
       CXX: sccache g++
       ARTIFACT: EndlessSky.tar
     steps:
