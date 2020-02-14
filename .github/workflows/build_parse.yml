@@ -141,7 +141,7 @@ jobs:
       - name: Compile
         if: steps.cache-artifact.outputs.cache-hit != 'true'
         run: |
-          $env:PATH="$env:USERPROFILE\scoop\apps\gcc${{ matrix.mingw }}\bin;$env:PATH"
+          $env:PATH="$env:USERPROFILE\scoop\apps\gcc${{ matrix.mingw }}\current\bin;$env:PATH"
           Write-Host $env:PATH
           which make
           which g++
