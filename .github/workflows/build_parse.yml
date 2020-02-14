@@ -238,17 +238,6 @@ jobs:
     needs: build_windows
     steps:
       - uses: actions/checkout@v2
-      - name: Install MinGW
-        run: choco install -y --no-progress --allow-downgrade mingw --version=${{ matrix.mingw }}
-      - name: Fetch development libraries
-        run: |
-          Invoke-WebRequest https://endless-sky.github.io/win64-dev.zip -OutFile win64-dev.zip
-          Expand-Archive win64-dev.zip -DestinationPath . -Force
-          Remove-Item win64-dev.zip
-          COPY ".\dev64\bin\*.dll" .
-          COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libgcc_s_seh-1.dll .
-          COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libstdc++-6.dll .
-          COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libwinpthread-1.dll .
       - name: Download artifact
         uses: actions/download-artifact@v1.0.0
         with:
