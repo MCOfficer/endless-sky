@@ -99,10 +99,10 @@ jobs:
           - 4.8.5
           - "" # Latest
     env:
-      BUILDCACHE_DIR: ./buildcache/
+      SCCACHE_DIR: ./sccache/
       DIR_MINGW64: C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32
       DIR_ESLIB: .\dev64
-      CXX: buildcache g++
+      CXX: sccache g++
       ARTIFACT: EndlessSky.exe
     steps:
       - uses: actions/checkout@v2
@@ -121,23 +121,23 @@ jobs:
           Set-ExecutionPolicy RemoteSigned -scope CurrentUser
           Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
           scoop bucket add MCOfficer https://github.com/MCOfficer/scoop-bucket/
-          scoop install buildcache gcc${{ matrix.mingw }}
+          scoop install sccache gcc${{ matrix.mingw }}
       - name: Fetch development libraries
         if: steps.cache-artifact.outputs.cache-hit != 'true'
         run: |
           Invoke-WebRequest https://endless-sky.github.io/win64-dev.zip -OutFile win64-dev.zip
           Expand-Archive win64-dev.zip -DestinationPath . -Force
           Remove-Item win64-dev.zip
-      - name: Cache buildcache
+      - name: Cache sccache
         if: steps.cache-artifact.outputs.cache-hit != 'true'
         uses: actions/cache@v1.1.0
         with:
-          path: ${{ env.BUILDCACHE_DIR }}
-          key: ${{ matrix.os }}-mingw${{ matrix.mingw }}-buildcache-${{ github.repository }}-${{ github.ref }}-${{ github.sha }}
+          path: ${{ env.SCCACHE_DIR }}
+          key: ${{ matrix.os }}-mingw${{ matrix.mingw }}-sccache-${{ github.repository }}-${{ github.ref }}-${{ github.sha }}
           restore-keys: |
-            ${{ matrix.os }}-mingw${{ matrix.mingw }}-buildcache-${{ github.repository }}-${{ github.ref }}-
-            ${{ matrix.os }}-mingw${{ matrix.mingw }}-buildcache-${{ github.repository }}-
-            ${{ matrix.os }}-mingw${{ matrix.mingw }}-buildcache
+            ${{ matrix.os }}-mingw${{ matrix.mingw }}-sccache-${{ github.repository }}-${{ github.ref }}-
+            ${{ matrix.os }}-mingw${{ matrix.mingw }}-sccache-${{ github.repository }}-
+            ${{ matrix.os }}-mingw${{ matrix.mingw }}-sccache
       - name: Compile
         if: steps.cache-artifact.outputs.cache-hit != 'true'
         run: |
