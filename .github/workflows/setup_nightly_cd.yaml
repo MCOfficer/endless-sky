@@ -9,6 +9,11 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+    - name: Remove old Release
+      run: |
+        RELEASE_ID=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases | jq  '.[] | select(.tag_name == "nightly") | .id')
+        curl -X DELETE https://api.github.com/repos/${{ github.repository }}/releases/$RELEASE_ID
+        curl -X DELETE https://api.github.com/repos/${{ github.repository }}/git/refs/tag /repos/:owner/:repo/git/refs/tags/nightly
     - name: Create Release
       uses: actions/create-release@v1
       with:
