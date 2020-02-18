@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      ARCH: x86_64
+      ARCH: x86_64 
       OUTPUT: endless-sky-amd64.tar.xz
     steps:
       - uses: actions/checkout@v2
