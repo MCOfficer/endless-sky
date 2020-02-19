@@ -184,4 +184,3 @@ jobs:
           asset_path: ${{ env.OUTPUT }}
           asset_name: ${{ env.OUTPUT }}
           asset_content_type: application/zip
-
