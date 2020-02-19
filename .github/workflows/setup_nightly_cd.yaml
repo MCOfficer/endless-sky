@@ -15,11 +15,11 @@ jobs:
         curl -X DELETE -H "Authorization: token ${{ env.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases/$RELEASE_ID
         curl -X DELETE -H "Authorization: token ${{ env.GITHUB_TOKEN }}" https://api.github.com/git/refs/tag/repos/${{ github.repository }}/git/refs/tags/nightly
     - name: Create Release
-      # https://github.com/actions/create-release/pull/32
-      uses: fleskesvor/create-release@1a72e235c178bf2ae6c51a8ae36febc24568c5fe
+      uses: ncipollo/release-action@v1
       with:
-        tag_name: nightly
-        release_name: Continuous Nightly Build
         body: TBD
+        commit: ${{ github.sha }}
+        name:  Continuous Nightly Build
         prerelease: true
-        commitish:  ${{ github.sha }}
+        tag: nightly
+        token: ${{ env.GITHUB_TOKEN }}
