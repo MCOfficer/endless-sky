@@ -1,7 +1,7 @@
 name: Setup Nightly CD
 
-on:
-  push
+#on:
+#  push
 
 jobs:
   setup:
