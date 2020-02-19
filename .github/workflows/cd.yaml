@@ -55,7 +55,7 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == 'push'
-        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
+        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
       - name: Upload Application
         uses: actions/upload-release-asset@v1
         with:
@@ -97,7 +97,7 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == 'push'
-        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
+        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
       - name: Upload AppImage
         uses: actions/upload-release-asset@v1
         with:
@@ -106,7 +106,7 @@ jobs:
           asset_name: ${{ env.OUTPUT }}
           asset_content_type: application/octet-stream
 
-  build_windows:
+  windows_win64:
     needs: setup
     runs-on: windows-latest
     env:
@@ -138,7 +138,7 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == 'push'
-        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
+        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
         shell: bash
       - name: Upload Application
         uses: actions/upload-release-asset@v1
@@ -148,7 +148,7 @@ jobs:
           asset_name: ${{ env.OUTPUT }}
           asset_content_type: application/zip
 
-  build_osx:
+  macos:
     needs: setup
     runs-on: macos-latest
     env:
@@ -176,7 +176,7 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == 'push'
-        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')""
+        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.tag_name == "nightly") | .upload_url')""
       - name: Upload Application
         uses: actions/upload-release-asset@v1
         with:
