@@ -1,18 +1,42 @@
 name: CD
 
 on:
-  release:
-    types: 
-    - published
+  release: # Release mode
+    types:
+      - published
+  push: # Nightly mode
+    branches:
+      - cd # TODO
 
 jobs:
+  setup:
+    # If this is a push event, we need to remove and recreate the nightly release, so it tags the current commit.
+    runs-on: ubuntu-latest
+    if: github.event_name == push
+    steps:
+      - name: Remove old Release
+        run: |
+          RELEASE_ID=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases | jq  '.[] | select(.tag_name == "nightly") | .id')
+          echo $RELEASE_ID
+          curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases/$RELEASE_ID
+          curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/git/refs/tags/nightly
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          body: TBD
+          commit: ${{ github.sha }}
+          name: Continuous Nightly Build
+          prerelease: true
+          tag: nightly
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   ubuntu_x86_64:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      ARCH: x86_64 
+      ARCH: x86_64
       OUTPUT: endless-sky-amd64.tar.gz
+      UPLOAD_URL: ${{ github.event.release.upload_url }}
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
@@ -29,14 +53,17 @@ jobs:
         with:
           name: ${{ env.OUTPUT }}
           path: ${{ env.OUTPUT }}
+      - name: Get Upload URL
+        if: github.event_name == push
+        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')""
+        shell: bash
       - name: Upload Application
         uses: actions/upload-release-asset@v1
         with:
-          upload_url: ${{ github.event.release.upload_url }}
+          upload_url: ${{ env.UPLOAD_URL }}
           asset_path: ${{ env.OUTPUT }}
           asset_name: ${{ env.OUTPUT }}
           asset_content_type: application/gzip
-
 
   appimage_x86_64:
     runs-on: ubuntu-latest
@@ -67,10 +94,14 @@ jobs:
         with:
           name: ${{ env.OUTPUT }}
           path: ${{ env.OUTPUT }}
+      - name: Get Upload URL
+        if: github.event_name == push
+        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')""
+        shell: bash
       - name: Upload AppImage
         uses: actions/upload-release-asset@v1
         with:
-          upload_url: ${{ github.event.release.upload_url }}
+          upload_url: ${{ env.UPLOAD_URL }}
           asset_path: ${{ env.OUTPUT }}
           asset_name: ${{ env.OUTPUT }}
           asset_content_type: application/octet-stream
@@ -81,33 +112,37 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       DIR_MINGW64: C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32
       DIR_ESLIB: .\dev64
-      OUTPUT: EndlessSky-win64.zip 
+      OUTPUT: EndlessSky-win64.zip
     steps:
-    - uses: actions/checkout@v2
-    - name: Fetch development libraries
-      run: |
-        Invoke-WebRequest https://endless-sky.github.io/win64-dev.zip -OutFile win64-dev.zip
-        Expand-Archive win64-dev.zip -DestinationPath . -Force
-        Remove-Item win64-dev.zip
-    - name: Compile
-      run: |
-        make -e -f .winmake -j ($(Get-CIMInstance -Class 'CIM_Processor').NumberOfLogicalProcessors)
-        COPY .\bin\pkgd\EndlessSky.exe EndlessSky.exe
-        COPY ".\dev64\bin\*.dll" .
-        COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libgcc_s_seh-1.dll .
-        COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libstdc++-6.dll .
-        COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libwinpthread-1.dll .
-    - name: Package Application
-      run: 7z a ${{ env.OUTPUT }} .\sounds\ .\images\ .\data\ *.dll license.txt keys.txt icon.png EndlessSky.exe credits.txt copyright changelog
-    - name: Upload artifact
-      uses: actions/upload-artifact@v1
-      with:
-        name: ${{ env.OUTPUT }}
-        path: ${{ env.OUTPUT }}
-    - name: Upload Application
-      uses: actions/upload-release-asset@v1
-      with:
-        upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ${{ env.OUTPUT }}
-        asset_name: ${{ env.OUTPUT }}
-        asset_content_type: application/zip
+      - uses: actions/checkout@v2
+      - name: Fetch development libraries
+        run: |
+          Invoke-WebRequest https://endless-sky.github.io/win64-dev.zip -OutFile win64-dev.zip
+          Expand-Archive win64-dev.zip -DestinationPath . -Force
+          Remove-Item win64-dev.zip
+      - name: Compile
+        run: |
+          make -e -f .winmake -j ($(Get-CIMInstance -Class 'CIM_Processor').NumberOfLogicalProcessors)
+          COPY .\bin\pkgd\EndlessSky.exe EndlessSky.exe
+          COPY ".\dev64\bin\*.dll" .
+          COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libgcc_s_seh-1.dll .
+          COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libstdc++-6.dll .
+          COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libwinpthread-1.dll .
+      - name: Package Application
+        run: 7z a ${{ env.OUTPUT }} .\sounds\ .\images\ .\data\ *.dll license.txt keys.txt icon.png EndlessSky.exe credits.txt copyright changelog
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{ env.OUTPUT }}
+          path: ${{ env.OUTPUT }}
+      - name: Get Upload URL
+        if: github.event_name == push
+        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')""
+        shell: bash
+      - name: Upload Application
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ env.UPLOAD_URL }}
+          asset_path: ${{ env.OUTPUT }}
+          asset_name: ${{ env.OUTPUT }}
+          asset_content_type: application/zip
