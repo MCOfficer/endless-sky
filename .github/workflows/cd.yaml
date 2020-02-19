@@ -34,7 +34,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      ARCH: x86_64
       OUTPUT: endless-sky-amd64.tar.gz
       UPLOAD_URL: ${{ github.event.release.upload_url }}
     steps:
@@ -55,8 +54,7 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == push
-        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')""
-        shell: bash
+        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
       - name: Upload Application
         uses: actions/upload-release-asset@v1
         with:
@@ -71,6 +69,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       ARCH: x86_64
       OUTPUT: endless-sky-x86_64.AppImage
+      UPLOAD_URL: ${{ github.event.release.upload_url }}
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
@@ -96,8 +95,7 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == push
-        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')""
-        shell: bash
+        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
       - name: Upload AppImage
         uses: actions/upload-release-asset@v1
         with:
@@ -120,7 +118,7 @@ jobs:
           Invoke-WebRequest https://endless-sky.github.io/win64-dev.zip -OutFile win64-dev.zip
           Expand-Archive win64-dev.zip -DestinationPath . -Force
           Remove-Item win64-dev.zip
-      - name: Compile
+      - name: Build Application
         run: |
           make -e -f .winmake -j ($(Get-CIMInstance -Class 'CIM_Processor').NumberOfLogicalProcessors)
           COPY .\bin\pkgd\EndlessSky.exe EndlessSky.exe
@@ -137,8 +135,44 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == push
-        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')""
+        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
         shell: bash
+      - name: Upload Application
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ env.UPLOAD_URL }}
+          asset_path: ${{ env.OUTPUT }}
+          asset_name: ${{ env.OUTPUT }}
+          asset_content_type: application/zip
+
+  build_osx:
+    runs-on: macos-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      OUTPUT: EndlessSky-macOS.zip
+      UPLOAD_URL: ${{ github.event.release.upload_url }}
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        run: brew install libpng libjpeg-turbo libmad sdl2 p7zip
+      - name: Adjust library paths
+        run: |
+          install_name_tool -id "@rpath/libpng16.16.dylib" /usr/local/lib/libpng16.16.dylib
+          install_name_tool -id "@rpath/libmad.0.2.1.dylib" /usr/local/lib/libmad.0.2.1.dylib
+          install_name_tool -id "@rpath/libturbojpeg.0.dylib" /usr/local/opt/libjpeg-turbo/lib/libturbojpeg.0.dylib
+          install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2.0.0.dylib
+      - name: Build Application
+        run: xcodebuild -configuration "Release" -jobs $(sysctl -n hw.logicalcpu) -quiet
+      - name: package
+        run: 7z a ${{ env.OUTPUT }} build/Release/Endless\ Sky.app
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{ env.OUTPUT }}
+          path: ${{ env.OUTPUT }}
+      - name: Get Upload URL
+        if: github.event_name == push
+        run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')""
       - name: Upload Application
         uses: actions/upload-release-asset@v1
         with:
