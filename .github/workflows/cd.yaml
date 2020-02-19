@@ -12,7 +12,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       ARCH: x86_64 
-      OUTPUT: endless-sky-amd64.tar.xz
+      OUTPUT: endless-sky-amd64.tar.gz
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
@@ -75,3 +75,33 @@ jobs:
           asset_name: ${{ env.OUTPUT }}
           asset_content_type: application/octet-stream
 
+  build_windows:
+    runs-on: windows-latest
+    env:
+        DIR_MINGW64: C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32
+        DIR_ESLIB: .\dev64
+        OUTPUT: EndlessSky-win64.zip 
+    steps:
+    - uses: actions/checkout@v2
+    - name: Fetch development libraries
+      run: |
+        Invoke-WebRequest https://endless-sky.github.io/win64-dev.zip -OutFile win64-dev.zip
+        Expand-Archive win64-dev.zip -DestinationPath . -Force
+        Remove-Item win64-dev.zip
+    - name: Compile
+      run: |
+        make -e -f .winmake -j ($(Get-CIMInstance -Class 'CIM_Processor').NumberOfLogicalProcessors)
+        COPY .\bin\pkgd\EndlessSky.exe EndlessSky.exe
+        COPY ".\dev64\bin\*.dll" .
+        COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libgcc_s_seh-1.dll .
+        COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libstdc++-6.dll .
+        COPY C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32\lib\libwinpthread-1.dll .
+    - name: Package Application
+      run: 7z a ${{ env.OUTPUT }} .\sounds\ .\images\ .\data\ *.dll license.txt keys.txt icon.png EndlessSky.exe credits.txt copyright changelog
+    - name: Upload Application
+      uses: actions/upload-release-asset@v1.0.2
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ${{ env.OUTPUT }}
+        asset_name: ${{ env.OUTPUT }}
+        asset_content_type: application/octet-stream
