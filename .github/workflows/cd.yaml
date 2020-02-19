@@ -31,6 +31,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
   ubuntu_x86_64:
+    needs: setup
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -64,6 +65,7 @@ jobs:
           asset_content_type: application/gzip
 
   appimage_x86_64:
+    needs: setup
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -105,6 +107,7 @@ jobs:
           asset_content_type: application/octet-stream
 
   build_windows:
+    needs: setup
     runs-on: windows-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -146,6 +149,7 @@ jobs:
           asset_content_type: application/zip
 
   build_osx:
+    needs: setup
     runs-on: macos-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
