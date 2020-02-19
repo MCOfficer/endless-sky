@@ -12,7 +12,7 @@ jobs:
   setup:
     # If this is a push event, we need to remove and recreate the nightly release, so it tags the current commit.
     runs-on: ubuntu-latest
-    if: github.event_name == push
+    if: github.event_name == "push"
     steps:
       - name: Remove old Release
         run: |
@@ -53,7 +53,7 @@ jobs:
           name: ${{ env.OUTPUT }}
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
-        if: github.event_name == push
+        if: github.event_name == "push"
         run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
       - name: Upload Application
         uses: actions/upload-release-asset@v1
@@ -94,7 +94,7 @@ jobs:
           name: ${{ env.OUTPUT }}
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
-        if: github.event_name == push
+        if: github.event_name == "push"
         run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
       - name: Upload AppImage
         uses: actions/upload-release-asset@v1
@@ -134,7 +134,7 @@ jobs:
           name: ${{ env.OUTPUT }}
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
-        if: github.event_name == push
+        if: github.event_name == "push"
         run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
         shell: bash
       - name: Upload Application
@@ -171,7 +171,7 @@ jobs:
           name: ${{ env.OUTPUT }}
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
-        if: github.event_name == push
+        if: github.event_name == "push"
         run: echo "::set-env name=UPLOAD_URL::$(echo $RELEASES |  jq '.[] | select(.tag_name == "nightly") | .upload_url')""
       - name: Upload Application
         uses: actions/upload-release-asset@v1
