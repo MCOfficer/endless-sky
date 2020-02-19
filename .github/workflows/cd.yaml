@@ -171,7 +171,7 @@ jobs:
         run: 7z a ${{ env.OUTPUT }} build/Release/Endless\ Sky.app
       - name: Upload artifact
         uses: actions/upload-artifact@v1
-        with:
+        with: 
           name: ${{ env.OUTPUT }}
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
@@ -184,3 +184,4 @@ jobs:
           asset_path: ${{ env.OUTPUT }}
           asset_name: ${{ env.OUTPUT }}
           asset_content_type: application/zip
+
