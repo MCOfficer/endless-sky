@@ -22,3 +22,4 @@ jobs:
         release_name: Continuous Nightly Build
         body: TBD
         prerelease: true
+        commitish:  ${{ github.sha }}
