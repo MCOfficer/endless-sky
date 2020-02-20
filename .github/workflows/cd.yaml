@@ -181,8 +181,6 @@ jobs:
         with: 
           name: ${{ env.OUTPUT }}
           path: ${{ env.OUTPUT }}
-      - name: Setup Debug Session
-        uses: P3TERX/debugger-action@master
       - name: Get Upload URL
         if: github.event_name == 'push'
         run: |
