@@ -60,7 +60,7 @@ jobs:
           RELEASES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases)
           echo ::set-env name=UPLOAD_URL::$( echo $RELEASES |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')
       - name: Upload Application
-        uses: actions/upload-release-asset@v1
+        uses: actions/upload-release-asset@v1.0.2
         with:
           upload_url: ${{ env.UPLOAD_URL }}
           asset_path: ${{ env.OUTPUT }}
