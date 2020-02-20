@@ -56,7 +56,9 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == 'push'
-        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')"
+        run: |
+          RELEASES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases)
+          echo ::set-env name=UPLOAD_URL::$( echo $RELEASES |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')
       - name: Upload Application
         uses: actions/upload-release-asset@v1
         with:
@@ -98,7 +100,9 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == 'push'
-        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')"
+        run: |
+          RELEASES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases)
+          echo ::set-env name=UPLOAD_URL::$( echo $RELEASES |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')
       - name: Upload AppImage
         uses: actions/upload-release-asset@v1
         with:
@@ -139,7 +143,9 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == 'push'
-        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')"
+        run: |
+          RELEASES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases)
+          echo ::set-env name=UPLOAD_URL::$( echo $RELEASES |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')
         shell: bash
       - name: Upload Application
         uses: actions/upload-release-asset@v1
@@ -179,7 +185,9 @@ jobs:
         uses: P3TERX/debugger-action@master
       - name: Get Upload URL
         if: github.event_name == 'push'
-        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')"
+        run: |
+          RELEASES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases)
+          echo ::set-env name=UPLOAD_URL::$( echo $RELEASES |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')
       - name: Upload Application
         uses: actions/upload-release-asset@v1
         with:
