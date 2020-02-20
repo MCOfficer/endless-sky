@@ -23,7 +23,8 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
-          body: TBD
+          body: |
+            This is an automated build of the latest source. It may be unstable or even crash, corrupt your save or eat your kitten. Use with caution!
           commit: ${{ github.sha }}
           name: Continuous Nightly Build
           prerelease: true
