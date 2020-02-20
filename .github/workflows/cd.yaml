@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
     steps:
-      - name: Remove old Release
+      - name: Remove old Nightly Release
         run: |
           RELEASE_ID=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases | jq  '.[] | select(.tag_name == "nightly") | .id')
           echo $RELEASE_ID
@@ -56,7 +56,7 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == 'push'
-        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
+        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')"
       - name: Upload Application
         uses: actions/upload-release-asset@v1
         with:
@@ -98,7 +98,7 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == 'push'
-        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
+        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')"
       - name: Upload AppImage
         uses: actions/upload-release-asset@v1
         with:
@@ -139,7 +139,7 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == 'push'
-        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
+        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')"
         shell: bash
       - name: Upload Application
         uses: actions/upload-release-asset@v1
@@ -168,7 +168,7 @@ jobs:
           install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2.0.0.dylib
       - name: Build Application
         run: xcodebuild -configuration "Release" -jobs $(sysctl -n hw.logicalcpu) -quiet
-      - name: package
+      - name: Package Application
         run: 7z a ${{ env.OUTPUT }} build/Release/Endless\ Sky.app
       - name: Upload artifact
         uses: actions/upload-artifact@v1
@@ -177,7 +177,7 @@ jobs:
           path: ${{ env.OUTPUT }}
       - name: Get Upload URL
         if: github.event_name == 'push'
-        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.tag_name == "nightly") | .upload_url')"
+        run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')"
       - name: Upload Application
         uses: actions/upload-release-asset@v1
         with:
