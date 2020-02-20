@@ -175,6 +175,8 @@ jobs:
         with: 
           name: ${{ env.OUTPUT }}
           path: ${{ env.OUTPUT }}
+      - name: Setup Debug Session
+        uses: P3TERX/debugger-action@master
       - name: Get Upload URL
         if: github.event_name == 'push'
         run: echo "::set-env name=UPLOAD_URL::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')"
