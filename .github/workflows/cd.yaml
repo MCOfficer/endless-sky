@@ -12,15 +12,16 @@ jobs:
   setup:
     # If this is a push event, we need to remove and recreate the nightly release, so it tags the current commit.
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
     steps:
       - name: Remove old Nightly Release
+        if: github.event_name == 'push'
         run: |
           RELEASE_ID=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases | jq  '.[] | select(.tag_name == "nightly") | .id')
           echo $RELEASE_ID
           curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases/$RELEASE_ID
           curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/git/refs/tags/nightly
       - name: Create Release
+        if: github.event_name == 'push'
         uses: ncipollo/release-action@v1
         with:
           body: |
