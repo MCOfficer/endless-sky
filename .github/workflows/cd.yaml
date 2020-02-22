@@ -61,7 +61,7 @@ jobs:
           RELEASES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases)
           echo ::set-env name=UPLOAD_URL::$( echo $RELEASES |  jq '.[] | select(.target_commitish == "${{ github.sha }}") | .upload_url')
       - name: Upload Application
-        uses: actions/upload-release-asset@v1.0.2
+        uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ env.UPLOAD_URL }}
           asset_path: ${{ env.OUTPUT }}
@@ -120,6 +120,7 @@ jobs:
       DIR_MINGW64: C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\x86_64-w64-mingw32
       DIR_ESLIB: .\dev64
       OUTPUT: EndlessSky-win64.zip
+      UPLOAD_URL: ${{ github.event.release.upload_url }}
     steps:
       - uses: actions/checkout@v2
       - name: Fetch development libraries
@@ -176,7 +177,9 @@ jobs:
       - name: Build Application
         run: xcodebuild -configuration "Release" -jobs $(sysctl -n hw.logicalcpu) -quiet
       - name: Package Application
-        run: 7z a ${{ env.OUTPUT }} build/Release/Endless\ Sky.app
+        run: |
+          cd build/Release
+          7z a ${{ github.workspace }}/${{ env.OUTPUT }} Endless\ Sky.app
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with: 
