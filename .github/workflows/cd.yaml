@@ -46,6 +46,11 @@ jobs:
           sudo rm /etc/apt/sources.list.d/* && sudo dpkg --clear-avail # Speed up installation and get rid of unwanted lists
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends libsdl2-dev libpng-dev libjpeg-turbo8-dev libopenal-dev libmad0-dev libglew-dev libgl1-mesa-dev libegl1-mesa-dev libgles2-mesa-dev scons
+      - name: Adjust version strings
+        run: |
+          perl -p -i -e 's/(Endless Sky )[\d.]+/$1Nightly at ${{ github.sha }}/ig' source/main.cpp
+          perl -p -i -e 's/version [\d.]+/Nightly at ${{ github.sha }}/ig' credits.txt
+        shell: bash
       - name: Build Application
         run: scons -j $(nproc)
       - name: Package Application
@@ -83,6 +88,11 @@ jobs:
           sudo rm /etc/apt/sources.list.d/* && sudo dpkg --clear-avail # Speed up installation and get rid of unwanted lists
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends libsdl2-dev libpng-dev libjpeg-turbo8-dev libopenal-dev libmad0-dev libglew-dev libgl1-mesa-dev libegl1-mesa-dev libgles2-mesa-dev scons
+      - name: Adjust version strings
+        run: |
+          perl -p -i -e 's/(Endless Sky )[\d.]+/$1Nightly at ${{ github.sha }}/ig' source/main.cpp
+          perl -p -i -e 's/version [\d.]+/Nightly at ${{ github.sha }}/ig' credits.txt
+        shell: bash
       - name: Build Application
         run: |
           cp icons/icon_512x512.png endless-sky.png # We need an icon file with this name
@@ -128,6 +138,11 @@ jobs:
           Invoke-WebRequest https://endless-sky.github.io/win64-dev.zip -OutFile win64-dev.zip
           Expand-Archive win64-dev.zip -DestinationPath . -Force
           Remove-Item win64-dev.zip
+      - name: Adjust version strings
+        run: |
+          perl -p -i -e 's/(Endless Sky )[\d.]+/$1Nightly at ${{ github.sha }}/ig' source/main.cpp
+          perl -p -i -e 's/version [\d.]+/Nightly at ${{ github.sha }}/ig' credits.txt
+        shell: bash
       - name: Build Application
         run: |
           make -e -f .winmake -j ($(Get-CIMInstance -Class 'CIM_Processor').NumberOfLogicalProcessors)
@@ -174,6 +189,11 @@ jobs:
           install_name_tool -id "@rpath/libmad.0.2.1.dylib" /usr/local/lib/libmad.0.2.1.dylib
           install_name_tool -id "@rpath/libturbojpeg.0.dylib" /usr/local/opt/libjpeg-turbo/lib/libturbojpeg.0.dylib
           install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2.0.0.dylib
+      - name: Adjust version strings
+        run: |
+          perl -p -i -e 's/(Endless Sky )[\d.]+/$1Nightly at ${{ github.sha }}/ig' source/main.cpp
+          perl -p -i -e 's/version [\d.]+/Nightly at ${{ github.sha }}/ig' credits.txt
+        shell: bash
       - name: Build Application
         run: xcodebuild -configuration "Release" -jobs $(sysctl -n hw.logicalcpu) -quiet
       - name: Package Application
