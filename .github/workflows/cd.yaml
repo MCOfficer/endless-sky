@@ -6,7 +6,7 @@ on:
       - published
   push: # Nightly mode
     branches:
-      - cd # TODO 
+      - cd-on-release # TODO 
 
 jobs:
   setup:
