@@ -11,7 +11,7 @@ on:
 jobs:
   setup:
     # If this is a push event, we need to remove and recreate the nightly release, so it tags the current commit.
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
     steps:
       - name: Remove old Nightly Release
         if: github.event_name == 'push'
