@@ -86,6 +86,8 @@ jobs:
           perl -p -i -e "s/version [\d.]+/$(git log --pretty="format:%nBuilt: $(date -u '+%Y-%m-%d %H:%M') UTC%nLast change by %an: %n %s" -1 | fmt -w 33 -c -s)/ig" credits.txt
           perl -0777 -p -i -e 's/(CFBundleShortVersionString.*?)[\d.]+/$1sha256.${{ github.sha }}/igs' XCode/EndlessSky-Info.plist
         shell: bash
+      - name: Debugging with tmate
+        uses: mxschmitt/action-tmate@v1.0.2
       - name: Build Application
         run: xcodebuild -configuration "Release" -jobs $(sysctl -n hw.logicalcpu) -quiet
       - name: Package Application
