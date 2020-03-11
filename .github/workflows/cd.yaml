@@ -70,6 +70,7 @@ jobs:
     runs-on: macos-latest
     env:
       OUTPUT: EndlessSky-macOS-${{ github.sha }}.zip
+      MACOSX_DEPLOYMENT_TARGET: 10.12
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
