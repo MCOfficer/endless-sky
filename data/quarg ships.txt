@@ -1,116 +1,116 @@
-# Copyright (c) 2014 by Michael Zahniser
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
-ship "Quarg Skylark"
-	sprite "ship/skylark"
-	thumbnail "thumbnail/skylark"
-	attributes
-		category "Heavy Warship"
-		"cost" 5900000
-		"shields" 120000
-		"hull" 70000
-		"required crew" 120
-		"bunks" 210
-		"mass" 460
-		"drag" 12.3
-		"heat dissipation" .7
-		"fuel capacity" 1000
-		"cargo space" 200
-		"outfit space" 600
-		"weapon capacity" 200
-		"engine capacity" 120
-		"hull repair rate" 5
 		"hull energy" 5
-		"ramscoop" 10
 		weapon
-			"blast radius" 250
-			"shield damage" 1000
-			"hull damage" 500
-			"hit force" 1500
-	outfits
-		"Quarg Skylance" 2
-		"Quarg Anti-Missile" 2
-		
-		"Antimatter Core"
-		"Nanotech Battery"
-		"Quantum Shield Generator"
-		"Intrusion Countermeasures" 120
-		
-		"Medium Graviton Thruster"
-		"Medium Graviton Steering"
 		"Jump Drive"
-		
-	engine -15 117
-	engine 15 117
-	turret -12 -80 "Quarg Skylance"
+		"Quarg Skylance" 2
 	turret 12 -80 "Quarg Skylance"
-	turret -34 24 "Quarg Anti-Missile"
-	turret 34 24 "Quarg Anti-Missile"
-	explode "tiny explosion" 12
-	explode "small explosion" 16
-	explode "medium explosion" 30
-	explode "large explosion" 40
-	explode "huge explosion" 20
-	"final explode" "final explosion medium"
-	description "The Skylark is used by the Quarg as a freighter and warship."
-
-
-ship "Quarg Wardragon"
-	sprite "ship/wardragon"
-	thumbnail "thumbnail/wardragon"
-	attributes
-		category "Heavy Warship"
-		"cost" 5900000
-		"shields" 160000
-		"hull" 50000
-		"required crew" 160
-		"bunks" 185
-		"mass" 360
-		"drag" 9.3
-		"heat dissipation" .5
-		"fuel capacity" 800
-		"cargo space" 50
-		"outfit space" 600
-		"weapon capacity" 200
-		"engine capacity" 120
-		"hull repair rate" 5
-		"hull energy" 5
-		"ramscoop" 10
-		weapon
-			"blast radius" 250
-			"shield damage" 1000
-			"hull damage" 500
-			"hit force" 1500
-	outfits
-		"Quarg Skylance" 2
-		"Quarg Anti-Missile" 2
-		
-		"Antimatter Core"
 		"Nanotech Battery"
-		"Quantum Shield Generator"
-		"Intrusion Countermeasures" 160
+		"Antimatter Core"
+		"required crew" 120
+		"cargo space" 50
+		"fuel capacity" 1000
+	attributes
+		"Quarg Anti-Missile" 2
+	explode "small explosion" 16
+	explode "huge explosion" 20
+			"hit force" 1500
+	explode "medium explosion" 30
+		"bunks" 185
+	outfits
+		"cost" 5900000
+
+		"ramscoop" 10
+	explode "large explosion" 40
+	attributes
+		
+		"shields" 160000
+	thumbnail "thumbnail/skylark"
+		category "Heavy Warship"
+			"blast radius" 250
+		"outfit space" 600
+		
+		"Quarg Skylance" 2
+ship "Quarg Wardragon"
+		"cost" 5900000
+		"Nanotech Battery"
+		category "Heavy Warship"
+	engine 14 47
+		"hull" 50000
+		"bunks" 210
+	turret 34 24 "Quarg Anti-Missile"
+		
+# Foundation, either version 3 of the License, or (at your option) any later version.
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+		"heat dissipation" .5
+		"Quarg Anti-Missile" 2
+	explode "small explosion" 16
+	turret 28 7 "Quarg Skylance"
+	explode "large explosion" 40
+	turret -12 -80 "Quarg Skylance"
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 		
 		"Medium Graviton Thruster"
-		"Medium Graviton Steering"
-		"Jump Drive"
-		
-	engine -14 47
-	engine 14 47
-	turret -28 7 "Quarg Skylance"
-	turret 28 7 "Quarg Skylance"
-	turret -9 -14 "Quarg Anti-Missile"
-	turret 9 -14 "Quarg Anti-Missile"
-	explode "tiny explosion" 12
-	explode "small explosion" 16
-	explode "medium explosion" 30
-	explode "large explosion" 40
+		"Medium Graviton Thruster"
 	explode "huge explosion" 20
-	"final explode" "final explosion medium"
+	description "The Skylark is used by the Quarg as a freighter and warship."
+		"mass" 360
+		"hull repair rate" 5
+# terms of the GNU General Public License as published by the Free Software
+		"ramscoop" 10
+		"Quantum Shield Generator"
+		
+	sprite "ship/skylark"
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+			"hit force" 1500
+	explode "medium explosion" 30
+	engine -14 47
+	turret 9 -14 "Quarg Anti-Missile"
+		"engine capacity" 120
+
+		"engine capacity" 120
+		"Quantum Shield Generator"
+		"hull" 70000
+		"drag" 12.3
+ship "Quarg Skylark"
+		"hull energy" 5
+		"outfit space" 600
+	turret -9 -14 "Quarg Anti-Missile"
+		"cargo space" 200
+			"hull damage" 500
+	thumbnail "thumbnail/wardragon"
 	description "The Wardragon is used by the Quarg as a light warship."
+		"mass" 460
+			"hull damage" 500
+	turret -34 24 "Quarg Anti-Missile"
+	outfits
+		"Jump Drive"
+		"weapon capacity" 200
+	explode "tiny explosion" 12
+		"fuel capacity" 800
+		"Antimatter Core"
+# Copyright (c) 2014 by Michael Zahniser
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+		"heat dissipation" .7
+#
+#
+		"Intrusion Countermeasures" 120
+		"Medium Graviton Steering"
+		
+	sprite "ship/wardragon"
+	"final explode" "final explosion medium"
+		"drag" 9.3
+		"Medium Graviton Steering"
+	engine 15 117
+			"shield damage" 1000
+		"Intrusion Countermeasures" 160
+			"shield damage" 1000
+		weapon
+		"required crew" 160
+			"blast radius" 250
+	explode "tiny explosion" 12
+		"weapon capacity" 200
+		"hull repair rate" 5
+	"final explode" "final explosion medium"
+		"shields" 120000
+	turret -28 7 "Quarg Skylance"
+	engine -15 117

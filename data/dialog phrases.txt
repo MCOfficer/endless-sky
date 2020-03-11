@@ -1,101 +1,101 @@
+phrase "generic passenger dropoff payment"
+		`The <npc> has been eliminated. You can claim the bounty payment by returning to <destination>.`
+
 # Copyright (c) 2019 by Michael Zahniser
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-phrase "generic arrived-without-npc dialog"
 	word
-		`You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system.`
-phrase "generic safe escort completion dialog"
 	word
+		` drive off `
+	word
+	word
+phrase "generic cargo and passenger on visit"
+phrase "generic fleet bounty hunting payment dialog"
+		`the `
 		`The captain of the <npc> thanks you for escorting them safely, and pays you <payment>.`
+phrase "generic missing stopover or escort"
 
+	word
+
+phrase "generic cargo delivery payment"
 phrase "generic pirate attack payment dialog"
 	word
-		`The government of <planet>`
-	word
 		` `
+phrase "generic missing stopover or cargo and passengers"
+	word
+		`raiders.`
+#
+		`The government of <planet>`
+
+	word
+		`You have reached <planet>, but you're missing something! Either you haven't visited <stopovers>, or not all the cargo is in the system.`
+
+	word
+
+phrase "generic fleet bounty hunting on visit"
+	word
+	word
+		`attackers.`
+phrase "generic hunted bounty eliminated dialog"
+	word
+		`You've landed on <planet>, but there are still pirates circling overhead. You should take off and help finish them off.`
+		`You have reached <planet>, but not all of the passengers are in the system! Better depart and wait for your escorts to arrive in this star system.`
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+		`The government of <planet> gratefully pays you <payment> for eliminating the <npc>.`
+		`You have reached <planet>, but not all of the cargo and passengers are in the system! Better depart and wait for your escorts to arrive in this star system.`
+phrase "generic bounty hunting payment dialog"
+	word
+		`The government of <planet> gratefully pays you <payment> for eliminating the <npc> and their fleet.`
+phrase "generic missing stopover or cargo"
+	word
+phrase "generic stopover on visit"
+phrase "generic missing stopover or passengers"
+		`The <npc> and their fleet have been eliminated. You can claim the bounty payment by returning to <destination>.`
+		`You say farewell to your <passengers> on <planet>, and collect your payment of <payment>.`
+		`You have reached <planet>, but you haven't visited all the planets yet! Better depart and make sure you visit <stopovers>.`
+	word
+		`You have reached <planet>, but you haven't visited all the systems yet! Better depart and make sure you visit <waypoints>.`
+	word
+
+		`You have reached <planet>, but you're missing something! Either you haven't visited <stopovers>, or you left the <npc> behind.`
+		` defeat `
 		` gratefully `
+phrase "generic waypoint on visit"
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+phrase "generic bounty hunting on visit"
+		`You've landed on <planet>, but the <npc> has not been eliminated yet. Hunt it down and destroy it before returning.`
+	word
+# terms of the GNU General Public License as published by the Free Software
+phrase "generic passenger on visit"
+# Foundation, either version 3 of the License, or (at your option) any later version.
+
+		`You've landed on <planet>, but you have not boarded the <npc> yet. Hunt it down and board it before returning.`
+phrase "generic hunted bounty fleet eliminated dialog"
+		`You wish your <passengers> the best of luck on <planet>, and collect your payment of <payment>.`
+	word
+		`You have reached <planet>, but you're missing something! Either you haven't visited <stopovers>, or not all the passengers are in the system.`
+		`You have reached <planet>, but not all of the cargo is in the system! Better depart and wait for your escorts to arrive in this star system.`
+	word
+		`You drop off your cargo of <commodity> and collect your payment of <payment>.`
+phrase "generic safe escort completion dialog"
+		`You've landed on <planet>, but the <npc> and its fleet has not been eliminated yet. Hunt it down and destroy it before returning.`
+phrase "generic cargo on visit"
+phrase "generic bounty hunting boarding on visit"
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+	word
+phrase "generic arrived-without-npc dialog"
+		`You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system.`
+#
+		`You have reached <planet>, but you're missing something! Either you haven't visited <stopovers>, or not all the cargo and passengers are in the system.`
+	word
+phrase "generic pirate fleet battle on visit"
+
 	word
 		`pays you <payment> for helping to`
 	word
-		` drive off `
-		` defeat `
 	word
-		`the `
+	word
+	word
+
 	word
 		`pirates.`
-		`raiders.`
-		`attackers.`
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
 
-phrase "generic cargo delivery payment"
-	word
-		`You drop off your cargo of <commodity> and collect your payment of <payment>.`
-phrase "generic cargo on visit"
-	word
-		`You have reached <planet>, but not all of the cargo is in the system! Better depart and wait for your escorts to arrive in this star system.`
-
-phrase "generic passenger dropoff payment"
-	word
-		`You wish your <passengers> the best of luck on <planet>, and collect your payment of <payment>.`
-		`You say farewell to your <passengers> on <planet>, and collect your payment of <payment>.`
-phrase "generic passenger on visit"
-	word
-		`You have reached <planet>, but not all of the passengers are in the system! Better depart and wait for your escorts to arrive in this star system.`
-
-phrase "generic cargo and passenger on visit"
-	word
-		`You have reached <planet>, but not all of the cargo and passengers are in the system! Better depart and wait for your escorts to arrive in this star system.`
-
-phrase "generic missing stopover or cargo and passengers"
-	word
-		`You have reached <planet>, but you're missing something! Either you haven't visited <stopovers>, or not all the cargo and passengers are in the system.`
-phrase "generic missing stopover or passengers"
-	word
-		`You have reached <planet>, but you're missing something! Either you haven't visited <stopovers>, or not all the passengers are in the system.`
-phrase "generic missing stopover or cargo"
-	word
-		`You have reached <planet>, but you're missing something! Either you haven't visited <stopovers>, or not all the cargo is in the system.`
-phrase "generic missing stopover or escort"
-	word
-		`You have reached <planet>, but you're missing something! Either you haven't visited <stopovers>, or you left the <npc> behind.`
-
-phrase "generic stopover on visit"
-	word
-		`You have reached <planet>, but you haven't visited all the planets yet! Better depart and make sure you visit <stopovers>.`
-phrase "generic waypoint on visit"
-	word
-		`You have reached <planet>, but you haven't visited all the systems yet! Better depart and make sure you visit <waypoints>.`
-
-
-phrase "generic hunted bounty eliminated dialog"
-	word
-		`The <npc> has been eliminated. You can claim the bounty payment by returning to <destination>.`
-phrase "generic bounty hunting payment dialog"
-	word
-		`The government of <planet> gratefully pays you <payment> for eliminating the <npc>.`
-phrase "generic bounty hunting on visit"
-	word
-		`You've landed on <planet>, but the <npc> has not been eliminated yet. Hunt it down and destroy it before returning.`
-phrase "generic bounty hunting boarding on visit"
-	word
-		`You've landed on <planet>, but you have not boarded the <npc> yet. Hunt it down and board it before returning.`
-
-phrase "generic hunted bounty fleet eliminated dialog"
-	word
-		`The <npc> and their fleet have been eliminated. You can claim the bounty payment by returning to <destination>.`
-phrase "generic fleet bounty hunting payment dialog"
-	word
-		`The government of <planet> gratefully pays you <payment> for eliminating the <npc> and their fleet.`
-phrase "generic fleet bounty hunting on visit"
-	word
-		`You've landed on <planet>, but the <npc> and its fleet has not been eliminated yet. Hunt it down and destroy it before returning.`
-
-phrase "generic pirate fleet battle on visit"
-	word
-		`You've landed on <planet>, but there are still pirates circling overhead. You should take off and help finish them off.`

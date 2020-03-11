@@ -1,82 +1,82 @@
-# Copyright (c) 2020 by Michael Zahniser
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-phrase "quarg"
-	word
-		"Quar"
-		"Mer"
-		"Ban"
-		"Koor"
-		"Plog"
-		"Flum"
-		"Krak"
-		"Grok"
-		"Merak"
-	word
-		"-"
-		"ala"
-		"gor"
-		"o"
-		"i"
-		"oni"
-		"lam"
-		"tim"
-		"ee"
-		"shee"
-	word
-		"lim"
-		"kor"
-		"far"
-		"mor"
-		"lup"
 		"plug"
-		"trum"
-		"ruk"
+# Foundation, either version 3 of the License, or (at your option) any later version.
+		"Quarg Wardragon" 2
+	cargo 3
+	variant
+# terms of the GNU General Public License as published by the Free Software
+		"Krak"
+phrase "quarg"
+		"lim"
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+		"Mer"
+	word
+		"gor"
+
+		"Flum"
+		"You have only a short time to learn to live together in peace."
+		forbearing opportunistic
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+		"Quarg Skylark" 3
+		"lup"
+		"-"
+		"All your weapons of evil must be destroyed."
+	variant
+		"ee"
 		"rook"
 
-# From the "Southern Television broadcast interruption."
-phrase "hostile quarg"
-	word
-		"All your weapons of evil must be destroyed."
-		"You have only a short time to learn to live together in peace."
+		"ruk"
+		"Quarg Wardragon"
+		forbearing opportunistic
+#
 		"You must live in peace... or leave the galaxy."
-
-fleet "Quarg"
-	government "Quarg"
+	word
 	names "quarg"
-	cargo 3
-	personality
-		forbearing opportunistic
-	variant
-		"Quarg Skylark"
-	variant
 		"Quarg Wardragon"
 
+	variant 2
+	word
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+		"ala"
+	word
+		"Quarg Skylark"
+phrase "hostile quarg"
 fleet "Large Quarg"
+		"Ban"
+		"tim"
+# From the "Southern Television broadcast interruption."
 	government "Quarg"
-	names "quarg"
-	cargo 1
+		"Merak"
+		"Quarg Skylark" 2
+		"mor"
+#
 	personality
-		forbearing opportunistic
-	variant 2
-		"Quarg Skylark" 2
-		"Quarg Wardragon"
-	variant 2
-		"Quarg Wardragon" 2
 		"Quarg Skylark"
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+	names "quarg"
+		"far"
 	variant
-		"Quarg Skylark" 2
-		"Quarg Wardragon" 2
-	variant
+# Copyright (c) 2020 by Michael Zahniser
 		"Quarg Wardragon" 3
-		"Quarg Skylark"
 	variant
-		"Quarg Skylark" 3
+		"Quarg Skylark" 2
+	personality
+		"Quar"
+	government "Quarg"
 		"Quarg Wardragon"
+		"Grok"
+		"shee"
+		"trum"
+		"Plog"
+	variant
+		"Quarg Skylark"
+		"o"
+		"kor"
+fleet "Quarg"
+
+		"i"
+	variant 2
+		"Quarg Wardragon" 2
+		"Koor"
+	cargo 1
+		"oni"
+		"lam"

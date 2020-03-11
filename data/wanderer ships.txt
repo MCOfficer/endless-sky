@@ -1,915 +1,915 @@
-# Copyright (c) 2015-2016 by Michael Zahniser
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-ship "Earth Shaper"
-	sprite "ship/earth shaper"
-	thumbnail "thumbnail/earth shaper"
-	attributes
-		category "Light Freighter"
-		licenses
-			Wanderer
-		"cost" 500000
-		"hull" 3300
-		"automaton" 1
-		"mass" 30
-		"drag" .9
-		"heat dissipation" .9
-		"fuel capacity" 300
-		"cargo space" 27
-		"outfit space" 59
-		"engine capacity" 26
-		"atmosphere scan" 100
-		weapon
-			"blast radius" 10
-			"shield damage" 100
-			"hull damage" 150
-			"hit force" 250
+		"drag" 9.4
 	outfits
-		"Small Biochemical Cell"
-		
-		"Type 1 Radiant Thruster"
-		"Type 1 Radiant Steering"
-		"Hyperdrive"
-		
-	engine -9 30
-	engine 9 30
-	explode "tiny explosion" 20
-	explode "small explosion" 10
-	description "The Earth Shaper is a robotic drone that the Wanderers use for mining, exploring, surveying, and terraforming."
-
-
-
-ship "Flycatcher"
-	sprite "ship/flycatcher"
 	thumbnail "thumbnail/flycatcher"
-	attributes
-		category "Drone"
-		licenses
-			Wanderer
-		"cost" 830000
-		"hull" 4700
-		"automaton" 1
-		"mass" 40
-		"drag" .6
-		"heat dissipation" .9
-		"outfit space" 86
-		"weapon capacity" 28
-		"engine capacity" 26
-		weapon
-			"blast radius" 10
-			"shield damage" 100
-			"hull damage" 150
-			"hit force" 250
-	outfits
-		"Wanderer Anti-Missile"
-		
-		"Small Biochemical Cell" 2
-		
-		"Type 1 Radiant Thruster"
-		"Type 1 Radiant Steering"
-		
-	engine -9 28
-	engine 9 28
-	turret 0 4
-	explode "tiny explosion" 30
-	explode "small explosion" 20
-	description "Flycatcher drones are used by the Wanderers to keep their star systems safe. Rather than carrying weapons of its own, a stock Flycatcher just carries an anti-missile turret for defending other ships."
-
-
-
-ship "Summer Leaf"
-	plural "Summer Leaves"
-	sprite "ship/summer leaf"
-	thumbnail "thumbnail/summer leaf"
-	attributes
-		category "Light Warship"
-		licenses
-			Wanderer
-		"cost" 9500000
-		"shields" 14400
-		"hull" 6700
-		"required crew" 6
-		"bunks" 15
-		"mass" 110
-		"drag" 2.6
-		"heat dissipation" .8
-		"fuel capacity" 800
-		"cargo space" 41
-		"outfit space" 320
-		"weapon capacity" 84
-		"engine capacity" 103
-		weapon
-			"blast radius" 70
-			"shield damage" 700
-			"hull damage" 350
-			"hit force" 1050
-	outfits
-		"Sunbeam" 2
-		
-		"Yellow Sun Reactor"
-		"Bright Cloud Shielding"
-		"Wanderer Ramscoop"
-		
-		"Type 3 Radiant Thruster"
-		"Type 3 Radiant Steering"
-		"Hyperdrive"
-		
-	engine -18 64
-	engine 18 64
-	gun -29 -9
-	gun 29 -9
-	explode "tiny explosion" 40
-	explode "small explosion" 20
-	explode "medium explosion" 10
-	"final explode" "final explosion small"
-	description "The Summer Leaf is mostly used by the Wanderers as a light transport, but it is also quite effective in combat."
-
-
-
-ship "Autumn Leaf"
-	plural "Autumn Leaves"
-	sprite "ship/autumn leaf"
-	thumbnail "thumbnail/autumn leaf"
-	attributes
-		category "Light Warship"
-		licenses
-			Wanderer
-		"cost" 12500000
-		"shields" 18700
-		"hull" 7400
-		"required crew" 8
-		"bunks" 16
-		"mass" 130
-		"drag" 2.9
-		"heat dissipation" .8
-		"fuel capacity" 1000
-		"cargo space" 45
-		"outfit space" 361
-		"weapon capacity" 103
-		"engine capacity" 117
-		weapon
-			"blast radius" 80
-			"shield damage" 800
-			"hull damage" 400
-			"hit force" 1200
-	outfits
-		"Sunbeam" 2
-		"Wanderer Anti-Missile"
-		
-		"White Sun Reactor"
-		"Bright Cloud Shielding"
-		"Wanderer Ramscoop"
-		
-		"Type 3 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Hyperdrive"
-		
-	engine -18 64
-	engine 18 64
-	gun -25 -22
-	gun 25 -22
-	turret 0 28
-	explode "tiny explosion" 50
-	explode "small explosion" 30
-	explode "medium explosion" 20
-	"final explode" "final explosion small"
-	description "The Autumn Leaf is based on the Wanderer Summer Leaf light warship, but slightly larger and better equipped for combat. Unlike Wanderer peacetime ships, it is equipped with a turret mount in addition to the ports for fixed guns."
-
-ship "Autumn Leaf" "Autumn Leaf (Heavy)"
-	outfits
-		"Sunbeam" 2
-		"Moonbeam Turret"
-		
-		"White Sun Reactor"
-		"Bright Cloud Shielding"
-		
-		"Type 3 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Hyperdrive"
-
-
-
-ship "Strong Wind"
-	sprite "ship/strong wind"
-	thumbnail "thumbnail/strong wind"
-	attributes
-		category "Medium Warship"
-		licenses
-			"Wanderer Military"
-		"cost" 16100000
-		"shields" 28500
-		"hull" 19600
-		"required crew" 17
-		"bunks" 39
-		"mass" 260
-		"drag" 4.7
-		"heat dissipation" .7
-		"fuel capacity" 600
-		"cargo space" 68
-		"outfit space" 493
-		"weapon capacity" 198
-		"engine capacity" 114
-		"asteroid scan power" 100
-		"atmosphere scan" 100
-		"tactical scan power" 25
-		weapon
-			"blast radius" 200
-			"shield damage" 2000
-			"hull damage" 1000
-			"hit force" 3000
-	outfits
-		"Sunbeam" 4
-		"Thunderhead Launcher" 2
-		"Thunderhead Missile" 100
-		"Thunderhead Storage Array"
-		
-		"White Sun Reactor"
-		"Dark Storm Shielding"
-		"Wanderer Ramscoop" 2
-		
-		"Type 3 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Hyperdrive"
-		
-	engine -30 127
-	engine 30 127
-	gun -64 13 "Sunbeam"
-	gun 64 13 "Sunbeam"
-	gun -57 21 "Sunbeam"
-	gun 57 21 "Sunbeam"
-	gun -32 57 "Thunderhead Launcher"
-	gun 32 57 "Thunderhead Launcher"
-	explode "small explosion" 60
-	explode "medium explosion" 40
-	explode "large explosion" 20
-	"final explode" "final explosion medium"
-	description "The Strong Wind was originally designed for science and exploration, but recently the Wanderers have modified the design to allow it to be used as a warship."
-
-
-
-ship "Tempest"
-	sprite "ship/tempest"
-	thumbnail "thumbnail/tempest"
-	attributes
-		category "Medium Warship"
-		licenses
-			"Wanderer Military"
-		"cost" 19700000
-		"shields" 42100
-		"hull" 25900
-		"required crew" 38
-		"bunks" 53
-		"mass" 320
-		"drag" 6.2
-		"heat dissipation" 0.65
-		"fuel capacity" 600
-		"cargo space" 47
-		"outfit space" 607
-		"weapon capacity" 271
-		"engine capacity" 122
-		weapon
-			"blast radius" 280
-			"shield damage" 2800
-			"hull damage" 1400
-			"hit force" 4200
-	outfits
-		"Sunbeam" 2
-		"Thunderhead Launcher" 2
-		"Thunderhead Missile" 80
-		"Dual Sunbeam Turret"
-		"Wanderer Anti-Missile" 2
-		
-		"Yellow Sun Reactor" 2
-		"Dark Storm Shielding"
-		"Wanderer Ramscoop"
-		
-		"Type 4 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Hyperdrive"
-	
-	engine -22 129
-	engine 22 129
-	gun -16 -100 "Sunbeam"
 	gun 16 -100 "Sunbeam"
-	gun -21 -83 "Thunderhead Launcher"
-	gun 21 -83 "Thunderhead Launcher"
-	turret 0 -37 "Dual Sunbeam Turret"
-	turret -32 87 "Wanderer Anti-Missile"
-	turret 32 87 "Wanderer Anti-Missile"
-	explode "small explosion" 80
-	explode "medium explosion" 50
-	explode "large explosion" 25
-	"final explode" "final explosion medium" 1
-	description "In response to the Unfettered invasion, the Wanderers have begun digging up ancient warship designs from their archives and putting them back into production. The Tempest is the first purpose-built warship they have manufactured in tens of thousands of years."
-
-ship "Tempest" "Tempest (Heavy)"
-	outfits
-		"Sunbeam" 4
-		"Dual Sunbeam Turret"
-		"Wanderer Anti-Missile" 2
-		
-		"White Sun Reactor"
-		"Red Sun Reactor"
-		"Dark Storm Shielding"
-		"Outfits Expansion"
-		"Wanderer Ramscoop"
-		
-		"Type 3 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Type 2 Radiant Steering"
-		"Hyperdrive"
-	
-	turret "Dual Sunbeam Turret"
-	turret "Wanderer Anti-Missile"
-	turret "Wanderer Anti-Missile"
-
-ship "Tempest" "Tempest (Missile)"
-	outfits
-		"Thunderhead Launcher" 4
-		"Thunderhead Missile" 220
-		"Thunderhead Storage Array" 3
-		"Dual Sunbeam Turret" 2
-		
-		"White Sun Reactor"
-		"Small Biochemical Cell"
-		"Dark Storm Shielding"
-		"Wanderer Ramscoop"
-		"Outfits Expansion"
-		
-		"Type 4 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Hyperdrive"
-	
+	sprite "ship/hurricane"
+	"final explode" "final explosion medium"
 	turret
-	turret "Dual Sunbeam Turret"
-	turret "Dual Sunbeam Turret"
-
-
-
-ship "Derecho"
-	sprite "ship/derecho"
-	thumbnail "thumbnail/derecho"
-	attributes
-		category "Heavy Warship"
+		"required crew" 17
+	gun -85 21
+		
 		licenses
-			"Wanderer Military"
-		"cost" 30500000
-		"shields" 53200
-		"hull" 32700
-		"required crew" 53
-		"bunks" 82
-		"mass" 540
-		"drag" 8.7
-		"heat dissipation" 0.6
-		"fuel capacity" 500
-		"cargo space" 56
-		"outfit space" 796
-		"weapon capacity" 342
-		"engine capacity" 164
-		weapon
-			"blast radius" 340
-			"shield damage" 3400
-			"hull damage" 1700
-			"hit force" 5100
-	outfits
-		"Sunbeam" 2
-		"Thunderhead Launcher" 2
-		"Thunderhead Missile" 80
-		"Dual Sunbeam Turret" 2
-		"Wanderer Anti-Missile" 2
-		
-		"Blue Sun Reactor"
-		"Red Sun Reactor"
-		"Dark Storm Shielding"
-		"Bright Cloud Shielding"
-		"Wanderer Heat Sink"
-		"Wanderer Ramscoop"
-		
-		"Type 4 Radiant Thruster"
-		"Type 1 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Type 3 Radiant Steering"
+	attributes
+	engine 10 47
 		"Hyperdrive"
-		
+	gun 15 -55 "Moonbeam"
+		"Thunderhead Storage Array" 4
+	turret 0 -37 "Dual Sunbeam Turret"
+		"mass" 260
 	engine -16 177
-	engine 16 177
-	gun -12 -156 "Sunbeam"
-	gun 12 -156 "Sunbeam"
-	gun -17 -134 "Thunderhead Launcher"
-	gun 17 -134 "Thunderhead Launcher"
-	turret -28 -45 "Dual Sunbeam Turret"
-	turret 28 -45 "Dual Sunbeam Turret"
-	turret -38 95 "Wanderer Anti-Missile"
-	turret 38 95 "Wanderer Anti-Missile"
-	explode "small explosion" 40
-	explode "medium explosion" 70
-	explode "large explosion" 50
-	explode "huge explosion" 20
-	"final explode" "final explosion large" 1
-	description "Like a latent gene waiting to express itself, the knowledge of how to wage war in space has been passed down through hundreds of generations of Wanderers. Based on one of their ancient designs, the Derecho has a mixture of agility and raw firepower that is well-suited to their present, rapidly changing situation."
-
-ship "Derecho" "Derecho (Turret)"
-	outfits
-		"Dual Sunbeam Turret" 4
-		
-		"Blue Sun Reactor"
-		"Red Sun Reactor"
-		"Dark Storm Shielding"
-		"Bright Cloud Shielding"
-		"Wanderer Heat Sink"
-		"Wanderer Ramscoop"
-		
-		"Type 4 Radiant Thruster"
-		"Type 2 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Type 2 Radiant Steering"
-		"Hyperdrive"
-
-ship "Derecho" "Derecho (Tough)"
-	outfits
-		"Sunbeam" 4
-		"Dual Sunbeam Turret" 2
-		
-		"Blue Sun Reactor"
-		"Yellow Sun Reactor"
-		"Dark Storm Shielding" 2
-		"Wanderer Ramscoop"
-		"Outfits Expansion"
-		
-		"Type 4 Radiant Thruster"
+	gun 21 -83 "Thunderhead Launcher"
+		"shields" 53200
+		"drag" 6.2
 		"Type 4 Radiant Steering" 2
+		"Type 4 Radiant Thruster"
+	sprite "ship/winter gale"
 		"Hyperdrive"
-	
-	turret "Dual Sunbeam Turret"
-	turret "Dual Sunbeam Turret"
-	turret
-	turret
+	thumbnail "thumbnail/tempest"
+	description "This is a Deep River freighter that has been converted into a transport ship for refugees."
+	turret 38 95 "Wanderer Anti-Missile"
+		"Blue Sun Reactor"
+		"outfit space" 320
+ship "Hurricane" "Hurricane (Tough)"
+		"Wanderer Ramscoop"
+		
+		"Wanderer Anti-Missile" 2
+		category "Heavy Freighter"
+		"Wanderer Heat Sink"
+	thumbnail "thumbnail/summer leaf"
+	description "The Hurricane is not built for speed, elegance, or versatility, but for one simple purpose: to be durable enough to serve as a rearguard, absorbing an enemy's attacks for long enough to allow the fleet it is guarding to escape."
+		"Type 4 Radiant Thruster"
 
+		"outfit space" 488
+	gun -29 -9
+	engine -53 345 .7
+		"cost" 19700000
+		"cost" 21120000
+	turret
+	gun 62 32
+		"Sunbeam" 4
+		"Thunderhead Storage Array"
+	outfits
+	thumbnail "thumbnail/deep river"
+		"Thunderhead Missile" 80
+	gun "Thunderhead Launcher"
+			"blast radius" 280
+	outfits
+		
+		"Thunderhead Missile" 160
+		"cargo space" -912
+	engine -9 28
+		"drag" .6
+			"shield damage" 100
+		
+		"mass" -160
+		"Bright Cloud Shielding"
+			"hull damage" 1700
+
+	gun 29 -9
+	gun -15 -10
+		"cost" 18300000
+		"drag" 2.6
+		"Thunderhead Launcher" 4
+	outfits
+	gun -41 -10 "Sunbeam"
+	engine 0 345
+		weapon
+			"hit force" 6000
+		
+		"engine capacity" 26
+			Wanderer
+	turret
+		"Type 2 Radiant Thruster"
+	sprite "ship/deep river 3"
+		
+		"fuel capacity" 500
+		"heat dissipation" .6
+		"shields" 7700
+	gun -68 5
+		"Dark Storm Shielding" 2
+
+	explode "huge explosion" 30
+
+		"Hyperdrive"
+		
+		category "Medium Warship"
+		
+		licenses
+		"bunks" 15
+			"blast radius" 10
+			"hit force" 5100
+		"outfit space" 607
+		"cost" 16100000
+		"Small Biochemical Cell"
+		"Wanderer Anti-Missile"
+		"required crew" 8
+	explode "huge explosion" 20
+	engine 9 28
+		"outfit space" 321
+		"cargo space" 74
+
+	"final explode" "final explosion small"
+	sprite "ship/deep river 4"
+		"Type 2 Radiant Steering"
+	turret -36 330 "Wanderer Anti-Missile"
+		"Hyperdrive"
+		"cargo space" 56
+	outfits
+	outfits
+		"shields" 42100
+		"drag" 2.9
+		"drag" 5.6
+	outfits
+		"mass" 770
+			"blast radius" 10
+	turret
+		
+		"bunks" 53
+	gun -32 57 "Thunderhead Launcher"
+		"Type 3 Radiant Steering"
+	description "Flycatcher drones are used by the Wanderers to keep their star systems safe. Rather than carrying weapons of its own, a stock Flycatcher just carries an anti-missile turret for defending other ships."
+		licenses
+		"Type 4 Radiant Thruster"
+	attributes
+			"Wanderer Military"
+		"Dark Storm Shielding" 2
+			"hit force" 3000
+
+		"cargo space" 14
+	turret 0 28
+	thumbnail "thumbnail/strong wind"
+	thumbnail "thumbnail/winter gale"
+	explode "tiny explosion" 20
+		"Wanderer Ramscoop"
+	sprite "ship/earth shaper"
+	engine -9 30
+		"Dark Storm Shielding"
+		"Type 4 Radiant Thruster"
+	explode "tiny explosion" 30
+	description "The Riptide is a dedicated transport ship meant to replace the temporary Deep River freighters that were converted into transport ships for refugee evacuation. Although not as durable as the Deep River, the Riptide is far more nimble of a ship while at the same time being able to carry more passengers."
+		"mass" 750
+		"required crew" 76
+		"Moonbeam" 2
+		"Blue Sun Reactor"
+	sprite "ship/deep river"
+		"bunks" 117
+	sprite "ship/strong wind"
 
 
 ship "Hurricane"
-	sprite "ship/hurricane"
-	thumbnail "thumbnail/hurricane"
-	attributes
-		category "Heavy Warship"
-		licenses
-			"Wanderer Military"
-		"cost" 39100000
-		"shields" 72400
-		"hull" 46500
-		"required crew" 76
-		"bunks" 117
-		"mass" 770
-		"drag" 11.9
-		"heat dissipation" 0.55
-		"fuel capacity" 500
-		"cargo space" 98
-		"outfit space" 960
-		"weapon capacity" 428
-		"engine capacity" 140
-		weapon
-			"blast radius" 400
-			"shield damage" 4000
-			"hull damage" 2000
-			"hit force" 6000
-	outfits
-		"Sunbeam" 6
-		"Dual Sunbeam Turret" 2
-		"Wanderer Anti-Missile" 2
-		
-		"Blue Sun Reactor"
 		"White Sun Reactor"
-		"Dark Storm Shielding" 2
-		"Wanderer Heat Sink"
-		"Wanderer Ramscoop"
-		
-		"Type 4 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Type 2 Radiant Steering"
-		"Hyperdrive"
-		
-	engine -23 181
-	engine 23 181
-	gun -68 5
-	gun 68 5
-	gun -85 21
-	gun 85 21
-	gun -62 32
-	gun 62 32
-	turret -27 -80 "Dual Sunbeam Turret"
-	turret 27 -80 "Dual Sunbeam Turret"
-	turret 0 -33
-	turret -39 140 "Wanderer Anti-Missile"
-	turret 39 140 "Wanderer Anti-Missile"
-	explode "small explosion" 20
-	explode "medium explosion" 80
-	explode "large explosion" 70
-	explode "huge explosion" 30
-	"final explode" "final explosion large" 1
-	description "The Hurricane is not built for speed, elegance, or versatility, but for one simple purpose: to be durable enough to serve as a rearguard, absorbing an enemy's attacks for long enough to allow the fleet it is guarding to escape."
 
-ship "Hurricane" "Hurricane (Turret)"
-	outfits
-		"Dual Sunbeam Turret" 5
-		
-		"Blue Sun Reactor" 2
-		"Dark Storm Shielding" 2
-		"Wanderer Heat Sink"
-		"Outfits Expansion" 2
-		"Wanderer Ramscoop"
-		
-		"Type 4 Radiant Thruster"
-		"Type 2 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Hyperdrive"
+	gun -20 -48 "Moonbeam"
+		"hull" 14800
 
-ship "Hurricane" "Hurricane (Tough)"
-	outfits
-		"Sunbeam" 2
-		"Thunderhead Launcher" 4
-		"Thunderhead Missile" 160
-		"Dual Sunbeam Turret" 2
-		"Wanderer Anti-Missile" 2
-		
-		"Blue Sun Reactor"
-		"White Sun Reactor"
-		"Dark Storm Shielding" 4
-		"Wanderer Ramscoop"
-		"Outfits Expansion" 2
-		
-		"Type 4 Radiant Thruster"
-		"Type 1 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Type 1 Radiant Steering"
-		"Hyperdrive"
-
-	gun "Sunbeam"
-	gun "Sunbeam"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
 	turret "Dual Sunbeam Turret"
-	turret "Dual Sunbeam Turret"
-	turret
-	turret "Wanderer Anti-Missile"
-	turret "Wanderer Anti-Missile"
-
-
-
-ship "Cool Breeze"
-	sprite "ship/cool breeze"
-	thumbnail "thumbnail/cool breeze"
-	attributes
-		category "Interceptor"
-		licenses
-			"Wanderer Military"
-		"cost" 4530000
-		"shields" 7700
-		"hull" 3100
-		"required crew" 1
-		"bunks" 3
-		"mass" 50
-		"drag" 1.8
-		"heat dissipation" .9
-		"fuel capacity" 400
-		"cargo space" 14
-		"outfit space" 192
-		"weapon capacity" 41
-		"engine capacity" 62
-		weapon
-			"blast radius" 36
-			"shield damage" 360
-			"hull damage" 180
-			"hit force" 540
-	outfits
-		"Moonbeam" 2
-		
-		"Red Sun Reactor"
+		"Hyperdrive"
+		"Sunbeam" 4
 		"Bright Cloud Shielding"
+
 		
-		"Type 2 Radiant Thruster"
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+			"Wanderer Military"
+	explode "large explosion" 20
+		"Type 1 Radiant Thruster"
+
+		"fuel capacity" 500
+		
+	explode "small explosion" 80
+		"required crew" 13
+		"Thunderhead Missile" 80
+	explode "medium explosion" 20
+	turret 36 330 "Wanderer Anti-Missile"
+		"cargo space" -228
+		"drag" 1.8
+			Wanderer
+	outfits
+		"cargo space" -456
+			Wanderer
+
+	turret 0 -28 "Sunbeam Turret"
+		"Yellow Sun Reactor" 2
+	explode "small explosion" 80
+	gun -40 -217
+		"bunks" 22
+ship "Summer Leaf"
+		"Hyperdrive"
+		"bunks" 3
+		"hull" 22350
+		"engine capacity" 186
+	sprite "ship/autumn leaf"
+
+	gun 15 -10
+		"weapon capacity" 84
+		"Hyperdrive"
+	outfits
+	outfits
+	turret 0 -33
+		"required crew" 6
+	gun 40 -217
+	description "This is the first ship the Wanderers have built in millennia that is designed to be operated by a single pilot instead of a crew. They are flown mostly by young warriors eager to prove their mettle by winning individual glory in battle."
+		licenses
+
 		"Type 3 Radiant Steering"
+		"required crew" 53
+		category "Medium Warship"
+
+		"mass" 500
+		"engine capacity" 140
+		"Outfits Expansion"
+		
+			Wanderer
+		
+		"fuel capacity" 800
+	explode "tiny explosion" 40
+		
+	outfits
+		
+		category "Heavy Warship"
+	engine 23 181
+	outfits
+		"Wanderer Anti-Missile" 2
+		licenses
+	turret -38 95 "Wanderer Anti-Missile"
+		"engine capacity" 83
+	gun "Thunderhead Launcher"
+		"White Sun Reactor"
+	engine 13 94
+		"Type 4 Radiant Steering"
+		
+	sprite "ship/tempest"
+	turret "Dual Sunbeam Turret"
+ship "Deep River"
+		"heat dissipation" 0.6
+		"Hyperdrive"
+	turret "Wanderer Anti-Missile"
+		"automaton" 1
+
+		"fuel capacity" 600
+	gun 17 -134 "Thunderhead Launcher"
+		"hull" 3300
+	gun 20 -48 "Moonbeam"
+		"Bright Cloud Shielding"
+		"Yellow Sun Reactor"
+ship "Derecho" "Derecho (Tough)"
+			Wanderer
+		
+	outfits
+	attributes
+		"required crew" 1
+		"Moonbeam Turret"
+		"Type 3 Radiant Steering"
+		"Type 4 Radiant Thruster"
+	attributes
+		"Dark Storm Shielding"
+	explode "small explosion" 60
+		"cargo space" 28
+		"Dual Sunbeam Turret" 2
+
+		weapon
+		"cargo space" -684
+	turret "Wanderer Anti-Missile"
+		"Type 3 Radiant Thruster"
+		"Hyperdrive"
+		"engine capacity" 83
+		"Sunbeam" 2
+		"White Sun Reactor"
+		"Wanderer Heat Sink"
+		category "Light Warship"
+	turret 39 140 "Wanderer Anti-Missile"
+			"hit force" 1200
+# terms of the GNU General Public License as published by the Free Software
+		"Dark Storm Shielding"
+		licenses
+	explode "small explosion" 40
+	attributes
+		"fuel capacity" 500
+		"Large Biochemical Cell"
+		"bunks" 16
+		
+		"Type 4 Radiant Thruster"
+	explode "small explosion" 20
+
+		"Type 2 Radiant Steering"
+		"asteroid scan power" 100
+ship "Winter Gale"
+	explode "huge explosion" 20
+	gun "Sunbeam"
+		"cost" 4530000
+		category "Drone"
+		"Type 4 Radiant Steering"
+		"engine capacity" 164
+		"hull" 25900
+
+	explode "medium explosion" 60
+		"hull" 7400
+	gun -56 -217
+			"hull damage" 1300
+	engine 22 129
+			"hull damage" 600
+			"shield damage" 1200
+	engine 13 94
+	thumbnail "thumbnail/earth shaper"
+			"shield damage" 2600
+	turret 0 -28 "Wanderer Anti-Missile"
+
+	gun -62 32
+	gun "Sunbeam"
+		"mass" 750
+		"weapon capacity" 177
+ship "Deep River" "Deep River 0"
+	sprite "ship/deep river 1"
+			"hit force" 3900
+	engine -30 127
+		"Type 3 Radiant Thruster"
+		"engine capacity" 122
+	gun -21 -83 "Thunderhead Launcher"
+		"heat dissipation" .9
+ship "Flycatcher"
+		
+		"Thunderhead Storage Array" 3
+		"Type 2 Radiant Steering"
+	engine 18 64
+	turret 0 4
+ship "Tempest" "Tempest (Heavy)"
+		"Wanderer Ramscoop"
+		"Dark Storm Shielding"
+
+		"Type 1 Radiant Thruster"
+		"Wanderer Ramscoop"
+
+	"final explode" "final explosion small"
+		"Dual Sunbeam Turret"
+		"cost" 830000
+		"Moonbeam" 2
+	gun "Thunderhead Launcher"
+		"engine capacity" 103
+	engine -13 94
+		
+	"final explode" "final explosion medium"
+	sprite "ship/deep river 2"
+		"Sunbeam" 2
+		
+		"outfit space" 192
+		"heat dissipation" .9
+	turret "Dual Sunbeam Turret"
+		"automaton" 1
+ship "Tempest"
+			"hit force" 1050
+	turret "Dual Sunbeam Turret"
+		
+
+		"Wanderer Anti-Missile" 2
+		"weapon capacity" 198
+		"hull" 47500
+		"required crew" 47
+		"Type 3 Radiant Steering"
+	turret "Dual Sunbeam Turret"
+	gun -18 -217
 		"Hyperdrive"
 	
-	engine -10 47
-	engine 10 47
-	gun -15 -10
-	gun 15 -10
-	explode "tiny explosion" 30
-	explode "small explosion" 10
-	"final explode" "final explosion small"
-	description "This is the first ship the Wanderers have built in millennia that is designed to be operated by a single pilot instead of a crew. They are flown mostly by young warriors eager to prove their mettle by winning individual glory in battle."
-
-ship "Cool Breeze" "Cool Breeze (Sunbeam)"
-	outfits
-		"Sunbeam"
-		
-		"Red Sun Reactor"
-		"Bright Cloud Shielding"
-		
-		"Type 3 Radiant Thruster"
-		"Type 2 Radiant Steering"
-		"Hyperdrive"
-
-
-
-ship "Winter Gale"
-	sprite "ship/winter gale"
-	thumbnail "thumbnail/winter gale"
-	attributes
-		category "Light Warship"
-		licenses
-			"Wanderer Military"
-		"cost" 14100000
-		"shields" 22400
-		"hull" 14800
-		"required crew" 14
-		"bunks" 23
-		"mass" 240
-		"drag" 5.6
-		"heat dissipation" .7
-		"fuel capacity" 600
-		"cargo space" 28
-		"outfit space" 478
-		"weapon capacity" 171
-		"engine capacity" 120
-		weapon
-			"blast radius" 120
-			"shield damage" 1200
-			"hull damage" 600
-			"hit force" 1800
-	outfits
-		"Moonbeam" 4
-		"Sunbeam" 2
-		"Wanderer Anti-Missile"
-		
-		"White Sun Reactor"
-		"Dark Storm Shielding"
-		
-		"Type 3 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Type 3 Radiant Steering"
-		"Hyperdrive"
-		
-	engine -13 94
-	engine 13 94
-	gun -15 -55 "Moonbeam"
-	gun 15 -55 "Moonbeam"
-	gun -20 -48 "Moonbeam"
-	gun 20 -48 "Moonbeam"
-	gun -41 -10 "Sunbeam"
-	gun 41 -10 "Sunbeam"
-	turret 0 -28 "Wanderer Anti-Missile"
-	explode "tiny explosion" 20
-	explode "small explosion" 40
-	explode "medium explosion" 30
-	"final explode" "final explosion medium"
-	description "The Winter Gale was designed by the Wanderers as a hardier and better-armed alternative to their existing light patrol ships. The Gale's large number of weapon hardpoints makes it flexible enough to reconfigure for facing a wide variety of enemies."
-
-ship "Winter Gale" "Winter Gale (Heavy)"
-	outfits
-		"Sunbeam" 4
-		"Moonbeam Turret"
-		
-		"White Sun Reactor"
-		"Dark Storm Shielding"
-		
-		"Type 3 Radiant Thruster"
-		"Type 1 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Type 1 Radiant Steering"
-		"Hyperdrive"
-		
-	engine -13 94
-	engine 13 94
-	gun "Sunbeam"
-	gun "Sunbeam"
-	gun "Sunbeam"
-	gun "Sunbeam"
-	gun
-	gun
-	turret "Moonbeam Turret"
-
-ship "Winter Gale" "Winter Gale (Missile)"
-	outfits
-		"Thunderhead Launcher" 4
-		"Thunderhead Missile" 160
-		"Moonbeam" 2
-		"Wanderer Anti-Missile"
-		
-		"White Sun Reactor"
-		"Dark Storm Shielding"
-		
-		"Type 4 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Hyperdrive"
-		
-	engine -13 94
-	engine 13 94
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Moonbeam"
-	gun "Moonbeam"
-	turret "Wanderer Anti-Missile"
-
-
-
-ship "Deep River"
-	sprite "ship/deep river"
-	thumbnail "thumbnail/deep river"
-	attributes
-		category "Heavy Freighter"
-		licenses
 			Wanderer
-		"cost" 18300000
-		"shields" 17600
-		"hull" 47500
-		"required crew" 13
-		"bunks" 22
-		"mass" 750
-		"drag" 9.4
-		"heat dissipation" .6
-		"fuel capacity" 500
-		"cargo space" 1140
-		"outfit space" 363
-		"weapon capacity" 177
-		"engine capacity" 83
-		weapon
-			"blast radius" 280
-			"shield damage" 2800
-			"hull damage" 1400
-			"hit force" 4200
-	outfits
-		"Thunderhead Launcher" 6
-		"Thunderhead Missile" 320
-		"Thunderhead Storage Array" 4
-		
-		"Large Biochemical Cell"
-		"Bright Cloud Shielding"
+		"Type 4 Radiant Steering"
+		"engine capacity" 114
+		"Sunbeam" 2
+	
+		"drag" 7.3
+			"blast radius" 36
+		"Type 4 Radiant Steering"
+		"fuel capacity" 600
 		"Wanderer Ramscoop"
+		"White Sun Reactor"
 		
-		"Type 2 Radiant Thruster"
-		"Type 3 Radiant Steering"
+	engine -30 165
 		"Hyperdrive"
+			"blast radius" 340
+		"Type 4 Radiant Steering"
+	engine 53 345 .7
+
+			"Wanderer Military"
+		"Hyperdrive"
+		"cost" 9500000
+	attributes
+			"blast radius" 280
+		category "Light Warship"
+		"Type 1 Radiant Steering"
+	gun 41 -10 "Sunbeam"
+		"Type 1 Radiant Steering"
+	gun -57 21 "Sunbeam"
+	gun "Sunbeam"
+	turret "Dual Sunbeam Turret"
+	engine -22 129
+	"final explode" "final explosion large"
+		"mass" 30
+			"Wanderer Military"
+		"Type 4 Radiant Steering"
+		weapon
+	"final explode" "final explosion medium" 1
+	gun 18 -217
+		"drag" 9.4
+	gun "Moonbeam"
+		"Hyperdrive"
+		"mass" 320
+		"Bright Cloud Shielding"
+		"Type 2 Radiant Thruster"
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+		"Wanderer Heat Sink"
+		"Wanderer Ramscoop"
+	explode "small explosion" 10
+		"Sunbeam" 2
+		"Type 3 Radiant Thruster"
+		"fuel capacity" 800
+
+	explode "tiny explosion" 50
+			"shield damage" 2000
+	engine -18 64
+			"hull damage" 150
+		category "Heavy Warship"
+	explode "medium explosion" 40
+#
+	plural "Summer Leaves"
+		"Sunbeam" 2
+		"Type 4 Radiant Steering"
+	gun -12 -156 "Sunbeam"
+	explode "medium explosion" 80
+		"mass" 240
+	gun "Moonbeam"
+			"hull damage" 1000
+		"Hyperdrive"
+		"White Sun Reactor"
+		"required crew" 14
+
+		"Dual Sunbeam Turret" 4
+		"outfit space" 960
+		"cargo space" 41
+		
+		"Type 1 Radiant Steering"
+		category "Interceptor"
+	description "The Earth Shaper is a robotic drone that the Wanderers use for mining, exploring, surveying, and terraforming."
+		"Red Sun Reactor"
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+			"hull damage" 180
 		
 	engine 53 345 .7
-	engine 0 345
-	engine -53 345 .7
-	gun -56 -217
-	gun 56 -217
-	gun -40 -217
-	gun 40 -217
-	gun -18 -217
-	gun 18 -217
-	explode "small explosion" 80
-	explode "medium explosion" 60
-	explode "large explosion" 30
-	explode "huge explosion" 20
+	gun "Sunbeam"
 	"final explode" "final explosion large"
-	description "The Deep River is a bulk freighter, designed to carry cargo in detachable pods."
+ship "Derecho"
+	engine -18 64
+	attributes
+		"Sunbeam" 2
+		
+		"Dark Storm Shielding" 4
+		"cost" 30500000
+	gun "Sunbeam"
+		"Thunderhead Launcher" 6
+	"final explode" "final explosion large" 1
+	attributes
 
-ship "Deep River" "Deep River 0"
-	sprite "ship/deep river 0"
+			"shield damage" 3400
+	gun 25 -22
+	turret -32 87 "Wanderer Anti-Missile"
+		
+		"Wanderer Anti-Missile"
+		
+		"Wanderer Anti-Missile" 2
+		"Wanderer Anti-Missile"
+		"cargo space" 98
+	gun 68 5
+	thumbnail "thumbnail/deep river"
+	"final explode" "final explosion small"
+			"shield damage" 700
+		licenses
+	thumbnail "thumbnail/derecho"
+	gun "Thunderhead Launcher"
 	add attributes
-		"mass" -400
-		"drag" -2
-		"cargo space" -1140
-
-ship "Deep River" "Deep River 1"
-	sprite "ship/deep river 1"
-	add attributes
-		"mass" -320
-		"drag" -1.6
-		"cargo space" -912
-
-ship "Deep River" "Deep River 2"
-	sprite "ship/deep river 2"
-	add attributes
-		"mass" -240
+			"hull damage" 150
+	sprite "ship/flycatcher"
+		"Type 4 Radiant Steering"
+	sprite "ship/deep river"
+		"Wanderer Ramscoop"
 		"drag" -1.2
-		"cargo space" -684
-
-ship "Deep River" "Deep River 3"
-	sprite "ship/deep river 3"
-	add attributes
-		"mass" -160
+			"blast radius" 70
+	engine 30 165
+		"Moonbeam" 4
+	description "The Autumn Leaf is based on the Wanderer Summer Leaf light warship, but slightly larger and better equipped for combat. Unlike Wanderer peacetime ships, it is equipped with a turret mount in addition to the ports for fixed guns."
+	engine 0 345
+		
 		"drag" -.8
-		"cargo space" -456
+		"Type 3 Radiant Steering"
+		"Wanderer Anti-Missile"
+			Wanderer
+		"Outfits Expansion" 2
+
+		"hull" 47500
+		"required crew" 38
+		"Wanderer Ramscoop"
+	explode "large explosion" 20
+		"weapon capacity" 428
+ship "Derecho" "Derecho (Turret)"
+	turret 28 -45 "Dual Sunbeam Turret"
+			"Wanderer Military"
+		"Wanderer Ramscoop"
+	explode "small explosion" 80
+		"Type 2 Radiant Thruster"
+		"atmosphere scan" 100
+	explode "medium explosion" 10
+	outfits
+	add attributes
+	turret 32 87 "Wanderer Anti-Missile"
+	gun
+		"heat dissipation" 0.55
+	explode "small explosion" 60
+		"drag" -1.6
+		"weapon capacity" 171
+		"Thunderhead Missile" 320
+		"shields" 17600
+
+		"Type 3 Radiant Thruster"
+		"Outfits Expansion"
+		weapon
+			"shield damage" 800
+	
+		"Type 4 Radiant Steering"
+		"cargo space" -1140
+		"Type 4 Radiant Thruster"
+			"hit force" 4200
+ship "Deep River" "Deep River 3"
+		"Sunbeam" 2
+	outfits
+		weapon
+	sprite "ship/riptide"
+		"Thunderhead Launcher" 4
+		category "Transport"
+		"required crew" 13
+		"engine capacity" 120
+		"Wanderer Ramscoop"
+
+	gun 12 -156 "Sunbeam"
+# Foundation, either version 3 of the License, or (at your option) any later version.
+		licenses
+		
+		"shields" 14400
+	description "The Deep River is a bulk freighter, designed to carry cargo in detachable pods."
+		"Dark Storm Shielding"
+	thumbnail "thumbnail/riptide"
+			"hit force" 250
+		"Sunbeam Turret"
+		"Blue Sun Reactor"
+			"shield damage" 4000
+		
+	thumbnail "thumbnail/cool breeze"
+		"shields" 22400
+	engine 9 30
+		"engine capacity" 117
+		"Bright Cloud Shielding"
+		
+		"Type 3 Radiant Thruster"
+	engine -13 94
+		"Wanderer Anti-Missile" 4
+ship "Winter Gale" "Winter Gale (Missile)"
+		"Type 2 Radiant Thruster"
+		"cargo space" 68
+		"Outfits Expansion" 2
+		"Outfits Expansion"
+		licenses
+		"heat dissipation" .7
+	gun 57 21 "Sunbeam"
+
+	explode "large explosion" 30
+		"Dark Storm Shielding"
+		"hull" 6700
+	thumbnail "thumbnail/autumn leaf"
+		"drag" -2
+ship "Autumn Leaf"
+		"Hyperdrive"
+	turret -39 140 "Wanderer Anti-Missile"
+		"heat dissipation" .7
+	gun 32 57 "Thunderhead Launcher"
+		"Yellow Sun Reactor"
+		"Type 1 Radiant Thruster"
+	gun "Sunbeam"
+	outfits
+			"hull damage" 400
+		"Yellow Sun Reactor"
+		"Dual Sunbeam Turret" 2
+		weapon
+		"Thunderhead Missile" 220
+		category "Light Freighter"
+		"shields" 72400
+	explode "medium explosion" 50
+		"outfit space" 363
+		"bunks" 82
+		"Wanderer Ramscoop"
+		"drag" .9
+		"Hyperdrive"
+
+		"bunks" 233
+		
+		"Type 4 Radiant Thruster"
+	plural "Autumn Leaves"
+		"Hyperdrive"
+	gun
+			"hit force" 250
+	description "The Strong Wind was originally designed for science and exploration, but recently the Wanderers have modified the design to allow it to be used as a warship."
+	thumbnail "thumbnail/hurricane"
+		"Small Biochemical Cell" 2
+
+		"drag" 4.7
+		"Type 4 Radiant Steering"
 
 ship "Deep River" "Deep River 4"
-	sprite "ship/deep river 4"
-	add attributes
-		"mass" -80
+	engine 16 177
 		"drag" -.4
-		"cargo space" -228
-
-ship "Deep River Transport"
-	sprite "ship/deep river"
-	thumbnail "thumbnail/deep river"
-	attributes
-		category "Heavy Freighter"
-		licenses
-			Wanderer
-		"cost" 18300000
-		"shields" 17600
-		"hull" 47500
-		"required crew" 13
-		"bunks" 166
-		"mass" 750
-		"drag" 9.4
-		"heat dissipation" .6
-		"fuel capacity" 500
-		"cargo space" 74
-		"outfit space" 321
-		"weapon capacity" 114
-		"engine capacity" 83
-		weapon
-			"blast radius" 280
-			"shield damage" 2800
-			"hull damage" 1400
-			"hit force" 4200
+	engine -10 47
 	outfits
-		"Wanderer Anti-Missile" 4
+	explode "small explosion" 20
 		
-		"Yellow Sun Reactor"
-		"Dark Storm Shielding"
+	description "In response to the Unfettered invasion, the Wanderers have begun digging up ancient warship designs from their archives and putting them back into production. The Tempest is the first purpose-built warship they have manufactured in tens of thousands of years."
+		"mass" 110
+
 		"Wanderer Ramscoop"
-		
-		"Type 2 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Hyperdrive"
-		
-	engine 53 345 .7
-	engine 0 345
-	engine -53 345 .7
-	turret -36 -205 "Wanderer Anti-Missile"
-	turret 36 -205 "Wanderer Anti-Missile"
-	turret -36 330 "Wanderer Anti-Missile"
-	turret 36 330 "Wanderer Anti-Missile"
-	explode "small explosion" 80
-	explode "medium explosion" 60
-	explode "large explosion" 30
-	explode "huge explosion" 20
-	"final explode" "final explosion large"
-	description "This is a Deep River freighter that has been converted into a transport ship for refugees."
-
-
-
-ship "Riptide"
-	sprite "ship/riptide"
-	thumbnail "thumbnail/riptide"
-	attributes
-		category "Transport"
-		licenses
-			Wanderer
-		"cost" 21120000
-		"shields" 38600
-		"hull" 22350
-		"required crew" 47
-		"bunks" 233
-		"mass" 500
-		"drag" 7.3
-		"heat dissipation" .7
-		"fuel capacity" 800
-		"cargo space" 164
-		"outfit space" 488
-		"weapon capacity" 98
-		"engine capacity" 186
-		weapon
-			"blast radius" 260
-			"shield damage" 2600
-			"hull damage" 1300
-			"hit force" 3900
+	turret "Moonbeam Turret"
+		"White Sun Reactor"
+		"Dark Storm Shielding"
+		"Dual Sunbeam Turret" 5
 	outfits
-		"Sunbeam Turret"
+		"White Sun Reactor"
+			"hit force" 540
+		"outfit space" 796
+	explode "medium explosion" 30
+ship "Deep River" "Deep River 2"
+
+		"tactical scan power" 25
+		"Type 4 Radiant Steering"
+		"Blue Sun Reactor"
+		"Type 4 Radiant Thruster"
+	turret 36 -205 "Wanderer Anti-Missile"
+		
+		
+	outfits
+			"shield damage" 2800
+		"Red Sun Reactor"
 		"Wanderer Anti-Missile" 2
+		"shields" 17600
+		"shields" 28500
+	
+		"White Sun Reactor"
+		"Dual Sunbeam Turret" 2
+	explode "small explosion" 20
+			"shield damage" 360
+		
+
+		"Sunbeam" 4
+	explode "tiny explosion" 20
+	outfits
+	gun 64 13 "Sunbeam"
+
+	outfits
+		category "Heavy Freighter"
+		weapon
+			"hull damage" 2000
+		"mass" -240
+		"Bright Cloud Shielding"
+		"cargo space" 1140
+	engine -23 181
+		"Dark Storm Shielding"
+
+			"blast radius" 280
+		"Red Sun Reactor"
+			"blast radius" 400
+		"Type 4 Radiant Thruster"
+	add attributes
+		"Type 1 Radiant Thruster"
+		"outfit space" 478
+	"final explode" "final explosion large" 1
+	outfits
+	description "The Winter Gale was designed by the Wanderers as a hardier and better-armed alternative to their existing light patrol ships. The Gale's large number of weapon hardpoints makes it flexible enough to reconfigure for facing a wide variety of enemies."
+	turret -27 -80 "Dual Sunbeam Turret"
+	sprite "ship/deep river 0"
+
+		"Bright Cloud Shielding"
+	explode "medium explosion" 70
+
+
+			"blast radius" 120
+	add attributes
+		
+
+	
+			"hit force" 1800
+		"Bright Cloud Shielding"
+		"outfit space" 86
+		"Dual Sunbeam Turret" 2
+		"fuel capacity" 500
+
+	attributes
+		"Hyperdrive"
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+		"hull" 4700
+		"weapon capacity" 41
+		"Type 2 Radiant Thruster"
+		"weapon capacity" 114
+			"hull damage" 350
+ship "Hurricane" "Hurricane (Turret)"
+		"Type 3 Radiant Steering"
+			"shield damage" 100
+		"Type 3 Radiant Thruster"
+		"Dark Storm Shielding" 2
+	attributes
+		weapon
+			"hull damage" 1400
+		"Dark Storm Shielding"
+		"weapon capacity" 342
+		"Thunderhead Missile" 160
+		"Type 4 Radiant Steering"
+		"Type 3 Radiant Thruster"
+		
+ship "Autumn Leaf" "Autumn Leaf (Heavy)"
+		
+		
+
+	explode "medium explosion" 60
+	gun -15 -55 "Moonbeam"
+		weapon
+		"fuel capacity" 600
+
+		"cargo space" 27
+		"Bright Cloud Shielding"
+
+		"Dual Sunbeam Turret"
+		"hull" 32700
+		weapon
+ship "Deep River" "Deep River 1"
+		"outfit space" 361
+
+		"hull" 3100
+		"Sunbeam" 6
+		"Type 2 Radiant Thruster"
+	sprite "ship/derecho"
+	turret -28 -45 "Dual Sunbeam Turret"
+		"cost" 12500000
+		"cargo space" 164
+
+		"Wanderer Heat Sink"
+	explode "tiny explosion" 30
+	explode "large explosion" 30
+			"blast radius" 260
+		weapon
+			"hull damage" 1400
+	engine 30 127
+		"Type 3 Radiant Thruster"
+		"weapon capacity" 271
+		"bunks" 23
+	gun "Thunderhead Launcher"
+	explode "large explosion" 25
+	gun "Thunderhead Launcher"
+		"Wanderer Ramscoop" 2
+	turret "Wanderer Anti-Missile"
+	explode "small explosion" 30
+	description "Like a latent gene waiting to express itself, the knowledge of how to wage war in space has been passed down through hundreds of generations of Wanderers. Based on one of their ancient designs, the Derecho has a mixture of agility and raw firepower that is well-suited to their present, rapidly changing situation."
+		licenses
+	turret "Wanderer Anti-Missile"
+		"cost" 14100000
+		"Type 4 Radiant Steering"
+		"Red Sun Reactor"
+		"Wanderer Anti-Missile" 2
+		licenses
+			"shield damage" 2800
+		"Blue Sun Reactor"
+	turret 27 -80 "Dual Sunbeam Turret"
+ship "Deep River Transport"
+		"Dark Storm Shielding"
+		"cost" 500000
+	"final explode" "final explosion medium"
+		"atmosphere scan" 100
+	gun 85 21
+		"mass" -400
+		"Hyperdrive"
+	gun "Thunderhead Launcher"
+	explode "huge explosion" 20
+		"drag" 8.7
+	description "The Summer Leaf is mostly used by the Wanderers as a light transport, but it is also quite effective in combat."
+		"Wanderer Ramscoop"
+		"mass" 130
+		"engine capacity" 62
+		"shields" 18700
+		"weapon capacity" 98
+		"cargo space" 47
+			"shield damage" 2800
+		
+		"Type 4 Radiant Steering"
+	gun -64 13 "Sunbeam"
+ship "Strong Wind"
+	gun 56 -217
+		"Thunderhead Launcher" 2
+		"heat dissipation" 0.65
+		"outfit space" 493
+ship "Cool Breeze" "Cool Breeze (Sunbeam)"
+	attributes
+ship "Earth Shaper"
+	attributes
 		
 		"White Sun Reactor"
-		"Bright Cloud Shielding"
-		"Wanderer Ramscoop"
 		
-		"Type 4 Radiant Thruster"
-		"Type 2 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		"Type 3 Radiant Steering"
-		"Hyperdrive"
-	engine 30 165
-	engine -30 165
-	turret 0 -28 "Sunbeam Turret"
+	engine -13 94
 	turret 40 110 "Wanderer Anti-Missile"
-	turret -40 110 "Wanderer Anti-Missile"
-	explode "small explosion" 60
+	explode "large explosion" 70
+		"weapon capacity" 103
+		category "Light Warship"
+		"engine capacity" 26
+		"Wanderer Ramscoop"
+		"bunks" 39
+		"Blue Sun Reactor" 2
+			"blast radius" 200
+	explode "small explosion" 10
+		"Moonbeam Turret"
+		"Red Sun Reactor"
+	engine 18 64
+			"hit force" 4200
+		"cost" 18300000
+	turret "Dual Sunbeam Turret"
+		"Sunbeam" 4
+ship "Cool Breeze"
+		"fuel capacity" 400
+ship "Tempest" "Tempest (Missile)"
+# Copyright (c) 2015-2016 by Michael Zahniser
+	sprite "ship/summer leaf"
+	gun "Thunderhead Launcher"
+		
+		"mass" -320
+	gun -25 -22
+		
+		
+		"shields" 38600
+		weapon
+		"Thunderhead Launcher" 4
+		"hull" 46500
+		"bunks" 166
+		"Type 4 Radiant Steering"
+		
+		"White Sun Reactor"
+		"weapon capacity" 28
+	sprite "ship/cool breeze"
+		"drag" 11.9
+		
+		
+		"Thunderhead Missile" 100
+	gun -16 -100 "Sunbeam"
+	explode "small explosion" 40
+		"mass" 40
+		"fuel capacity" 300
+		
+		"Type 4 Radiant Steering"
+		"Hyperdrive"
+		
+			"Wanderer Military"
+		"Hyperdrive"
+		
+ship "Riptide"
+		
+		"Type 2 Radiant Steering"
+		
+		"cargo space" 45
+		"mass" -80
+		"Sunbeam"
+		"Thunderhead Launcher" 2
+		"Type 1 Radiant Thruster"
+
+			"hull damage" 1400
+		
+		"outfit space" 59
+		"hull" 19600
+	turret -36 -205 "Wanderer Anti-Missile"
+		
+		"White Sun Reactor"
+		"mass" 50
+		"heat dissipation" .7
+		"Small Biochemical Cell"
+	add attributes
 	explode "medium explosion" 40
-	explode "large explosion" 20
-	"final explode" "final explosion medium"
-	description "The Riptide is a dedicated transport ship meant to replace the temporary Deep River freighters that were converted into transport ships for refugee evacuation. Although not as durable as the Deep River, the Riptide is far more nimble of a ship while at the same time being able to carry more passengers."
+	explode "large explosion" 50
+	gun -17 -134 "Thunderhead Launcher"
+		"heat dissipation" .8
+		"heat dissipation" .8
+		licenses
+			"hit force" 4200
+		"mass" 540
+ship "Winter Gale" "Winter Gale (Heavy)"
+	turret -40 110 "Wanderer Anti-Missile"
+#
+		"Dual Sunbeam Turret" 2
+		"Type 1 Radiant Steering"
+			"blast radius" 80
+		"cost" 39100000
+	engine -53 345 .7
+		weapon
+	outfits
+	engine 13 94
+		"Hyperdrive"
+		licenses
+	turret "Wanderer Anti-Missile"
+	attributes
+		"heat dissipation" .9
+		"fuel capacity" 1000
+		"heat dissipation" .6
+		"Thunderhead Launcher" 2

@@ -1,3148 +1,3148 @@
-# Copyright (c) 2014 by Michael Zahniser
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-mission "Cargo Smuggling [0]"
-	name "Smuggling to <planet>"
-	job
-	repeat
-	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 20,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Cargo" 5 2 .1
-	illegal 20000
-	to offer
-		or
-			"reputation: Pirate" > -100
-			"combat rating" > 150
-	source
-		government "Pirate"
-	destination
-		distance 3 6
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 4000 200
+	name "Assassinate a military target"
 		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Cargo Smuggling [1]"
-	name "Smuggling to <planet>"
-	job
-	repeat
-	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 25,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Cargo" 5 2 .1
-	illegal 25000
-	to offer
-		random < 90
-		or
-			"reputation: Pirate" > -100
-			"combat rating" > 150
-	source
-		government "Pirate"
-	destination
-		distance 3 8
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 4000 200
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Cargo Smuggling [2]"
-	name "Smuggling to <planet>"
-	job
-	repeat
-	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 32,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Cargo" 5 2 .1
-	illegal 32000
-	to offer
-		random < 70
-		or
-			"reputation: Pirate" > -100
-			"combat rating" > 150
-	source
-		government "Pirate"
-	destination
-		distance 4 10
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 5000 200
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Cargo Smuggling [3]"
-	name "Smuggling to <planet>"
-	job
-	repeat
-	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 40,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Cargo" 5 2 .1
-	illegal 40000
-	to offer
-		random < 60
-		or
-			"reputation: Pirate" > -100
-			"combat rating" > 150
-	source
-		government "Pirate"
-	destination
-		distance 5 12
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 6000 200
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-
-
-mission "Drug Running [0]"
-	name "Drug run to <planet>"
-	job
-	repeat
-	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 37,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Substances" 5 2 .1
-	illegal 37000
-	to offer
-		random < 80
-		or
-			"reputation: Pirate" > -50
-			"combat rating" > 400
-	source
-		government "Pirate"
-	destination
-		distance 3 10
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 5000 250
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Drug Running [1]"
-	name "Drug run to <planet>"
-	job
-	repeat
-	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 46,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Substances" 5 2 .1
-	illegal 46000
-	to offer
-		random < 70
-		or
-			"reputation: Pirate" > -50
-			"combat rating" > 400
-	source
-		government "Pirate"
-	destination
-		distance 4 12
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 5000 250
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Drug Running [2]"
-	name "Drug run to <planet>"
-	job
-	repeat
-	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 55,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Substances" 5 2 .1
-	illegal 55000
-	to offer
-		random < 60
-		or
-			"reputation: Pirate" > -50
-			"combat rating" > 400
-	source
-		government "Pirate"
-	destination
-		distance 5 14
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 7000 250
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Drug Running [3]"
-	name "Drug run to <planet>"
-	job
-	repeat
-	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 65,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Substances" 5 2 .1
-	illegal 65000
-	to offer
-		random < 50
-		or
-			"reputation: Pirate" > -50
-			"combat rating" > 400
-	source
-		government "Pirate"
-	destination
-		distance 6 16
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 9000 250
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-
-
-mission "Bulk Cargo Smuggling [0]"
-	name "Bulk smuggling to <planet>"
-	job
-	repeat
-	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 47,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Cargo" 25 2 .1
-	illegal 47000
-	to offer
-		random < 70
-		or
-			"reputation: Pirate" > -50
-			"combat rating" > 400
-	source
-		government "Pirate"
-	destination
-		distance 3 8
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 7000 200
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Bulk Cargo Smuggling [1]"
-	name "Bulk smuggling to <planet>"
-	job
-	repeat
-	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 65,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Cargo" 25 2 .1
-	illegal 65000
-	to offer
-		random < 60
-		or
-			"reputation: Pirate" > -50
-			"combat rating" > 400
-	source
-		government "Pirate"
-	destination
-		distance 3 12
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 10000 200
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Bulk Cargo Smuggling [2]"
-	name "Bulk smuggling to <planet>"
-	job
-	repeat
-	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 86,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Cargo" 25 2 .1
-	illegal 86000
-	to offer
-		random < 40
-		or
-			"reputation: Pirate" > -50
-			"combat rating" > 400
-	source
-		government "Pirate"
-	destination
-		distance 4 16
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 15000 200
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-
-
-mission "Bulk Drug Running [0]"
-	name "Bulk drug run to <planet>"
-	job
-	repeat
-	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 86,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Substances" 25 2 .1
-	illegal 86000
-	to offer
-		random < 50
-		or
-			"reputation: Pirate" > -25
-			"combat rating" > 1100
-	source
-		government "Pirate"
-	destination
-		distance 4 12
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 10000 250
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Bulk Drug Running [1]"
-	name "Bulk drug run to <planet>"
-	job
-	repeat
-	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 100,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Substances" 25 2 .1
-	illegal 100000
-	to offer
-		random < 40
-		or
-			"reputation: Pirate" > -25
-			"combat rating" > 1100
-	source
-		government "Pirate"
-	destination
-		distance 5 14
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 15000 250
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Bulk Drug Running [2]"
-	name "Bulk drug run to <planet>"
-	job
-	repeat
-	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 120,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
-	cargo "Illegal Substances" 25 2 .1
-	illegal 120000
-	to offer
-		random < 30
-		or
-			"reputation: Pirate" > -25
-			"combat rating" > 1100
-	source
-		government "Pirate"
-	destination
-		distance 6 16
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 20000 250
-		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-
-
-mission "Stealth Cargo Smuggling (North) [0]"
-	name "Highly illegal cargo to <planet>"
-	job
-	repeat
-	infiltrating
-	description "Run <cargo> to <destination>. Being scanned will result in a 130,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
-	cargo "Highly Illegal Cargo" 5 2 .1
-	illegal 130000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
-	stealth
-	to offer
-		random < 40
-		"reputation: Pirate" > -10
-		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "north pirate"
-	destination
-		distance 3 12
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Republic
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "republic small"
-			variant
 				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting
-		system destination
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic staying
-		system destination
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	on fail
-		"reputation: Republic" -= 5
-		"reputation: Navy (Oathkeeper)" -= 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 50000 300
-		"reputation: Pirate" += 5
-		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Stealth Cargo Smuggling (North) [1]"
-	name "Highly illegal cargo to <planet>"
-	job
-	repeat
-	infiltrating
-	description "Run <cargo> to <destination>. Being scanned will result in a 175,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
-	cargo "Highly Illegal Cargo" 5 2 .1
-	illegal 175000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
-	stealth
-	to offer
-		random < 20
-		"reputation: Pirate" > -10
-		"combat rating" > 1100
+		"reputation: Pirate" += 10
+		personality heroic staying waiting
 	source
-		government "Pirate"
-		attributes "north pirate"
-	destination
-		distance 4 14
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Republic
-		personality heroic waiting
-		system
-			distance 3 5
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting
-		system
-			distance 2 4
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting
-		system destination
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting entering
-		system destination
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		system destination
-		personality heroic staying
-		government Republic
-		fleet "Navy Surveillance"
-	on fail
-		"reputation: Republic" -= 5
-		"reputation: Navy (Oathkeeper)" -= 5
 	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 75000 300
-		"reputation: Pirate" += 5
-		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Stealth Cargo Smuggling (Core) [0]"
-	name "Highly illegal cargo to <planet>"
-	job
-	repeat
-	infiltrating
-	description "Run <cargo> to <destination>. Being scanned will result in a 130,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
-	cargo "Highly Illegal Cargo" 5 2 .1
-	illegal 130000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
-	stealth
-	to offer
-		random < 40
-		"reputation: Pirate" > -10
-		"combat rating" > 1100
-	source
 		government "Pirate"
-		attributes "core pirate"
-	destination
-		distance 3 12
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic staying
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	on fail
-		"reputation: Syndicate" -= 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 50000 300
-		"reputation: Pirate" += 5
-		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Stealth Cargo Smuggling (Core) [1]"
-	name "Highly illegal cargo to <planet>"
-	job
-	repeat
-	infiltrating
-	description "Run <cargo> to <destination>. Being scanned will result in a 175,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
-	cargo "Highly Illegal Cargo" 5 2 .1
-	illegal 175000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
-	stealth
-	to offer
-		random < 20
-		"reputation: Pirate" > -10
-		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "core pirate"
-	destination
-		distance 4 14
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system
-			distance 3 5
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system
-			distance 2 4
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting entering
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic staying
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)" 2
-	on fail
-		"reputation: Syndicate" -= 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 75000 300
-		"reputation: Pirate" += 5
-		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Stealth Cargo Smuggling (South) [0]"
-	name "Highly illegal cargo to <planet>"
-	job
-	repeat
-	infiltrating
-	description "Run <cargo> to <destination>. Being scanned will result in a 130,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
-	cargo "Highly Illegal Cargo" 5 2 .1
-	illegal 130000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
-	stealth
-	to offer
-		random < 40
-		"reputation: Pirate" > -10
-		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "south pirate"
-	destination
-		distance 3 12
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Militia
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic staying
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	on fail
-		"reputation: Free Worlds" -= 5
-		"reputation: Militia" -= 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 50000 300
-		"reputation: Pirate" += 5
-		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Stealth Cargo Smuggling (South) [1]"
-	name "Highly illegal cargo to <planet>"
-	job
-	repeat
-	infiltrating
-	description "Run <cargo> to <destination>. Being scanned will result in a 175,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
-	cargo "Highly Illegal Cargo" 5 2 .1
-	illegal 175000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
-	stealth
-	to offer
-		random < 20
-		"reputation: Pirate" > -10
-		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "south pirate"
-	destination
-		distance 4 14
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Militia
-		personality heroic waiting
-		system
-			distance 3 5
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting
-		system
-			distance 2 4
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting entering
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic staying
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)" 2
-	on fail
-		"reputation: Free Worlds" -= 5
-		"reputation: Militia" -= 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 75000 300
-		"reputation: Pirate" += 5
-		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-
-
-mission "Stealth Drug Running (North) [0]"
-	name "Highly illegal drugs to <planet>"
-	job
-	repeat
-	infiltrating
-	description "Run <cargo> to <destination>. Being scanned will result in a 175,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
-	cargo "Highly Illegal Substances" 5 2 .1
-	illegal 175000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
-	stealth
-	to offer
-		random < 30
-		"reputation: Pirate" > 0
-		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "north pirate"
-	destination
-		distance 3 12
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Republic
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting
-		system destination
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic staying
-		system destination
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	on fail
-		"reputation: Republic" -= 5
-		"reputation: Navy (Oathkeeper)" -= 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 75000 375
-		"reputation: Pirate" += 5
-		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Stealth Drug Running (North) [1]"
-	name "Highly illegal drugs to <planet>"
-	job
-	repeat
-	infiltrating
-	description "Run <cargo> to <destination>. Being scanned will result in a 250,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
-	cargo "Highly Illegal Substances" 5 2 .1
-	illegal 250000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
-	stealth
-	to offer
-		random < 15
-		"reputation: Pirate" > 0
-		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "north pirate"
-	destination
-		distance 4 14
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Republic
-		personality heroic waiting
-		system
-			distance 3 5
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting
-		system
-			distance 2 4
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting
-		system destination
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting entering
-		system destination
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic staying
-		system destination
-		fleet "Navy Surveillance"
-	on fail
-		"reputation: Republic" -= 5
-		"reputation: Navy (Oathkeeper)" -= 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 100000 375
-		"reputation: Pirate" += 5
-		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Stealth Drug Running (Core) [0]"
-	name "Highly illegal drugs to <planet>"
-	job
-	repeat
-	infiltrating
-	description "Run <cargo> to <destination>. Being scanned will result in a 175,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
-	cargo "Highly Illegal Substances" 5 2 .1
-	illegal 175000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
-	stealth
-	to offer
-		random < 30
-		"reputation: Pirate" > 0
-		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "core pirate"
-	destination
-		distance 3 12
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic staying
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	on fail
-		"reputation: Syndicate" -= 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 75000 375
-		"reputation: Pirate" += 5
-		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Stealth Drug Running (Core) [1]"
-	name "Highly illegal drugs to <planet>"
-	job
-	repeat
-	infiltrating
-	description "Run <cargo> to <destination>. Being scanned will result in a 250,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
-	cargo "Highly Illegal Substances" 5 2 .1
-	illegal 250000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
-	stealth
-	to offer
-		random < 15
-		"reputation: Pirate" > 0
-		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "core pirate"
-	destination
-		distance 4 14
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system
-			distance 3 5
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system
-			distance 2 4
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting entering
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic staying
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)" 2
-	on fail
-		"reputation: Syndicate" -= 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 100000 375
-		"reputation: Pirate" += 5
-		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Stealth Drug Running (South) [0]"
-	name "Highly illegal drugs to <planet>"
-	job
-	repeat
-	infiltrating
-	description "Run <cargo> to <destination>. Being scanned will result in a 175,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
-	cargo "Highly Illegal Substances" 5 2 .1
-	illegal 175000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
-	stealth
-	to offer
-		random < 30
-		"reputation: Pirate" > 0
-		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "south pirate"
-	destination
-		distance 3 12
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Militia
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic staying
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	on fail
-		"reputation: Free Worlds" -= 5
-		"reputation: Militia" -= 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 75000 375
-		"reputation: Pirate" += 5
-		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-mission "Stealth Drug Running (South) [1]"
-	name "Highly illegal drugs to <planet>"
-	job
-	repeat
-	infiltrating
-	description "Run <cargo> to <destination>. Being scanned will result in a 250,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
-	cargo "Highly Illegal Substances" 5 2 .1
-	illegal 250000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
-	stealth
-	to offer
-		random < 15
-		"reputation: Pirate" > 0
-		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "south pirate"
-	destination
-		distance 4 14
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Militia
-		personality heroic waiting
-		system
-			distance 3 5
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting
-		system
-			distance 2 4
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting entering
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic staying
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)" 2
-	on fail
-		"reputation: Free Worlds" -= 5
-		"reputation: Militia" -= 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 100000 375
-		"reputation: Pirate" += 5
-		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
-
-
-
-mission "Wanted Passenger [0]"
-	name "Wanted individual to <planet>"
-	job
-	repeat
-	description "This wanted individual wishes to reach <destination> without being caught by local law enforcement. They also wish to bring with them <cargo>. Payment is <payment>."
-	passengers 1
-	cargo "battle trophies" 1
-	illegal 50000 `Upon scanning your vessel, law enforcement notice the criminal that you have on board. Entering your ship to detain them, they find the criminal in the corner of one of the rooms of your ship, clutching their battle trophies and screaming "you'll never take them from me!" After a short confrontation, they carry the criminal out and leave you with a small fine.`
-	stealth
-	to offer
-		or
-			"reputation: Pirate" > -100
-			"combat rating" > 400
-	source
-		government "Pirate"
-	destination
-		distance 2 10
-		government "Republic" "Free Worlds" "Syndicate" "Neutral"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 30000 300
-		dialog "Your <passengers> insists that you land on the edge of the spaceport to avoid being seen. After you land, they pay you <payment> before quickly grabbing their things and leaving your ship."
-
-mission "Wanted Passengers [1]"
-	name "Wanted individuals to <planet>"
-	job
-	repeat
-	description "These <bunks> wanted individuals wish to reach <destination> without being caught by local law enforcement. They also wish to bring with them <cargo>. Payment is <payment>."
-	passengers 2 10 .9
-	cargo "credit chips" 1
-	illegal 75000 `Upon scanning your vessel, law enforcement notice the criminals that you have on board. Entering your ship to detain them, they find the criminals busy scooping their credits into the airlock, hoping that no one can have them. The law enforcement quickly detain the criminals and carry them off along with the rest of the credits, leaving you with a moderately sized fine.`
-	stealth
-	to offer
-		random < 75
-		"reputation: Pirate" > -50
-		"combat rating" > 1100
-	source
-		government "Pirate"
-	destination
-		distance 2 10
-		government "Republic" "Free Worlds" "Syndicate" "Neutral"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 20000 300
-		dialog "Your <passengers> insist that you land on the edge of the spaceport to avoid being seen. After you land, they pay you <payment> before quickly grabbing their things and leaving your ship."
-	
-mission "Wanted Passengers [2]"
-	name "Wanted individuals to <planet>"
-	job
-	repeat
-	description "These <bunks> wanted individuals wish to reach <destination> without being caught by local law enforcement. They also wish to bring with them <cargo>. Payment is <payment>."
-	passengers 2 10 .9
-	cargo "customized weapons" 1
-	illegal 75000 `Upon scanning your vessel, law enforcement notice the criminals that you have on board. Entering your ship to detain them, the criminals begin firing down the hallways with their customized weapons. Immediately met with tear gas, the criminals did not put up too much of a fight. The law enforcement carry the criminals out and leave you with a moderate fine and a few laser marks in the halls of your ship.`
-	stealth
-	to offer
-		random < 50
-		"reputation: Pirate" > -50
-		"combat rating" > 1100
-	source
-		government "Pirate"
-	destination
-		distance 2 10
-		government "Republic" "Free Worlds" "Syndicate" "Neutral"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 20000 300
-		dialog "Your <passengers> insist that you land on the edge of the spaceport to avoid being seen. After you land, they pay you <payment> before quickly grabbing their things and leaving your ship."
-
-mission "Wanted Passengers [3]"
-	name "Wanted individuals to <planet>"
-	job
-	repeat
-	description "These <bunks> wanted individuals wish to reach <destination> without being caught by local law enforcement. They also wish to bring with them <cargo>. Payment is <payment>."
-	passengers 2 10 .9
-	cargo "aged wine" 1
-	illegal 75000 `Upon scanning your vessel, law enforcement notice the criminals that you have on board. Entering your ship to detain them, they find them all passed out in their bunks rooms, having drank too much of the wine that they had brought with them. After carrying the criminals out, they give you a moderate fine and leave.`
-	stealth
-	to offer
-		random < 25
-		"reputation: Pirate" > -50
-		"combat rating" > 1100
-	source
-		government "Pirate"
-	destination
-		distance 2 10
-		government "Republic" "Free Worlds" "Syndicate" "Neutral"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 20000 300
-		dialog "Your <passengers> insist that you land on the edge of the spaceport to avoid being seen. After you land, they pay you <payment> before quickly grabbing their things and leaving your ship."
-
-
-
-mission "Highly Wanted Passenger (North)"
-	name "Galactic criminal to <planet>"
-	job
-	repeat
-	infiltrating
-	description "This criminal is wanted by every law enforcement agency in the galaxy and needs safe transport to <destination> with their <cargo>. The payment is high at an amazing <payment>, but transporting such a person could lead to trouble."
-	passengers 1
-	cargo "stolen navy secrets" 1
-	illegal 300000 `Law enforcement rush their way onto your ship through the airlocks, suited head to toe in armor and armed to the teeth. Your passenger is quickly made to surrender and is hauled off in cuffs. The officers consider detaining you as well, but eventually decide to only fine you to reduce the trouble they have to go through.`
-	stealth
-	to offer
-		random < 15
-		"reputation: Pirate" > 10
-		"combat rating" > 3000
-	source
-		government "Pirate"
-		attributes "north pirate"
-	destination
-		distance 4 14
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Republic
-		personality heroic waiting
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting
-		system
-			distance 3 5
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting
-		system
-			distance 2 4
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting
-		system destination
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic waiting entering
-		system destination
-		fleet
-			names "republic small"
-			variant
-				"Gunboat"
-	npc
-		government Republic
-		personality heroic staying
-		system destination
-		fleet "Navy Surveillance"
-	on fail
-		"reputation: Republic" -= 5
-		"reputation: Navy (Oathkeeper)" -= 5
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 200000 1000
-		"reputation: Pirate" += 5
-		dialog "You land outside of the main city to avoid any chances of your passenger being seen. They grab their things and make their way off of your ship after paying you <payment>."
-
-mission "Highly Wanted Passenger (Core)"
-	name "Galactic criminal to <planet>"
-	job
-	repeat
-	infiltrating
-	description "This criminal is wanted by every law enforcement agency in the galaxy and needs safe transport to <destination> with their <cargo>. The payment is high at an amazing <payment>, but transporting such a person could lead to trouble."
-	passengers 1
-	cargo "stolen banking records" 1
-	illegal 300000 `Law enforcement rush their way onto your ship through the airlocks, suited head to toe in armor and armed to the teeth. Your passenger is quickly made to surrender and is hauled off in cuffs. The officers consider detaining you as well, but eventually decide to only fine you to reduce the trouble they have to go through.`
-	stealth
-	to offer
-		random < 15
-		"reputation: Pirate" > 10
-		"combat rating" > 3000
-	source
-		government "Pirate"
-		attributes "core pirate"
-	destination
-		distance 4 14
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Syndicate
-		personality heroic waiting
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system
-			distance 3 5
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system
-			distance 2 4
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic waiting entering
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)"
-	npc
-		government Syndicate
-		personality heroic staying
-		system destination
-		fleet
-			names "syndicate small"
-			variant
-				"Quicksilver (Scanner)" 2
-	on fail
-		"reputation: Syndicate" -= 5
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 200000 1000
-		"reputation: Pirate" += 5
-		dialog "You land outside of the main city to avoid any chances of your passenger being seen. They grab their things and make their way off of your ship after paying you <payment>."
-
-mission "Highly Wanted Passenger (South)"
-	name "Galactic criminal to <planet>"
-	job
-	repeat
-	infiltrating
-	description "This criminal is wanted by every law enforcement agency in the galaxy and needs safe transport to <destination> with their <cargo>. The payment is high at an amazing <payment>, but transporting such a person could lead to trouble."
-	passengers 1
-	cargo "prototype technology" 1
-	illegal 300000 `Law enforcement rush their way onto your ship through the airlocks, suited head to toe in armor and armed to the teeth. Your passenger is quickly made to surrender and is hauled off in cuffs. The officers consider detaining you as well, but eventually decide to only fine you to reduce the trouble they have to go through.`
-	stealth
-	to offer
-		random < 15
-		"reputation: Pirate" > 10
-		"combat rating" > 3000
-	source
-		government "Pirate"
-		attributes "south pirate"
-	destination
-		distance 4 14
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
-	npc
-		government Militia
-		personality heroic waiting
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting
-		system
-			distance 3 5
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting
-		system
-			distance 2 4
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting
-		system
-			distance 3
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic waiting entering
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)"
-	npc
-		government Militia
-		personality heroic staying
-		system destination
-		fleet
-			names "militia"
-			variant
-				"Bastion (Scanner)" 2
-	on fail
-		"reputation: Free Worlds" -= 5
-		"reputation: Militia" -= 5
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 200000 1000
-		"reputation: Pirate" += 5
-		dialog "You land outside of the main city to avoid any chances of your passenger being seen. They grab their things and make their way off of your ship after paying you <payment>."
-
-
-
-mission "Slave Transport [0]"
-	name "Transfer slaves to <planet>"
-	job
-	repeat
-	description "A pirate on <planet> has bought slaves from a local warlord. Transfer these <bunks> slaves to <destination> for <payment>. Slavery is punishable by death throughout the galaxy, so this may be a dangerous job to take."
-	passengers 2 10 .9
-	illegal -1
-	to offer
-		random < 25
-		"reputation: Pirate" > 0
-		"combat rating" > 1100
-	on offer
-		require "Brig"
-	source
-		government "Pirate"
-	destination
-		distance 3 30
-		government "Pirate"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 75000 400
-		dialog "After landing on <planet>, the pirates move the <bunks> slaves from your ship and pay you <payment>."
-
-mission "Slave Transport [1]"
-	name "Transfer slaves to <planet>"
-	job
-	repeat
-	description "A pirate on <planet> has bought slaves from a local warlord. Transfer these <bunks> slaves to <destination> for <payment>. Slavery is punishable by death throughout the galaxy, so this may be a dangerous job to take."
-	passengers 2 10 .9
-	illegal -1
-	to offer
-		random < 25
-		"reputation: Pirate" > 0
-		"combat rating" > 1100
-	on offer
-		require "Brig"
-	source
-		government "Pirate"
-	destination
-		distance 3 30
-		government "Pirate"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 75000 400
-		dialog "After landing on <planet>, the pirates move the <bunks> slaves from your ship and pay you <payment>."
-
-mission "Slave Transport [2]"
-	name "Transfer slaves to <planet>"
-	job
-	repeat
-	description "A pirate on <planet> has bought slaves from a local warlord. Transfer these <bunks> slaves to <destination> for <payment>. Slavery is punishable by death throughout the galaxy, so this may be a dangerous job to take."
-	passengers 2 10 .9
-	illegal -1
-	to offer
-		random < 25
-		"reputation: Pirate" > 0
-		"combat rating" > 1100
-	on offer
-		require "Brig"
-	source
-		government "Pirate"
-	destination
-		distance 3 30
-		government "Pirate"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 75000 400
-		dialog "After landing on <planet>, the pirates move the <bunks> slaves from your ship and pay you <payment>."
-
-
-
-mission "Bulk Slave Transport [0]"
-	name "Transfer slaves to <planet>"
-	job
-	repeat
-	description "A pirate on <planet> has bought slaves from a local warlord. Transfer these <bunks> slaves to <destination> for <payment>. Slavery is punishable by death throughout the galaxy, so this may be a dangerous job to take."
-	passengers 10 4 .1
-	illegal -1
-	to offer
-		random < 15
-		"reputation: Pirate" > 0
-		"combat rating" > 3000
-	on offer
-		require "Brig"
-	source
-		government "Pirate"
-	destination
-		distance 3 30
-		government "Pirate"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 100000 400
-		dialog "After landing on <planet>, the pirates move the <bunks> slaves from your ship and pay you <payment>."
-
-mission "Bulk Slave Transport [1]"
-	name "Transfer slaves to <planet>"
-	job
-	repeat
-	description "A pirate on <planet> has bought slaves from a local warlord. Transfer these <bunks> slaves to <destination> for <payment>. Slavery is punishable by death throughout the galaxy, so this may be a dangerous job to take."
-	passengers 10 4 .1
-	illegal -1
-	to offer
-		random < 15
-		"reputation: Pirate" > 0
-		"combat rating" > 3000
-	on offer
-		require "Brig"
-	source
-		government "Pirate"
-	destination
-		distance 3 30
-		government "Pirate"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 100000 400
-		dialog "After landing on <planet>, the pirates move the <bunks> slaves from your ship and pay you <payment>."
-
-
-
-mission "Mercenary Job (Medium, North, Dangerous Origin)"
-	name "Protection to <planet>"
-	job
-	repeat
-	description "The captain of the <npc> will pay you <payment> to help them escape local law enforcement and reach <destination> by <date>."
-	deadline 10
-	to offer
-		random < 40
-		"combat rating" > 400
-		"reputation: Pirate" > 0
-	source
-		government Republic "Free Worlds" Syndicate Neutral
-		attributes frontier north
-	destination
-		government "Pirate"
-		attributes "north pirate"
-		distance 3 4
-	npc
-		government Republic
-		personality waiting
-		fleet "Small Republic"
-	npc
-		government Republic
-		personality waiting entering
-		system destination
-		fleet "Small Republic"
-	
-	npc accompany save
-		government Pirate
-		personality escort
-		fleet
-			names "pirate"
-			variant
-				"Headhunter"
-			variant
-				"Headhunter (Particle)"
-			variant
-				"Raven (Afterburner)"
-			variant
-				"Raven (Heavy)"
-			variant
-				"Corvette"
-			variant
-				"Corvette (Missile)"
-			variant
-				"Corvette (Speedy)"
-	on complete
-		payment 180000
-		dialog phrase "generic safe escort completion dialog"
-	on visit
-		dialog phrase "generic arrived-without-npc dialog"
-
-mission "Escort Illegal Cargo (Large, North, Dangerous Path)"
-	name "Protect cargo to <planet>"
-	job
-	repeat
-	description "The captain of the <npc> will pay you <payment> to escort them and their illegal cargo safely through law-enforced space to reach <destination> by <date>."
-	deadline 12
-	to offer
-		random < 30
-		"combat rating" > 1100
-		"reputation: Pirate" > 0
-	source
-		government Republic "Free Worlds" Syndicate Neutral Pirate
-		attributes frontier north "north pirate"
-		distance 3 6
-	destination
-		government "Pirate"
-		attributes "north pirate"
-	npc
-		government Republic
-		personality staying
-		system destination
-		fleet "Large Republic"
-	
-	npc accompany save
-		government Pirate
-		personality escort
-		fleet
-			names "pirate"
-			variant 3
-				"Corvette"
-			variant 3
-				"Corvette (Missile)"
-			variant 3
-				"Corvette (Speedy)"
-			variant 2
-				"Firebird"
-			variant 2
-				"Firebird (Missile)"
-			variant 2
-				"Firebird (Plasma)"
-			variant 1
-				"Leviathan"
-	on complete
-		payment 240000
-		dialog phrase "generic safe escort completion dialog"
-	on visit
-		dialog phrase "generic arrived-without-npc dialog"
-
-mission "Escort Stolen Vessel (Extra Large, North, Dangerous Path)"
-	name "Protect ship to <planet>"
-	job
-	repeat
+mission "Republic Assassination [1]"
 	description "The captain of the <npc> will pay you <payment> to escort them and their stolen vessel safely through law-enforced space to reach <destination> by <date>."
-	deadline 12
-	to offer
-		random < 15
-		"combat rating" > 3000
-		"reputation: Pirate" > 0
-	source
-		government Republic "Free Worlds" Syndicate Neutral Pirate
-		attributes frontier north "north pirate"
-	destination
-		government "Pirate"
-		attributes "north pirate"
-		distance 3 6
-	npc
-		government Republic
-		personality staying
-		system destination
-		fleet "Small Republic"
-		fleet "Large Republic"
-	
-	npc accompany save
-		government Pirate
-		personality escort
 		fleet
-			names "pirate"
-			variant 6
-				"Leviathan"
-				"Hauler II"
-			variant 4
-				"Leviathan (Laser)"
-				"Hauler"
-			variant 4
-				"Leviathan (Heavy)"
-				"Freighter"
-			variant 1
-				"Bactrian"
-				"Shuttle"
-	on complete
-		payment 375000
-		dialog phrase "generic safe escort completion dialog"
-	on visit
-		dialog phrase "generic arrived-without-npc dialog"
-
-mission "Mercenary Job (Medium, Core, Dangerous Origin)"
-	name "Protection to <planet>"
-	job
-	repeat
-	description "The captain of the <npc> will pay you <payment> to help them escape local law enforcement and reach <destination> by <date>."
-	deadline 10
-	to offer
-		random < 40
-		"combat rating" > 400
-		"reputation: Pirate" > 0
-	source
-		government Republic "Free Worlds" Syndicate Neutral
-		attributes core
-	destination
-		government "Pirate"
-		attributes "core pirate"
-		distance 3 4
-	npc
-		government Syndicate
-		personality waiting
-		fleet "Small Syndicate"
-	npc
-		government Syndicate
-		personality waiting entering
-		system destination
-		fleet "Small Syndicate"
-	
-	npc accompany save
-		government Pirate
-		personality escort
+		payment 75000 400
 		fleet
-			names "pirate"
-			variant 1
-				"Headhunter"
-			variant 1
-				"Headhunter (Particle)"
-			variant 1
-				"Quicksilver"
-			variant 1
-				"Quicksilver (Proton)"
-	on complete
-		payment 180000
-		dialog phrase "generic safe escort completion dialog"
-	on visit
-		dialog phrase "generic arrived-without-npc dialog"
-
-mission "Escort Illegal Cargo (Large, Core, Dangerous Path)"
-	name "Protect cargo to <planet>"
-	job
-	repeat
-	description "The captain of the <npc> will pay you <payment> to escort them and their illegal cargo safely through law-enforced space to reach <destination> by <date>."
-	deadline 12
-	to offer
-		random < 30
-		"combat rating" > 1100
-		"reputation: Pirate" > 0
 	source
-		government Republic "Free Worlds" Syndicate Neutral Pirate
-		attributes core "core pirate"
-		distance 3 6
-	destination
-		government "Pirate"
-		attributes "core pirate"
-	npc
-		government Syndicate
-		personality staying
-		system destination
-		fleet "Large Syndicate"
+		"reputation: Pirate" > 100
+				"Bastion (Scanner)"
+		personality heroic staying target marked
+		distance 3 30
 	
-	npc accompany save
-		government Pirate
-		personality escort
-		fleet
-			names "pirate"
-			variant 3
-				"Quicksilver (Proton)" 3
-			variant 2
-				"Manta (Proton)"
-			variant 2
-				"Manta"
-			variant 1
-				"Splinter" 2
-			variant 1
-				"Splinter (Laser)" 2
-	on complete
-		payment 240000
-		dialog phrase "generic safe escort completion dialog"
-	on visit
-		dialog phrase "generic arrived-without-npc dialog"
-
-mission "Escort Stolen Vessel (Extra Large, Core, Dangerous Path)"
-	name "Protect ship to <planet>"
-	job
-	repeat
-	description "The captain of the <npc> will pay you <payment> to escort them and their stolen vessel safely through law-enforced space to reach <destination> by <date>."
-	deadline 12
-	to offer
-		random < 15
-		"combat rating" > 3000
-		"reputation: Pirate" > 0
+			variant
 	source
-		government Republic "Free Worlds" Syndicate Neutral Pirate
-		attributes core "core pirate"
 	destination
-		government "Pirate"
-		attributes "core pirate"
-		distance 3 6
-	npc
-		government Syndicate
-		personality staying
-		system destination
-		fleet "Small Syndicate"
-		fleet "Large Syndicate"
-	
-	npc accompany save
-		government Pirate
-		personality escort
-		fleet
-			names "pirate"
-			variant 4
-				"Firebird"
-				"Argosy"
-			variant 4
-				"Firebird (Plasma)"
-				"Bounder"
-			variant 4
-				"Firebird (Missile)"
-				"Quicksilver"
-			variant 2
-				"Falcon"
-				"Freighter"
-			variant 2
-				"Falcon (Laser)"
-				"Freighter"
-			variant 1
-				"Falcon (Heavy)"
-				"Heavy Shuttle"
+	stealth
 	on complete
-		payment 375000
-		dialog phrase "generic safe escort completion dialog"
-	on visit
-		dialog phrase "generic arrived-without-npc dialog"
-
-mission "Mercenary Job (Medium, South, Dangerous Origin)"
-	name "Protection to <planet>"
-	job
-	repeat
-	description "The captain of the <npc> will pay you <payment> to help them escape local law enforcement and reach <destination> by <date>."
-	deadline 10
-	to offer
-		random < 40
-		"combat rating" > 400
-		"reputation: Pirate" > 0
-	source
-		government Republic "Free Worlds" Syndicate Neutral
-		attributes south
-	destination
-		government "Pirate"
-		attributes "south pirate"
-		distance 3 4
-	npc
-		government Militia
-		personality waiting
-		fleet "Small Militia"
-	npc
-		government Militia
-		personality waiting entering
-		system destination
-		fleet "Small Militia"
-	
-	npc accompany save
-		government Pirate
-		personality escort
-		fleet
-			names "pirate"
-			variant 1
-				"Clipper"
-			variant 1
-				"Clipper (Speedy)"
-			variant 1
-				"Clipper (Heavy)"
-			variant 1
-				"Modified Argosy"
-	on complete
-		payment 180000
-		dialog phrase "generic safe escort completion dialog"
-	on visit
-		dialog phrase "generic arrived-without-npc dialog"
 
 mission "Escort Illegal Cargo (Large, South, Dangerous Path)"
-	name "Protect cargo to <planet>"
-	job
+		dialog "The target has been destroyed. Return to <destination> for your payment."
+				"Splinter" 2
+				"Firebird (Plasma)"
+				"Combat Drone" 8
+	on complete
+		payment 7000 200
+	illegal 75000 `Upon scanning your vessel, law enforcement notice the criminals that you have on board. Entering your ship to detain them, they find them all passed out in their bunks rooms, having drank too much of the wine that they had brought with them. After carrying the criminals out, they give you a moderate fine and leave.`
+	npc
+			names "syndicate small"
+		personality plunders staying
+			names "militia"
+		attributes "north pirate"
+	on complete
+			names "pirate"
+		fleet
+		dialog phrase "generic arrived-without-npc dialog"
+	npc kill
+	stealth
+			variant
+
+		government "Syndicate"
+			names "republic small"
+			names civilian
+		dialog `The militia fleets have been defeated. Return to <destination>.`
+		government Militia
+		system destination
+		personality staying target
 	repeat
-	description "The captain of the <npc> will pay you <payment> to escort them and their illegal cargo safely through law-enforced space to reach <destination> by <date>."
-	deadline 12
-	to offer
-		random < 30
-		"combat rating" > 1100
+		
+	
+		payment 180000
+		system destination
+		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the rival gang."
+			names "syndicate small"
+	on visit
+				"Bastion (Scanner)"
+	on offer
+	destination
+		system
+		fleet "Small Core Pirates" 2
+		dialog phrase "generic cargo on visit"
+			names "pirate"
+		government Syndicate
+	destination
+	repeat
+		system
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		"reputation: Free Worlds" -= 10
+		attributes "north pirate"
+			variant
+				"Gunboat"
+		government Syndicate
+		attributes "north pirate"
+		"combat rating" > 150
+		fleet
+		or
+		government Syndicate
+		payment 10000 200
+		system destination
+	npc
+			"combat rating" > 150
+	repeat
+	on complete
+	name "Competition near <system>"
+	job
+		dialog "The pirate warlord thanks you for eliminating the politician that threated them and pays you <payment>."
+				"Gunboat"
 		"reputation: Pirate" > 0
 	source
-		government Republic "Free Worlds" Syndicate Neutral Pirate
-		attributes south "south pirate"
-		distance 3 6
-	destination
-		government "Pirate"
-		attributes "south pirate"
-	npc
-		government Militia
-		personality staying
+		conversation "northern pirate defense"
 		system destination
-		fleet "Large Militia"
-	
-	npc accompany save
-		government Pirate
-		personality escort
+		payment 1000000
+	name "Assassinate a military target"
+	job
+		"combat rating" > 800
+				"Corvette"
+	to offer
 		fleet
-			names "pirate"
-			variant 2
-				"Modified Argosy"
-			variant 2
-				"Modified Argosy (Heavy)"
-			variant 2
-				"Modified Argosy (Blaster)"
-			variant 1
-				"Bastion"
-			variant 1
-				"Bastion (Laser)"
-			variant 1
-				"Bastion (Heavy)"
+	npc kill
+		government Militia
+		dialog "The pirates of <planet> take the secret cargo from your cargo hold and pay you <payment>."
+			"reputation: Pirate" > -50
+				"Vanguard"
+		government "Pirate"
+			distance 2 4
+		random < 15
+		system
+	npc kill
 	on complete
-		payment 240000
+		payment 400000
+		distance 2 10
+	description "Run <cargo> to <destination>. Being scanned will result in a 130,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
+		"reputation: Free Worlds" -= 5
+	repeat
+	source
+	cargo "Illegal Cargo" 25 2 .1
+		government "Pirate"
+			variant
+		"reputation: Pirate" > -10
+	name "Highly illegal drugs to <planet>"
+	destination
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+mission "Highly Wanted Passenger (Core)"
+		dialog "A gang of pirates on <planet> thank you for taking out the Syndicated Security commander and pay you <payment>."
+		personality heroic waiting
+	choice
+				"Gunboat"
+	description "Run <cargo> to <destination>. Being scanned will result in a 130,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
+		personality plunders staying
+
+		fleet
+		government Republic "Free Worlds" Syndicate Neutral
+		"combat rating" > 3000
+	source
+		government Militia
+	illegal 46000
+	npc
+				"Firebird"
+		"reputation: Pirate" > 10
+		personality staying
+		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the rival gang."
+				"Gunboat" 2
+		fleet "Small Northern Pirates" 2
+				"Quicksilver"
+	repeat
+	on complete
+			"combat rating" > 150
 		dialog phrase "generic safe escort completion dialog"
 	on visit
-		dialog phrase "generic arrived-without-npc dialog"
-
-mission "Escort Stolen Vessel (Extra Large, South, Dangerous Path)"
-	name "Protect ship to <planet>"
 	job
-	repeat
-	description "The captain of the <npc> will pay you <payment> to escort them and their stolen vessel safely through law-enforced space to reach <destination> by <date>."
-	deadline 12
-	to offer
-		random < 15
-		"combat rating" > 3000
-		"reputation: Pirate" > 0
+	on offer
+mission "Wanted Passengers [1]"
+				"Cruiser"
+	job
 	source
-		government Republic "Free Worlds" Syndicate Neutral Pirate
-		attributes south "south pirate"
-	destination
-		government "Pirate"
-		attributes "south pirate"
-		distance 3 6
-	npc
-		government Militia
-		personality staying
-		system destination
-		fleet "Small Militia"
-		fleet "Large Militia"
-	
-	npc accompany save
-		government Pirate
-		personality escort
-		fleet
-			names "pirate"
-			variant 4
-				"Bastion"
-				"Blackbird"
-			variant 4
-				"Bastion (Laser)"
-				"Clipper"
-			variant 4
-				"Bastion (Heavy)"
-				"Bounder"
-			variant 2
 				"Falcon"
-				"Hauler"
-			variant 2
-				"Falcon (Laser)"
-				"Freighter"
-			variant 1
-				"Falcon (Heavy)"
-				"Heavy Shuttle"
-	on complete
-		payment 375000
-		dialog phrase "generic safe escort completion dialog"
+		system
+		random < 10
+	
+			names "militia"
+		government "Pirate"
+	job
+		"reputation: Pirate" > 50
+			names "civilian"
+		government Syndicate
+				"Bastion (Scanner)"
+	minor
+				"Corvette (Missile)"
+			names "republic small"
+	job
+		fleet "Large Northern Pirates"
+				"Gunboat"
+			variant
+			variant 3
+		personality heroic waiting
+		fleet
+	repeat
+	on fail
+	source
+		dialog "The merchants have been eliminated. Return to <destination> for your cut of the loot."
 	on visit
+				"Falcon"
+	to offer
+	name "Defend <planet>"
+		"reputation: Pirate" > 0
+			names civilian
+		fleet "Small Syndicate" 2
+		"combat rating" > 800
+		payment 750000
+		dialog "A band of slave traders thank you for eliminating the politician and pay you <payment>."
+		`	(Stay here until the fight is over.)`
+		attributes "north pirate"
+	on fail
+		"reputation: Navy (Oathkeeper)" -= 5
+			"combat rating" > 150
+		"reputation: Free Worlds" -= 20
+		payment 750000
+	`	Local pirate forces are preparing to repel the militia attack. You join them, and take off together...`
+mission "Mercenary Job (Medium, South, Dangerous Origin)"
+	description "This wanted individual wishes to reach <destination> without being caught by local law enforcement. They also wish to bring with them <cargo>. Payment is <payment>."
+		"reputation: Navy (Oathkeeper)" -= 5
+		fleet
+		payment 750000
+		government "Pirate"
+	on complete
+		dialog phrase "generic passenger on visit"
+		dialog `The Navy fleets have been defeated. Return to <destination>.`
+				"Corvette"
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+			distance 3 5
+		payment 100000 375
+	to offer
+				"Fury" 2
+
+		government "Syndicate"
+			variant 2
+		fleet
+			distance 2 4
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+	npc kill
+		personality heroic waiting
+		system
+	name "Convoy near <system>"
+		government Pirate
+	repeat
+	destination
+	destination
+	illegal 86000
+	name "Smuggling to <planet>"
+			names "militia"
+		personality heroic staying
+
+			variant
+				"Quicksilver (Proton)"
+	to offer
+				"Quicksilver" 3
+			distance 3 5
+		government Republic
+		government "Pirate"
+				"Bastion (Scanner)"
+
+	source
+		dialog "The merchants have been eliminated. Return to <destination> for your cut of the loot."
+	source
+		"reputation: Pirate" >= 0
+		"combat rating" > 400
+			variant
+		system
+mission "Stealth Drug Running (North) [1]"
+		distance 4 12
+	job
+		dialog "You are greeted by applause from many pirates when you land and a powerful pirate warlord pays you <payment>."
+		government "Militia"
+		fleet
+		dialog phrase "generic passenger on visit"
+	to offer
+	npc kill
+		government Pirate
+		fleet
+	repeat
+
+		dialog phrase "generic cargo on visit"
+	description "Rumor has it that the Republic is planning a raid on regional pirate gangs in order to reduce piracy. An important Navy commander said to be leading this raid has been spotted in a nearby system with a large fleet. Find and destroy them in order to send a message to the Republic. Payment is <payment>."
+mission "Syndicate Assassination [2]"
 		dialog phrase "generic arrived-without-npc dialog"
-
-
-
-mission "Eliminating Law Enforcement (North, Small)"
-	name "Navy near <system>"
-	repeat
-	job
-	description "A Navy fleet near the <system> system has halted our raids. Destroy them and return to <planet> for a payment of <payment>."
+		personality escort
+		government "Militia"
+	on complete
+		"reputation: Pirate" > -10
 	to offer
-		random < 25
+	source
+		government "Pirate"
+	source
+	cargo "Highly Illegal Cargo" 5 2 .1
+		dialog "The target has been destroyed. Return to <destination> for your payment."
+	source
+	to offer
+				"Blackbird" 2
+	repeat
+	name "Protect ship to <planet>"
+	name "Assassinate a political target"
+	on complete
+	name "Transfer slaves to <planet>"
+	description "A Syndicated Security commander who has led a number of small raids against pirate gangs in the region has been spotted patrolling a nearby system with their fleet. Find and destroy them in order to send a message to the Syndicate. Payment is <payment>."
+	npc kill
+		distance 3 4
+		random < 5
+		dialog `Many locals of <planet> thank you and collectively pay you <payment> for helping to drive off the militia forces.`
+		fleet
+	description `A merchant convoy has been spotted near the <system> system. A local warlord is interested in having the cargo on the <npc>. Plunder it and return to <planet> for payment of <payment>.`
+	repeat
+	on visit
+		fleet
 		"combat rating" > 1100
-	source
 		government "Pirate"
-		attributes "north pirate"
-	npc kill
-		government "Republic"
-		personality heroic staying target
-		system
-			distance 1 3
-		fleet "Small Republic" 2
-		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
-	on complete
-		payment 250000
-		"reputation: Pirate" += 5
-		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the Navy fleet."
-
-mission "Eliminating Law Enforcement (North, Large)"
-	name "Navy near <system>"
-	repeat
-	job
-	description "A large Navy fleet near the <system> system has halted our raids. Destroy them and return to <planet> for a payment of <payment>."
-	to offer
-		random < 15
-		"combat rating" > 3000
-	source
-		government "Pirate"
-		attributes "north pirate"
-	npc kill
-		government "Republic"
-		personality heroic staying target
-		system
-			distance 1 3
-		fleet "Large Republic"
-		fleet "Small Republic" 2
-		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
-	on complete
-		payment 400000
-		"reputation: Pirate" += 10
-		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the Navy fleet."
-
+	on offer
+				"Manta"
+	illegal -1
+		or
+		fleet
 mission "Eliminating Law Enforcement (Core, Small)"
-	name "Syndicate near <system>"
-	repeat
-	job
-	description "A Syndicate fleet near the <system> system has halted our raids. Destroy them and return to <planet> for a payment of <payment>."
-	to offer
-		random < 25
-		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "core pirate"
-	npc kill
-		government "Syndicate"
-		personality heroic staying target
+		"combat rating" > 400
+	stealth
+				"Bastion (Scanner)" 2
+		payment 600000
+		personality heroic staying target marked
+	minor
 		system
-			distance 1 3
-		fleet "Small Syndicate" 2
-		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+	job
+	description "A large rival gang is gaining too much power. Their leader is currently near the <system> system. Take them and their escorts out and return to <planet> for a payment of <payment>."
+				"Corvette (Speedy)"
+		dialog phrase "generic cargo on visit"
+	npc
+		dialog phrase "generic passenger on visit"
+	infiltrating
+				"Star Queen"
+	job
+	to offer
+				"Star Queen"
+	description "A merchant fleet has been spotted near the <system> system. Join in destroying them and return to <planet> for a cut of the loot (<payment>)."
+		attributes south "south pirate"
+		dialog "The target has been destroyed. Return to <destination> for your payment."
+		attributes frontier north "north pirate"
+	on fail
+		system
+		fleet "Small Core Pirates" 2
+	source
+			variant
+		dialog "The target has been destroyed. Return to <destination> for your payment."
+			variant
+		dialog phrase "generic cargo on visit"
+				"Quicksilver (Scanner)"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		payment 375000
+	
+		"reputation: Syndicate" -= 10
+			names "syndicate small"
+	destination
+		government "Pirate"
+		personality staying target
+		"reputation: Pirate" > 0
+		system destination
+		fleet
+			names "syndicate small"
+		dialog phrase "generic passenger on visit"
 	on complete
-		payment 250000
-		"reputation: Pirate" += 5
-		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the Syndicate fleet."
+				"Star Queen"
+	to offer
+		"reputation: Free Worlds" -= 5
 
-mission "Eliminating Law Enforcement (Core, Large)"
-	name "Syndicate near <system>"
-	repeat
-	job
-	description "A large Syndicate fleet near the <system> system has halted our raids. Destroy them and return to <planet> for a payment of <payment>."
-	to offer
-		random < 15
+				"Protector" 2
+			variant
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+mission "Stealth Cargo Smuggling (North) [0]"
+	npc
 		"combat rating" > 3000
-	source
-		government "Pirate"
-		attributes "core pirate"
-	npc kill
-		government "Syndicate"
-		personality heroic staying target
-		system
-			distance 1 3
-		fleet "Large Syndicate"
-		fleet "Small Syndicate" 2
-		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+		dialog "After landing on <planet>, the pirates move the <bunks> slaves from your ship and pay you <payment>."
+	repeat
+		"reputation: Pirate" += 5
+# terms of the GNU General Public License as published by the Free Software
 	on complete
-		payment 400000
+mission "Stealth Drug Running (Core) [1]"
+				"Bastion (Scanner)"
+		personality heroic staying
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+	name "Bulk drug run to <planet>"
+	destination
+	on fail
+		personality heroic staying
+		payment 75000 400
+		government Pirate
+	stealth
+	name "Bulk smuggling to <planet>"
+	name "Protection to <planet>"
+				"Quicksilver (Scanner)"
+	choice
+				"Headhunter (Particle)"
+	description "The captain of the <npc> will pay you <payment> to help them escape local law enforcement and reach <destination> by <date>."
+			"reputation: Pirate" > -25
+mission "Northern Pirate Defense [Unpaid]"
+		personality waiting entering
+
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		attributes "north pirate"
+		attributes "south pirate"
+	on offer
+		personality escort
+				"Quicksilver" 2
+			variant 1
+				"Falcon"
+			variant
+	job
+			names "syndicate small"
+	source
+				"Carrier"
+	npc
+mission "Stealth Cargo Smuggling (North) [1]"
+
+		government Republic
+	description "Run <cargo> to <destination>. Being scanned will result in a 175,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
+	on complete
+		personality heroic waiting entering
+		"reputation: Free Worlds" -= 5
+				"Quicksilver (Scanner)"
+		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the militia fleet."
+		"reputation: Militia" -= 5
+		fleet
+	on complete
+	name "Militia near <system>"
+		system
+	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 86,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+			variant 2
+		dialog "The target fleet has been destroyed. Return to <destination> for your payment."
+		random < 30
+outfit "Secret Cargo"
+	source
+		fleet
+				"Bastion (Scanner)"
+mission "Syndicate Assassination [4]"
+mission "Escort Illegal Cargo (Large, North, Dangerous Path)"
+		fleet "Large Republic"
+		system destination
+			variant
+		government "Pirate"
+		government "Pirate"
+		government Republic
+		government Republic "Free Worlds" Syndicate Neutral
+		government Militia
+		dialog "After counting up the loot from the destroyed merchant fleet, you are given your cut. <payment>"
+		dialog phrase "generic cargo on visit"
+		fleet "Large Militia"
+		system destination
+		personality heroic waiting entering
+				"Quicksilver (Scanner)" 2
+	npc
+	name "Highly illegal cargo to <planet>"
+			names "militia"
+	npc kill
+		personality staying
+			distance 2 4
+mission "Southern Pirate Defense"
+		government "Pirate"
+			variant
+		"combat rating" > 1100
+		government Syndicate
+	source
+		dialog phrase "generic cargo on visit"
+		"reputation: Republic" -= 25
+		system destination
+	description "A key Republic politician who is worrying local pirate gangs was spotted in their ship, the <npc>, in a nearby system. Find and destroy them in order to send a message to the Republic. Payment is <payment>. Be advised that they may have escorts."
+
+				"Frigate" 3
+		dialog phrase "generic safe escort completion dialog"
+		system
+		"reputation: Syndicate" -= 15
+		attributes "south pirate"
+	illegal 130000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+		random < 5
+		personality heroic waiting entering
+			variant
+		government Syndicate
+		government "Pirate"
+	illegal 37000
+	description "The captain of the <npc> will pay you <payment> to escort them and their stolen vessel safely through law-enforced space to reach <destination> by <date>."
+	repeat
+		attributes "north pirate"
+		payment 15000 200
+conversation "southern pirate defense"
+	job
+		personality plunders staying
+	on complete
+			names "republic small"
+		dialog phrase "generic safe escort completion dialog"
+				"Frigate" 2
+	on visit
+
+	job
+		random < 20
+	description "A key Republic politician who is worrying local drug traders was spotted in their ship, the <npc>, in a nearby system. Find and destroy them in order to send a message to the Republic. Payment is <payment>. Be advised that they are heavily defended."
+		"reputation: Pirate" += 5
+		government Pirate
+	on complete
+	passengers 1
+	repeat
+			distance 2 5
+			distance 3
+		system destination
+	npc
+	source
+	job
+			decline
+		personality heroic waiting
+
+	to offer
+	name "Highly illegal cargo to <planet>"
+			variant 1
 		"reputation: Pirate" += 10
-		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the Syndicate fleet."
+		system
+		system
+		personality heroic staying
+		government Republic
+	infiltrating
+	to offer
+	job
+		personality heroic staying target
+			variant
+		government Militia
+	on complete
+		government Republic
+	deadline 10
+		system destination
+			"reputation: Pirate" > -100
+		fleet
+		distance 4 14
+	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 37,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+	npc
+
+		system
+	cargo "Highly Illegal Substances" 5 2 .1
+	illegal 75000 `Upon scanning your vessel, law enforcement notice the criminals that you have on board. Entering your ship to detain them, they find the criminals busy scooping their credits into the airlock, hoping that no one can have them. The law enforcement quickly detain the criminals and carry them off along with the rest of the credits, leaving you with a moderately sized fine.`
+	description "A key Free Worlds politician who is worrying local slave traders was spotted in their ship, the <npc>, in a nearby system. Find and destroy them in order to send a message to the Free Worlds. Payment is <payment>. Be advised that they may have escorts."
+	illegal 300000 `Law enforcement rush their way onto your ship through the airlocks, suited head to toe in armor and armed to the teeth. Your passenger is quickly made to surrender and is hauled off in cuffs. The officers consider detaining you as well, but eventually decide to only fine you to reduce the trouble they have to go through.`
+	repeat
+	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 86,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+		"reputation: Pirate" += 5
+		fleet
+	to offer
+		attributes "north pirate"
+		attributes south "south pirate"
+	repeat
+		government Republic
+				"Quicksilver (Scanner)"
+			distance 3
+
+				"Quicksilver (Scanner)"
+		distance 3 12
+				"Bastion"
+		personality escort
+		personality heroic waiting
+		system destination
+	cargo "Highly Illegal Substances" 5 2 .1
+				"Argosy" 2
+		"reputation: Pirate" > 50
+		payment 350000
+			"combat rating" > 400
+				"Flivver"
+	description "Run <cargo> to <destination>. Being scanned will result in a 175,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
+		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the Navy fleet."
+		"reputation: Pirate" += 5
+		fleet
+	on visit
+		or
+	npc kill
+		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the Navy fleet."
+	destination
+				"Bastion (Scanner)"
+	npc evade
+		government Republic
+		personality heroic staying target marked
+				"Hawk" 2
+	passengers 2 10 .9
+			names civilian
+		payment 240000
+	job
+	name "Merchants near <system>"
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		personality heroic staying
+			"combat rating" > 1100
+			names "syndicate small"
+		fleet "Large Syndicate" 2
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+			variant
+		attributes "core pirate"
+		distance 4 14
+		"reputation: Navy (Oathkeeper)" -= 10
+			variant
+		government "Pirate"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+	source
+		personality heroic waiting
+				"Raven (Afterburner)"
+	passengers 10 4 .1
+			names "syndicate small"
+	destination
+	on fail
+		government "Pirate"
+		payment 400000
+		"combat rating" > 150
+			variant 1
+		distance 6 16
+			"combat rating" > 400
+	illegal 175000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+		government Militia
+			distance 1 2
+			variant
+mission "Syndicate Assassination [1]"
 
 mission "Eliminating Law Enforcement (South, Small)"
-	name "Militia near <system>"
-	repeat
-	job
-	description "A militia fleet near the <system> system has halted our raids. Destroy them and return to <planet> for a payment of <payment>."
-	to offer
-		random < 25
-		"combat rating" > 1100
-	source
+	on visit
+mission "Drug Running [3]"
 		government "Pirate"
-		attributes "south pirate"
-	npc kill
-		government "Militia"
-		personality heroic staying target
-		system
-			distance 1 3
-		fleet "Small Militia" 2
-		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
-	on complete
-		payment 250000
-		"reputation: Pirate" += 5
-		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the militia fleet."
-
-mission "Eliminating Law Enforcement (South, Large)"
-	name "Militia near <system>"
-	repeat
-	job
-	description "A large militia fleet near the <system> system has halted our raids. Destroy them and return to <planet> for a payment of <payment>."
-	to offer
-		random < 15
-		"combat rating" > 3000
-	source
-		government "Pirate"
-		attributes "south pirate"
-	npc kill
-		government "Militia"
-		personality heroic staying target
-		system
-			distance 1 3
-		fleet "Large Militia"
-		fleet "Small Militia" 2
-		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
-	on complete
-		payment 400000
-		"reputation: Pirate" += 10
-		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the militia fleet."
-
-
-
-mission "Eliminating Competition (North, Small)"
-	name "Competition near <system>"
-	description "A small rival gang is causing trouble near the <system> system. Take them out and return to <planet> for a payment of <payment>."
-	repeat
-	job
-	to offer
-		random < 20
+		system destination
 		"combat rating" > 400
-	source
-		government "Pirate"
-		attributes "north pirate"
-	npc kill
-		government Pirate
-		personality heroic staying target marked
-		system
-			distance 1 2
-		fleet "Small Northern Pirates" 4
 		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
-	on complete
-		payment 500000
-		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the rival gang."
-
+	description "Run <cargo> to <destination>. Being scanned will result in a 130,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
+			variant
+	source
+		attributes "south pirate"
 mission "Eliminating Competition (North, Large)"
-	name "Competition near <system>"
-	description "A large rival gang is gaining too much power. Their leader is currently near the <system> system. Take them and their escorts out and return to <planet> for a payment of <payment>."
-	repeat
-	job
-	to offer
-		random < 10
 		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "north pirate"
-	npc kill
-		government Pirate
-		personality heroic staying target marked
-		system
-			distance 1 3
-		fleet "Large Northern Pirates" 2
-		fleet "Small Northern Pirates" 2
-		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+	npc
+	npc
+		fleet "Small Syndicate"
+		"combat rating" > 1100
+		personality heroic staying
+	npc
+				"Splinter"
+	on visit
+	to offer
+	illegal 175000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
 	on complete
-		payment 750000
-		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the rival gang."
+		payment 75000 300
+		fleet
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		system destination
+	source
+	name "Bulk smuggling to <planet>"
+mission "Cargo Smuggling [2]"
+		government Republic
+	category "Special"
+	name "Protection to <planet>"
+		government Syndicate
+		system destination
+		government "Pirate"
+	repeat
+			variant
+	passengers 2 10 .9
+				"Frigate" 2
+	to offer
+	job
+		payment 1500000
+	name "Highly illegal cargo to <planet>"
+	infiltrating
+		"reputation: Militia" -= 5
+	job
+	npc
 
-mission "Eliminating Competition (Core, Small)"
-	name "Competition near <system>"
+	source
+	cargo "Illegal Substances" 5 2 .1
+				"Bastion (Scanner)"
+mission "Slave Transport [2]"
+		"reputation: Pirate" += 10
+			variant 4
+		"reputation: Pirate" > 0
+	source
+	to offer
+	npc
+		government Syndicate
+	source
+mission "Eliminating Competition (North, Small)"
+		dialog phrase "generic safe escort completion dialog"
+
+				"Modified Argosy (Blaster)"
+	destination
+			variant
+	npc
+		system
+				"Argosy"
+			distance 1 2
+				"Headhunter"
+		government Militia
+	illegal 65000
+		personality escort
+	on visit
+		system
+		government "Pirate"
+				"Quicksilver (Scanner)"
+	source
+	on complete
+		conversation "southern pirate defense"
+mission "Bulk Drug Running [2]"
+	repeat
+	npc
+		distance 4 12
 	description "A small rival gang is causing trouble near the <system> system. Take them out and return to <planet> for a payment of <payment>."
 	repeat
-	job
-	to offer
-		random < 20
-		"combat rating" > 400
-	source
-		government "Pirate"
-		attributes "core pirate"
-	npc kill
-		government Pirate
-		personality heroic staying target marked
-		system
-			distance 1 2
-		fleet "Small Core Pirates" 4
-		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
-	on complete
-		payment 500000
-		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the rival gang."
-
-mission "Eliminating Competition (Core, Large)"
-	name "Competition near <system>"
-	description "A large rival gang is gaining too much power. Their leader is currently near the <system> system. Take them and their escorts out and return to <planet> for a payment of <payment>."
+		personality heroic waiting
 	repeat
+	description "A Navy fleet near the <system> system has halted our raids. Destroy them and return to <planet> for a payment of <payment>."
 	job
-	to offer
-		random < 10
-		"combat rating" > 1100
-	source
+				"Quicksilver" 2
+	description "A pirate on <planet> has bought slaves from a local warlord. Transfer these <bunks> slaves to <destination> for <payment>. Slavery is punishable by death throughout the galaxy, so this may be a dangerous job to take."
 		government "Pirate"
-		attributes "core pirate"
-	npc kill
-		government Pirate
-		personality heroic staying target marked
-		system
-			distance 1 3
-		fleet "Large Core Pirates" 2
-		fleet "Small Core Pirates" 2
-		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
-	on complete
-		payment 750000
-		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the rival gang."
-
-mission "Eliminating Competition (South, Small)"
-	name "Competition near <system>"
-	description "A small rival gang is causing trouble near the <system> system. Take them out and return to <planet> for a payment of <payment>."
-	repeat
-	job
-	to offer
-		random < 20
-		"combat rating" > 400
-	source
-		government "Pirate"
-		attributes "south pirate"
-	npc kill
-		government Pirate
-		personality heroic staying target marked
-		system
-			distance 1 2
-		fleet "Small Southern Pirates" 4
-		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
-	on complete
-		payment 500000
-		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the rival gang."
-
-mission "Eliminating Competition (South, Large)"
-	name "Competition near <system>"
-	description "A large rival gang is gaining too much power. Their leader is currently near the <system> system. Take them and their escorts out and return to <planet> for a payment of <payment>."
-	repeat
-	job
-	to offer
-		random < 10
-		"combat rating" > 1100
-	source
-		government "Pirate"
-		attributes "south pirate"
-	npc kill
-		government Pirate
-		personality heroic staying target marked
-		system
-			distance 1 3
-		fleet "Large Southern Pirates" 2
-		fleet "Small Southern Pirates" 2
-		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
-	on complete
-		payment 750000
-		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the rival gang."
-
-
-
-mission "Raid on Merchants (North)"
-	name "Merchants near <system>"
-	repeat
-	job
-	description "A merchant fleet has been spotted near the <system> system. Join in destroying them and return to <planet> for a cut of the loot (<payment>)."
-	to offer
-		random < 50
-		"combat rating" > 150
-		"reputation: Pirate" > 0
-	source
-		government "Pirate"
-		attributes "north pirate"
-	npc
-		government "Pirate"
-		personality plunders harvests escort
-		fleet "Small Northern Pirates"
 	
-	npc kill
-		government "Merchant"
-		personality heroic staying target
-		system
-			distance 1 3
-		fleet "Small Northern Merchants" 2
-		fleet "Large Northern Merchants"
-		dialog "The merchants have been eliminated. Return to <destination> for your cut of the loot."
-	on complete
-		payment 150000
-		dialog "After counting up the loot from the destroyed merchant fleet, you are given your cut. <payment>"
-
-mission "Raid on Merchants (Core)"
-	name "Merchants near <system>"
+		government "Pirate"
+	on visit
+			variant 2
 	repeat
-	job
-	description "A merchant fleet has been spotted near the <system> system. Join in destroying them and return to <planet> for a cut of the loot (<payment>)."
-	to offer
-		random < 50
-		"combat rating" > 150
-		"reputation: Pirate" > 0
-	source
-		government "Pirate"
-		attributes "core pirate"
-	npc
-		government "Pirate"
-		personality plunders harvests escort
-		fleet "Small Core Pirates"
-	
-	npc kill
-		personality heroic staying target
-		government "Merchant"
-		system
-			distance 1 3
-		fleet "Small Core Merchants" 2
-		fleet "Large Core Merchants"
-		dialog "The merchants have been eliminated. Return to <destination> for your cut of the loot."
-	on complete
-		payment 150000
-		dialog "After counting up the loot from the destroyed merchant fleet, you are given your cut. <payment>"
-
-mission "Raid on Merchants (South)"
-	name "Merchants near <system>"
-	repeat
-	job
-	description "A merchant fleet has been spotted near the <system> system. Join in destroying them and return to <planet> for a cut of the loot (<payment>)."
-	to offer
-		random < 50
-		"combat rating" > 150
-		"reputation: Pirate" > 0
-	source
-		government "Pirate"
-		attributes "south pirate"
-	npc
-		government "Pirate"
-		personality plunders harvests escort
+		"reputation: Pirate" += 5
+		personality heroic waiting
 		fleet "Small Southern Pirates"
-	npc kill
-		personality heroic staying target
-		government "Merchant"
-		system
-			distance 1 3
-		fleet "Small Southern Merchants" 2
-		fleet "Large Southern Merchants"
-		dialog "The merchants have been eliminated. Return to <destination> for your cut of the loot."
-	on complete
-		payment 150000
-		dialog "After counting up the loot from the destroyed merchant fleet, you are given your cut. <payment>"
-
-
-
-mission "Northern Pirate Defense"
-	name "Defend <planet>"
-	repeat
-	minor
-	description "Local Navy forces are attacking <destination>! Defeat them to defend anarchy!"
-	to offer
-		random < 15
-		"reputation: Pirate" >= 0
 	source
 		government "Pirate"
-		attributes "north pirate"
-	npc evade
-		government "Republic"
+	name "Convoy near <system>"
+	repeat
+	job
+		government "Pirate"
+	job
+
+	source
+	source
+	repeat
+			variant
+		dialog phrase "generic safe escort completion dialog"
+
+	job
+		government "Pirate"
+		personality heroic waiting
+		government "Pirate"
+			distance 2 4
+		"reputation: Navy (Oathkeeper)" -= 15
+mission "FW Assassination [4]"
+			distance 1 3
+	on complete
+	description "The captain of the <npc> will pay you <payment> to help them escape local law enforcement and reach <destination> by <date>."
+		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the militia fleet."
+	on complete
+	source
+				"Falcon (Laser)"
 		personality heroic staying waiting
-		fleet "Large Republic" 2
-		dialog `The Navy fleets have been defeated. Return to <destination>.`
+	on offer
+		dialog "The targets have been destroyed. Return to <destination> for payment."
+	repeat
+	on complete
+	source
+		random < 30
+		dialog phrase "generic cargo on visit"
+		dialog "You land on <planet>, but you don't have the secret cargo! Return to the <npc> and bring the cargo back to <planet>."
+	repeat
+	cargo "Illegal Cargo" 5 2 .1
+		government Militia
+	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 32,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+			distance 3
+	repeat
+		fleet "Small Southern Pirates" 2
+	cargo "Illegal Substances" 25 2 .1
+conversation "northern pirate defense"
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		attributes "south pirate"
+		government "Pirate"
+				"Freighter (Secret Cargo)"
+		dialog "The target has been destroyed. Return to <destination> for your payment."
+		personality heroic waiting entering
+		distance 4 14
+		"reputation: Pirate" += 10
+			names "syndicate small"
+	name "Defend <planet>"
+	job
+	npc
+		government Syndicate
+		random < 20
+		fleet "Small Southern Pirates" 4
+	illegal 32000
+		government "Pirate"
+		dialog "A gang of pirates on <planet> thank you for taking out the Free Worlds commander and pay you <payment>."
+		government "Pirate"
+	npc accompany save
+		personality heroic waiting entering
+		
+	npc
+				"Gunboat"
+				"Splinter" 2
+		attributes "core pirate"
+				"Osprey" 2
+				"Falcon (Heavy)"
+		"combat rating" > 200
+				"Firebird" 2
+		fleet
+		"reputation: Pirate" > -50
+			"reputation: Pirate" > -100
+		`	(Stay here until the fight is over.)`
+	destination
+	passengers 1
+	on complete
+			names "syndicate small"
+	illegal -1
+		"combat rating" > 3000
+		system
+	destination
+				"Lance" 4
+				"Heavy Shuttle"
+				"Quicksilver (Scanner)"
+	to offer
+		government Syndicate
+		payment 6000 200
+		fleet "Small Northern Pirates"
+		"reputation: Pirate" >= 0
+	name "Convoy near <system>"
+		fleet
+	name "Highly illegal cargo to <planet>"
+	to offer
+	
+			names "pirate"
+		system destination
+		government "Pirate"
+	cargo "Highly Illegal Substances" 5 2 .1
+				"Quicksilver (Scanner)"
+	destination
+		"reputation: Pirate" += 5
+				"Leviathan"
+			variant
+	on visit
+		fleet "Small Syndicate"
+			names "syndicate small"
+			variant
+				"Splinter (Laser)" 2
+				"Corvette (Speedy)"
+	cargo "Highly Illegal Substances" 5 2 .1
+		government Republic "Free Worlds" Syndicate Neutral Pirate
+		government "Pirate"
+	source
+		attributes "south pirate"
+		system
+		personality heroic waiting
+				"Freighter"
+		payment 1500000
+	to offer
+	name "Transfer slaves to <planet>"
+		"combat rating" > 1100
+		conversation "core pirate defense"
+		payment 150000
+mission "Bulk Drug Running [1]"
+	cargo "Highly Illegal Substances" 5 2 .1
+		"reputation: Syndicate" -= 5
+		fleet "Large Northern Pirates"
+			distance 3
+				"Freighter (Secret Cargo)"
+	npc
+	repeat
+		attributes "south pirate"
+		fleet "Large Syndicate"
+		"reputation: Republic" -= 5
+		government Syndicate
+
+	source
+	npc kill
+				"Gunboat"
+		dialog "After landing on <planet>, the pirates move the <bunks> slaves from your ship and pay you <payment>."
+		"reputation: Navy (Oathkeeper)" -= 5
+			variant 1
+	description "Run <cargo> to <destination>. Being scanned will result in a 250,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
+		payment 5000 200
+				"Clipper (Heavy)"
+		dialog phrase "generic cargo on visit"
+			variant 2
+	to offer
+			"combat rating" > 400
+		dialog phrase "generic cargo on visit"
+				"Bastion (Laser)"
+		personality heroic waiting
+
+		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+
+		"reputation: Republic" -= 20
+		personality heroic staying
+		fleet
+		system
+	repeat
+
+	minor
+		random < 75
+	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 100,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+	npc
+		fleet
+	repeat
+		government Militia
+		dialog phrase "generic passenger on visit"
+#
+	stealth
+		fleet
+mission "Escort Illegal Cargo (Large, Core, Dangerous Path)"
+		dialog phrase "generic cargo on visit"
+		distance 3 8
+		"reputation: Pirate" += 5
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+	to offer
+	source
+		system
+		personality heroic waiting
+	source
+	job
+	cost 0
+	on visit
+	source
+	npc
+	source
+	repeat
+	npc
+				"Gunboat"
+		payment 240000
+	infiltrating
+		government "Pirate"
+			variant
+		dialog phrase "generic cargo on visit"
+		dialog "After landing on <planet>, the pirates move the <bunks> slaves from your ship and pay you <payment>."
+		random < 20
+	npc
+		fleet
+
+			distance 3
 	npc
 		government "Pirate"
-		personality plunders staying
-		fleet "Large Northern Pirates"
-		fleet "Small Northern Pirates"
-	on offer
-		conversation "northern pirate defense"
-	on complete
-		payment 200000
-		dialog `Many locals of <planet> thank you and collectively pay you <payment> for helping to drive off the Navy.`
-
-mission "Northern Pirate Defense [Unpaid]"
-	name "Defend <planet>"
-	repeat
-	minor
-	description "Local Navy forces are attacking <destination>! Defeat them to defend anarchy!"
+		"combat rating" > 800
+		attributes "south pirate"
+		dialog "Your <passengers> insist that you land on the edge of the spaceport to avoid being seen. After you land, they pay you <payment> before quickly grabbing their things and leaving your ship."
+		"reputation: Pirate" += 5
+		payment 20000 300
+		fleet "Small Northern Merchants" 2
+	destination
+	illegal 55000
 	to offer
-		random < 5
-		"reputation: Pirate" >= 0
+		personality heroic staying target
+	on offer
+	illegal 20000
+		government Militia
+			distance 2 5
+mission "Stealth Cargo Smuggling (Core) [1]"
+			"reputation: Pirate" > -50
+		government Militia
+	to offer
+	on visit
+		attributes "north pirate"
+			"combat rating" > 400
+	on complete
+	cargo "Illegal Substances" 25 2 .1
+		random < 15
+	job
+				"Gunboat"
 	source
+	passengers 1
+		"combat rating" > 1100
+		`	(Stay here until the fight is over.)`
+		random < 15
+		system
+		"reputation: Pirate" > 0
+		fleet
+	
+	on visit
+	job
+
+				"Falcon"
+			variant 4
+			variant 3
+
+		payment 9000 250
+		dialog "The target has been destroyed. Return to <destination> for your payment."
+		system destination
+		system
+		system
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+	source
+	repeat
+	to offer
+	name "Defend <planet>"
+	source
+		"combat rating" > 400
+	description "A large rival gang is gaining too much power. Their leader is currently near the <system> system. Take them and their escorts out and return to <planet> for a payment of <payment>."
+		"reputation: Pirate" += 5
+				"Combat Drone" 12
+	stealth
+			"reputation: Pirate" > -25
+		government "Pirate"
+		system
+		fleet
+		government "Pirate"
+		"combat rating" > 1100
+				"Bastion" 3
+		random < 40
+	to offer
+	name "Highly illegal drugs to <planet>"
+		government "Pirate"
+		or
+	npc
+
+		government "Syndicate"
+mission "Drug Running [0]"
+		"reputation: Pirate" > 10
+	source
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+	name "Wanted individuals to <planet>"
+	npc kill
+	job
+				"Frigate"
+		has "event: war begins"
+			distance 3 5
+			names "republic small"
+		distance 4 10
+	illegal 50000 `Upon scanning your vessel, law enforcement notice the criminal that you have on board. Entering your ship to detain them, they find the criminal in the corner of one of the rooms of your ship, clutching their battle trophies and screaming "you'll never take them from me!" After a short confrontation, they carry the criminal out and leave you with a small fine.`
+				"Quicksilver" 2
+	npc
+	deadline 12
+		government "Pirate"
+	npc
+		government Pirate
+				"Hauler II"
+			distance 3 5
+		fleet
+		government Pirate
+	to offer
+		government "Pirate"
+mission "Core Pirate Defense"
+
+	npc
+	to offer
+		system
+mission "Eliminating Competition (South, Large)"
+			variant 4
+		"reputation: Free Worlds" -= 5
+	destination
+		government Republic
+		distance 4 16
+	deadline 10
+
+	job
+			names "republic small"
+		system
+
+				"Quicksilver"
 		government "Pirate"
 		attributes "north pirate"
-	npc evade
+		distance 3 12
+		distance 4 14
+	to offer
+	on complete
+		personality heroic staying target
+		system
+			distance 3
+		attributes "core pirate"
+		random < 5
+			variant
+		fleet "Large Republic"
+		"reputation: Pirate" += 3
+	source
+	name "Defend <planet>"
+		random < 30
+	passengers 2 10 .9
+		"combat rating" > 1100
+		fleet "Small Republic"
+		dialog `Many locals of <planet> thank you for helping to drive off the Syndicate.`
+		payment 1000000
+	on visit
+	npc
+	cargo "Illegal Cargo" 25 2 .1
+	source
+	to offer
+		"combat rating" > 1100
+		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+		"reputation: Pirate" += 10
+		random < 5
+			decline
+	repeat
+	on complete
+		"reputation: Syndicate" -= 20
+		"combat rating" > 1100
+		dialog phrase "generic cargo on visit"
+		personality heroic waiting
+			names "republic small"
+			names "militia"
+		payment 20000 250
+	job
+	destination
+	description "Local Syndicate forces are attacking <destination>! Defeat them to defend anarchy!"
+		personality heroic staying
+	infiltrating
+			"combat rating" > 400
+	illegal 47000
+
+		fleet
+		random < 25
+		"reputation: Pirate" += 5
+		
+		personality heroic waiting
+		fleet "Small Militia" 2
+			names "syndicate small"
+	on complete
+			names "republic small"
+	job
+		government Militia
+		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+
+				"Gunboat"
+mission "Mercenary Job (Medium, Core, Dangerous Origin)"
+			variant
+		personality waiting entering
+		payment 200000 1000
+		government Syndicate
+		government "Militia"
+		dialog phrase "generic cargo on visit"
+			variant 1
+		fleet "Large Core Merchants"
+		government Pirate
+	name "Wanted individuals to <planet>"
+		distance 4 14
+		personality heroic waiting
+			names "militia"
+		government "Pirate"
+		outfit "Secret Cargo" -1
+		government Pirate
+	npc
+	on complete
+	npc
+	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 40,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+	name "Highly illegal drugs to <planet>"
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		
+				"Firebird (Plasma)"
+			names "republic small"
+	name "Militia near <system>"
+	source
+	description "A pirate on <planet> has bought slaves from a local warlord. Transfer these <bunks> slaves to <destination> for <payment>. Slavery is punishable by death throughout the galaxy, so this may be a dangerous job to take."
+	description "A key Syndicate politician who has plans that worry many local pirate gangs was spotted in their ship, the <npc>, in a nearby system. Find and destroy them in order to send a message to the Syndicate. Payment is <payment>. Be advised that they are heavily defended."
+	npc kill
+				"Firebird (Missile)"
+	minor
+			variant
+	stealth
+			variant
+	npc
+		personality staying
+		attributes "north pirate"
+
+		system
+	source
+				"Splinter" 3
+		personality heroic staying
+	job
+			variant
+			variant
+		"reputation: Pirate" > 0
+		personality staying
+	on visit
+	on complete
+	name "Smuggling to <planet>"
+		fleet "Large Militia" 2
+		fleet
+			variant 1
+		"reputation: Pirate" += 5
+	on complete
+	on visit
+	deadline 12
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+	npc
+		fleet
+				"Lance" 4
+			variant
+	npc
+	on visit
+	source
+			variant
+		fleet "Small Southern Merchants" 2
+		conversation "southern pirate defense"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		fleet "Small Syndicate" 2
+			names "republic small"
+	on complete
+	deadline 12
+
+			variant 2
+	npc kill
+		dialog "The target has been destroyed. Return to <destination> for your payment."
+	name "Highly illegal drugs to <planet>"
+		system destination
+			decline
+		"reputation: Militia" -= 5
+		dialog "After landing on <planet>, the pirates move the <bunks> slaves from your ship and pay you <payment>."
+	destination
+	to offer
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+			variant
+	name "Navy near <system>"
+		
+		has "event: war begins"
+mission "Drug Running [2]"
+			variant
+		require "Brig"
+	description "Local Syndicate forces are attacking <destination>! Defeat them to defend anarchy!"
+	on offer
+		dialog "After counting up the loot from the destroyed merchant fleet, you are given your cut. <payment>"
+
+	destination
+	on complete
+		fleet "Small Republic" 2
+	destination
+			variant
+				"Freighter (Secret Cargo)"
+		dialog "The targets have been destroyed. Return to <destination> for payment."
+
+	destination
+			names "syndicate small"
+		fleet "Small Republic" 2
+			variant 6
+		distance 3 12
+		personality heroic staying
+	source
+		fleet
+			variant 2
+	stealth
+				"Quicksilver" 4
+	repeat
+		system
+		payment 500000
+		"combat rating" > 1100
+mission "Cargo Smuggling [3]"
+		"reputation: Pirate" += 5
+		system
+		system
+		government Syndicate
+				"Combat Drone" 6
+	repeat
+				"Freighter"
+		personality staying target
+			variant
+				"Quicksilver" 3
+	on complete
 		government "Republic"
+			variant
+		random < 60
+			variant
+	npc
+		conversation "northern pirate defense"
+			variant
+	description "A key Free Worlds politician who has angered a powerful pirate warlord was spotted in their ship, the <npc>, in a nearby system. Find and destroy them in order to send a message to the Free Worlds. Payment is <payment>. Be advised that they are heavily defended."
+		personality heroic waiting entering
+				"Firebird" 2
+
+		attributes "south pirate"
+		dialog phrase "generic cargo on visit"
+		"reputation: Pirate" > -10
+		personality heroic waiting
+		fleet
+	on complete
+				"Hauler"
+		fleet
+			variant
+		"combat rating" > 400
+	npc kill
+	npc kill
+			variant
+	repeat
+		personality heroic waiting
+		fleet
+		fleet
+		system
+		fleet
+	source
+		personality staying target
+	job
+			variant
+		government Militia
+	on complete
+			"reputation: Pirate" > -25
+			variant
+	illegal 130000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+	
+			names "civilian"
+		personality heroic staying
+			names "republic small"
+		personality staying target
+	job
+
+	description "A pirate on <planet> has bought slaves from a local warlord. Transfer these <bunks> slaves to <destination> for <payment>. Slavery is punishable by death throughout the galaxy, so this may be a dangerous job to take."
+		payment 200000
+	name "Assassinate a political target"
+		distance 3 6
+	on complete
+
+				"Flivver"
+		personality heroic waiting
+	destination
+		system destination
+		government "Pirate"
+	cargo "Illegal Substances" 5 2 .1
+	npc
+mission "Slave Transport [0]"
+		fleet
+		government "Pirate"
+		system destination
+			names "pirate"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		system destination
+		attributes core
+		government Republic
+
+		payment 200000
+			variant
+	npc kill
+
+		random < 15
+		fleet
+	to offer
+		government "Pirate"
+	npc
+		"combat rating" > 3000
+
+	npc accompany save
+			names "syndicate small"
+		"combat rating" > 3000
+		system
+		payment 600000
+		government "Pirate"
+		personality staying target
+	npc
+			variant
+	source
+		personality heroic waiting
+	name "Syndicate near <system>"
+	on complete
+	npc
+		personality heroic staying target
+	to offer
+	job
+			names "republic small"
+	source
+	passengers 2 10 .9
+		government "Pirate"
+		dialog phrase "generic cargo on visit"
+		payment 50000 300
+		payment 4000 200
+			distance 2 4
+		random < 10
+	job
+		government Pirate
+mission "Core Pirate Defense [Unpaid]"
+
+		government Syndicate
+		personality heroic waiting
+				"Gunboat"
+	job
+		payment 100000 375
+	repeat
+		"reputation: Navy (Oathkeeper)" -= 25
+		distance 2 10
+	source
+	npc
+		require "Brig"
+
+		payment 750000
+		"combat rating" > 400
+			variant 1
+		personality staying
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+	job
+	repeat
+				"Splinter" 2
+				"Freighter (Secret Cargo)"
+	source
+		payment 250000
+	name "Bulk smuggling to <planet>"
+		fleet "Large Militia"
+		or
+
+	`Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the Syndicate! We need every combat-worthy ship to join the defenses!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
+			names "free worlds small"
+		attributes core "core pirate"
+			variant 1
+
+	npc kill
+		government Pirate
+		"reputation: Republic" -= 5
+		dialog "After counting up the loot from the destroyed merchant fleet, you are given your cut. <payment>"
+		fleet
+		government "Pirate"
+		dialog "The merchants have been eliminated. Return to <destination> for your cut of the loot."
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+	stealth
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		random < 50
+			distance 3 5
+		system
+	illegal 130000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+		dialog "You are greeted by applause from many pirates when you land and a powerful pirate warlord pays you <payment>."
+		payment 4000 200
+		payment 250000
+	description "Run <cargo> to <destination>. Being scanned will result in a 175,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
+	on complete
+	minor
+		fleet
+	name "Defend <planet>"
+			names "syndicate small"
+	description "Rumor has it that the Syndicate is planning a raid on regional pirate gangs in order to reduce piracy. An important security commander said to be leading this raid has been spotted in a nearby system with a large fleet. Find and destroy them in order to send a message to the Syndicate. Payment is <payment>."
+	to offer
+			variant 1
+		government Syndicate
+mission "Eliminating Competition (Core, Small)"
+
+		government Republic
+	illegal -1
+
+		government "Pirate"
+	stealth
+	repeat
+		fleet
+		payment 20000 300
+				"Hauler"
+	infiltrating
+		"reputation: Pirate" > -50
+		government "Pirate"
+		fleet "Large Militia"
+	to offer
+			distance 2 4
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+			variant
+				"Quicksilver (Scanner)"
+		government "Pirate"
+		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+			"combat rating" > 150
+		random < 40
+			variant
+		outfit "Secret Cargo" -1
+		dialog `The Syndicate fleets have been defeated. Return to <destination>.`
+		fleet
+			variant 2
+		fleet
+		attributes "south pirate"
+		distance 3 30
+	job
+	to offer
+		system destination
+
+				"Carrier" 2
+		government "Pirate"
+		personality heroic staying
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		government "Pirate"
+			distance 3
+	name "Bulk drug run to <planet>"
+			variant
+		government "Merchant"
+
+				"Osprey" 2
+		random < 40
+				"Gunboat" 2
+			distance 1 3
+		government Republic
+			variant
+	on visit
+		fleet
+	source
+	description `A merchant convoy has been spotted near the <system> system. A local warlord is interested in having the cargo on the <npc>. Plunder it and return to <planet> for payment of <payment>.`
+	illegal 25000
+	on complete
+	to offer
+mission "Eliminating Law Enforcement (Core, Large)"
+		random < 60
+	name "Competition near <system>"
+	
+		dialog "Your <passengers> insist that you land on the edge of the spaceport to avoid being seen. After you land, they pay you <payment> before quickly grabbing their things and leaving your ship."
+				"Bastion" 2
+		system destination
+	name "Galactic criminal to <planet>"
+	npc
+	npc
+				"Rainmaker"
+	source
+	npc
+	npc
+		government Syndicate
+	to offer
+		government "Republic"
+	description `A merchant convoy has been spotted near the <system> system. A local warlord is interested in having the cargo on the <npc>. Plunder it and return to <planet> for payment of <payment>.`
+	description "This criminal is wanted by every law enforcement agency in the galaxy and needs safe transport to <destination> with their <cargo>. The payment is high at an amazing <payment>, but transporting such a person could lead to trouble."
+	npc
+			variant
+				"Argosy" 2
+	npc
+		government "Pirate"
+			names "republic small"
+	name "Assassinate a political target"
+	repeat
+		fleet
+		government Syndicate
+	destination
+		random < 15
+				"Corvette (Missile)"
+		"combat rating" > 1100
+			names "militia"
+		random < 50
+	to offer
+			names civilian
+				"Gunboat"
+	on visit
+mission "Stealth Drug Running (South) [1]"
+		personality plunders staying
+		"reputation: Syndicate" -= 5
+			names "syndicate small"
+		dialog "Your <passengers> insist that you land on the edge of the spaceport to avoid being seen. After you land, they pay you <payment> before quickly grabbing their things and leaving your ship."
+		personality escort
+		payment 600000
+	`	Local pirate forces are preparing to repel the Navy attack. You join them, and take off together...`
+	npc
+	on visit
+				"Manta" 2
+		random < 80
+			distance 2 4
+		fleet "Small Core Pirates" 4
+			"combat rating" > 400
+		"reputation: Pirate" += 3
+
+		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the Syndicate fleet."
+			variant
+		distance 3 4
+		"reputation: Pirate" += 5
+				"Quicksilver (Scanner)"
+		fleet
+	name "Protect cargo to <planet>"
+	repeat
+		government Militia
+	npc kill
+		attributes "south pirate"
+		government "Syndicate"
+	npc
+	on fail
+	illegal 65000
+		system
+mission "Stealth Drug Running (North) [0]"
+	on visit
+		random < 25
+				"Bastion (Scanner)"
+	source
+	description "The captain of the <npc> will pay you <payment> to escort them and their illegal cargo safely through law-enforced space to reach <destination> by <date>."
+		random < 15
+			variant
+	to offer
+		personality escort
+	destination
+	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 25,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+	on complete
+			distance 1 2
+				"Cruiser" 2
+	on visit
+	to offer
+	illegal -1
+	to offer
+		government Syndicate
+	npc
+		government "Free Worlds"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		"reputation: Pirate" += 5
+		fleet
+	repeat
+	npc
+			distance 3
+		fleet "Small Republic"
+		government Syndicate
+		personality heroic waiting
+		dialog phrase "generic cargo on visit"
+				"Manta"
+	repeat
+	job
+	npc
+			variant
+	source
+		random < 15
+	on fail
+	description "Cargo stolen from a merchant ship which has caught the interest of a pirate warlord."
+	name "Defend <planet>"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		government Militia
+	source
+		`	(Join the defense fleet.)`
+	description "Rumor has it that the Free Worlds are planning a raid on regional pirate gangs in order to reduce piracy. An important militia commander said to be leading this raid has been spotted in a nearby system with a large fleet. Find and destroy them in order to send a message to the Free Worlds. Payment is <payment>."
+		government Militia
+			names "republic small"
+				"Bastion" 2
+	description "A merchant fleet has been spotted near the <system> system. Join in destroying them and return to <planet> for a cut of the loot (<payment>)."
+			variant
+		government "Pirate"
+	on visit
+		payment 75000 400
+		government "Pirate"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral"
+		government Republic
+	on complete
+	description "The captain of the <npc> will pay you <payment> to help them escape local law enforcement and reach <destination> by <date>."
+	to offer
+	on visit
+		has "event: war begins"
+		personality heroic waiting
+
+	on complete
+		"combat rating" > 1100
+		"reputation: Pirate" > 0
+		distance 4 14
+	name "Navy near <system>"
+		fleet "Large Northern Merchants"
+		payment 75000 375
+	source
+			variant
+			names "republic small"
+		government "Pirate"
+		government "Pirate"
+	stealth
+		"reputation: Pirate" >= 0
+	destination
+		fleet
+	repeat
+		distance 2 10
+		personality plunders harvests escort
+mission "FW Assassination [3]"
+		payment 50000 300
+			distance 3 5
+		personality heroic waiting
+		attributes frontier north "north pirate"
+		attributes "south pirate"
+	cargo "Highly Illegal Cargo" 5 2 .1
+
+		payment 200000
+		"reputation: Pirate" += 10
+
+			"combat rating" > 400
+	destination
+			variant
+		system
+		random < 30
+		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+		dialog "A gang of pirates on <planet> thank you for taking out the Navy commander and pay you <payment>."
+			variant
+			names "militia"
+		system destination
+		government Republic "Free Worlds" Syndicate Neutral
+		payment 150000
+			variant
+mission "Bulk Drug Running [0]"
+		fleet "Small Republic"
+		or
+mission "Southern Pirate Defense [Unpaid]"
+
+		random < 15
+	repeat
+	description "A Free Worlds militia commander who has led a number of small raids against pirate gangs in the region has been spotted patrolling a nearby system with their fleet. Find and destroy them in order to send a message to the Free Worlds. Payment is <payment>."
+		"reputation: Free Worlds" -= 5
+		"reputation: Pirate" > 100
+
+	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 120,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+	job
+				"Quicksilver (Scanner)"
+		fleet "Small Northern Pirates"
+	on complete
+
+			variant
+	description "Local militia forces are attacking <destination>! Defeat them to defend anarchy!"
+	npc
+				"Bastion (Scanner)"
+	npc
+		random < 5
+			variant
+	to offer
+		attributes "core pirate"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		system
+		random < 50
+
+		fleet
+		payment 1500000
+		dialog "You are greeted by applause from many pirates when you land and a powerful pirate warlord pays you <payment>."
+mission "FW Assassination [1]"
+			names "militia"
+	on visit
+	on visit
+	job
+	infiltrating
+	cargo "Highly Illegal Cargo" 5 2 .1
+		random < 15
+		"combat rating" > 1100
+	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 65,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+		attributes "core pirate"
+		attributes "north pirate"
+			variant 3
+		fleet "Small Southern Pirates" 2
+			"combat rating" > 400
+	on complete
+		personality heroic staying target marked
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		dialog phrase "generic cargo on visit"
+		"reputation: Pirate" > -100
+		personality staying heroic target
+	source
+				"Blackbird"
+	npc evade
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+mission "FW Assassination [2]"
+		payment 500000
+		dialog `Many locals of <planet> thank you and collectively pay you <payment> for helping to drive off the Navy.`
+		fleet
+	npc
+		attributes "north pirate"
+		fleet
+		attributes frontier north
+
+			distance 3 4
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		government "Pirate"
+			names "syndicate small"
+		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the rival gang."
+	
+	name "Bulk drug run to <planet>"
+	name "Syndicate near <system>"
+		"reputation: Pirate" += 5
+	repeat
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+		fleet "Large Syndicate"
+				"Manta" 2
+	name "Drug run to <planet>"
+
+		personality plunders staying
+		"reputation: Navy (Oathkeeper)" -= 20
+		fleet "Small Militia"
+	repeat
+	on visit
+		`	(Join the defense fleet.)`
+				"Headhunter" 3
+	description "This criminal is wanted by every law enforcement agency in the galaxy and needs safe transport to <destination> with their <cargo>. The payment is high at an amazing <payment>, but transporting such a person could lead to trouble."
+			distance 3 5
+mission "Wanted Passenger [0]"
+	cargo "Illegal Substances" 5 2 .1
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		government "Merchant"
+		government "Pirate"
+	to offer
+		government "Pirate"
+	description "A large Syndicate fleet near the <system> system has halted our raids. Destroy them and return to <planet> for a payment of <payment>."
+		random < 50
+			names "syndicate small"
+		dialog "You land outside of the main city to avoid any chances of your passenger being seen. They grab their things and make their way off of your ship after paying you <payment>."
+	source
+mission "Republic Assassination [3]"
+			distance 2 4
+		"reputation: Pirate" += 3
+				"Vanguard"
+		distance 4 14
+		launch
+		personality heroic waiting
+		random < 70
+		distance 3 8
+	description "A small rival gang is causing trouble near the <system> system. Take them out and return to <planet> for a payment of <payment>."
+		dialog phrase "generic arrived-without-npc dialog"
+		fleet
+		government Republic
+		payment 5000 250
+		government "Pirate"
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		payment 75000 300
+		government "Pirate"
+	on fail
+			distance 1 3
+
+		government Republic "Free Worlds" Syndicate Neutral Pirate
+		fleet "Small Southern Pirates" 2
+		dialog phrase "generic cargo on visit"
+				"Clipper"
+	on offer
+			distance 3
+		system destination
+
+				"Corvette" 2
+		personality escort
+		personality staying target
+	description "The captain of the <npc> will pay you <payment> to escort them and their stolen vessel safely through law-enforced space to reach <destination> by <date>."
+		attributes "core pirate"
+	repeat
+		government "Free Worlds"
+		fleet "Large Northern Pirates" 2
+		"reputation: Syndicate" -= 5
+	illegal 86000
+				"Osprey"
+	npc kill
+		"reputation: Pirate" += 5
+	npc kill
+		dialog "The target and their fleet has been destroyed. Return to <destination> for your payment."
+			variant
+
+			names "syndicate small"
+	repeat
+		government "Pirate"
+				"Quicksilver (Scanner)"
+		system
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+			variant 1
+mission "Stealth Cargo Smuggling (Core) [0]"
 		personality heroic staying waiting
 		fleet "Large Republic"
-		fleet "Small Republic"
-		dialog `The Navy fleets have been defeated. Return to <destination>.`
-	npc
-		government "Pirate"
-		personality plunders staying
-		fleet "Large Northern Pirates"
-		fleet "Small Northern Pirates"
-	on offer
-		conversation "northern pirate defense"
+	cargo "Illegal Cargo" 25 2 .1
 	on complete
-		dialog `Many locals of <planet> thank you for helping to drive off the Navy.`
-
-conversation "northern pirate defense"
-	`Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the Navy! We need every combat-worthy ship to join the defenses!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
-	choice
-		`	(Stay here until the fight is over.)`
-			decline
-		`	(Join the defense fleet.)`
-	`	Local pirate forces are preparing to repel the Navy attack. You join them, and take off together...`
-		launch
-
-
-mission "Core Pirate Defense"
-	name "Defend <planet>"
-	repeat
-	minor
-	description "Local Syndicate forces are attacking <destination>! Defeat them to defend anarchy!"
-	to offer
-		random < 15
-		"reputation: Pirate" >= 0
-	source
-		government "Pirate"
-		attributes "core pirate"
-	npc evade
+				"Freighter"
+		"reputation: Pirate" += 5
+		distance 3 30
+		fleet "Navy Surveillance"
+		"combat rating" > 1100
+		personality heroic waiting
+	npc
+			names "militia"
+# Copyright (c) 2014 by Michael Zahniser
+	destination
 		government "Syndicate"
-		personality heroic staying waiting
-		fleet "Small Syndicate"
-		fleet "Large Syndicate" 2
-		dialog `The Syndicate fleets have been defeated. Return to <destination>.`
-	npc
-		government "Pirate"
-		personality plunders staying
-		fleet "Small Core Pirates" 2
-	on offer
-		conversation "core pirate defense"
-	on complete
-		payment 200000
-		dialog `Many locals of <planet> thank you and collectively pay you <payment> for helping to drive off the Syndicate.`
-
-mission "Core Pirate Defense [Unpaid]"
-	name "Defend <planet>"
-	repeat
-	minor
-	description "Local Syndicate forces are attacking <destination>! Defeat them to defend anarchy!"
-	to offer
-		random < 5
-		"reputation: Pirate" >= 0
-	source
-		government "Pirate"
-		attributes "core pirate"
+		"combat rating" > 1100
 	npc evade
-		government "Syndicate"
-		personality heroic staying waiting
-		fleet "Small Syndicate" 2
-		fleet "Large Syndicate"
-		dialog `The Syndicate fleets have been defeated. Return to <destination>.`
-	npc
-		government "Pirate"
-		personality plunders staying
-		fleet "Small Core Pirates" 2
-	on offer
-		conversation "core pirate defense"
-	on complete
-		dialog `Many locals of <planet> thank you for helping to drive off the Syndicate.`
-
-conversation "core pirate defense"
-	`Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the Syndicate! We need every combat-worthy ship to join the defenses!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
-	choice
-		`	(Stay here until the fight is over.)`
-			decline
-		`	(Join the defense fleet.)`
-	`	Local pirate forces are preparing to repel the Syndicate attack. You join them, and take off together...`
-		launch
-
-
-mission "Southern Pirate Defense"
-	name "Defend <planet>"
-	repeat
-	minor
-	description "Local militia forces are attacking <destination>! Defeat them to defend anarchy!"
-	to offer
-		random < 15
-		"reputation: Pirate" >= 0
-	source
-		government "Pirate"
-		attributes "south pirate"
-	npc evade
-		government "Militia"
-		personality heroic staying waiting
-		fleet "Small Militia"
-		fleet "Large Militia" 2
-		dialog `The militia fleets have been defeated. Return to <destination>.`
-	npc
-		government "Pirate"
-		personality plunders staying
-		fleet "Small Southern Pirates" 2
-	on offer
-		conversation "southern pirate defense"
-	on complete
-		payment 200000
-		dialog `Many locals of <planet> thank you and collectively pay you <payment> for helping to drive off the militia forces.`
-
-mission "Southern Pirate Defense [Unpaid]"
-	name "Defend <planet>"
-	repeat
-	minor
-	description "Local militia forces are attacking <destination>! Defeat them to defend anarchy!"
-	to offer
-		random < 5
-		"reputation: Pirate" >= 0
-	source
-		government "Pirate"
-		attributes "south pirate"
-	npc evade
-		government "Militia"
-		personality heroic staying waiting
-		fleet "Small Militia" 2
-		fleet "Large Militia"
-		dialog `The militia fleets have been defeated. Return to <destination>.`
-	npc
-		government "Pirate"
-		personality plunders staying
-		fleet "Small Southern Pirates" 2
-	on offer
-		conversation "southern pirate defense"
-	on complete
-		dialog `Many locals of <planet> thank you for helping to drive off the militia forces.`
-
-conversation "southern pirate defense"
-	`Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the militia! We need every combat-worthy ship to join the defenses!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
-	choice
-		`	(Stay here until the fight is over.)`
-			decline
-		`	(Join the defense fleet.)`
-	`	Local pirate forces are preparing to repel the militia attack. You join them, and take off together...`
-		launch
-
-
-
-outfit "Secret Cargo"
-	category "Special"
-	cost 0
-	thumbnail "outfit/unknown"
-	"mass" 1
-	description "Cargo stolen from a merchant ship which has caught the interest of a pirate warlord."
-
-mission "Cargo Theft (North)"
-	name "Convoy near <system>"
-	job
-	repeat
-	description `A merchant convoy has been spotted near the <system> system. A local warlord is interested in having the cargo on the <npc>. Plunder it and return to <planet> for payment of <payment>.`
-	to offer
-		random < 15
-		"combat rating" > 3000
-	source
-		government Pirate
-		attributes "north pirate"
-	npc
-		government "Merchant"
-		personality staying heroic target
-		system
-			distance 2 3
-		fleet
-			names "civilian"
-			variant
-				"Freighter (Secret Cargo)"
-				"Corvette" 2
-			variant
-				"Freighter (Secret Cargo)"
-				"Firebird" 2
-			variant
-				"Freighter (Secret Cargo)"
-				"Leviathan"
-	on visit
-		dialog "You land on <planet>, but you don't have the secret cargo! Return to the <npc> and bring the cargo back to <planet>."
-	on complete
-		outfit "Secret Cargo" -1
-		payment 1500000
-		dialog "The pirates of <planet> take the secret cargo from your cargo hold and pay you <payment>."
-
-mission "Cargo Theft (Core)"
-	name "Convoy near <system>"
-	job
-	repeat
-	description `A merchant convoy has been spotted near the <system> system. A local warlord is interested in having the cargo on the <npc>. Plunder it and return to <planet> for payment of <payment>.`
-	to offer
-		random < 15
-		"combat rating" > 3000
-	source
-		government Pirate
-		attributes "core pirate"
-	npc
-		government "Merchant"
-		personality staying heroic target
-		system
-			distance 2 3
-		fleet
-			names "civilian"
-			variant
-				"Freighter (Secret Cargo)"
-				"Quicksilver" 2
-			variant
-				"Freighter (Secret Cargo)"
-				"Splinter" 2
-			variant
-				"Freighter (Secret Cargo)"
-				"Vanguard"
-	on visit
-		dialog "You land on <planet>, but you don't have the secret cargo! Return to the <npc> and bring the cargo back to <planet>."
-	on complete
-		outfit "Secret Cargo" -1
-		payment 1500000
-		dialog "The pirates of <planet> take the secret cargo from your cargo hold and pay you <payment>."
-
-mission "Cargo Theft (South)"
-	name "Convoy near <system>"
-	job
-	repeat
-	description `A merchant convoy has been spotted near the <system> system. A local warlord is interested in having the cargo on the <npc>. Plunder it and return to <planet> for payment of <payment>.`
-	to offer
-		random < 15
-		"combat rating" > 3000
-	source
-		government Pirate
-		attributes "south pirate"
-	npc
-		government "Merchant"
-		personality staying heroic target
-		system
-			distance 2 3
-		fleet
-			names "civilian"
-			variant
-				"Freighter (Secret Cargo)"
-				"Bastion" 2
-			variant
-				"Freighter (Secret Cargo)"
-				"Blackbird" 2
-			variant
-				"Freighter (Secret Cargo)"
-				"Falcon"
-	on visit
-		dialog "You land on <planet>, but you don't have the secret cargo! Return to the <npc> and bring the cargo back to <planet>."
-	on complete
-		outfit "Secret Cargo" -1
-		payment 1500000
-		dialog "The pirates of <planet> take the secret cargo from your cargo hold and pay you <payment>."
-
-
-
-mission "FW Assassination [1]"
-	name "Assassinate a political target"
-	description "A key Free Worlds politician who is worrying local slave traders was spotted in their ship, the <npc>, in a nearby system. Find and destroy them in order to send a message to the Free Worlds. Payment is <payment>. Be advised that they may have escorts."
-	repeat
-	job
-	to offer
-		"combat rating" > 200
-		random < 5
-		"reputation: Pirate" > -100
-		has "event: war begins"
-	source
-		government "Pirate"
-		attributes "south pirate"
+	description "These <bunks> wanted individuals wish to reach <destination> without being caught by local law enforcement. They also wish to bring with them <cargo>. Payment is <payment>."
+				"Bastion (Scanner)"
+		payment 75000 375
+	name "Transfer slaves to <planet>"
 	npc kill
-		government "Free Worlds"
-		personality staying target
-		system
-			distance 2 5
-		fleet
-			names civilian
-			variant
-				"Flivver"
-				"Osprey" 2
-			variant
-				"Osprey"
+			names "militia"
+				"Quicksilver (Scanner)"
+		government Pirate
+		system destination
+		payment 150000
 				"Bastion"
-			variant
-				"Falcon"
-				"Fury" 2
-		dialog "The target has been destroyed. Return to <destination> for your payment."
+	npc
 	on complete
-		payment 350000
-		dialog "A band of slave traders thank you for eliminating the politician and pay you <payment>."
-		"reputation: Free Worlds" -= 10
-		"reputation: Pirate" += 3
-		
-mission "FW Assassination [2]"
-	name "Assassinate a political target"
-	description "A key Free Worlds politician who has angered a powerful pirate warlord was spotted in their ship, the <npc>, in a nearby system. Find and destroy them in order to send a message to the Free Worlds. Payment is <payment>. Be advised that they are heavily defended."
-	repeat
-	job
-	to offer
-		"combat rating" > 400
-		random < 5
-		"reputation: Pirate" > -50
+	npc kill
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
 		has "event: war begins"
-	source
+		government Pirate
+#
+	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 47,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
 		government "Pirate"
-		attributes "south pirate"
-	npc kill
-		government "Free Worlds"
-		personality staying target
+		government "Pirate"
+	destination
+	infiltrating
 		system
-			distance 2 5
-		fleet
-			names civilian
-			variant
+		outfit "Secret Cargo" -1
+		fleet "Small Syndicate"
+	job
+		government "Pirate"
+		distance 3 10
+		"reputation: Republic" -= 5
+		"combat rating" > 1100
+		"reputation: Pirate" > 0
+	illegal 300000 `Law enforcement rush their way onto your ship through the airlocks, suited head to toe in armor and armed to the teeth. Your passenger is quickly made to surrender and is hauled off in cuffs. The officers consider detaining you as well, but eventually decide to only fine you to reduce the trouble they have to go through.`
 				"Star Queen"
-				"Osprey"
-				"Argosy" 2
-			variant
-				"Star Queen"
-				"Falcon"
-				"Argosy"
-		dialog "The target has been destroyed. Return to <destination> for your payment."
-	on complete
-		payment 600000
-		dialog "The pirate warlord thanks you for eliminating the politician that threated them and pays you <payment>."
-		"reputation: Free Worlds" -= 15
-		"reputation: Pirate" += 5
-		
-mission "FW Assassination [3]"
-	name "Assassinate a military target"
-	description "A Free Worlds militia commander who has led a number of small raids against pirate gangs in the region has been spotted patrolling a nearby system with their fleet. Find and destroy them in order to send a message to the Free Worlds. Payment is <payment>."
-	repeat
-	job
 	to offer
-		"combat rating" > 500
-		random < 5
-		"reputation: Pirate" > 50
-		has "event: war begins"
-	source
-		government "Pirate"
-		attributes "south pirate"
-	npc kill
-		government "Free Worlds"
-		personality staying target
-		system
-			distance 2 4
 		fleet
-			names "free worlds small"
-			variant
-				"Falcon"
-				"Osprey" 2
-				"Sparrow" 4
-			variant
-				"Falcon"
-				"Argosy (Laser)" 3
-				"Hawk" 2
-				"Fury" 2
-		dialog "The target has been destroyed. Return to <destination> for your payment."
-	on complete
-		payment 750000
-		dialog "A gang of pirates on <planet> thank you for taking out the Free Worlds commander and pay you <payment>."
-		"reputation: Free Worlds" -= 20
-		"reputation: Pirate" += 7
-		
-mission "FW Assassination [4]"
-	name "Assassinate a military target"
-	description "Rumor has it that the Free Worlds are planning a raid on regional pirate gangs in order to reduce piracy. An important militia commander said to be leading this raid has been spotted in a nearby system with a large fleet. Find and destroy them in order to send a message to the Free Worlds. Payment is <payment>."
+	on visit
 	repeat
+		payment 250000
+mission "Eliminating Law Enforcement (North, Large)"
+	description "A Syndicate fleet near the <system> system has halted our raids. Destroy them and return to <planet> for a payment of <payment>."
 	job
-	to offer
-		"combat rating" > 800
-		random < 5
-		"reputation: Pirate" > 100
-		has "event: war begins"
-	source
-		government "Pirate"
-		attributes "south pirate"
-	npc kill
-		government "Free Worlds"
-		personality staying target
 		system
-			distance 2 4
-		fleet
-			names "free worlds small"
-			variant
-				"Falcon" 2
-				"Bastion" 3
-				"Osprey" 2
-				"Argosy" 2
-			variant
-				"Falcon"
-				"Bastion" 2
-				"Argosy" 5
-				"Fury" 4
-		dialog "The target fleet has been destroyed. Return to <destination> for your payment."
-	on complete
-		payment 1000000
-		dialog "You are greeted by applause from many pirates when you land and a powerful pirate warlord pays you <payment>."
-		"reputation: Free Worlds" -= 25
-		"reputation: Pirate" += 10
-		
-mission "Syndicate Assassination [1]"
-	name "Assassinate a political target"
-	description "A key Syndicate politician was spotted passing through a nearby system in their ship, the <npc>. Find and destroy them in order to send a message to the Syndicate. Payment is <payment>. Be advised that they may have escorts."
 	repeat
-	job
-	to offer
-		"combat rating" > 200
-		random < 5
-		"reputation: Pirate" > -100
-	source
-		government "Pirate"
-		attributes "core pirate"
-	npc kill
-		government "Syndicate"
-		personality staying target
-		system
-			distance 2 5
 		fleet
-			names civilian
-			variant
-				"Star Queen"
-				"Quicksilver" 2
-		dialog "The target has been destroyed. Return to <destination> for your payment."
-	on complete
-		payment 350000
-		dialog "A pirate warlord thanks you for eliminating the politician and pays you <payment>."
-		"reputation: Syndicate" -= 10
-		"reputation: Pirate" += 3
-		
-mission "Syndicate Assassination [2]"
-	name "Assassinate a political target"
-	description "A key Syndicate politician who has plans that worry many local pirate gangs was spotted in their ship, the <npc>, in a nearby system. Find and destroy them in order to send a message to the Syndicate. Payment is <payment>. Be advised that they are heavily defended."
+		random < 15
 	repeat
+			distance 1 3
+		random < 15
 	job
-	to offer
-		"combat rating" > 400
-		random < 5
-		"reputation: Pirate" > -50
-	source
-		government "Pirate"
-		attributes "core pirate"
-	npc kill
-		government "Syndicate"
-		personality staying target
-		system
-			distance 2 5
+		personality heroic staying target
+			variant
+		random < 15
+		personality heroic staying target
+		system destination
+		"combat rating" > 1100
 		fleet
-			names civilian
-			variant
-				"Star Queen"
-				"Splinter" 2
-			variant
-				"Star Queen"
-				"Manta" 2
-		dialog "The targets have been destroyed. Return to <destination> for payment."
-	on complete
-		payment 600000
-		dialog "A band of pirates thank you for eliminating the politician and pay you <payment>."
-		"reputation: Syndicate" -= 15
-		"reputation: Pirate" += 5
-		
-mission "Syndicate Assassination [3]"
-	name "Assassinate a military target"
-	description "A Syndicated Security commander who has led a number of small raids against pirate gangs in the region has been spotted patrolling a nearby system with their fleet. Find and destroy them in order to send a message to the Syndicate. Payment is <payment>."
-	repeat
-	job
-	to offer
-		"combat rating" > 500
-		random < 5
-		"reputation: Pirate" > 50
-	source
-		government "Pirate"
-		attributes "core pirate"
-	npc kill
-		government "Syndicate"
-		personality staying target
-		system
-			distance 2 4
-		fleet
-			names "syndicate small"
-			variant
-				"Vanguard"
-				"Manta" 2
-				"Splinter"
-				"Quicksilver" 3
-			variant
-				"Vanguard"
-				"Protector"
-				"Quicksilver" 4
-		dialog "The target has been destroyed. Return to <destination> for your payment."
-	on complete
-		payment 750000
-		dialog "A gang of pirates on <planet> thank you for taking out the Syndicated Security commander and pay you <payment>."
-		"reputation: Syndicate" -= 20
-		"reputation: Pirate" += 7
-		
-mission "Syndicate Assassination [4]"
-	name "Assassinate a military target"
-	description "Rumor has it that the Syndicate is planning a raid on regional pirate gangs in order to reduce piracy. An important security commander said to be leading this raid has been spotted in a nearby system with a large fleet. Find and destroy them in order to send a message to the Syndicate. Payment is <payment>."
-	repeat
-	job
-	to offer
-		"combat rating" > 800
-		random < 5
-		"reputation: Pirate" > 100
-	source
-		government "Pirate"
-		attributes "core pirate"
-	npc kill
-		government "Syndicate"
-		personality staying target
-		system
-			distance 2 4
-		fleet
-			names "syndicate small"
-			variant
-				"Vanguard"
-				"Protector" 2
-				"Splinter" 3
-				"Manta"
-				"Quicksilver" 2
-			variant
-				"Vanguard" 3
-				"Splinter" 2
-				"Manta" 2
-				"Quicksilver" 3
-		dialog "The target and their fleet has been destroyed. Return to <destination> for your payment."
-	on complete
-		payment 1000000
-		dialog "You are greeted by applause from many pirates when you land and a powerful pirate warlord pays you <payment>."
-		"reputation: Syndicate" -= 25
-		"reputation: Pirate" += 10
-		
-mission "Republic Assassination [1]"
-	name "Assassinate a political target"
-	description "A key Republic politician who is worrying local pirate gangs was spotted in their ship, the <npc>, in a nearby system. Find and destroy them in order to send a message to the Republic. Payment is <payment>. Be advised that they may have escorts."
-	repeat
-	job
-	to offer
-		"combat rating" > 200
-		random < 5
-		"reputation: Pirate" > -100
-	source
-		government "Pirate"
-		attributes "north pirate"
-	npc kill
-		government "Republic"
-		personality staying target
-		system
-			distance 3 5
-		fleet
-			names civilian
-			variant
-				"Flivver"
+	name "Galactic criminal to <planet>"
+		"reputation: Pirate" > 0
 				"Headhunter" 2
-				"Corvette"
-		dialog "The target has been destroyed. Return to <destination> for your payment."
-	on complete
-		payment 350000
-		dialog "A pirate warlord thanks you for eliminating the politician pays you <payment>."
-		"reputation: Republic" -= 10
-		"reputation: Navy (Oathkeeper)" -= 10
-		"reputation: Pirate" += 3
-		
-mission "Republic Assassination [2]"
-	name "Assassinate a political target"
-	description "A key Republic politician who is worrying local drug traders was spotted in their ship, the <npc>, in a nearby system. Find and destroy them in order to send a message to the Republic. Payment is <payment>. Be advised that they are heavily defended."
-	repeat
-	job
+	description "These <bunks> wanted individuals wish to reach <destination> without being caught by local law enforcement. They also wish to bring with them <cargo>. Payment is <payment>."
+		"combat rating" > 400
+		payment 1000000
+				"Bastion (Scanner)"
+		personality waiting
+	description "A militia fleet near the <system> system has halted our raids. Destroy them and return to <planet> for a payment of <payment>."
+
+		government "Pirate"
+	`	Local pirate forces are preparing to repel the Syndicate attack. You join them, and take off together...`
+		or
+		"reputation: Pirate" += 5
 	to offer
+		government "Pirate"
+		system
+
+	on complete
+	name "Drug run to <planet>"
+	name "Competition near <system>"
+			distance 2 4
+			variant 1
+			distance 3 5
+				"Gunboat"
+	passengers 2 10 .9
+		system
+		conversation "core pirate defense"
+		dialog phrase "generic passenger on visit"
+	on complete
+				"Gunboat"
+			variant
+				"Heavy Shuttle"
+	to offer
+	illegal -1
+		"reputation: Pirate" > 0
+		dialog phrase "generic passenger on visit"
+	on fail
+		government Syndicate
+				"Argosy (Laser)" 3
+mission "Stealth Drug Running (South) [0]"
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		dialog phrase "generic safe escort completion dialog"
+		distance 3 30
+	repeat
+		personality waiting
+		personality heroic waiting
+	description "A Republic Navy commander who has led a number of small raids against pirate gangs in the region has been spotted patrolling a nearby system with their fleet. Find and destroy them in order to send a message to the Republic. Payment is <payment>."
+		dialog `Many locals of <planet> thank you for helping to drive off the militia forces.`
+			distance 3 5
+	npc
+		government "Pirate"
+		require "Brig"
+		fleet
+		"reputation: Pirate" > 0
+		fleet
+		government Republic
+	description "A small rival gang is causing trouble near the <system> system. Take them out and return to <planet> for a payment of <payment>."
+	on visit
+		launch
+				"Sparrow" 4
+
+	on complete
+	job
+		payment 15000 250
+		dialog `The militia fleets have been defeated. Return to <destination>.`
+			variant
+				"Gunboat"
+		dialog "Your <passengers> insists that you land on the edge of the spaceport to avoid being seen. After you land, they pay you <payment> before quickly grabbing their things and leaving your ship."
+		system destination
+	stealth
+			names "pirate"
+
+	npc evade
+		"combat rating" > 500
+		government Republic
+			names "syndicate small"
+		fleet "Small Militia"
+	description "Local Navy forces are attacking <destination>! Defeat them to defend anarchy!"
+		government "Pirate"
+		distance 3 12
+		government "Merchant"
+	name "Assassinate a political target"
+	job
+				"Headhunter"
+	repeat
+				"Star Queen"
+mission "Bulk Cargo Smuggling [1]"
+			variant
+		government Republic "Free Worlds" Syndicate Neutral Pirate
+				"Vanguard"
+			variant
+			distance 1 3
+		random < 10
+	destination
+	description "A large rival gang is gaining too much power. Their leader is currently near the <system> system. Take them and their escorts out and return to <planet> for a payment of <payment>."
+
+			variant
+	on complete
+	repeat
+		random < 40
+			variant 2
+	npc accompany save
+	deadline 10
+	to offer
+		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+	name "Smuggling to <planet>"
+	source
+	on offer
+		system destination
+	repeat
+		government Republic
+		government "Pirate"
+	name "Assassinate a military target"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral"
+				"Bastion (Laser)"
+			names "militia"
+		attributes "north pirate"
+		personality staying target
+	to offer
+		"reputation: Pirate" > 0
+	destination
+		payment 180000
+	destination
+			names "syndicate small"
+	to offer
+		system
+		"reputation: Pirate" > -50
+mission "Bulk Slave Transport [1]"
+	name "Protect cargo to <planet>"
+			variant
+		or
+	passengers 1
+				"Gunboat"
+			names "pirate"
+		system
+
+		personality heroic staying target
+			variant
+	description "Run <cargo> to <destination>. Being scanned will result in a 250,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
+		fleet
+		government Militia
+		random < 30
+		fleet
+			variant
+	on visit
+		"reputation: Pirate" += 7
+
+			distance 2 3
+		distance 3 4
+		
+		fleet "Small Northern Pirates" 4
+
+		personality heroic staying target marked
+		government "Free Worlds"
+		personality heroic waiting
+				"Fury" 2
+	repeat
+		attributes core "core pirate"
+		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+	npc
+	to offer
+			variant
+	npc kill
+			names "republic small"
+		"reputation: Pirate" > 0
+		"combat rating" > 3000
+
+	on visit
+		system destination
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		government "Pirate"
+
+	on complete
+	npc accompany save
+		personality heroic waiting
+				"Splinter" 2
+		system
+	on complete
+mission "Republic Assassination [4]"
+		distance 3 6
+	on fail
+				"Leviathan (Heavy)"
+		random < 15
+		government "Republic"
+		fleet
+			variant 4
+	source
+		or
+	npc kill
+		"reputation: Free Worlds" -= 15
+		"combat rating" > 1100
+	npc
+	illegal 250000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+		system
+				"Falcon (Heavy)"
+		personality staying target
+
+			"reputation: Pirate" > -100
+	infiltrating
+	destination
+	on complete
+		government Militia
 		"combat rating" > 400
 		random < 5
-		"reputation: Pirate" > -50
-	source
-		government "Pirate"
-		attributes "north pirate"
-	npc kill
-		government "Republic"
-		personality staying target
+			distance 1 3
+				"Gunboat"
+	on visit
+		personality staying heroic target
+	npc
+	to offer
+	repeat
+		personality heroic waiting
+	on fail
+
+		attributes "core pirate"
+	name "Protection to <planet>"
 		system
-			distance 3 5
+		personality heroic waiting
+	name "Wanted individual to <planet>"
 		fleet
-			names civilian
-			variant
-				"Star Queen"
-				"Headhunter" 3
-				"Firebird" 2
-			variant
-				"Star Queen"
-				"Gunboat" 2
-				"Frigate"
-		dialog "The targets have been destroyed. Return to <destination> for payment."
-	on complete
-		payment 600000
-		dialog "A band of drug traders thank you for eliminating the politician and pay you <payment>."
-		"reputation: Republic" -= 15
-		"reputation: Navy (Oathkeeper)" -= 15
+		government Syndicate
+	`Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the militia! We need every combat-worthy ship to join the defenses!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
+		personality heroic waiting
+		government "Pirate"
+		government "Pirate"
+	npc
+	name "Wanted individuals to <planet>"
+	to offer
+		personality heroic waiting
+		attributes "core pirate"
+
+mission "Stealth Cargo Smuggling (South) [0]"
+	npc
+		random < 90
+		dialog `The Navy fleets have been defeated. Return to <destination>.`
+	repeat
 		"reputation: Pirate" += 5
-		
-mission "Republic Assassination [3]"
-	name "Assassinate a military target"
-	description "A Republic Navy commander who has led a number of small raids against pirate gangs in the region has been spotted patrolling a nearby system with their fleet. Find and destroy them in order to send a message to the Republic. Payment is <payment>."
 	repeat
-	job
-	to offer
-		"combat rating" > 600
-		random < 5
-		"reputation: Pirate" > 50
-	source
+mission "Republic Assassination [2]"
+	repeat
 		government "Pirate"
-		attributes "north pirate"
-	npc kill
-		government "Republic"
-		personality staying target
-		system
-			distance 3 4
-		fleet
-			names "republic small"
+	cargo "Illegal Cargo" 5 2 .1
 			variant
-				"Cruiser"
-				"Combat Drone" 4
-				"Frigate" 2
+
 			variant
-				"Carrier"
-				"Lance" 4
-				"Combat Drone" 6
-				"Gunboat" 2
-				"Rainmaker"
-		dialog "The target has been destroyed. Return to <destination> for your payment."
+		payment 375000
+mission "Eliminating Competition (South, Small)"
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+				"Quicksilver (Scanner)"
 	on complete
-		payment 750000
-		dialog "A gang of pirates on <planet> thank you for taking out the Navy commander and pay you <payment>."
-		"reputation: Republic" -= 20
-		"reputation: Navy (Oathkeeper)" -= 20
-		"reputation: Pirate" += 7
-		
-mission "Republic Assassination [4]"
-	name "Assassinate a military target"
-	description "Rumor has it that the Republic is planning a raid on regional pirate gangs in order to reduce piracy. An important Navy commander said to be leading this raid has been spotted in a nearby system with a large fleet. Find and destroy them in order to send a message to the Republic. Payment is <payment>."
-	repeat
-	job
-	to offer
-		"combat rating" > 800
-		random < 5
-		"reputation: Pirate" > 100
+				"Argosy"
 	source
-		government "Pirate"
-		attributes "north pirate"
-	npc kill
-		government "Republic"
-		personality staying target
-		system
-			distance 3 4
 		fleet
-			names "republic small"
+	cargo "aged wine" 1
+		
+		dialog "A pirate warlord thanks you for eliminating the politician and pays you <payment>."
+		random < 20
+	"mass" 1
+		personality heroic waiting
+	repeat
+		random < 5
+	job
+	on complete
+		government "Pirate"
+	destination
+		dialog phrase "generic passenger on visit"
+		fleet
+	name "Galactic criminal to <planet>"
+		"combat rating" > 3000
+		dialog "A band of pirates thank you for eliminating the politician and pay you <payment>."
+	on visit
 			variant
-				"Carrier" 2
-				"Lance" 8
-				"Combat Drone" 12
-				"Frigate" 3
-			variant
-				"Carrier"
-				"Lance" 4
+# Foundation, either version 3 of the License, or (at your option) any later version.
+conversation "core pirate defense"
+	on complete
+		"combat rating" > 1100
+				"Star Queen"
+	to offer
+	npc accompany save
+			names "militia"
+		or
+	npc
+			names "militia"
+			distance 3
+		government Militia
+		"reputation: Pirate" >= 0
+			"reputation: Pirate" > -50
+		government "Pirate"
+	cargo "stolen navy secrets" 1
+		"combat rating" > 200
+	source
 				"Combat Drone" 6
-				"Cruiser" 2
-				"Combat Drone" 8
-				"Frigate" 2
-				"Rainmaker" 2
-				"Gunboat" 2
+		distance 4 14
+	illegal 40000
+			"reputation: Pirate" > -100
+		
+		"reputation: Pirate" > 0
+	name "Assassinate a military target"
+		launch
+	on visit
+	source
+			variant 4
+		system destination
+			variant 2
+	npc
+	description "These <bunks> wanted individuals wish to reach <destination> without being caught by local law enforcement. They also wish to bring with them <cargo>. Payment is <payment>."
+		dialog "You land outside of the main city to avoid any chances of your passenger being seen. They grab their things and make their way off of your ship after paying you <payment>."
+		government Republic
+	destination
+		dialog "You land outside of the main city to avoid any chances of your passenger being seen. They grab their things and make their way off of your ship after paying you <payment>."
+	cargo "Illegal Cargo" 5 2 .1
+
+	name "Assassinate a political target"
+		government Republic
+		"combat rating" > 1100
+mission "Raid on Merchants (South)"
+
+			"reputation: Pirate" > -50
+		fleet "Small Syndicate"
+		random < 15
+	
+			names "republic small"
+	name "Assassinate a military target"
+	on complete
+		government Syndicate
+			"reputation: Pirate" > -50
+		government "Pirate"
+		personality heroic staying waiting
 		dialog "The target and their fleet has been destroyed. Return to <destination> for your payment."
+	repeat
+		require "Brig"
+	repeat
+		system destination
+		"combat rating" > 3000
+		random < 25
+		payment 100000 400
+	to offer
+				"Falcon"
+		fleet "Large Core Pirates" 2
+				"Vanguard" 3
+	repeat
+mission "Highly Wanted Passenger (South)"
+		government "Pirate"
+	source
+		dialog phrase "generic cargo on visit"
+		dialog phrase "generic arrived-without-npc dialog"
+
+		"reputation: Militia" -= 5
+		government "Pirate"
+		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+			variant 1
+	to offer
+		random < 40
+	description "Local Navy forces are attacking <destination>! Defeat them to defend anarchy!"
+			variant
+		random < 15
+	to offer
+			variant 1
+	to offer
+		government "Republic"
+	on visit
+			names "militia"
+	destination
+		random < 5
+		or
+		attributes "south pirate"
+	job
+		personality staying target
+	name "Drug run to <planet>"
+		fleet
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+				"Freighter (Secret Cargo)"
+	deadline 12
+		system destination
+		distance 3 12
+	to offer
+		fleet
+		random < 20
+		"reputation: Pirate" += 7
+			names civilian
+		personality heroic waiting
+mission "Raid on Merchants (North)"
+		"reputation: Pirate" > 0
+		"reputation: Pirate" > -50
+
+	description "A merchant fleet has been spotted near the <system> system. Join in destroying them and return to <planet> for a cut of the loot (<payment>)."
+	source
+		dialog phrase "generic passenger on visit"
+		system destination
+			distance 2 3
+		or
+		fleet "Large Republic"
+	to offer
+	to offer
+			variant
+		"reputation: Republic" -= 10
+		personality staying target
+	illegal 75000 `Upon scanning your vessel, law enforcement notice the criminals that you have on board. Entering your ship to detain them, the criminals begin firing down the hallways with their customized weapons. Immediately met with tear gas, the criminals did not put up too much of a fight. The law enforcement carry the criminals out and leave you with a moderate fine and a few laser marks in the halls of your ship.`
+	to offer
+		attributes "north pirate"
+	npc kill
+			variant
+	destination
+		system
+		government "Pirate"
+				"Bastion"
+	repeat
+			names "militia"
+	job
+	name "Highly illegal cargo to <planet>"
+				"Bastion (Scanner)"
+				"Bastion (Scanner)"
+	job
+			distance 1 3
+		fleet
+		payment 20000 300
+			distance 3
+		payment 75000 375
+				"Gunboat"
+		dialog phrase "generic cargo on visit"
+	to offer
+	source
+		system destination
 	on complete
-		payment 1000000
-		dialog "You are greeted by applause from many pirates when you land and a powerful pirate warlord pays you <payment>."
-		"reputation: Republic" -= 25
-		"reputation: Navy (Oathkeeper)" -= 25
-		"reputation: Pirate" += 10
+		personality waiting
+	npc
+				"Modified Argosy"
+		"reputation: Republic" -= 15
+			names "militia"
+	repeat
+
+		random < 70
+	source
+		personality heroic waiting
+		fleet "Small Northern Pirates"
+	repeat
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+	description "A large militia fleet near the <system> system has halted our raids. Destroy them and return to <planet> for a payment of <payment>."
+	source
+	npc kill
+		dialog phrase "generic arrived-without-npc dialog"
+	job
+		dialog "The pirates of <planet> take the secret cargo from your cargo hold and pay you <payment>."
+	destination
+				"Gunboat"
+		"combat rating" > 1100
+		dialog "You land on <planet>, but you don't have the secret cargo! Return to the <npc> and bring the cargo back to <planet>."
+			names civilian
+		attributes "south pirate"
+		personality heroic staying target marked
+
+			variant 2
+		personality heroic waiting
+		require "Brig"
+	to offer
+		distance 3 6
+		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+	npc
+	npc
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+	on fail
+				"Bastion (Scanner)"
+mission "Bulk Slave Transport [0]"
+		"combat rating" > 3000
+				"Firebird"
+		attributes "south pirate"
+mission "Escort Stolen Vessel (Extra Large, Core, Dangerous Path)"
+		"reputation: Pirate" > 100
+	illegal 100000
+		system destination
+		"reputation: Pirate" > -10
+	destination
+			names "republic small"
+			distance 2 4
+	job
+mission "Cargo Theft (Core)"
+	repeat
+		government Republic
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		"combat rating" > 1100
+		payment 30000 300
+	npc
+				"Protector"
+		dialog phrase "generic cargo on visit"
+			names "syndicate small"
+	on complete
+	job
+	name "Highly illegal drugs to <planet>"
+	to offer
+			names "syndicate small"
+		attributes "south pirate"
+		payment 240000
+	name "Protect ship to <planet>"
+		distance 2 10
+			"reputation: Pirate" > -50
+			distance 3
+	description "Run <cargo> to <destination>. Being scanned will result in a 175,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
+	illegal 250000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+		random < 60
+		government Militia
+		"combat rating" > 600
+		fleet
+		government Republic
+			names "syndicate small"
+	description "Run <cargo> to <destination>. Being scanned will result in a 175,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
+		personality heroic staying
+	repeat
+		system
+		dialog "The pirates of <planet> take the secret cargo from your cargo hold and pay you <payment>."
+		distance 5 12
+	destination
+	repeat
+				"Quicksilver (Scanner)"
+		distance 3 30
+		fleet "Small Militia"
+		"reputation: Pirate" += 5
+		distance 3 6
+		"reputation: Republic" -= 5
+		payment 750000
+		random < 20
+		government "Pirate"
+		fleet
+	cargo "Illegal Substances" 5 2 .1
+
+			distance 1 3
+		attributes "north pirate"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+				"Bastion (Scanner)"
+		payment 200000 1000
+		fleet "Small Republic"
+mission "Cargo Smuggling [0]"
+		random < 5
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+	stealth
+		fleet
+			names "syndicate small"
+	description "Run <cargo> to <destination>. Being scanned will result in a 250,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
+		fleet "Small Militia" 2
+			distance 1 3
+			"combat rating" > 1100
+	name "Merchants near <system>"
+		dialog phrase "generic arrived-without-npc dialog"
+mission "Wanted Passengers [3]"
+	npc
+		government "Republic" "Free Worlds" "Syndicate" "Neutral"
+		"reputation: Navy (Oathkeeper)" -= 5
+		personality heroic waiting
+			names "republic small"
+		fleet
+		system destination
+			variant 2
+
+	name "Competition near <system>"
+				"Raven (Heavy)"
+mission "Cargo Smuggling [1]"
+		random < 5
+			variant
+	repeat
+			variant
+		payment 200000 1000
+				"Vanguard"
+		or
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+	npc
+mission "Wanted Passengers [2]"
+			variant
+		fleet
+		fleet "Small Core Pirates"
+				"Falcon"
+	destination
+mission "Slave Transport [1]"
+	source
+	to offer
+				"Manta" 2
+		
+			distance 1 3
+		government "Merchant"
+		attributes "south pirate"
+		distance 3 12
+	to offer
+	on visit
+			variant
+				"Bastion (Scanner)"
+	on complete
+	job
+		"combat rating" > 3000
+		system
+	npc
+		dialog phrase "generic arrived-without-npc dialog"
+	on visit
+			names "pirate"
+	source
+	on complete
+			variant
+	stealth
+		government Republic
+		government Syndicate
+	npc
+		fleet
+			"reputation: Pirate" > -100
+mission "Bulk Cargo Smuggling [2]"
+		personality heroic staying waiting
+		government "Pirate"
+		government "Militia"
+	destination
+			names "civilian"
+				"Bounder"
+	source
+	job
+		or
+		fleet
+		government "Republic"
+		attributes "south pirate"
+		government Pirate
+				"Headhunter (Particle)"
+		government "Pirate"
+		random < 15
+		payment 750000
+			variant
+	npc
+		personality heroic waiting entering
+				"Firebird (Missile)"
+		fleet
+		government "Syndicate"
+		system
+			distance 3
+		"combat rating" > 500
+		dialog phrase "generic passenger on visit"
+	repeat
+				"Quicksilver (Scanner)"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		government Syndicate
+				"Osprey"
+		fleet
+
+	on visit
+				"Gunboat"
+	npc
+		government Republic
+		random < 15
+			variant
+	cargo "stolen banking records" 1
+		"reputation: Navy (Oathkeeper)" -= 5
+			variant
+		"combat rating" > 3000
+		random < 30
+	infiltrating
+	on complete
+		"reputation: Pirate" > -10
+				"Manta (Proton)"
+		payment 100000 375
+	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 55,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		payment 100000 400
+		fleet
+				"Quicksilver (Scanner)" 2
+	to offer
+			names "republic small"
+		attributes "south pirate"
+		government Republic
+	destination
+
+		
+		fleet "Small Syndicate" 2
+		"combat rating" > 1100
+	destination
+		payment 50000 300
+			variant
+		fleet
+		fleet "Large Syndicate"
+		"combat rating" > 3000
+		government Militia
+		attributes "core pirate"
+mission "Eliminating Law Enforcement (North, Small)"
+			names "free worlds small"
+		"reputation: Pirate" += 7
+	to offer
+		government Militia
+	illegal 175000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+	to offer
+		"reputation: Pirate" > 0
+		"combat rating" > 3000
+		"reputation: Pirate" > 0
+			variant
+		government "Syndicate"
+			names "militia"
+		government "Pirate"
+				"Gunboat"
+	on complete
+		personality heroic waiting
+	illegal 175000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+	source
+	destination
+				"Leviathan (Laser)"
+				"Gunboat"
+
+				"Freighter (Secret Cargo)"
+	name "Transfer slaves to <planet>"
+		random < 30
+	repeat
+
+	npc
+	npc
+		personality heroic waiting
+			distance 2 4
+mission "Syndicate Assassination [3]"
+			names "republic small"
+	repeat
+		"combat rating" > 400
+	on visit
+			distance 2 3
+			distance 3
+		attributes "north pirate"
+	job
+		attributes "north pirate"
+		"reputation: Pirate" > -50
+		personality heroic waiting
+		random < 5
+			distance 2 4
+	on visit
+	job
+	on offer
+	cargo "Highly Illegal Substances" 5 2 .1
+		`	(Join the defense fleet.)`
+		fleet "Small Militia"
+	source
+	name "Smuggling to <planet>"
+		system
+		attributes south
+	source
+		"reputation: Militia" -= 5
+		system destination
+
+	npc kill
+	npc
+			variant
+		random < 25
+	passengers 10 4 .1
+	npc
+		dialog `Many locals of <planet> thank you for helping to drive off the Navy.`
+	npc
+	source
+				"Quicksilver (Scanner)"
+				"Modified Argosy"
+		personality staying
+	thumbnail "outfit/unknown"
+	stealth
+				"Lance" 8
+		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the rival gang."
+	on visit
+		random < 5
+		attributes "core pirate"
+		government "Pirate"
+			distance 3 5
+			names "republic small"
+			variant 4
+		personality heroic waiting
+	on visit
+	on complete
+			names "republic small"
+	job
+	on complete
+				"Freighter (Secret Cargo)"
+	on complete
+		government "Pirate"
+		"reputation: Syndicate" -= 5
+	job
+	name "Protect cargo to <planet>"
+		system
+
+	cargo "Illegal Cargo" 5 2 .1
+		random < 25
+		"reputation: Pirate" > 0
+		dialog `Many locals of <planet> thank you and collectively pay you <payment> for helping to drive off the Syndicate.`
+mission "Raid on Merchants (Core)"
+		"reputation: Syndicate" -= 5
+		"reputation: Pirate" > 10
+			names "syndicate small"
+	to offer
+				"Quicksilver (Scanner)" 2
+				"Bastion (Heavy)"
+		personality heroic waiting entering
+		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+				"Bastion (Scanner)"
+		distance 3 12
+				"Quicksilver (Scanner)"
+
+				"Falcon" 2
+	on complete
+		"combat rating" > 1100
+	job
+		personality heroic waiting
+			distance 3
+	source
+		fleet "Large Republic" 2
+				"Corvette"
+		fleet "Small Core Merchants" 2
+				"Freighter (Secret Cargo)"
+		"reputation: Republic" -= 5
+	npc
+		government Syndicate
+		random < 40
+		personality waiting entering
+	job
+		government "Pirate"
+			distance 1 3
+				"Bastion (Heavy)"
+				"Bastion (Scanner)"
+			names "pirate"
+	job
+		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the rival gang."
+mission "Stealth Drug Running (Core) [0]"
+		personality heroic staying target
+	to offer
+	on complete
+				"Quicksilver (Scanner)"
+		system destination
+			"combat rating" > 1100
+		fleet
+		dialog "A pirate warlord thanks you for eliminating the politician pays you <payment>."
+	name "Competition near <system>"
+mission "Drug Running [1]"
+	repeat
+		attributes "south pirate"
+			variant
+		attributes "core pirate"
+			variant
+		"reputation: Syndicate" -= 25
+		dialog phrase "generic safe escort completion dialog"
+	npc
+	repeat
+	npc
+		government Pirate
+	on complete
+	npc
+	repeat
+	on fail
+
+		government Militia
+				"Falcon"
+		system
+mission "Cargo Theft (North)"
+	job
+		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the rival gang."
+		random < 50
+	on complete
+	npc kill
+		dialog phrase "generic passenger on visit"
+	stealth
+		system destination
+		system
+		fleet
+		system destination
+		government "Republic"
+	infiltrating
+	cargo "Highly Illegal Cargo" 5 2 .1
+		random < 40
+	on visit
+		personality heroic waiting
+	on complete
+				"Leviathan"
+		"reputation: Pirate" > -50
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+	job
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		personality heroic waiting
+			distance 3 4
+		personality heroic staying
+
+	stealth
+		system
+				"Fury" 4
+				"Leviathan"
+	name "Protect ship to <planet>"
+	npc
+	job
+		random < 25
+mission "Escort Stolen Vessel (Extra Large, South, Dangerous Path)"
+	repeat
+	description "A large Navy fleet near the <system> system has halted our raids. Destroy them and return to <planet> for a payment of <payment>."
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		government Militia
+			variant 4
+	illegal 300000 `Law enforcement rush their way onto your ship through the airlocks, suited head to toe in armor and armed to the teeth. Your passenger is quickly made to surrender and is hauled off in cuffs. The officers consider detaining you as well, but eventually decide to only fine you to reduce the trouble they have to go through.`
+		system destination
+			names "militia"
+			variant 1
+	on offer
+	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 65,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+	choice
+			variant
+	job
+		government Militia
+		"reputation: Pirate" > 0
+
+			variant
+		"combat rating" > 3000
+		distance 6 16
+	to offer
+	job
+		attributes "core pirate"
+				"Quicksilver (Scanner)"
+		fleet "Navy Surveillance"
+			variant
+		"reputation: Free Worlds" -= 25
+	deadline 12
+		"reputation: Pirate" += 5
+		fleet
+		government "Pirate"
+
+mission "Northern Pirate Defense"
+		fleet
+			names "syndicate small"
+		fleet
+		distance 5 14
+	repeat
+		government Republic
+		system
+		attributes "north pirate"
+	npc accompany save
+	to offer
+		"reputation: Pirate" >= 0
+		government "Republic"
+	npc evade
+		fleet "Large Southern Merchants"
+
+			variant 3
+		distance 3 6
+			variant
+		fleet
+	cargo "prototype technology" 1
+mission "Eliminating Law Enforcement (South, Large)"
+	to offer
+		personality heroic staying target
+		government "Merchant"
+	infiltrating
+		fleet "Large Syndicate"
+			variant
+	on fail
+			variant
+		government "Pirate"
+	to offer
+		personality heroic waiting
+			variant
+		system destination
+	stealth
+			distance 1 3
+				"Quicksilver (Scanner)"
+		payment 10000 250
+			names "militia"
+mission "Mercenary Job (Medium, North, Dangerous Origin)"
+		system destination
+		government Syndicate
+
+mission "Stealth Cargo Smuggling (South) [1]"
+		"reputation: Pirate" > 0
+	npc
+			names "republic small"
+	npc
+		"combat rating" > 150
+		government Syndicate
+	job
+mission "Bulk Cargo Smuggling [0]"
+		
+		dialog `The Syndicate fleets have been defeated. Return to <destination>.`
+		government "Pirate"
+	infiltrating
+			variant 2
+	to offer
+				"Bactrian"
+		government "Syndicate"
+	npc
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+	name "Transfer slaves to <planet>"
+		attributes "core pirate"
+				"Modified Argosy (Heavy)"
+		fleet "Large Southern Pirates" 2
+		government Militia
+		fleet
+	job
+		random < 40
+			variant
+		system destination
+	job
+				"Bastion (Scanner)"
+		distance 5 14
+				"Quicksilver (Proton)" 3
+		personality staying heroic target
+		government Pirate
+		"reputation: Pirate" > -100
+		government "Pirate"
+		attributes "north pirate"
+			variant
+	deadline 12
+	on complete
+	on visit
+	job
+	npc
+	cargo "Highly Illegal Cargo" 5 2 .1
+		personality staying target
+		government "Pirate"
+		dialog "The pirates of <planet> gratefully pay you <payment> for eliminating the Syndicate fleet."
+	npc
+		government Syndicate
+		government "Pirate"
+	to offer
+	npc
+		government Republic "Free Worlds" Syndicate Neutral Pirate
+	cargo "battle trophies" 1
+				"Falcon"
+		government "Republic"
+	repeat
+	on complete
+		fleet "Navy Surveillance"
+		government "Free Worlds"
+		personality heroic waiting
+			variant
+	illegal 175000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+	npc
+		dialog phrase "generic arrived-without-npc dialog"
+
+	to offer
+		personality heroic staying waiting
+		random < 15
+		personality heroic waiting
+	description "Smuggle <cargo> to <destination>. If law enforcement catches you, you will be fined 20,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+				"Bastion (Scanner)" 2
+		fleet "Small Militia" 2
+		government Militia
+	description "Run <cargo> to <destination>. If law enforcement catches you, you will be fined 46,000 credits. A contact at the location will retrieve the cargo. Payment is <payment>."
+				"Clipper"
+	to offer
+			variant
+	to offer
+		"reputation: Pirate" > 50
+			names "pirate"
+		"reputation: Pirate" > 0
+	description "Local militia forces are attacking <destination>! Defeat them to defend anarchy!"
+	job
+		fleet "Small Core Pirates" 2
+		government Republic
+	on visit
+	npc
+		payment 400000
+
+			distance 2 4
+		or
+	to offer
+		distance 3 6
+	source
+	`Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the Navy! We need every combat-worthy ship to join the defenses!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
+			variant
+				"Freighter (Secret Cargo)"
+			variant 4
+		dialog phrase "generic cargo on visit"
+		fleet
+		"reputation: Pirate" > -10
+	job
+	description "This criminal is wanted by every law enforcement agency in the galaxy and needs safe transport to <destination> with their <cargo>. The payment is high at an amazing <payment>, but transporting such a person could lead to trouble."
+	passengers 2 10 .9
+			variant 1
+	on visit
+		random < 70
+			"reputation: Pirate" > -50
+			names "militia"
+		random < 15
+	npc
+		dialog phrase "generic cargo on visit"
+		government "Pirate"
+	repeat
+
+		system destination
+				"Clipper (Speedy)"
+	source
+	cargo "Highly Illegal Cargo" 5 2 .1
+mission "Escort Stolen Vessel (Extra Large, North, Dangerous Path)"
+		dialog "The fleet has been eliminated. You can claim the bounty payment by returning to <destination>."
+			distance 3 5
+				"Bastion (Scanner)"
+
+	name "Assassinate a military target"
+			names "militia"
+		attributes "core pirate"
+		system
+		dialog "You land on <planet>, but you don't have the secret cargo! Return to the <npc> and bring the cargo back to <planet>."
+		government Republic "Free Worlds" Syndicate Neutral Pirate
+		"combat rating" > 1100
+				"Gunboat" 2
+				"Bounder"
+			variant
+	npc accompany save
+	infiltrating
+	cargo "Illegal Substances" 25 2 .1
+
+	job
+		fleet "Large Militia"
+	destination
+		payment 500000
+	npc
+	on complete
+		government Republic
+	source
+		attributes "south pirate"
+		"reputation: Pirate" > 0
+		government Republic
+	npc
+		fleet
+			variant
+		attributes "core pirate"
+	illegal 120000
+		distance 4 14
+
+			names "militia"
+		payment 5000 250
+		dialog phrase "generic cargo on visit"
+		"reputation: Pirate" >= 0
+		random < 5
+		fleet
+	cargo "customized weapons" 1
+		random < 5
+		"reputation: Pirate" > 0
+		random < 50
+			names "syndicate small"
+		system
+	job
+	npc
+	name "Competition near <system>"
+		personality heroic waiting
+		dialog "After landing on <planet>, the pirates move the <bunks> slaves from your ship and pay you <payment>."
+		payment 350000
+	npc accompany save
+		payment 350000
+		payment 7000 250
+			distance 2 5
+		payment 375000
+		personality heroic waiting
+		government Pirate
+			variant 1
+	job
+		personality plunders harvests escort
+	illegal 175000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+		government "Merchant"
+			names "republic small"
+	repeat
+		random < 15
+			variant
+	description "A key Syndicate politician was spotted passing through a nearby system in their ship, the <npc>. Find and destroy them in order to send a message to the Syndicate. Payment is <payment>. Be advised that they may have escorts."
+			variant
+	job
+				"Quicksilver (Scanner)"
+		government Militia
+		government "Pirate"
+
+	to offer
+			variant
+	on complete
+				"Bastion (Scanner)"
+	on complete
+	npc evade
+		distance 3 6
+		fleet
+				"Freighter"
+	npc
+		government "Republic" "Free Worlds" "Syndicate" "Neutral"
+		dialog phrase "generic cargo on visit"
+		dialog phrase "generic cargo on visit"
+				"Falcon (Laser)"
+mission "Cargo Theft (South)"
+				"Carrier"
+	stealth
+	on fail
+			variant
+		system
+		"reputation: Pirate" > -100
+mission "Eliminating Competition (Core, Large)"
+			names "militia"
+		attributes "core pirate"
+			variant 1
+	
+	on complete
+		system destination
+		dialog phrase "generic safe escort completion dialog"
+
+		fleet
+		government Republic
+		dialog phrase "generic safe escort completion dialog"
+		dialog "A band of drug traders thank you for eliminating the politician and pay you <payment>."
+		fleet
+		"combat rating" > 200
+	name "Drug run to <planet>"
+		personality heroic waiting
+	npc accompany save
+	on complete
+	repeat
+		system
+		fleet
+	on visit
+		attributes "core pirate"
+				"Bastion (Scanner)" 2
+	on complete
+		personality heroic waiting
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+		payment 180000
+				"Combat Drone" 4
+	source
+	name "Highly illegal cargo to <planet>"
+				"Osprey" 2
+	illegal 250000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+		system
+	on complete
+	description "A pirate on <planet> has bought slaves from a local warlord. Transfer these <bunks> slaves to <destination> for <payment>. Slavery is punishable by death throughout the galaxy, so this may be a dangerous job to take."
+		system
+	on visit
+				"Shuttle"
+		fleet
+		dialog phrase "generic passenger on visit"
+		government Pirate
+				"Rainmaker" 2
+		government Pirate
+		government Republic "Free Worlds" Syndicate Neutral Pirate
+		personality heroic waiting entering
+	infiltrating
+
+		attributes "north pirate"
+	description "Run <cargo> to <destination>. Being scanned will result in a 175,000 credit fine and the cargo will be seized. You will need to land away from the spaceport or else you may get caught. Payment is <payment>."
+	repeat
+		attributes "core pirate"
+	name "Highly illegal drugs to <planet>"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+		government "Pirate"
+	on complete
+		system
+		personality heroic staying
+	npc
+		payment 75000 300
+		fleet
+	destination
+		attributes "core pirate"
+		"combat rating" > 1100
+	name "Assassinate a political target"
+	minor
+				"Argosy" 5
+		personality escort
+		government Syndicate
+	description "The captain of the <npc> will pay you <payment> to escort them and their illegal cargo safely through law-enforced space to reach <destination> by <date>."
+		dialog phrase "generic arrived-without-npc dialog"
+			names "militia"
+		random < 5
+		government Militia
+		dialog "You find the contact at the edge of the spaceport. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+				"Star Queen"
+	on complete
+	description "A pirate on <planet> has bought slaves from a local warlord. Transfer these <bunks> slaves to <destination> for <payment>. Slavery is punishable by death throughout the galaxy, so this may be a dangerous job to take."
+	name "Merchants near <system>"
+		attributes "core pirate"
+	job
+	destination
+	description "The captain of the <npc> will pay you <payment> to escort them and their illegal cargo safely through law-enforced space to reach <destination> by <date>."
+	on complete
+			variant
+		personality plunders harvests escort
+			distance 2 5
+			variant
+
+		personality plunders staying
+		system destination
+	on complete
+	cargo "credit chips" 1
+mission "Highly Wanted Passenger (North)"
+		random < 25
+	to offer
+		system destination
+		personality escort
+	npc

@@ -1,855 +1,855 @@
-# Copyright (c) 2018 by Michael Zahniser
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-phrase "free worlds scanner payment"
-	word
-		`A Free Worlds captain is waiting for you when you land and takes a copy of your scanner logs, and you collect your payment of <payment>.`
-
-mission "FW Scout Run [0]"
-	job
 	repeat
-	name `Scouting Run`
-	description `Fly through the <waypoints> system and scout it out for Navy activity. Then return to <destination> by <date> where your ship's scanner logs will be analyzed. Payment is <payment>.`
-	deadline
-	to offer
-		random < 30
-		has "salary: Free Worlds"
-		not "event: fw armistice"
-	source
-		government "Free Worlds"
-		neighbor
+				neighbor government "Republic"
 			neighbor government "Republic"
-	waypoint
-		distance 1 2
-		government "Republic"
-	on visit
-		dialog phrase "generic waypoint on visit"
-	on complete
-		payment 10000 180
-		dialog phrase "free worlds scanner payment"
-	on visit
-		dialog `You have landed on <planet>, but you have yet to scout out all the marked systems. Visit all the systems marked on your map before returning.`
-
-mission "FW Scout Run [1]"
-	job
-	repeat
-	name `Scouting Run`
-	description `Fly through the <waypoints> systems and scout them out for Navy activity. Then return to <destination> by <date> where your ship's scanner logs will be analyzed. Payment is <payment>.`
-	deadline
-	to offer
-		random < 25
-		has "salary: Free Worlds"
-		not "event: fw armistice"
-	source
-		government "Free Worlds"
+	description `These <bunks> passengers would like to escape the frontlines of the war and immediately settle on <destination> by <date>. Payment is <payment>.`
 		neighbor
-			neighbor government "Republic"
-	waypoint
-		distance 2 3
-		government "Republic"
-	waypoint
-		distance 2 3
-		government "Republic"
-	on visit
-		dialog phrase "generic waypoint on visit"
-	on complete
-		payment 20000 180
-		dialog phrase "free worlds scanner payment"
-	on visit
-		dialog `You have landed on <planet>, but you have yet to scout out all the marked systems. Visit all the systems marked on your map before returning.`
-
-mission "FW Scout Run [2]"
-	job
-	repeat
-	name `Scouting Run`
-	description `Fly through the <waypoints> systems and scout them out for Navy activity. Then return to <destination> by <date> where your ship's scanner logs will be analyzed. Payment is <payment>.`
-	deadline
-	to offer
-		random < 20
-		has "salary: Free Worlds"
-		not "event: fw armistice"
-	source
 		government "Free Worlds"
-		neighbor
+	npc
+				"Behemoth"
+mission "FW Frontline Resupply [1]"
 			neighbor government "Republic"
-	waypoint
-		distance 2 3
-		government "Republic"
-	waypoint
-		distance 3 4
-		government "Republic"
-	on visit
-		dialog phrase "generic waypoint on visit"
-	on complete
+		payment 270000
 		payment 30000 180
-		dialog phrase "free worlds scanner payment"
+		not "event: fw armistice"
+	description `Fly through the <waypoints> systems and scout them out for Navy activity. Then return to <destination> by <date> where your ship's scanner logs will be analyzed. Payment is <payment>.`
+	destination
+		government "Republic"
 	on visit
+		attributes shipyard
+		random < 30
+				neighbor government "Republic"
+			neighbor
+				"Freighter" 2
 		dialog `You have landed on <planet>, but you have yet to scout out all the marked systems. Visit all the systems marked on your map before returning.`
-
-
-
-phrase "free worlds convoy supplies payment"
-	word
-		`The captain of the <npc> thanks you for escorting them safely, and the shipyard pays you <payment> for helping to deliver the supplies.`
-
+	description `The shipyard on <planet> is in need of more supplies for building warships. Immediately escort a convoy of ships to <destination> by <date>. Payment is <payment>.`
+		distance 2 6
+	on complete
+		government "Merchant"
+	to offer
+				"Freighter" 2
+	on visit
+	on complete
+	job
+	job
+	to offer
+		payment 2000 180
+	deadline
+	source
+			variant
+		government "Pirate"
+		random < 30
+		not "event: fw armistice"
+		government "Free Worlds"
+		fleet "Large Southern Pirates"
+		government "Republic"
+		fleet "Small Southern Pirates"
+		payment 5000 180
+	job
+	repeat
+		not "main plot completed"
+	deadline 2 1
 mission "FW Convoy Defense [0]"
-	job
-	repeat
-	name `Convoy to <planet>`
-	description `The shipyard on <planet> is in need of more supplies for building warships. Immediately escort a convoy of ships to <destination> by <date>. Payment is <payment>.`
-	deadline 1 1
+		dialog phrase "free worlds scanner payment"
+		government "Free Worlds"
+				neighbor government "Republic"
+	name `Resupply <planet>`
 	to offer
+		government "Free Worlds"
+		dialog phrase "free worlds thanked resupply payment"
+		dialog phrase "free worlds scanner payment"
+	waypoint
+	source
+	on complete
+		has "salary: Free Worlds"
+			neighbor government "Republic"
+	name `Care package to <planet>`
+		dialog phrase "generic waypoint on visit"
+	on complete
+		has "chosen sides"
+	name `Resupply <planet>`
+	repeat
+	word
+		personality escort timid
+	description `These <bunks> passengers would like to escape the frontlines of the war and immediately settle on <destination> by <date>. Payment is <payment>.`
+			neighbor government "Republic"
+		has "chosen sides"
 		random < 30
-		has "salary: Free Worlds"
-		not "main plot completed"
-	source
-		government "Free Worlds"
-		attributes "mining" "factory"
-		not attributes shipyard
-	destination
-		government "Free Worlds"
-		attributes shipyard
-		distance 2 6
-	npc
-		government "Pirate"
-		personality nemesis staying harvests plunders
-		system destination
-		fleet "Large Southern Pirates"
-		fleet "Small Southern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis harvests plunders
-		system destination
-		fleet "Large Southern Pirates"
-		fleet "Small Southern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis harvests plunders
-		fleet "Large Southern Pirates"
-	npc accompany save
-		government "Merchant"
-		personality escort timid
-		fleet
-			names "civilian"
-			variant
-				"Freighter" 2
-				"Bastion"
-			variant
-				"Behemoth"
-				"Clipper" 2
-			variant
-				"Behemoth" 2
-			variant
-				"Hauler III"
-				"Bastion" 2
-			variant
-				"Hauler II" 2
-				"Osprey"
-			variant
-				"Argosy" 2
-				"Osprey"
-	on complete
-		payment 270000
-		dialog phrase "free worlds convoy supplies payment"
-	on visit
-		dialog `You have reached <planet>, but you left part or all of the convoy behind! Better depart and wait for them to arrive in this star system.`
-
-mission "FW Convoy Defense [1]"
-	job
-	repeat
-	name `Convoy to <planet>`
-	description `The shipyard on <planet> is in need of more supplies for building warships. Immediately escort a convoy of ships to <destination> by <date>. Payment is <payment>.`
-	deadline 1 1
-	to offer
-		random < 20
-		has "salary: Free Worlds"
-		not "main plot completed"
-	source
-		government "Free Worlds"
-		attributes "mining" "factory"
-		not attributes shipyard
-	destination
-		government "Free Worlds"
-		attributes shipyard
-		distance 2 6
-	npc
-		government "Pirate"
-		personality nemesis staying harvests plunders
-		system destination
-		fleet "Large Southern Pirates"
-		fleet "Small Southern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis harvests plunders
-		system destination
-		fleet "Large Southern Pirates"
-		fleet "Small Southern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis harvests plunders
-		fleet "Large Southern Pirates"
-	npc accompany save
-		government "Merchant"
-		personality escort timid
-		fleet
-			names "civilian"
-			variant
-				"Freighter" 2
-				"Bastion"
-			variant
-				"Behemoth"
-				"Clipper" 2
-			variant
-				"Behemoth" 2
-			variant
-				"Hauler III"
-				"Bastion" 2
-			variant
-				"Hauler II" 2
-				"Osprey"
-			variant
-				"Argosy" 2
-				"Osprey"
-	on complete
-		payment 270000
-		dialog phrase "free worlds convoy supplies payment"
-	on visit
-		dialog `You have reached <planet>, but you left part or all of the convoy behind! Better depart and wait for them to arrive in this star system.`
-
-mission "FW Convoy Defense [2]"
-	job
-	repeat
-	name `Convoy to <planet>`
-	description `The shipyard on <planet> is in need of more supplies for building warships. Immediately escort a convoy of ships to <destination> by <date>. Payment is <payment>.`
-	deadline 1 1
-	to offer
-		random < 10
-		has "salary: Free Worlds"
-		not "main plot completed"
-	source
-		government "Free Worlds"
-		attributes "mining" "factory"
-		not attributes shipyard
-	destination
-		government "Free Worlds"
-		attributes shipyard
-		distance 2 6
-	npc
-		government "Pirate"
-		personality nemesis staying harvests plunders
-		system destination
-		fleet "Large Southern Pirates"
-		fleet "Small Southern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis harvests plunders
-		system destination
-		fleet "Large Southern Pirates"
-		fleet "Small Southern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis harvests plunders
-		fleet "Large Southern Pirates"
-	npc accompany save
-		government "Merchant"
-		personality escort timid
-		fleet
-			names "civilian"
-			variant
-				"Freighter" 2
-				"Bastion"
-			variant
-				"Behemoth"
-				"Clipper" 2
-			variant
-				"Behemoth" 2
-			variant
-				"Hauler III"
-				"Bastion" 2
-			variant
-				"Hauler II" 2
-				"Osprey"
-			variant
-				"Argosy" 2
-				"Osprey"
-	on complete
-		payment 270000
-		dialog phrase "free worlds convoy supplies payment"
-	on visit
-		dialog `You have reached <planet>, but you left part or all of the convoy behind! Better depart and wait for them to arrive in this star system.`
-
-
-
-mission "FW Reinforcements [0]"
-	job
-	repeat
-	name `Reinforcements to <planet>`
-	description `These <bunks> Free Worlds soldiers require immediate transport to <destination> by <date> in order to reinforce the frontlines. Payment is <payment>.`
-	deadline 2 1
-	passengers 5 5 .2
-	to offer
-		random < 20
-		has "salary: Free Worlds"
-		not "event: fw armistice"
-	source
-		government "Free Worlds"
-		not
-			neighbor government "Republic"
-		not
-			neighbor
-				neighbor government "Republic"
-	destination
-		distance 2 10
-		government "Free Worlds"
-		neighbor
-			neighbor government "Republic"
-	on visit
 		dialog phrase "generic passenger on visit"
-	on complete
-		payment 10000 180
-		dialog `You unload the Free Worlds soldiers into the busy spaceport of <planet>, and collect your payment of <payment>.`
-
-mission "FW Reinforcements [1]"
-	job
-	repeat
-	name `Reinforcements to <planet>`
-	description `These <bunks> Free Worlds soldiers require immediate transport to <destination> by <date> in order to reinforce the frontlines. Payment is <payment>.`
-	deadline 2 1
-	passengers 5 5 .2
-	to offer
-		random < 10
-		has "salary: Free Worlds"
-		not "event: fw armistice"
-	source
-		government "Free Worlds"
-		not
-			neighbor government "Republic"
-		not
-			neighbor
-				neighbor government "Republic"
-	destination
-		distance 2 10
-		government "Free Worlds"
-		neighbor
-			neighbor government "Republic"
+		not attributes shipyard
 	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 10000 180
-		dialog `You unload the Free Worlds soldiers into the busy spaceport of <planet>, and collect your payment of <payment>.`
-
-
+mission "FW Frontline Resupply [2]"
 phrase "free worlds thanked resupply payment"
-	phrase
-		"generic cargo delivery payment"
-	word
-		` `
-	word
-		`A Free Worlds captain stationed on <planet> thanks you for delivering the much-needed supplies.`
-		`The Free Worlds captains stationed on <planet> thank you for delivering the much-needed supplies.`
-
-mission "FW Outfitter Resupply [0]"
-	job
-	repeat
-	name `Resupply <planet>`
-	description `The outfitter on <planet> is running low on supplies and needs to be restocked immediately. Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	cargo random 5 2 .1
-	to offer
-		random < 50
 		has "salary: Free Worlds"
-		not "main plot completed"
-	source
-		government "Free Worlds"
-	destination
-		distance 4 8
-		government "Free Worlds"
-		attributes outfitter
-	on visit
+		personality nemesis staying harvests plunders
+		government "Republic"
+		random < 20
 		dialog phrase "generic cargo on visit"
-	on complete
-		payment 2000 180
-		dialog phrase "free worlds thanked resupply payment"
+			variant
+		not
+	deadline 2 1
+			variant
 
+		fleet "Large Southern Pirates"
+
+	to offer
+		personality escort timid
+	on visit
+	word
+
+	word
+	cargo random 1 3
 mission "FW Outfitter Resupply [1]"
-	job
-	repeat
-	name `Resupply <planet>`
-	description `The outfitter on <planet> is running low on supplies and needs to be restocked immediately. Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	cargo random 5 2 .1
-	to offer
-		random < 40
-		has "salary: Free Worlds"
-		not "main plot completed"
-	source
-		government "Free Worlds"
-	destination
-		distance 5 10
-		government "Free Worlds"
-		attributes outfitter
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
 		payment 2000 180
-		dialog phrase "free worlds thanked resupply payment"
-
+	description `These <bunks> Free Worlds soldiers require immediate transport to <destination> by <date> in order to reinforce the frontlines. Payment is <payment>.`
+	source
+	repeat
+	destination
+	npc accompany save
+		government "Pirate"
+		not "event: fw armistice"
 mission "FW Outfitter Resupply [2]"
-	job
-	repeat
-	name `Resupply <planet>`
-	description `The outfitter on <planet> is running low on supplies and needs to be restocked immediately. Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	cargo random 5 2 .1
-	to offer
-		random < 30
-		has "salary: Free Worlds"
-		not "main plot completed"
-	source
-		government "Free Worlds"
+	name `Refugees to <planet>`
+		payment 10000 180
+				"Osprey"
 	destination
-		distance 6 12
 		government "Free Worlds"
-		attributes outfitter
-	on visit
-		dialog phrase "generic cargo on visit"
+		system destination
+			neighbor government "Republic"
 	on complete
-		payment 2000 180
-		dialog phrase "free worlds thanked resupply payment"
+mission "FW Care Package to Republic [0]"
+		not
+		government "Free Worlds"
 
+		not
+		distance 2 3
+		government "Pirate"
+		neighbor
+	on complete
+	to offer
+		neighbor
+		random < 20
+		government "Free Worlds"
+				"Bastion" 2
+		government "Free Worlds"
+		distance 6 12
+		has "chosen sides"
+	on complete
+		"generic cargo delivery payment"
+	on complete
+				"Behemoth" 2
+	deadline 2 1
+		`A Free Worlds captain stationed on <planet> thanks you for delivering the much-needed supplies.`
+			neighbor
+		not "event: fw armistice"
+		government "Pirate"
+	deadline 2 1
+mission "FW Refugees [0]"
+
+	passengers 2 10 .9
+mission "FW Reinforcements [0]"
+#
+	destination
+	npc accompany save
+		distance 2 6
+		random < 10
+			neighbor government "Republic"
+	passengers 5 5 .2
+		dialog phrase "free worlds thanked resupply payment"
+	destination
+	job
+		dialog phrase "free worlds thanked refugee transport"
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+		not "event: fw armistice"
+		dialog `You have reached <planet>, but you left part or all of the convoy behind! Better depart and wait for them to arrive in this star system.`
+# Copyright (c) 2018 by Michael Zahniser
+				"Behemoth"
+				"Clipper" 2
+			neighbor
+		government "Free Worlds"
+mission "FW Care Package from Republic [0]"
+		has "salary: Free Worlds"
+	cargo random 25 2 .05
+				"Freighter" 2
+			neighbor government "Republic"
+		neighbor
+		payment 2000 180
+
+	deadline
+	on visit
+	npc accompany save
+	repeat
+		payment 1000 180
+		has "chosen sides"
+				"Clipper" 2
+	name `Convoy to <planet>`
+	destination
+
+				neighbor government "Republic"
+	deadline 2 1
+		dialog `You have reached <planet>, but you left part or all of the convoy behind! Better depart and wait for them to arrive in this star system.`
+		dialog phrase "generic cargo on visit"
+	job
+	deadline 2 1
+			variant
+	name `Convoy to <planet>`
+		has "salary: Free Worlds"
+		not
+
+				"Bastion"
+		not
+		government "Free Worlds"
+		random < 10
+				neighbor government "Republic"
+		not
+	source
+	job
+		not
+mission "FW Scout Run [0]"
+		not "event: fw armistice"
+	job
+	on visit
+		dialog phrase "free worlds thanked care package"
+	description `The outfitter on <planet> is running low on supplies and needs to be restocked immediately. Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+	to offer
+		dialog phrase "generic passenger on visit"
+			neighbor government "Republic"
+	deadline 2 1
+		not "main plot completed"
+	on visit
+phrase "free worlds scanner payment"
+	repeat
 mission "FW Bulk Outfitter Resupply [0]"
 	job
-	repeat
-	name `Resupply <planet>`
-	description `The outfitter on <planet> is running low on supplies and needs to be restocked immediately. Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	cargo random 25 2 .05
-	to offer
+		dialog phrase "free worlds thanked refugee transport"
 		random < 30
-		has "salary: Free Worlds"
-		not "main plot completed"
-	source
-		government "Free Worlds"
-	destination
-		distance 4 8
-		government "Free Worlds"
-		attributes outfitter
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 5000 180
-		dialog phrase "free worlds thanked resupply payment"
-
-mission "FW Bulk Outfitter Resupply [1]"
-	job
 	repeat
-	name `Resupply <planet>`
-	description `The outfitter on <planet> is running low on supplies and needs to be restocked immediately. Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	cargo random 25 2 .05
-	to offer
-		random < 25
-		has "salary: Free Worlds"
-		not "main plot completed"
-	source
+	description `The frontlines of the war are in need of a resupply. Immediately deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+	npc
+		government "Merchant"
+		has "chosen sides"
+	repeat
 		government "Free Worlds"
-	destination
+		dialog phrase "generic passenger on visit"
+		payment 5000 180
+		not "main plot completed"
+		payment 270000
+	waypoint
+	source
+	word
+	to offer
+			neighbor
+mission "FW Refugees [1]"
+				"Osprey"
+	on complete
+		random < 60
+	on visit
+		neighbor
+	description `These <bunks> passengers would like to escape the frontlines of the war and immediately settle on <destination> by <date>. Payment is <payment>.`
+		has "salary: Free Worlds"
+	on complete
+	source
+				"Clipper" 2
+	to offer
+		government "Pirate"
+	on visit
+	word
+		personality nemesis staying harvests plunders
+			neighbor
+				neighbor government "Republic"
+	name `Convoy to <planet>`
+		not
+	job
+	on visit
+		has "salary: Free Worlds"
+		random < 30
+		dialog phrase "free worlds scanner payment"
+		fleet "Small Southern Pirates"
+		government "Free Worlds"
+		government "Free Worlds"
 		distance 5 10
-		government "Free Worlds"
-		attributes outfitter
-	on visit
+mission "FW Care Package from Republic [1]"
+	destination
 		dialog phrase "generic cargo on visit"
-	on complete
-		payment 5000 180
-		dialog phrase "free worlds thanked resupply payment"
+		`The Free Worlds captains stationed on <planet> thank you for delivering the much-needed supplies.`
+		distance 2 10
+mission "FW Scout Run [1]"
+		not
 
-mission "FW Bulk Outfitter Resupply [2]"
-	job
 	repeat
-	name `Resupply <planet>`
-	description `The outfitter on <planet> is running low on supplies and needs to be restocked immediately. Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	cargo random 25 2 .05
-	to offer
-		random < 20
-		has "salary: Free Worlds"
+	deadline 1 1
+		neighbor
+	destination
+		not attributes shipyard
 		not "main plot completed"
+
+		distance 2 10
+		dialog phrase "free worlds thanked refugee transport"
+	deadline 2 1
+	destination
+			neighbor government "Republic"
+		attributes outfitter
+	on complete
+		government "Free Worlds"
+	name `Reinforcements to <planet>`
+			neighbor government "Republic"
+	on complete
+		government "Republic"
+	on visit
+		has "salary: Free Worlds"
+		`You deliver the care package of <commodity> to the specified address and explain to the people where the care package came from. They thank you for delivering it, and you collect your payment of <payment>.`
+	description `The shipyard on <planet> is in need of more supplies for building warships. Immediately escort a convoy of ships to <destination> by <date>. Payment is <payment>.`
+			variant
+	name `Resupply <planet>`
+		government "Free Worlds"
+	npc
+	name `Resupply <planet>`
+				"Hauler II" 2
+mission "FW Bulk Outfitter Resupply [2]"
+	cargo "heavy metals" 5 2 .1
+		neighbor
+		fleet "Large Southern Pirates"
+	on visit
+			variant
+	to offer
+		government "Free Worlds"
+		not "event: fw armistice"
+	on visit
+		government "Free Worlds"
+	description `These <bunks> passengers would like to escape the frontlines of the war and immediately settle on <destination> by <date>. Payment is <payment>.`
+				neighbor government "Republic"
+	to offer
+		government "Free Worlds"
+		distance 2 3
+				"Hauler III"
+	on visit
+	job
+
+	npc
+		distance 2 10
+	source
+		not "event: fw armistice"
+# terms of the GNU General Public License as published by the Free Software
+	deadline 1 1
+	npc
+		not "event: fw armistice"
+				"Argosy" 2
 	source
 		government "Free Worlds"
+	description `Fly through the <waypoints> system and scout it out for Navy activity. Then return to <destination> by <date> where your ship's scanner logs will be analyzed. Payment is <payment>.`
+		payment 2000 180
+	job
+		system destination
+	description `The frontlines of the war are in need of a resupply. Immediately deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+	repeat
+
+				"Hauler III"
+			neighbor government "Republic"
+				neighbor government "Republic"
+	deadline 1 1
+		dialog phrase "free worlds thanked resupply payment"
+		payment 1000 180
+		not "main plot completed"
+		payment 270000
+		distance 2 10
+	on visit
+	repeat
+		government "Free Worlds"
+	repeat
+	on complete
+			variant
+		has "salary: Free Worlds"
+		government "Free Worlds"
+		government "Free Worlds"
+	description `The outfitter on <planet> is running low on supplies and needs to be restocked immediately. Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+	repeat
+		fleet "Large Southern Pirates"
 	destination
-		distance 6 12
+			variant
+		fleet "Large Southern Pirates"
+
+			neighbor government "Republic"
+		government "Republic"
+	to offer
+		government "Free Worlds"
+		government "Pirate"
+				"Behemoth" 2
+	job
+	on visit
+		has "salary: Free Worlds"
+	npc
+		dialog phrase "free worlds convoy supplies payment"
+	cargo random 5 2 .1
+				"Osprey"
+	npc
+	deadline
+		attributes "mining" "factory"
+		not attributes shipyard
+		random < 40
+	description `The outfitter on <planet> is running low on supplies and needs to be restocked immediately. Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+	on visit
+	to offer
+	name `Resupply <planet>`
+
+		`A Free Worlds captain is waiting for you when you land and takes a copy of your scanner logs, and you collect your payment of <payment>.`
+		attributes "mining" "factory"
+		has "chosen sides"
+		personality nemesis harvests plunders
+	name `Resupply <planet>`
+
+	name `Refugees to <planet>`
+		dialog phrase "generic cargo on visit"
+	waypoint
+			neighbor government "Republic"
+		not "event: fw armistice"
+	source
+			neighbor government "Republic"
+	cargo random 1 3
+	repeat
+
+	passengers 2 10 .9
+
+		dialog `You have landed on <planet>, but you have yet to scout out all the marked systems. Visit all the systems marked on your map before returning.`
+			neighbor
+	repeat
+		personality nemesis harvests plunders
+		government "Free Worlds"
+		dialog phrase "generic waypoint on visit"
+	name `Resupply <planet>`
+		dialog phrase "generic cargo on visit"
+		neighbor
+	deadline 2 1
+		personality nemesis harvests plunders
+			neighbor government "Republic"
+		attributes shipyard
+	destination
+		government "Merchant"
+		distance 2 5
+	on visit
+		payment 20000 180
+		attributes outfitter
+	job
+		attributes shipyard
+		not
+	name `Care package to <planet>`
+		random < 30
+		dialog phrase "generic cargo on visit"
+	description `The outfitter on <planet> is running low on supplies and needs to be restocked immediately. Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+		government "Republic"
+		not "main plot completed"
+		not
+
+
+	deadline 2 1
+		personality nemesis harvests plunders
+	source
+		dialog phrase "free worlds thanked resupply payment"
+		not
+		random < 30
+				"Hauler II" 2
+			neighbor government "Republic"
+	job
+mission "FW Convoy Defense [1]"
+		not
+	description `A citizen of the Free Worlds is worried about family members in the Republic. Immediately deliver a care package of <cargo> to <destination> by <date>. Payment is <payment>.`
+		attributes outfitter
+		` `
+		payment 10000 180
+		dialog phrase "generic cargo on visit"
+		has "salary: Free Worlds"
+	repeat
+		payment 5000 180
+			neighbor government "Republic"
+				"Osprey"
+	source
+		has "salary: Free Worlds"
+	deadline 2 1
+		payment 5000 180
+	passengers 5 5 .2
+	on visit
+	name `Refugees to <planet>`
+		personality escort timid
+
+		neighbor
+
+		government "Free Worlds"
+	to offer
+	source
+	description `A citizen of the Republic is worried about family members in the Free Worlds. Immediately deliver a care package of <cargo> to <destination> by <date>. Payment is <payment>.`
+		fleet "Small Southern Pirates"
+		payment 2000 180
+	repeat
+		government "Free Worlds"
+				neighbor government "Republic"
+		payment 5000 180
+	to offer
+		dialog phrase "free worlds thanked resupply payment"
+			neighbor government "Republic"
+	destination
+	destination
+	repeat
+	destination
+	name `Care package to <planet>`
+		payment 5000 180
+				"Osprey"
+				"Bastion" 2
+	source
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+	to offer
+		government "Free Worlds"
+		government "Free Worlds"
+	on complete
+		not "event: fw armistice"
+	name `Resupply <planet>`
+	description `A citizen of the Free Worlds is worried about family members in the Republic. Immediately deliver a care package of <cargo> to <destination> by <date>. Payment is <payment>.`
+		dialog phrase "generic cargo on visit"
+			neighbor
+		distance 3 12
+		dialog phrase "free worlds thanked care package"
+		government "Republic"
+		has "salary: Free Worlds"
+	job
+				"Argosy" 2
+phrase "free worlds thanked refugee transport"
+	deadline 1 1
+		has "salary: Free Worlds"
+	on visit
+
+		fleet
+		not
+	job
+		dialog phrase "generic cargo on visit"
+	cargo "food" 5 2 .1
+		dialog phrase "free worlds convoy supplies payment"
+		not
+		distance 2 5
+mission "FW Convoy Defense [2]"
+	repeat
+	on complete
+mission "FW Reinforcements [1]"
+	destination
+	name `Scouting Run`
+	source
+	description `The outfitter on <planet> is running low on supplies and needs to be restocked immediately. Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+			variant
+				"Osprey"
+			variant
+		attributes "mining" "factory"
+			variant
+	on complete
+		system destination
+	source
+				"Hauler II" 2
+		dialog phrase "generic waypoint on visit"
+			names "civilian"
+	source
+	passengers 2 10 .9
+	deadline 2 1
+	on complete
+	name `Scouting Run`
 		government "Free Worlds"
 		attributes outfitter
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 5000 180
-		dialog phrase "free worlds thanked resupply payment"
-
-mission "FW Frontline Resupply [0]"
-	job
-	repeat
-	name `Resupply <planet>`
-	description `The frontlines of the war are in need of a resupply. Immediately deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	cargo "food" 5 2 .1
-	to offer
-		random < 40
-		has "salary: Free Worlds"
-		not "event: fw armistice"
-	source
-		government "Free Worlds"
-		not
-			neighbor government "Republic"
-		not
-			neighbor
-				neighbor government "Republic"
-	destination
-		distance 2 10
-		government "Free Worlds"
 		neighbor
-			neighbor government "Republic"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
 		payment 2000 180
+			variant
+	name `Care package to <planet>`
 		dialog phrase "free worlds thanked resupply payment"
-
-mission "FW Frontline Resupply [1]"
+		government "Free Worlds"
+	waypoint
+		distance 4 8
 	job
-	repeat
-	name `Resupply <planet>`
-	description `The frontlines of the war are in need of a resupply. Immediately deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	cargo "medical" 5 2 .1
-	to offer
+mission "FW Care Package to Republic [1]"
+		distance 2 6
+	on visit
+
+				"Bastion"
+		has "chosen sides"
+	on complete
+	job
 		random < 30
-		has "salary: Free Worlds"
-		not "event: fw armistice"
-	source
-		government "Free Worlds"
-		not
-			neighbor government "Republic"
-		not
-			neighbor
-				neighbor government "Republic"
-	destination
-		distance 2 10
-		government "Free Worlds"
-		neighbor
-			neighbor government "Republic"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 2000 180
-		dialog phrase "free worlds thanked resupply payment"
-
-mission "FW Frontline Resupply [2]"
-	job
 	repeat
-	name `Resupply <planet>`
-	description `The frontlines of the war are in need of a resupply. Immediately deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	cargo "heavy metals" 5 2 .1
-	to offer
-		random < 20
-		has "salary: Free Worlds"
-		not "event: fw armistice"
-	source
-		government "Free Worlds"
-		not
-			neighbor government "Republic"
-		not
-			neighbor
-				neighbor government "Republic"
-	destination
-		distance 2 10
-		government "Free Worlds"
-		neighbor
-			neighbor government "Republic"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 2000 180
-		dialog phrase "free worlds thanked resupply payment"
-
-mission "FW Bulk Frontline Resupply [0]"
 	job
-	repeat
-	name `Resupply <planet>`
 	description `The frontlines of the war are in need of a resupply. Immediately deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	cargo "food" 25 2 .95
-	to offer
-		random < 30
-		has "salary: Free Worlds"
-		not "event: fw armistice"
-	source
-		government "Free Worlds"
-		not
-			neighbor government "Republic"
-		not
-			neighbor
-				neighbor government "Republic"
-	destination
-		distance 3 12
-		government "Free Worlds"
 		neighbor
-			neighbor government "Republic"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 5000 180
-		dialog phrase "free worlds thanked resupply payment"
-
+		government "Free Worlds"
+		not "main plot completed"
+			variant
+		government "Free Worlds"
 mission "FW Bulk Frontline Resupply [1]"
 	job
-	repeat
-	name `Resupply <planet>`
-	description `The frontlines of the war are in need of a resupply. Immediately deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	cargo "medical" 25 2 .95
-	to offer
-		random < 15
-		has "salary: Free Worlds"
-		not "event: fw armistice"
+	on visit
+			variant
 	source
+	repeat
+		fleet "Small Southern Pirates"
+		distance 1 2
+	destination
+	on complete
+	source
+	to offer
+	cargo random 5 2 .1
+	source
+	deadline 1 1
+	on complete
+		not "event: fw armistice"
+	to offer
+	deadline 2 1
+	on complete
+	destination
+	on visit
+		has "salary: Free Worlds"
+		random < 30
+mission "FW Frontline Resupply [0]"
+		fleet "Small Southern Pirates"
+		distance 5 10
+	destination
+		dialog phrase "free worlds thanked resupply payment"
+		dialog phrase "free worlds thanked resupply payment"
+		dialog phrase "free worlds thanked refugee transport"
+	repeat
+		`The captain of the <npc> thanks you for escorting them safely, and the shipyard pays you <payment> for helping to deliver the supplies.`
+		neighbor
+	destination
+		not "event: fw armistice"
+			variant
+		payment 10000 180
+		random < 20
+				neighbor government "Republic"
+			neighbor
+	to offer
+		distance 6 12
+	destination
 		government "Free Worlds"
+		random < 20
 		not
 			neighbor government "Republic"
+	deadline 2 1
+		government "Pirate"
+
+			neighbor government "Republic"
+		has "chosen sides"
+		dialog phrase "free worlds convoy supplies payment"
+	job
+	passengers 5 5 .5
+	on visit
+		attributes outfitter
+		dialog `You unload the Free Worlds soldiers into the busy spaceport of <planet>, and collect your payment of <payment>.`
+
+	on complete
+			variant
+
+
+#
+		random < 20
+		fleet "Small Southern Pirates"
+	job
 		not
-			neighbor
-				neighbor government "Republic"
-	destination
-		distance 3 12
-		government "Free Worlds"
-		neighbor
+		`Your passengers thank you graciously for taking them away from the dangerous frontlines of the war. You wish them the best of luck on <planet>, and collect your payment of <payment>.`
 			neighbor government "Republic"
 	on visit
+	job
+		personality nemesis harvests plunders
+		has "salary: Free Worlds"
+mission "FW Bulk Outfitter Resupply [1]"
+
+				"Bastion"
 		dialog phrase "generic cargo on visit"
+	destination
+		random < 25
+		not "main plot completed"
+	repeat
+		distance 2 10
+	deadline 1 1
+		dialog phrase "generic passenger on visit"
+				"Bastion" 2
+		government "Free Worlds"
+mission "FW Outfitter Resupply [0]"
+	description `The frontlines of the war are in need of a resupply. Immediately deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+	on visit
+		fleet "Large Southern Pirates"
+	repeat
+		not "event: fw armistice"
+				"Behemoth" 2
+	name `Reinforcements to <planet>`
+	repeat
+	destination
+phrase "free worlds convoy supplies payment"
+			neighbor
+	description `The frontlines of the war are in need of a resupply. Immediately deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+		random < 20
 	on complete
-		payment 5000 180
+	cargo random 25 2 .05
+		not
+phrase "free worlds thanked care package"
+		government "Free Worlds"
+	to offer
+		government "Pirate"
+			variant
+		fleet "Large Southern Pirates"
+		dialog phrase "free worlds thanked care package"
+
+		payment 1000 180
+	name `Scouting Run`
+		government "Free Worlds"
+
+		dialog `You have landed on <planet>, but you have yet to scout out all the marked systems. Visit all the systems marked on your map before returning.`
+		payment 2000 180
+		dialog phrase "free worlds thanked resupply payment"
+	on visit
+	on complete
+				neighbor government "Republic"
+	name `Resupply <planet>`
+		government "Free Worlds"
+	description `A citizen of the Republic is worried about family members in the Free Worlds. Immediately deliver a care package of <cargo> to <destination> by <date>. Payment is <payment>.`
+		payment 1000 180
+	description `Fly through the <waypoints> systems and scout them out for Navy activity. Then return to <destination> by <date> where your ship's scanner logs will be analyzed. Payment is <payment>.`
+
+		government "Free Worlds"
+	to offer
+		not
+	to offer
+		government "Free Worlds"
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+			neighbor government "Republic"
+		government "Free Worlds"
+		has "salary: Free Worlds"
+		random < 15
+	to offer
+		distance 2 10
+		random < 30
+		distance 2 10
+		dialog `You unload the Free Worlds soldiers into the busy spaceport of <planet>, and collect your payment of <payment>.`
+			names "civilian"
+	to offer
+	npc
+		payment 2000 180
+	description `The outfitter on <planet> is running low on supplies and needs to be restocked immediately. Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+	deadline 2 1
+	source
+
+		distance 2 5
+	destination
+		fleet "Large Southern Pirates"
+	to offer
+
+# Foundation, either version 3 of the License, or (at your option) any later version.
+		not "main plot completed"
+			neighbor
+		dialog phrase "generic cargo on visit"
+		government "Free Worlds"
+		has "salary: Free Worlds"
+mission "FW Refugees [2]"
+		fleet
+	cargo "food" 25 2 .95
+		neighbor
+	name `Resupply <planet>`
+	destination
+		neighbor
+			neighbor
+	description `The shipyard on <planet> is in need of more supplies for building warships. Immediately escort a convoy of ships to <destination> by <date>. Payment is <payment>.`
+			neighbor government "Republic"
+	on visit
+		random < 40
+	repeat
+				"Hauler III"
+	source
+		random < 25
+	job
+	job
+		personality nemesis harvests plunders
+		distance 2 10
+	waypoint
+				"Behemoth"
+			variant
 		dialog phrase "free worlds thanked resupply payment"
 
-
-
-phrase "free worlds thanked care package"
-	word
-		`You deliver the care package of <commodity> to the specified address and explain to the people where the care package came from. They thank you for delivering it, and you collect your payment of <payment>.`
-
-mission "FW Care Package to Republic [0]"
-	job
-	repeat
-	name `Care package to <planet>`
-	description `A citizen of the Free Worlds is worried about family members in the Republic. Immediately deliver a care package of <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 1 1
-	cargo random 1 3
-	to offer
-		random < 30
-		has "chosen sides"
-		not "event: fw armistice"
-	source
-		government "Free Worlds"
-	destination
-		government "Republic"
-		distance 2 5
-	on visit
 		dialog phrase "generic cargo on visit"
-	on complete
-		payment 1000 180
-		dialog phrase "free worlds thanked care package"
-
-mission "FW Care Package to Republic [1]"
-	job
-	repeat
-	name `Care package to <planet>`
-	description `A citizen of the Free Worlds is worried about family members in the Republic. Immediately deliver a care package of <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 1 1
-	cargo random 1 3
-	to offer
-		random < 30
-		has "chosen sides"
-		not "event: fw armistice"
 	source
-		government "Free Worlds"
-	destination
-		government "Republic"
-		distance 2 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 1000 180
-		dialog phrase "free worlds thanked care package"
-
-mission "FW Care Package from Republic [0]"
-	job
-	repeat
-	name `Care package to <planet>`
-	description `A citizen of the Republic is worried about family members in the Free Worlds. Immediately deliver a care package of <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 1 1
-	cargo random 1 3
-	to offer
-		random < 30
-		has "chosen sides"
-		not "event: fw armistice"
-	source
-		government "Republic"
-	destination
-		government "Free Worlds"
-		distance 2 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 1000 180
-		dialog phrase "free worlds thanked care package"
-
-mission "FW Care Package from Republic [1]"
-	job
-	repeat
-	name `Care package to <planet>`
-	description `A citizen of the Republic is worried about family members in the Free Worlds. Immediately deliver a care package of <cargo> to <destination> by <date>. Payment is <payment>.`
-	deadline 1 1
-	cargo random 1 3
-	to offer
-		random < 30
-		has "chosen sides"
-		not "event: fw armistice"
-	source
-		government "Republic"
-	destination
-		government "Free Worlds"
-		distance 2 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 1000 180
-		dialog phrase "free worlds thanked care package"
-
-
-
-phrase "free worlds thanked refugee transport"
-	word
-		`Your passengers thank you graciously for taking them away from the dangerous frontlines of the war. You wish them the best of luck on <planet>, and collect your payment of <payment>.`
-
-mission "FW Refugees [0]"
-	job
-	repeat
-	name `Refugees to <planet>`
-	description `These <bunks> passengers would like to escape the frontlines of the war and immediately settle on <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	passengers 2 10 .9
-	to offer
-		random < 60
-		has "chosen sides"
-		not "event: fw armistice"
-	source
-		government "Free Worlds"
-		neighbor
-			neighbor government "Republic"
-	destination
-		distance 2 10
-		government "Free Worlds"
-		not
-			neighbor government "Republic"
-		not
-			neighbor
-				neighbor government "Republic"
-	on visit
+mission "FW Scout Run [2]"
 		dialog phrase "generic passenger on visit"
-	on complete
-		payment 2000 180
-		dialog phrase "free worlds thanked refugee transport"
-
-mission "FW Refugees [1]"
-	job
-	repeat
-	name `Refugees to <planet>`
-	description `These <bunks> passengers would like to escape the frontlines of the war and immediately settle on <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	passengers 2 10 .9
-	to offer
-		random < 40
-		has "chosen sides"
-		not "event: fw armistice"
-	source
-		government "Free Worlds"
-		neighbor
-			neighbor government "Republic"
-	destination
-		distance 2 10
-		government "Free Worlds"
-		not
-			neighbor government "Republic"
-		not
-			neighbor
-				neighbor government "Republic"
+		random < 50
 	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 2000 180
-		dialog phrase "free worlds thanked refugee transport"
-
-mission "FW Refugees [2]"
-	job
-	repeat
-	name `Refugees to <planet>`
-	description `These <bunks> passengers would like to escape the frontlines of the war and immediately settle on <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	passengers 2 10 .9
+	cargo random 1 3
+		dialog phrase "generic cargo on visit"
 	to offer
-		random < 20
-		has "chosen sides"
+	name `Refugees to <planet>`
+	name `Resupply <planet>`
+			names "civilian"
 		not "event: fw armistice"
-	source
+		government "Pirate"
+		fleet
 		government "Free Worlds"
-		neighbor
-			neighbor government "Republic"
-	destination
-		distance 2 10
-		government "Free Worlds"
-		not
-			neighbor government "Republic"
-		not
-			neighbor
-				neighbor government "Republic"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 2000 180
-		dialog phrase "free worlds thanked refugee transport"
-
 mission "FW Bulk Refugees [0]"
-	job
-	repeat
-	name `Refugees to <planet>`
-	description `These <bunks> passengers would like to escape the frontlines of the war and immediately settle on <destination> by <date>. Payment is <payment>.`
-	deadline 2 1
-	passengers 5 5 .5
-	to offer
-		random < 20
-		has "chosen sides"
-		not "event: fw armistice"
+		system destination
+		fleet "Large Southern Pirates"
+		not
+	word
+		distance 3 12
+
+		personality nemesis staying harvests plunders
 	source
-		government "Free Worlds"
-		neighbor
-			neighbor government "Republic"
-	destination
-		distance 2 10
+	cargo random 5 2 .1
+		payment 2000 180
+		government "Republic"
+	phrase
+
+		not "event: fw armistice"
+		distance 2 3
 		government "Free Worlds"
 		not
-			neighbor government "Republic"
-		not
-			neighbor
-				neighbor government "Republic"
-	on visit
-		dialog phrase "generic passenger on visit"
+		government "Free Worlds"
+	deadline 1 1
+		government "Republic"
 	on complete
-		payment 5000 180
-		dialog phrase "free worlds thanked refugee transport"
+		not "event: fw armistice"
+	cargo random 1 3
+
+
+		government "Free Worlds"
+	description `These <bunks> Free Worlds soldiers require immediate transport to <destination> by <date> in order to reinforce the frontlines. Payment is <payment>.`
+	to offer
+		dialog `You have reached <planet>, but you left part or all of the convoy behind! Better depart and wait for them to arrive in this star system.`
+	job
+			neighbor government "Republic"
+		random < 20
+	deadline 2 1
+	source
+	cargo "medical" 5 2 .1
+		has "salary: Free Worlds"
+	cargo "medical" 25 2 .95
+		not
+			neighbor government "Republic"
+		attributes outfitter
+	deadline 2 1
+	job
+	on complete
+	to offer
+		government "Free Worlds"
+	cargo random 25 2 .05
+	repeat
+		system destination
+mission "FW Bulk Frontline Resupply [0]"
+		not "event: fw armistice"
+		random < 40
+	source
+		distance 4 8
+
+	on visit
+		system destination
+	npc
+	source
+		dialog phrase "generic cargo on visit"
+				"Argosy" 2
+		distance 2 10
+		dialog phrase "generic cargo on visit"
+		government "Free Worlds"
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+	on complete
+		dialog phrase "free worlds thanked care package"
+		distance 3 4
+
+
+		has "salary: Free Worlds"
+		distance 2 5
+		dialog phrase "generic passenger on visit"
+	source
+		dialog phrase "free worlds thanked resupply payment"

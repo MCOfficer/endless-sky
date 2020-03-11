@@ -1,1362 +1,1362 @@
-# Copyright (c) 2014-2016 by Michael Zahniser
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
-ship "Korath Raider"
-	sprite "ship/raider"
-	thumbnail "thumbnail/raider"
-	attributes
-		category "Heavy Warship"
-		"cost" 16570000
-		"shields" 27000
-		"hull" 9000
-		"required crew" 145
-		"bunks" 250
-		"mass" 720
-		"drag" 12
-		"heat dissipation" .5
-		"fuel capacity" 600
-		"cargo space" 175
-		"outfit space" 721
-		"weapon capacity" 284
-		"engine capacity" 159
-		weapon
-			"blast radius" 250
-			"shield damage" 3600
-			"hull damage" 1800
-			"hit force" 5400
-	outfits
-		"Korath Grab-Strike" 4
-		"Korath Banisher"
-		"Korath Warder"
-		
-		"Triple Plasma Core"
-		"Systems Core (Medium)"
-		"Large Heat Shunt" 2
-		"Small Heat Shunt"
-		"Fuel Processor"
-		"Korath Repeater Rifle" 196
-		
-		"Thruster (Planetary Class)"
-		"Steering (Planetary Class)"
 		"Jump Drive"
-	
-	engine -20 130
-	engine 20 130
-	turret -8 -145 "Korath Grab-Strike"
-	turret 8 -145 "Korath Grab-Strike"
-	turret -34 -143 "Korath Grab-Strike"
-	turret 34 -143 "Korath Grab-Strike"
-	turret 0 35 "Korath Banisher"
-	turret 0 90 "Korath Warder"
-	fighter -75 100
-	fighter 75 100
-	explode "tiny explosion" 20
-	explode "small explosion" 45
-	explode "medium explosion" 50
-	explode "large explosion" 40
-	explode "huge explosion" 10
-	"final explode" "final explosion large"
-	description "The Korath Raider is their warship of choice for plundering neighboring species."
-
-ship "Korath Raider" "Korath Raider (Ember)"
-	sprite "ship/raider"
-	outfits
-		"Korath Grab-Strike" 4
-		"Korath Banisher"
-		"Korath Warder"
-		
-		"Triple Plasma Core"
-		"Systems Core (Medium)"
-		"Large Heat Shunt" 2
-		"Small Heat Shunt"
-		"Fuel Processor"
-		"Korath Repeater Rifle" 196
-		"Outfits Expansion"
-		
-		"Thruster (Planetary Class)"
-		"Steering (Planetary Class)"
-		"Jump Drive"
-		"Hyperdrive"
-
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Banisher"
-	turret "Korath Warder"
-
-ship "Korath Raider" "Korath Raider (Hyperdrive)"
-	sprite "ship/raider"
-	outfits
-		"Korath Grab-Strike" 4
-		"Korath Banisher"
-		"Korath Warder"
-		
-		"Triple Plasma Core"
-		"Systems Core (Medium)"
-		"Large Heat Shunt" 2
-		"Small Heat Shunt"
-		"Fuel Processor"
-		"Korath Repeater Rifle" 196
-		"Outfits Expansion"
-		
-		"Thruster (Planetary Class)"
-		"Steering (Planetary Class)"
-		"Jump Drive (Broken)"
-		"Hyperdrive"
-
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Banisher"
-	turret "Korath Warder"
-
-ship "Korath Raider" "Korath Raider (Crippled)"
-	sprite "ship/raider"
-	outfits
-		"Korath Grab-Strike" 2
-		"Korath Banisher"
-		"Korath Warder"
-		
-		"Triple Plasma Core"
-		"Large Heat Shunt" 2
-		"Small Heat Shunt"
-		"Korath Repeater Rifle" 196
-		"Outfits Expansion"
-		
-		"Thruster (Planetary Class)"
-		"Steering (Planetary Class)"
-		"Jump Drive (Broken)"
-		"Hyperdrive"
-
-	turret
-	turret
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Banisher"
-	turret "Korath Warder"
-
-ship "Korath Chaser"
-	sprite "ship/chaser"
-	thumbnail "thumbnail/chaser"
-	attributes
-		category "Fighter"
-		"cost" 671000
-		"shields" 2300
-		"hull" 900
-		"required crew" 1
-		"bunks" 1
-		"mass" 40
-		"drag" .9
-		"heat dissipation" .9
-		"outfit space" 92
-		"weapon capacity" 25
-		"engine capacity" 30
-		weapon
-			"blast radius" 48
-			"shield damage" 320
-			"hull damage" 160
-			"hit force" 480
-	outfits
-		"Korath Fire-Lance"
-		
-		"Generator (Furnace Class)"
-		"Small Heat Shunt"
-		"Korath Repeater Rifle" 
-		
-		"Thruster (Asteroid Class)"
-		"Steering (Asteroid Class)"
-	
-	engine -7 23
-	engine 7 23
-	gun 0 -28 "Korath Fire-Lance"
-	explode "tiny explosion" 20
-	description "The Korath Chaser is a fighter carried by most of their capital ships."
-
-
-
-ship "Korath World-Ship"
-	sprite "ship/world-ship a"
-	thumbnail "thumbnail/world-ship a"
-	attributes
-		category "Heavy Freighter"
-		cost 27690000
-		shields 47000
-		hull 34000
-		"required crew" 794
-		"bunks" 1492
-		"mass" 1735
-		"drag" 21
-		"heat dissipation" .4
-		"fuel capacity" 1000
-		"cargo space" 264
-		"outfit space" 779
-		"weapon capacity" 314
-		"engine capacity" 165
-		weapon
-			"blast radius" 400
-			"shield damage" 8000
-			"hull damage" 4000
-			"hit force" 12000
-	outfits
-		"Korath Grab-Strike" 2
-		"Korath Banisher" 3
-		"Korath Warder" 3
-		
-		"Triple Plasma Core"
-		"Systems Core (Large)"
-		"Large Heat Shunt" 2
-		"Fuel Processor"
-		"Korath Repeater Rifle" 150
-		
-		"Thruster (Planetary Class)"
-		"Steering (Planetary Class)"
-		"Hyperdrive"
-	
-	engine -37 343 .8
-	engine 0 343 .9
-	engine 37 343 .8
-	turret -76 -157 "Korath Grab-Strike"
-	turret 76 -157 "Korath Banisher"
-	turret -59 -135 "Korath Warder"
-	turret 59 -135 "Korath Grab-Strike"
-	turret -61 -6 "Korath Banisher"
-	turret 61 -6 "Korath Warder"
-	turret -66 210 "Korath Warder"
-	turret 66 210 "Korath Banisher"
-	explode "tiny explosion" 30
-	explode "small explosion" 45
-	explode "medium explosion" 50
-	explode "large explosion" 40
-	explode "huge explosion" 50
-	"final explode" "final explosion large"
-	description "Korath World-Ships are massive nomadic habitats that hold all that is left of their people."
-
-ship "Korath World-Ship" "Korath World-Ship B"
-	sprite "ship/world-ship b"
-	thumbnail "thumbnail/world-ship b"
-	turret -76 -219 "Korath Grab-Strike"
-	turret 76 -219 "Korath Grab-Strike"
-	turret -75 -112 "Korath Banisher"
-	turret 75 -112 "Korath Banisher"
-	turret 0 -92 "Korath Warder"
-	turret -83 165 "Korath Warder"
-	turret 83 165 "Korath Warder"
-	turret 0 277 "Korath Banisher"
-
-ship "Korath World-Ship" "Korath World-Ship C"
-	sprite "ship/world-ship c"
-	thumbnail "thumbnail/world-ship c"
-	turret -45 -243 "Korath Warder"
-	turret 45 -243 "Korath Grab-Strike"
-	turret -47 -136 "Korath Grab-Strike"
-	turret 47 -136 "Korath Banisher"
-	turret -70 57 "Korath Warder"
-	turret 70 57 "Korath Banisher"
-	turret -91 290 "Korath Banisher"
-	turret 91 290 "Korath Warder"
-
-ship "Korath World-Ship" "Korath World-Ship A (Jump)"
-	outfits
-		"Korath Grab-Strike" 2
-		"Korath Banisher" 3
-		"Korath Warder" 3
-		
-		"Triple Plasma Core"
-		"Systems Core (Large)"
-		"Large Heat Shunt" 2
-		"Fuel Processor"
-		"Korath Repeater Rifle" 150
-		
-		"Thruster (Planetary Class)"
-		"Steering (Planetary Class)"
-		"Jump Drive"
-	
-	turret -76 -157 "Korath Grab-Strike"
-	turret 76 -157 "Korath Banisher"
-	turret -59 -135 "Korath Warder"
-	turret 59 -135 "Korath Grab-Strike"
-	turret -61 -6 "Korath Banisher"
-	turret 61 -6 "Korath Warder"
-	turret -66 210 "Korath Warder"
-	turret 66 210 "Korath Banisher"
-
-ship "Korath World-Ship" "Korath World-Ship B (Jump)"
-	sprite "ship/world-ship b"
-	outfits
-		"Korath Grab-Strike" 2
-		"Korath Banisher" 3
-		"Korath Warder" 3
-		
-		"Triple Plasma Core"
-		"Systems Core (Large)"
-		"Large Heat Shunt" 2
-		"Fuel Processor"
-		"Korath Repeater Rifle" 150
-		
-		"Thruster (Planetary Class)"
-		"Steering (Planetary Class)"
-		"Jump Drive"
-	
-	turret -76 -219 "Korath Grab-Strike"
-	turret 76 -219 "Korath Grab-Strike"
-	turret -75 -112 "Korath Banisher"
-	turret 75 -112 "Korath Banisher"
-	turret 0 -92 "Korath Warder"
-	turret -83 165 "Korath Warder"
-	turret 83 165 "Korath Warder"
-	turret 0 277 "Korath Banisher"
-
-ship "Korath World-Ship" "Korath World-Ship C (Jump)"
-	sprite "ship/world-ship c"
-	outfits
-		"Korath Grab-Strike" 2
-		"Korath Banisher" 3
-		"Korath Warder" 3
-		
-		"Triple Plasma Core"
-		"Systems Core (Large)"
-		"Large Heat Shunt" 2
-		"Fuel Processor"
-		"Korath Repeater Rifle" 150
-		
-		"Thruster (Planetary Class)"
-		"Steering (Planetary Class)"
-		"Jump Drive"
-	
-	turret -45 -247 "Korath Warder"
-	turret 45 -247 "Korath Grab-Strike"
-	turret -47 -140 "Korath Grab-Strike"
-	turret 47 -140 "Korath Banisher"
-	turret -70 53 "Korath Warder"
-	turret 70 53 "Korath Banisher"
-	turret -91 286 "Korath Banisher"
-	turret 91 286 "Korath Warder"
-
-ship "Korath World-Ship" "Korath World-Ship B (Ember)"
-	sprite "ship/world-ship b"
-	outfits
-		"Korath Grab-Strike" 2
-		"Korath Banisher" 3
-		"Korath Warder" 3
-		
-		"Triple Plasma Core"
-		"Systems Core (Large)"
-		"Large Heat Shunt" 2
-		"Fuel Processor"
-		"Korath Repeater Rifle" 150
-		"Outfits Expansion"
-		
-		"Thruster (Planetary Class)"
-		"Steering (Planetary Class)"
-		"Jump Drive"
-		"Hyperdrive"
-		
-	turret -76 -219 "Korath Grab-Strike"
-	turret 76 -219 "Korath Grab-Strike"
-	turret -75 -112 "Korath Banisher"
-	turret 75 -112 "Korath Banisher"
-	turret 0 -92 "Korath Warder"
-	turret -83 165 "Korath Warder"
-	turret 83 165 "Korath Warder"
-	turret 0 277 "Korath Banisher"
-
-ship "Korath World-Ship" "Korath World-Ship B (Crippled)"
-	sprite "ship/world-ship b"
-	outfits
-		"Korath Banisher" 3
-		"Korath Warder" 1
-		
-		"Triple Plasma Core"
-		"Large Heat Shunt" 2
-		"Korath Repeater Rifle" 150
-		"Outfits Expansion"
-		
-		"Thruster (Planetary Class)"
-		"Steering (Planetary Class)"
-		"Jump Drive (Broken)"
-		"Hyperdrive"
-	
-	turret -76 -219
-	turret 76 -219
-	turret -75 -112 "Korath Banisher"
-	turret 75 -112 "Korath Banisher"
-	turret 0 -92 "Korath Warder"
-	turret -83 165
-	turret 83 165
-	turret 0 277 "Korath Banisher"
-
-
-
-ship "Kar Ik Vot 349"
-	sprite "ship/kar ik vot 349"
-	thumbnail "thumbnail/kar ik vot 349"
-	attributes
-		category "Heavy Warship"
-		"cost" 41280000
-		"shields" 57200
-		"hull" 65400
-		"automaton" 1
-		"mass" 1350
-		"drag" 16.8
-		"heat dissipation" .5
-		"fuel capacity" 400
-		"cargo space" 87
-		"outfit space" 1054
-		"weapon capacity" 447
-		"engine capacity" 173
-		"self destruct" .8
-		"ramscoop" 3
-		weapon
-			"blast radius" 450
-			"shield damage" 6400
-			"hull damage" 3200
-			"hit force" 9600
-	outfits
-		"Korath Detainer" 2
-		"Korath Piercer Launcher" 2
-		"Korath Piercer" 94
-		"Korath Piercer Rack" 2
-		"Korath Warder" 2
-		"Korath Repeater Turret" 6
-		
-		"Triple Plasma Core"
-		"Plasma Core"
-		"Systems Core (Large)"
-		"Large Heat Shunt" 4
-		"Small Heat Shunt" 2
-		"Control Transceiver"
-		
-		"Thruster (Planetary Class)"
-		"Steering (Stellar Class)"
-		Hyperdrive
-	
-	engine -24 237
-	engine 24 237
-	gun -8 -212 "Korath Detainer"
-	gun 8 -212 "Korath Detainer"
-	gun -16 -158 "Korath Piercer Launcher"
-	gun 16 -158 "Korath Piercer Launcher"
-	turret -37 -150 "Korath Repeater Turret"
-	turret 37 -150 "Korath Repeater Turret"
-	turret -38 -132 "Korath Repeater Turret"
-	turret 38 -132 "Korath Repeater Turret"
-	turret -40 -111 "Korath Repeater Turret"
-	turret 40 -111 "Korath Repeater Turret"
-	turret -102 188 "Korath Warder"
-	turret 102 188 "Korath Warder"
-	explode "tiny explosion" 120
-	explode "small explosion" 60
-	explode "medium explosion" 70
-	explode "large explosion" 50
-	explode "huge explosion" 15
-	"final explode" "final explosion large"
-	description "The largest and deadliest of the Kor Sestor robotic warships, a single one of these battlecruisers can hold its own against an entire fleet of lesser ships."
-
-ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Offense)"
-	outfits
-		"Korath Piercer Launcher" 4
-		"Korath Piercer" 124
-		"Korath Repeater Turret" 6
-		"Korath Grab-Strike" 2
-		
-		"Triple Plasma Core"
-		"Plasma Core"
-		"Systems Core (Large)"
-		"Systems Core (Medium)"
-		"Large Heat Shunt" 5
-		"Outfits Expansion"
-		"Control Transceiver"
-		
-		"Thruster (Planetary Class)"
-		"Thruster (Asteroid Class)"
-		"Steering (Stellar Class)"
-		Hyperdrive
-	
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-
-ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Defense)"
-	outfits
-		"Korath Piercer Launcher" 4
-		"Korath Piercer" 140
-		"Korath Piercer Rack"
-		"Korath Warder" 3
-		"Korath Grab-Strike" 3
-		"Korath Banisher" 2
-		
-		"Triple Plasma Core"
-		"Plasma Core"
-		"Systems Core (Large)"
-		"Systems Core (Medium)"
-		"Large Heat Shunt" 3
-		"Outfits Expansion"
-		"Control Transceiver"
-		
-		"Thruster (Stellar Class)"
-		"Steering (Planetary Class)"
-		Hyperdrive
-	
-	turret "Korath Warder"
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Banisher"
-	turret "Korath Banisher"
-	turret "Korath Warder"
-	turret "Korath Warder"
-
-ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Trapper)"
-	outfits
-		"Korath Detainer" 2
-		"Korath Grab-Strike" 4
-		"Korath Banisher" 2
-		
-		"Triple Plasma Core"
-		"Double Plasma Core"
-		"Systems Core (Large)"
-		"Systems Core (Medium)"
-		"Large Heat Shunt" 3
-		"Small Heat Shunt"
-		"Outfits Expansion" 4
-		"Control Transceiver"
-		
-		"Thruster (Planetary Class)"
-		"Steering (Stellar Class)"
-		Hyperdrive
-	
-	gun "Korath Detainer"
-	gun "Korath Detainer"
-	gun
-	gun
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Banisher"
-	turret "Korath Banisher"
-	turret
-	turret
-
-
-ship "Tek Far 71 - Lek"
-	sprite "ship/tek far 71 lek"
-	thumbnail "thumbnail/tek far 71 lek"
-	attributes
-		category "Medium Warship"
-		"cost" 22870000
-		"shields" 25400
-		"hull" 29500
-		"automaton" 1
-		"mass" 610
-		"drag" 9.6
-		"heat dissipation" .6
-		"fuel capacity" 400
-		"cargo space" 36
-		"outfit space" 533
-		"weapon capacity" 235
-		"engine capacity" 102
-		"self destruct" .7
-		"ramscoop" 3
-		weapon
-			"blast radius" 320
-			"shield damage" 4000
-			"hull damage" 2000
-			"hit force" 6000
-	outfits
-		"Korath Detainer"
-		"Korath Piercer Launcher" 2
-		"Korath Piercer" 62
-		"Korath Banisher"
-		"Korath Warder" 2
-		
-		"Double Plasma Core"
-		"Generator (Furnace Class)"
-		"Systems Core (Medium)"
-		"Large Heat Shunt"
-		"Control Transceiver"
-		
-		"Thruster (Lunar Class)"
-		"Steering (Lunar Class)"
-		"Hyperdrive"
-	
-	engine -9 219
-	engine 9 219
-	gun 10 -180 "Korath Detainer"
-	gun 10 -180 "Korath Piercer Launcher"
-	gun 10 -180 "Korath Piercer Launcher"
-	turret -10 -85 "Korath Warder"
-	turret -13 -61
-	turret -14 -38 "Korath Banisher"
-	turret 14 177 "Korath Warder"
-	drone 20.5 -65 over
-	drone 44.5 -40 over
-	drone 30 67 over
-	drone 61.5 83 over
-	drone 43 137 over
-	drone 18 171.5 over
-	drone 30 -106 under
-	drone 24 -8 under
-	drone 42 55 under
-	drone 34 172 under
-	explode "tiny explosion" 80
-	explode "small explosion" 45
-	explode "medium explosion" 50
-	explode "large explosion" 40
-	explode "huge explosion" 10
-	"final explode" "final explosion large"
-	description "The Kor Sestor war fleets rely heavily on small, powerful fighters and drones. This ship can carry up to ten of their drones, clamped to the exterior of its hull."
-
-ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Close Quarters)"
-	outfits
-		"Korath Detainer"
-		"Korath Repeater" 2
-		"Korath Repeater Turret" 3
-		"Korath Warder"
-		
-		"Double Plasma Core"
-		"Generator (Furnace Class)"
-		"Systems Core (Medium)"
-		"Large Heat Shunt" 2
-		"Small Heat Shunt"
-		"Outfits Expansion"
-		"Control Transceiver"
-		
-		"Thruster (Lunar Class)"
-		"Steering (Lunar Class)"
-		"Hyperdrive"
-	
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Warder"
-	turret "Korath Repeater Turret"
-
-
-ship "Tek Far 78 - Osk"
-	sprite "ship/tek far 78 osk"
-	thumbnail "thumbnail/tek far 78 osk"
-	attributes
-		category "Medium Warship"
-		"cost" 25630000
-		"shields" 27600
-		"hull" 34100
-		"automaton" 1
-		"mass" 690
-		"drag" 10.2
-		"heat dissipation" .55
-		"fuel capacity" 400
-		"cargo space" 43
-		"outfit space" 611
-		"weapon capacity" 272
-		"engine capacity" 117
-		"self destruct" .7
-		"ramscoop" 3
-		weapon
-			"blast radius" 340
-			"shield damage" 4400
-			"hull damage" 2200
-			"hit force" 6600
-	outfits
-		"Korath Detainer"
-		"Korath Piercer Launcher" 3
-		"Korath Piercer" 93
-		"Korath Banisher"
-		"Korath Warder" 2
-		
-		"Double Plasma Core"
-		"Generator (Inferno Class)"
-		"Systems Core (Medium)"
-		"Large Heat Shunt"
-		"Control Transceiver"
-		
-		"Thruster (Lunar Class)"
-		"Steering (Planetary Class)"
-		Hyperdrive
-	
-	engine -9 245
-	engine 9 245
-	gun 0 -239 "Korath Detainer"
-	gun 0 -239 "Korath Piercer Launcher"
-	gun -9 -220 "Korath Piercer Launcher"
-	gun -9 -220 "Korath Piercer Launcher"
-	turret 17 -133 "Korath Warder"
-	turret 19 -110
-	turret 21 -87
-	turret 23 -64 "Korath Banisher"
-	turret 38 145 "Korath Warder"
-	fighter -18.5 -163 over
-	fighter -43.5 -103.5 over
-	fighter -16.5 -32.5 over
-	fighter -30 57 over
-	fighter -55.5 96.5 over
-	fighter -21.5 150.5 over
-	fighter -32.5 -76.5 under
-	fighter -14.5 43.5 under
-	fighter -42.5 193.5 under
-	explode "tiny explosion" 90
-	explode "small explosion" 50
-	explode "medium explosion" 55
-	explode "large explosion" 45
-	explode "huge explosion" 12
-	"final explode" "final explosion large"
-	description "This carrier is equipped with docking clamps for up to nine fighters. When loaded with a full complement of the powerful Kor Sestor robotic fighters, it is a formidable opponent."
-
-ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Close Quarters)"
-	outfits
-		"Korath Detainer"
-		"Korath Warder" 2
-		"Korath Repeater Turret" 3
-		
-		"Triple Plasma Core"
-		"Systems Core (Medium)"
-		"Large Heat Shunt" 3
-		"Outfits Expansion"
-		"Control Transceiver"
-		
-		"Thruster (Lunar Class)"
-		"Steering (Planetary Class)"
-		Hyperdrive
-	
-	turret "Korath Warder"
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Warder"
-
-
-ship "Tek Far 109"
-	sprite "ship/tek far 109"
-	thumbnail "thumbnail/tek far 109"
-	attributes
-		category "Medium Warship"
-		"cost" 18290000
-		"shields" 17900
-		"hull" 15800
-		"automaton" 1
-		"mass" 540
-		"drag" 9.1
-		"heat dissipation" .65
-		"fuel capacity" 400
-		"cargo space" 31
-		"outfit space" 491
-		"weapon capacity" 217
-		"engine capacity" 98
-		"self destruct" .7
-		"ramscoop" 3
-		weapon
-			"blast radius" 280
-			"shield damage" 3200
-			"hull damage" 1600
-			"hit force" 4800
-	outfits
-		"Korath Detainer"
-		"Korath Piercer Launcher" 2
-		"Korath Piercer" 62
-		"Korath Banisher" 2
-		
-		"Double Plasma Core"
-		"Systems Core (Medium)"
-		"Small Heat Shunt" 2
-		"Control Transceiver"
-		
-		"Thruster (Lunar Class)"
-		"Steering (Planetary Class)"
-		Hyperdrive
-	
-	engine -9 205
-	engine 9 205
-	gun 0 -214 "Korath Detainer"
-	gun -14 -206 "Korath Piercer Launcher"
-	gun 14 -206 "Korath Piercer Launcher"
-	turret -89 32
-	turret 89 32
-	drone 38.5 -115.5 over
-	drone 25 -50.5 over
-	drone 59 28 over
-	drone 28 79 over
-	drone 19.5 145.5 over
-	drone 57.5 -56.5 under
-	drone 40 19 under
-	drone 60 58.5 under
-	drone 45.5 135 under
-	fighter -36.5 -130.5 over
-	fighter -61.5 -68 over
-	fighter -29.5 -17 over
-	fighter -54.5 55 over
-	fighter -62 24 under
-	fighter -35 136.5 under
-	fighter -22 -82 under
-	explode "tiny explosion" 70
-	explode "small explosion" 40
-	explode "medium explosion" 45
-	explode "large explosion" 30
-	explode "huge explosion" 8
-	"final explode" "final explosion medium"
-	description "The TF109 is designed almost solely for the purpose of carrying a fleet of Kor Sestor fighters and drones. Without them to serve as a protective screen, the ship itself is relatively helpless."
-
-
-ship "Met Par Tek 53"
-	sprite "ship/met par tek 53"
-	thumbnail "thumbnail/met par tek 53"
-	attributes
-		category "Light Warship"
-		"cost" 14480000
-		"shields" 15100
-		"hull" 22200
-		"automaton" 1
-		"mass" 420
-		"drag" 5.7
-		"heat dissipation" .8
-		"fuel capacity" 400
-		"cargo space" 26
-		"outfit space" 610
-		"weapon capacity" 213
-		"engine capacity" 110
-		"self destruct" .65
-		"ramscoop" 3
-		weapon
-			"blast radius" 250
-			"shield damage" 3200
-			"hull damage" 1600
-			"hit force" 4800
-	outfits
-		"Korath Repeater" 3
-		"Korath Repeater Turret" 6
-		
-		"Double Plasma Core"
-		"Generator (Inferno Class)"
-		"Systems Core (Medium)"
-		"Large Heat Shunt" 3
-		"Control Transceiver"
-		
-		"Thruster (Lunar Class)"
-		"Steering (Planetary Class)"
-		"Hyperdrive"
-	
-	engine -24 132
-	engine 24 132
-	gun 0 -92 "Korath Repeater"
-	gun -10 -65 "Korath Repeater"
-	gun 10 -65 "Korath Repeater"
-	turret -36 -45 "Korath Repeater Turret"
-	turret 36 -45 "Korath Repeater Turret"
-	turret -38 -28 "Korath Repeater Turret"
-	turret 38 -28 "Korath Repeater Turret"
-	turret -40 -8 "Korath Repeater Turret"
-	turret 40 -8 "Korath Repeater Turret"
-	
-	explode "tiny explosion" 60
-	explode "small explosion" 30
-	explode "medium explosion" 35
-	explode "large explosion" 20
-	explode "huge explosion" 6
-	"final explode" "final explosion medium"
-	description "Although this is the smallest Kor Sestor ship other than their fighters, it is larger than most human capital ships and considerably more powerful."
-
-ship "Met Par Tek 53" "Met Par Tek 53 (Sniper)"
-	outfits
-		"Korath Detainer"
-		"Korath Piercer Launcher" 2
-		"Korath Piercer" 62
-		"Korath Grab-Strike"
-		"Korath Warder"
-		
-		"Double Plasma Core"
-		"Generator (Inferno Class)"
-		"Generator (Candle Class)"
-		"Systems Core (Medium)"
-		"Large Heat Shunt"
-		"Control Transceiver"
-		
-		"Thruster (Lunar Class)"
-		"Steering (Planetary Class)"
-		"Steering (Comet Class)"
-		"Hyperdrive"
-	
-	gun "Korath Detainer"
-	gun "Korath Piercer Launcher"
-	gun "Korath Piercer Launcher"
-	turret "Korath Grab-Strike"
-	turret "Korath Warder"
-	turret
-	turret
-	turret
-	turret
-
-
-ship "Far Lek 14"
-	sprite "ship/far lek 14"
-	thumbnail "thumbnail/far lek 14"
-	attributes
-		category "Drone"
-		"cost" 573000
-		"shields" 900
-		"hull" 1600
-		"automaton" 1
-		"mass" 26
-		"drag" .8
-		"heat dissipation" 1.1
-		"outfit space" 65
-		"weapon capacity" 11
-		"engine capacity" 24
-		"self destruct" .6
-		weapon
-			"blast radius" 5
-			"shield damage" 50
-			"hull damage" 25
-			"hit force" 75
-	outfits
-		"Korath Repeater"
-		
-		"Generator (Candle Class)"
-		"Small Heat Shunt"
-		
-		"Thruster (Asteroid Class)"
-		"Steering (Asteroid Class)"
-		
-	engine -2 28
-	engine 8 28
-	gun 0 -30
-	explode "tiny explosion" 20
-	explode "small explosion" 10
-	description "At the peak of their recent civil war, the Kor Sestor faction developed these automated attack drones, easy to manufacture and encased in an ultra-dense hull that can absorb a significant amount of damage."
-
-
-ship "Far Osk 27"
-	sprite "ship/far osk 27"
-	thumbnail "thumbnail/far osk 27"
-	attributes
-		category "Fighter"
-		"cost" 761000
-		"shields" 1500
-		"hull" 2400
-		"automaton" 1
-		"mass" 34
-		"drag" 1.1
-		"heat dissipation" 1.0
-		"outfit space" 99
-		"weapon capacity" 22
-		"engine capacity" 24
-		"self destruct" .6
-		weapon
-			"blast radius" 12
-			"shield damage" 120
-			"hull damage" 60
-			"hit force" 180
-	outfits
-		"Korath Repeater" 2
-		
-		"Generator (Furnace Class)"
-		"Small Heat Shunt" 2
-		
-		"Thruster (Asteroid Class)"
-		"Steering (Asteroid Class)"
-		
-	engine -4 37
-	engine 4 37
-	gun 7 -15
-	gun 13 -8
-	explode "tiny explosion" 25
-	explode "small explosion" 15
-	description "Because it is piloted by a computer and has no need for a cockpit or life support systems, the FS27 fighter is able to carry far more weaponry than any comparable human ship."
-
-
-
-ship "Model 8"
-	sprite "ship/model 8"
-	thumbnail "thumbnail/model 8"
-	attributes
-		category "Interceptor"
-		"cost" 3725000
-		"shields" 5450
-		"hull" 3320
-		"automaton" 1
-		"mass" 110
-		"drag" 3.2
-		"heat dissipation" 1.5
-		"fuel capacity" 200
-		"cargo space" 29
-		"outfit space" 220
-		"weapon capacity" 49
-		"engine capacity" 60
-		"self destruct" .60
-		"ramscoop" 3
-		weapon
-			"blast radius" 100
-			"shield damage" 1200
-			"hull damage" 600
-			"hit force" 1800
-	outfits
-		"Korath Slicer"
-		
-		"Generator (Furnace Class)"
-		"Generator (Candle Class)"
-		"Systems Core (Small)"
-		"Reasoning Node"
-		
-		"Thruster (Comet Class)"
-		"Steering (Lunar Class)"
-		Hyperdrive
-	
-	engine -11 49
-	engine 11 49
-	gun 9 -36 "Korath Slicer"
-	gun -11 -15
-	explode "tiny explosion" 30
-	explode "small explosion" 10
-	"final explode" "final explosion small"
-	description "The primary role of the smallest Kor Mereti drones is asteroid mining, but their lasers can also be employed as offensive weapons when necessary."
-
-
-ship "Model 16"
-	sprite "ship/model 16"
-	thumbnail "thumbnail/model 16"
-	attributes
-		category "Light Warship"
-		"cost" 8449000
-		"shields" 15700
-		"hull" 9800
-		"automaton" 1
-		"mass" 250
-		"drag" 6.9
-		"heat dissipation" 1.3
-		"fuel capacity" 400
-		"cargo space" 7
-		"outfit space" 426
-		"weapon capacity" 149
-		"engine capacity" 107
-		"self destruct" .65
-		"ramscoop" 3
-		weapon
-			"blast radius" 200
-			"shield damage" 2200
-			"hull damage" 1100
-			"hit force" 3300
-	outfits
-		"Korath Minelayer"
-		"Korath Mine" 17
-		"Korath Disruptor"
-		"Korath Slicer Turret"
-		
-		"Plasma Core"
-		"Generator (Inferno Class)"
-		"Systems Core (Small)"
-		"Small Heat Shunt"
-		"Reasoning Node"
-		
-		"Thruster (Planetary Class)"
-		"Steering (Lunar Class)"
-		Hyperdrive
-	
-	engine -10 99
-	engine 10 99
-	gun 0 -99 "Korath Minelayer"
-	turret -18 -31 "Korath Disruptor"
-	turret 19 49 "Korath Slicer Turret"
-	explode "tiny explosion" 60
-	explode "small explosion" 40
-	explode "medium explosion" 30
-	explode "large explosion" 10
-	"final explode" "final explosion small"
-	description "The Kor Mereti war drones are constructed in a modular fashion, which allows them to grow over time as more materials become available. This one is recently built, and relatively small."
-
-
-ship "Model 32"
-	sprite "ship/model 32"
-	thumbnail "thumbnail/model 32"
-	attributes
-		category "Light Warship"
-		"cost" 12765000
-		"shields" 27900
-		"hull" 13400
-		"automaton" 1
-		"mass" 370
-		"drag" 9.0
-		"heat dissipation" 1.3
-		"fuel capacity" 400
-		"cargo space" 16
-		"outfit space" 481
-		"weapon capacity" 205
-		"engine capacity" 110
-		"self destruct" .70
-		"ramscoop" 3
-		weapon
-			"blast radius" 240
-			"shield damage" 3200
-			"hull damage" 1600
-			"hit force" 4800
-	outfits
-		"Korath Minelayer"
-		"Korath Mine" 17
-		"Korath Disruptor"
-		"Korath Slicer Turret" 2
-		
-		"Double Plasma Core"
-		"Generator (Candle Class)"
-		"Systems Core (Small)"
-		"Small Heat Shunt"
-		"Reasoning Node"
-		
-		"Thruster (Planetary Class)"
-		"Steering (Lunar Class)"
-		Hyperdrive
-
-	engine -10 128
-	engine 10 128
-	gun 0 -129 "Korath Minelayer"
-	turret 32 -24 "Korath Disruptor"
-	turret -31 -9 "Korath Slicer Turret"
-	turret 24 19 "Korath Slicer Turret"
-	explode "tiny explosion" 80
-	explode "small explosion" 55
-	explode "medium explosion" 40
-	explode "large explosion" 15
-	"final explode" "final explosion medium"
-	description "The Kor Mereti built their drones to mimic life: capable of growth and development throughout their life cycles. Their automated factories can convert the drones from one configuration to another by adding or removing modules."
-
-
-ship "Model 64"
-	sprite "ship/model 64"
-	thumbnail "thumbnail/model 64"
-	attributes
-		category "Medium Warship"
-		"cost" 19552000
-		"shields" 41700
-		"hull" 18000
-		"automaton" 1
-		"mass" 580
-		"drag" 11.1
-		"heat dissipation" 1.1
-		"fuel capacity" 400
-		"cargo space" 34
-		"outfit space" 567
-		"weapon capacity" 263
-		"engine capacity" 114
-		"self destruct" .74
-		"ramscoop" 3
-		weapon
-			"blast radius" 280
-			"shield damage" 4000
-			"hull damage" 2000
-			"hit force" 6000
-	outfits
-		"Korath Minelayer"
-		"Korath Mine" 35
-		"Korath Mine Rack" 2
-		"Korath Disruptor" 2
-		"Korath Slicer Turret" 2
-		
-		"Double Plasma Core"
-		"Generator (Furnace Class)"
-		"Systems Core (Medium)"
-		"Reasoning Node" 2
-		
-		"Thruster (Lunar Class)"
-		"Thruster (Asteroid Class)"
-		"Steering (Planetary Class)"
-		Hyperdrive
-	
-	engine -19 159
-	engine 19 159
-	gun 0 -159 "Korath Minelayer"
-	turret 20 -74 "Korath Slicer Turret"
-	turret -35 -69 "Korath Disruptor"
-	turret -29 71 "Korath Slicer Turret"
-	turret 34 77 "Korath Disruptor"
-	explode "tiny explosion" 100
-	explode "small explosion" 70
-	explode "medium explosion" 50
-	explode "large explosion" 20
-	"final explode" "final explosion medium"
-	description "This medium-sized drone serves the Kor Mereti fleets in much the same way as a human Frigate, but in terms of total firepower it is far beyond anything humans have constructed."
-
-
-ship "Model 128"
-	sprite "ship/model 128"
-	thumbnail "thumbnail/model 128"
-	attributes
-		category "Medium Warship"
-		"cost" 24073000
-		"shields" 57000
-		"hull" 23100
-		"automaton" 1
-		"mass" 780
-		"drag" 13.2
-		"heat dissipation" 1.0
-		"fuel capacity" 400
-		"cargo space" 53
-		"outfit space" 713
-		"weapon capacity" 344
-		"engine capacity" 132
-		"self destruct" .77
-		"ramscoop" 3
-		weapon
-			"blast radius" 320
-			"shield damage" 4600
-			"hull damage" 2300
-			"hit force" 6900
-	outfits
-		"Korath Minelayer" 2
-		"Korath Mine" 34
-		"Korath Disruptor" 2
-		"Korath Slicer Turret" 3
-		
-		"Double Plasma Core"
-		"Generator (Inferno Class)"
-		"Systems Core (Medium)"
-		"Reasoning Node" 2
-		
-		"Thruster (Planetary Class)"
-		"Steering (Planetary Class)"
-		"Steering (Asteroid Class)"
-		Hyperdrive
-
-	engine -14 178
-	engine 14 178
 	gun -11 -166 "Korath Minelayer"
-	gun 11 -166 "Korath Minelayer"
-	turret 29 -83 "Korath Slicer Turret"
-	turret -26 -53 "Korath Disruptor"
-	turret 56 35 "Korath Slicer Turret"
-	turret 50 84 "Korath Disruptor"
-	turret -24 115 "Korath Slicer Turret"
-	explode "tiny explosion" 120
-	explode "small explosion" 85
-	explode "medium explosion" 60
-	explode "large explosion" 25
+		"fuel capacity" 1000
+	explode "medium explosion" 55
+		"Steering (Asteroid Class)"
+		"Generator (Candle Class)"
+		"drag" 15.3
 	"final explode" "final explosion large"
+		"weapon capacity" 217
+		"self destruct" .79
+		"Thruster (Lunar Class)"
+		"Korath Banisher" 3
+		"Steering (Stellar Class)"
+		"Control Transceiver"
+	gun 0 -129 "Korath Minelayer"
+		"required crew" 794
+		"Korath Piercer" 94
+		
+
+		"self destruct" .65
+	
+	turret "Korath Warder"
+	explode "tiny explosion" 60
+		Hyperdrive
+		"required crew" 1
+		"Korath Mine" 61
+			"hull damage" 1100
+		"Korath Banisher"
+	engine -4 37
+		"weapon capacity" 205
+	fighter -21.5 150.5 over
+	outfits
+			"blast radius" 200
+	
+			"hull damage" 60
+		"Korath Mine" 34
+			"hull damage" 25
+	drone 57.5 -56.5 under
+	engine -2 28
+		"Korath Repeater Rifle" 150
+	drone 43 137 over
+		"Hyperdrive"
+	engine 9 219
+	drone 30 67 over
+		weapon
+ship "Met Par Tek 53" "Met Par Tek 53 (Sniper)"
+		"cost" 22870000
+	turret 75 -112 "Korath Banisher"
+	gun -16 -158 "Korath Piercer Launcher"
+	thumbnail "thumbnail/model 64"
+		"weapon capacity" 11
+			"hull damage" 2300
+		
+	attributes
+	gun 22 -148 "Korath Minelayer"
+		"Korath Detainer"
+	attributes
+		"hull" 34100
+
+		"Korath Warder" 3
+		
+	turret -29 71 "Korath Slicer Turret"
+		"automaton" 1
+		"hull" 9000
+		"Thruster (Planetary Class)"
+		"Plasma Core"
+		category "Drone"
+	turret 89 32
+		"Steering (Planetary Class)"
+	
+		"Korath Grab-Strike" 2
+		"Korath Grab-Strike" 4
+	explode "small explosion" 50
+
+		"Korath Disruptor"
+	turret "Korath Repeater Turret"
+	explode "large explosion" 20
+		"Steering (Planetary Class)"
+		"mass" 1150
+	engine -145 97
+	attributes
+		"shields" 57000
+			"hit force" 4800
+		"Small Heat Shunt" 2
+	engine -24 132
+	turret -83 165 "Korath Warder"
+		"outfit space" 99
+		weapon
+	turret 38 -28 "Korath Repeater Turret"
+		"Korath Minelayer"
+	turret "Korath Banisher"
+	turret "Korath Repeater Turret"
+	description "Although this is the smallest Kor Sestor ship other than their fighters, it is larger than most human capital ships and considerably more powerful."
+	engine 7 23
+		"outfit space" 779
+	turret 0 277 "Korath Banisher"
+	attributes
+	gun -11 -15
+
+		"Generator (Candle Class)"
+	sprite "ship/kar ik vot 349"
+	turret 38 145 "Korath Warder"
+		"outfit space" 721
+	turret 50 84 "Korath Disruptor"
+		"cargo space" 87
+	turret 76 -219
+	attributes
+		"drag" 16.8
+		"Steering (Planetary Class)"
+	
+		"shields" 86400
+		"shields" 5450
+		"Korath Repeater Rifle" 150
+		
+	turret 83 165 "Korath Warder"
+	explode "small explosion" 30
+		"Triple Plasma Core"
+	explode "large explosion" 25
+		
+		category "Light Warship"
+
+	turret -83 165 "Korath Warder"
+		"automaton" 1
+	explode "tiny explosion" 100
+		"Korath Piercer" 62
+		"Reasoning Node"
+	thumbnail "thumbnail/world-ship a"
+		"hull" 15800
+		"self destruct" .70
+		
+		"Fuel Processor"
+	outfits
+	
+		"Korath Piercer Launcher" 4
+		"automaton" 1
+			"hull damage" 1800
+		"Korath Detainer"
+	turret -76 -157 "Korath Grab-Strike"
+		"fuel capacity" 400
+	explode "tiny explosion" 140
+		Hyperdrive
+		
+		"Korath Repeater Rifle" 196
+		"Triple Plasma Core"
+		"Thruster (Lunar Class)"
+
+	gun 22 -143 "Korath Minelayer"
+		weapon
+		"Korath Piercer" 93
+	outfits
 	description "As Kor Mereti drones continue to grow and develop into their final form, they split down the middle. At the same time, their shielding and weaponry continue to become stronger."
 
-
-ship "Model 256"
-	sprite "ship/model 256"
-	thumbnail "thumbnail/model 256"
-	attributes
-		category "Heavy Warship"
-		"cost" 34920000
-		"shields" 71700
-		"hull" 28700
-		"automaton" 1
-		"mass" 970
-		"drag" 15.3
-		"heat dissipation" .9
-		"fuel capacity" 400
-		"cargo space" 78
-		"outfit space" 857
-		"weapon capacity" 393
-		"engine capacity" 145
-		"self destruct" .79
-		"ramscoop" 3
-		weapon
-			"blast radius" 340
-			"shield damage" 5200
-			"hull damage" 2600
-			"hit force" 7800
-	outfits
-		"Korath Minelayer" 2
-		"Korath Mine" 61
-		"Korath Mine Rack" 3
-		"Korath Disruptor" 3
-		"Korath Slicer Turret" 3
 		
-		"Triple Plasma Core"
-		"Systems Core (Large)"
-		"Large Heat Shunt"
-		"Reasoning Node" 3
-		
-		"Thruster (Planetary Class)"
+	turret 83 165 "Korath Warder"
 		"Steering (Planetary Class)"
-		"Steering (Comet Class)"
-		Hyperdrive
-
-	engine -60 147
-	engine 60 147
-	gun -22 -148 "Korath Minelayer"
-	gun 22 -148 "Korath Minelayer"
-	turret 36 -85 "Korath Disruptor"
-	turret -56 -45 "Korath Slicer Turret"
-	turret 69 3 "Korath Disruptor"
-	turret -73 38 "Korath Slicer Turret"
-	turret 66 64 "Korath Slicer Turret"
-	turret -56 101 "Korath Disruptor"
-	explode "tiny explosion" 140
-	explode "small explosion" 100
-	explode "medium explosion" 70
-	explode "large explosion" 30
-	"final explode" "final explosion large"
-	description "There is a saying among the Quarg that every species which insists on studying war will eventually construct a weapon that outlives its creators. For the Korath, their war drones have very nearly done so."
-
-
-ship "Model 512"
-	sprite "ship/model 512"
-	thumbnail "thumbnail/model 512"
-	attributes
-		category "Heavy Warship"
-		"cost" 40375000
-		"shields" 86400
-		"hull" 34200
-		"automaton" 1
-		"mass" 1150
-		"drag" 17.4
-		"heat dissipation" .8
-		"fuel capacity" 400
-		"cargo space" 107
-		"outfit space" 994
-		"weapon capacity" 440
-		"engine capacity" 161
-		"self destruct" .80
+	thumbnail "thumbnail/tek far 71 lek"
+			"blast radius" 280
+	turret "Korath Grab-Strike"
+		"Korath Banisher"
 		"ramscoop" 3
+		"Thruster (Stellar Class)"
+	turret "Korath Grab-Strike"
+	outfits
+		"Korath Disruptor" 3
+		"Korath Disruptor" 2
+		"shields" 71700
+		"Korath Grab-Strike" 2
+		"hull" 2400
+		"Korath Warder" 3
+
+	turret "Korath Warder"
+		"heat dissipation" .65
+	engine 10 99
+		"cost" 573000
+		"Korath Grab-Strike" 2
+	turret -37 -150 "Korath Repeater Turret"
+	description "The Kor Mereti built their drones to mimic life: capable of growth and development throughout their life cycles. Their automated factories can convert the drones from one configuration to another by adding or removing modules."
+	outfits
+		
+			"blast radius" 280
+	explode "small explosion" 45
+		"ramscoop" 3
+		"ramscoop" 3
+		"Korath Slicer Turret" 3
+	thumbnail "thumbnail/model 8"
+	engine 0 343 .9
+		"cost" 25630000
+		"Control Transceiver"
+		"Korath Slicer"
+		"outfit space" 481
+		"Reasoning Node" 3
+		Hyperdrive
+	thumbnail "thumbnail/raider"
+		"Thruster (Lunar Class)"
+		"Systems Core (Large)"
+		"Korath Banisher"
+		
+		"cost" 14480000
+		"fuel capacity" 400
+		"Steering (Planetary Class)"
+	turret
+	attributes
+
+	engine 24 237
+			"hit force" 6600
+		"automaton" 1
+		"Large Heat Shunt" 2
+	turret 91 286 "Korath Warder"
+
+ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Close Quarters)"
+			"blast radius" 400
+
+	fighter -14.5 43.5 under
+		"automaton" 1
+		"fuel capacity" 400
+	drone 28 79 over
+	sprite "ship/model 16"
+	turret "Korath Warder"
+	turret "Korath Warder"
+	outfits
+
+	turret -76 -219 "Korath Grab-Strike"
+			"shield damage" 8000
+	description "This medium-sized drone serves the Kor Mereti fleets in much the same way as a human Frigate, but in terms of total firepower it is far beyond anything humans have constructed."
+	turret 75 -112 "Korath Banisher"
+	outfits
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+		"cost" 40375000
+
+	turret 76 -219 "Korath Grab-Strike"
+		"Small Heat Shunt"
+		"heat dissipation" .9
+
+
+		"outfit space" 1054
+		"cargo space" 16
+		"Korath Mine Rack" 2
+		"Systems Core (Large)"
+	turret -75 -112 "Korath Banisher"
+	turret "Korath Repeater Turret"
+		"hull" 65400
+	fighter -61.5 -68 over
+	engine -37 343 .8
+	turret -70 53 "Korath Warder"
+	turret 32 -24 "Korath Disruptor"
+	drone 19.5 145.5 over
+	engine -9 245
+	
+	turret "Korath Repeater Turret"
+	turret 21 -87
+		"Korath Piercer Launcher" 2
+		"engine capacity" 60
+		"Generator (Furnace Class)"
+	sprite "ship/world-ship b"
+	turret "Korath Repeater Turret"
+	explode "medium explosion" 35
+		"heat dissipation" .9
+		"Thruster (Lunar Class)"
+			"blast radius" 320
+		"Systems Core (Medium)"
+		"ramscoop" 3
+			"hull damage" 2600
+	
+	explode "tiny explosion" 30
+		"cargo space" 36
+		"cargo space" 31
+		"Korath Repeater" 3
+		"Systems Core (Medium)"
+	gun "Korath Detainer"
+		"Thruster (Planetary Class)"
+	fighter -22 -82 under
+		"Thruster (Lunar Class)"
+	turret 40 -111 "Korath Repeater Turret"
+		"cost" 8449000
+	turret 91 290 "Korath Warder"
+		"heat dissipation" .8
+		
+	"final explode" "final explosion small"
+		"Korath Detainer"
+		"Triple Plasma Core"
+			"shield damage" 3200
+		"self destruct" .8
+		"Small Heat Shunt"
+			"hit force" 7800
+		"Double Plasma Core"
+	sprite "ship/world-ship c"
+	explode "medium explosion" 30
+		"Large Heat Shunt" 2
+	turret "Korath Grab-Strike"
+	turret 45 -243 "Korath Grab-Strike"
+	outfits
+		
+		"self destruct" .65
+		"Korath Repeater Rifle" 150
+			"shield damage" 4000
+		
+
+		Hyperdrive
+		
+	gun
+		"Korath Repeater Turret" 3
+			"hull damage" 1600
+	explode "huge explosion" 10
+		"hull" 1600
+		
+	turret "Korath Banisher"
+		category "Light Warship"
+		"Fuel Processor"
+		"Korath Banisher" 2
+		"shields" 41700
+	
+		"Steering (Planetary Class)"
+		"Large Heat Shunt" 3
+		"Systems Core (Medium)"
+		"Thruster (Planetary Class)"
+	"final explode" "final explosion medium"
+		"Steering (Planetary Class)"
+		"ramscoop" 3
+		"shields" 27000
+	explode "tiny explosion" 120
+
+		"Systems Core (Medium)"
+		"Small Heat Shunt"
+		"self destruct" .60
+	turret 0 277 "Korath Banisher"
+	turret 75 -112 "Korath Banisher"
+		"Thruster (Planetary Class)"
+		"ramscoop" 3
+	explode "small explosion" 10
+	"final explode" "final explosion small"
+	turret 47 -140 "Korath Banisher"
+			"blast radius" 250
+		"Control Transceiver"
+	engine 14 178
+		"Large Heat Shunt" 5
+ship "Korath World-Ship" "Korath World-Ship B (Jump)"
+ship "Korath World-Ship" "Korath World-Ship C"
+		"Korath Mine Rack" 2
+	fighter -29.5 -17 over
+	fighter -35 136.5 under
+		"Thruster (Planetary Class)"
+		"Control Transceiver"
+	turret -59 -135 "Korath Warder"
+		"Thruster (Planetary Class)"
+		"hull" 900
+		"Korath Minelayer" 2
+			"shield damage" 50
+	sprite "ship/model 32"
+		Hyperdrive
+		"Plasma Core"
+		"ramscoop" 3
+	turret 0 -92 "Korath Warder"
+		"drag" .8
+		"Triple Plasma Core"
+	"final explode" "final explosion medium"
+			"hull damage" 600
+		"cargo space" 34
+	explode "tiny explosion" 30
+		"engine capacity" 159
+	gun 9 -36 "Korath Slicer"
+		"Jump Drive (Broken)"
+		
+			"hit force" 9600
+	turret "Korath Grab-Strike"
+	turret -121 86 "Korath Slicer Turret"
+		"Plasma Core"
+		"Korath Mine" 35
+		"Large Heat Shunt"
+	turret 14 177 "Korath Warder"
+	sprite "ship/far osk 27"
+		"mass" 34
+		"Korath Repeater Rifle" 150
+		"required crew" 145
+		"weapon capacity" 272
+	description "The primary role of the smallest Kor Mereti drones is asteroid mining, but their lasers can also be employed as offensive weapons when necessary."
+		"Control Transceiver"
+		"Steering (Lunar Class)"
+	turret -61 -6 "Korath Banisher"
+	explode "large explosion" 30
+	gun 7 -15
+		"engine capacity" 24
+			"hull damage" 4000
+		"Large Heat Shunt" 2
+	engine -60 147
+		"Steering (Planetary Class)"
+		"Korath Fire-Lance"
+	outfits
+		"Korath Banisher"
+	turret 19 -110
+			"hull damage" 2200
+			"blast radius" 250
+		"Systems Core (Small)"
+		"Fuel Processor"
+	engine 9 245
+	turret -76 -157 "Korath Grab-Strike"
+		"Steering (Asteroid Class)"
+		"Steering (Planetary Class)"
+		
+		"Korath Slicer Turret" 2
+# Copyright (c) 2014-2016 by Michael Zahniser
+		"mass" 370
+	drone 34 172 under
+	sprite "ship/raider"
+	sprite "ship/model 8"
+		"Outfits Expansion"
+		"shields" 1500
+ship "Model 64"
+		"cost" 761000
+		"weapon capacity" 235
+		"heat dissipation" .5
+	explode "huge explosion" 12
+	turret 23 -64 "Korath Banisher"
+	turret
+		"Fuel Processor"
+		"Korath Slicer Turret" 4
+		"Thruster (Planetary Class)"
+		"engine capacity" 165
 		weapon
-			"blast radius" 380
-			"shield damage" 5600
-			"hull damage" 2800
+	turret 0 277 "Korath Banisher"
+	turret 38 -132 "Korath Repeater Turret"
+	description "The Kor Mereti war drones are constructed in a modular fashion, which allows them to grow over time as more materials become available. This one is recently built, and relatively small."
+		"automaton" 1
+		"weapon capacity" 49
+			"shield damage" 320
+		"cost" 16570000
+	drone 59 28 over
+		"Korath Piercer Launcher" 2
+	turret -38 -28 "Korath Repeater Turret"
+		"Steering (Lunar Class)"
+	"final explode" "final explosion large"
+	outfits
+	turret "Korath Grab-Strike"
+	
+	turret "Korath Banisher"
+		"Systems Core (Large)"
+	explode "small explosion" 100
+		"Control Transceiver"
+		"mass" 26
+		"outfit space" 533
+		"Jump Drive"
+	attributes
+		"engine capacity" 30
+		"Korath Piercer" 62
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Trapper)"
+		"Thruster (Asteroid Class)"
+	thumbnail "thumbnail/world-ship b"
+	explode "small explosion" 15
+		"Thruster (Comet Class)"
+	turret 0 -92 "Korath Warder"
+		"fuel capacity" 400
+		"mass" 250
+		"heat dissipation" 1.1
+		"Korath Detainer"
+	turret "Korath Grab-Strike"
+
+	explode "tiny explosion" 80
+		"Steering (Lunar Class)"
+	gun "Korath Detainer"
+		"cargo space" 53
+		"Korath Repeater Rifle" 196
+		"Outfits Expansion"
+		
+		"Generator (Inferno Class)"
+		"Systems Core (Large)"
+	"final explode" "final explosion large"
+	turret -40 -111 "Korath Repeater Turret"
+	outfits
+		"Triple Plasma Core"
+# terms of the GNU General Public License as published by the Free Software
+	turret "Korath Repeater Turret"
+	turret 0 35 "Korath Banisher"
+		"Steering (Planetary Class)"
+	drone 44.5 -40 over
+		"Thruster (Planetary Class)"
+			"hit force" 5400
+	turret -56 -45 "Korath Slicer Turret"
+	turret -14 -38 "Korath Banisher"
+		"ramscoop" 3
+
+			"shield damage" 5200
+		"outfit space" 491
+		"Generator (Furnace Class)"
+
+	turret 76 -219 "Korath Grab-Strike"
+		"cost" 671000
+	outfits
+	
+	gun 0 -28 "Korath Fire-Lance"
+	turret -76 -219 "Korath Grab-Strike"
+	engine -20 130
+	turret 47 -136 "Korath Banisher"
+ship "Korath Raider" "Korath Raider (Hyperdrive)"
+		"automaton" 1
+		"Large Heat Shunt" 2
+	description "The largest and deadliest of the Kor Sestor robotic warships, a single one of these battlecruisers can hold its own against an entire fleet of lesser ships."
+		category "Interceptor"
+	explode "large explosion" 30
+		"Thruster (Lunar Class)"
+		"Control Transceiver"
+		"heat dissipation" 1.3
+	gun -22 -143 "Korath Minelayer"
+	turret "Korath Grab-Strike"
+
+	explode "small explosion" 40
+		"shields" 2300
+		"outfit space" 610
+		"Fuel Processor"
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+		"Small Heat Shunt" 2
+	turret 34 -143 "Korath Grab-Strike"
+		"drag" 6.9
+	turret "Korath Warder"
+		"mass" 610
+	turret 61 -6 "Korath Warder"
+		
+		"Systems Core (Medium)"
+	turret -13 -61
+		"Thruster (Asteroid Class)"
+	gun 10 -180 "Korath Piercer Launcher"
+	turret -45 -247 "Korath Warder"
+		"heat dissipation" .55
+		"Korath Piercer Launcher" 3
+			"shield damage" 3600
+		"hull" 34200
+	outfits
+		"Steering (Stellar Class)"
+		"Triple Plasma Core"
+	turret 17 -133 "Korath Warder"
+		"cargo space" 264
+	turret 69 3 "Korath Disruptor"
+		"Triple Plasma Core"
+	thumbnail "thumbnail/model 512"
+		"mass" 110
+		Hyperdrive
+		
+		"drag" 10.2
+ship "Tek Far 71 - Lek"
+		"Large Heat Shunt" 2
+		
+		category "Medium Warship"
+		"drag" 17.4
+	turret -18 -31 "Korath Disruptor"
+	turret 66 210 "Korath Banisher"
+		"Systems Core (Large)"
+		"engine capacity" 161
+			"shield damage" 1200
+	thumbnail "thumbnail/tek far 109"
+		"Fuel Processor"
+		"Thruster (Planetary Class)"
+		"outfit space" 857
+	turret
+			"blast radius" 48
+	
+		"heat dissipation" 1.0
+		"drag" 9.6
+	explode "small explosion" 40
+	turret 83 165
+	thumbnail "thumbnail/world-ship c"
+	turret -66 210 "Korath Warder"
+	outfits
+		"Small Heat Shunt"
+
+		"Systems Core (Large)"
+	explode "tiny explosion" 70
+		"engine capacity" 102
+		"Fuel Processor"
+	"final explode" "final explosion large"
+		"cost" 18290000
+	turret -8 -145 "Korath Grab-Strike"
+		"ramscoop" 3
+
+			"hull damage" 1600
+		Hyperdrive
+	explode "large explosion" 40
+		"shields" 15100
+
+		category "Medium Warship"
+	description "There is a saying among the Quarg that every species which insists on studying war will eventually construct a weapon that outlives its creators. For the Korath, their war drones have very nearly done so."
+		Hyperdrive
+	outfits
+		"shields" 900
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Offense)"
+		"Korath Warder" 1
+	engine 9 205
+		
+	engine 4 37
+		"cost" 12765000
+	turret 124 -57 "Korath Slicer Turret"
+	outfits
+	fighter -42.5 193.5 under
+	explode "tiny explosion" 80
+ship "Korath World-Ship"
+	gun "Korath Piercer Launcher"
+		"Double Plasma Core"
+	turret 76 -219 "Korath Grab-Strike"
+			"shield damage" 4600
+	attributes
+		"Hyperdrive"
+ship "Tek Far 78 - Osk"
+	turret 75 -112 "Korath Banisher"
+		
+		"Generator (Inferno Class)"
+	turret -47 -136 "Korath Grab-Strike"
+	turret "Korath Warder"
+		"Generator (Furnace Class)"
+	explode "tiny explosion" 90
+		"fuel capacity" 200
+	
+	explode "medium explosion" 50
+	gun 10 -65 "Korath Repeater"
+		"Korath Slicer Turret" 2
+		"drag" 3.2
+		
+		"cargo space" 107
+	
+	engine -24 237
+ship "Model 16"
+	turret 40 -8 "Korath Repeater Turret"
+	outfits
+		"Triple Plasma Core"
+	turret 56 35 "Korath Slicer Turret"
+	explode "medium explosion" 70
+	turret 37 -150 "Korath Repeater Turret"
+		"Korath Disruptor" 2
+		"Generator (Furnace Class)"
+		"Korath Warder" 2
+		"Korath Minelayer" 2
+		"cargo space" 175
+		"Korath Banisher" 2
+		"Systems Core (Medium)"
+			"hull damage" 2000
+		
+		"hull" 29500
+	gun "Korath Detainer"
+	gun 0 -30
+	turret "Korath Repeater Turret"
+	turret 59 -135 "Korath Grab-Strike"
+		"Plasma Core"
+	turret "Korath Warder"
+	"final explode" "final explosion large"
+		"weapon capacity" 393
+ship "Far Lek 14"
+		"outfit space" 567
 			"hit force" 8400
+			"hit force" 4800
+		"Large Heat Shunt" 2
+	sprite "ship/model 512"
+	engine 145 97
+		category "Heavy Freighter"
+		Hyperdrive
+		"Korath Banisher"
+	turret "Korath Warder"
+		"Korath Banisher" 3
+	turret 0 90 "Korath Warder"
+		"cargo space" 26
+			"hit force" 1800
+	gun 8 -212 "Korath Detainer"
+	turret
+	gun 0 -214 "Korath Detainer"
+ship "Korath World-Ship" "Korath World-Ship B"
+		
+	thumbnail "thumbnail/chaser"
+		"Thruster (Asteroid Class)"
+		category "Light Warship"
+		
+	gun 14 -206 "Korath Piercer Launcher"
+		"engine capacity" 24
+		"Korath Grab-Strike" 2
+ship "Model 512"
+
+	turret "Korath Grab-Strike"
+ship "Model 256"
+
+		"automaton" 1
+	turret "Korath Banisher"
+# Foundation, either version 3 of the License, or (at your option) any later version.
+ship "Tek Far 109"
+	gun -14 -206 "Korath Piercer Launcher"
+	sprite "ship/tek far 71 lek"
+		"self destruct" .77
+	turret -76 -219 "Korath Grab-Strike"
+		"Outfits Expansion"
+	turret "Korath Repeater Turret"
+		"Korath Grab-Strike" 2
+
+		
+			"shield damage" 4400
+	gun -22 -148 "Korath Minelayer"
+		"Korath Repeater Turret" 6
+		"automaton" 1
+		"Large Heat Shunt"
+		"Double Plasma Core"
+		"Generator (Candle Class)"
+		
+	engine -10 128
+			"blast radius" 340
+	gun -10 -65 "Korath Repeater"
+	turret "Korath Grab-Strike"
+	turret -59 -135 "Korath Warder"
+		"Jump Drive"
+			"shield damage" 5600
+		"Korath Mine Rack" 3
+ship "Met Par Tek 53"
+		"Systems Core (Medium)"
+		
+		"Systems Core (Large)"
+		"self destruct" .80
+		"Control Transceiver"
+		"drag" 9.1
+	turret
+		"Systems Core (Medium)"
+	drone 24 -8 under
+		"mass" 1735
+	turret 0 -92 "Korath Warder"
+			"blast radius" 340
 	outfits
 		"Korath Minelayer" 2
-		"Korath Mine" 52
-		"Korath Mine Rack" 2
-		"Korath Disruptor" 3
-		"Korath Slicer Turret" 4
-		
-		"Triple Plasma Core"
-		"Plasma Core"
-		"Systems Core (Large)"
-		"Large Heat Shunt"
-		"Small Heat Shunt" 2
-		"Reasoning Node" 3
-		
-		"Thruster (Planetary Class)"
-		"Steering (Stellar Class)"
+		"Fuel Processor"
+		category "Medium Warship"
 		Hyperdrive
-
-	engine -145 97
-	engine 145 97
-	gun -22 -143 "Korath Minelayer"
-	gun 22 -143 "Korath Minelayer"
-	turret -23 -134 "Korath Slicer Turret"
-	turret 91 -102 "Korath Disruptor"
-	turret 124 -57 "Korath Slicer Turret"
-	turret -130 -33 "Korath Disruptor"
-	turret 138 20 "Korath Slicer Turret"
-	turret -121 86 "Korath Slicer Turret"
+		"Small Heat Shunt"
+	explode "huge explosion" 10
+	turret 70 57 "Korath Banisher"
+		"weapon capacity" 263
+	"final explode" "final explosion medium"
+		"Korath Warder"
+		"mass" 970
+		"Korath Repeater Turret" 3
+	
+		"Small Heat Shunt"
+	attributes
+		
 	turret 54 138 "Korath Disruptor"
-	explode "tiny explosion" 160
-	explode "small explosion" 115
-	explode "medium explosion" 80
-	explode "large explosion" 35
+
+		cost 27690000
+	sprite "ship/model 256"
+	drone 38.5 -115.5 over
+	turret 36 -85 "Korath Disruptor"
+		"Steering (Planetary Class)"
+	turret -83 165
+		"Triple Plasma Core"
+
+	turret "Korath Grab-Strike"
+		"drag" 1.1
+		"self destruct" .7
+	outfits
+		"Jump Drive"
+	description "The Korath Raider is their warship of choice for plundering neighboring species."
+	sprite "ship/raider"
+	explode "huge explosion" 8
+		weapon
+			"blast radius" 5
+		"Korath Grab-Strike" 4
+		
+		"Small Heat Shunt"
+		"hull" 28700
+			"hit force" 480
+	drone 18 171.5 over
+		"drag" 13.2
+		"Systems Core (Large)"
+		"engine capacity" 145
+	turret -24 115 "Korath Slicer Turret"
+		"Steering (Planetary Class)"
+		"automaton" 1
+		"Thruster (Planetary Class)"
+ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Close Quarters)"
+	
+		"shields" 57200
+		"Jump Drive (Broken)"
+		
+		
+		
+	fighter -36.5 -130.5 over
+		"Triple Plasma Core"
+		"Steering (Lunar Class)"
+			"hull damage" 3200
+		"Systems Core (Small)"
+		"hull" 23100
+		"Large Heat Shunt" 2
+	gun -9 -220 "Korath Piercer Launcher"
+	thumbnail "thumbnail/kar ik vot 349"
+	fighter -55.5 96.5 over
+	description "The Kor Sestor war fleets rely heavily on small, powerful fighters and drones. This ship can carry up to ten of their drones, clamped to the exterior of its hull."
+	
+
+		"Korath Repeater" 2
+		"hull" 18000
+		"Steering (Stellar Class)"
+	gun -8 -212 "Korath Detainer"
+		
+		"heat dissipation" .6
+		"Thruster (Planetary Class)"
+	engine -7 23
+	turret 61 -6 "Korath Warder"
+	description "Because it is piloted by a computer and has no need for a cockpit or life support systems, the FS27 fighter is able to carry far more weaponry than any comparable human ship."
+	explode "tiny explosion" 60
+		"Thruster (Lunar Class)"
+	engine -19 159
+		"Thruster (Asteroid Class)"
+	turret 24 19 "Korath Slicer Turret"
+		
+	turret
+		"Reasoning Node" 2
+		"Steering (Planetary Class)"
+		"Thruster (Planetary Class)"
+		"Korath Piercer Rack" 2
+		"fuel capacity" 400
+			"blast radius" 450
+		"Steering (Planetary Class)"
+	engine -9 219
+		category "Fighter"
+	turret 66 210 "Korath Banisher"
+		"shields" 25400
+	sprite "ship/world-ship a"
+		
+		"Steering (Planetary Class)"
+
+		"self destruct" .6
+		"Small Heat Shunt" 2
+	turret 29 -83 "Korath Slicer Turret"
+	turret -70 57 "Korath Warder"
+		
+		"Generator (Inferno Class)"
+ship "Model 8"
+			"hull damage" 1600
+		"weapon capacity" 25
+	outfits
+	drone 45.5 135 under
+	sprite "ship/tek far 109"
+		"Systems Core (Medium)"
+
+	fighter -32.5 -76.5 under
+			"shield damage" 120
+		"weapon capacity" 22
+		"Double Plasma Core"
+		"automaton" 1
+	sprite "ship/model 128"
+		"Korath Grab-Strike" 2
+	turret "Korath Grab-Strike"
+	fighter 75 100
+	turret 83 165 "Korath Warder"
+	turret 19 49 "Korath Slicer Turret"
+	engine -14 178
+		"Korath Banisher" 3
+	explode "small explosion" 10
+		"Plasma Core"
+ship "Korath World-Ship" "Korath World-Ship C (Jump)"
+	turret -31 -9 "Korath Slicer Turret"
+		"engine capacity" 117
+		"Large Heat Shunt" 2
+	sprite "ship/world-ship b"
+	explode "large explosion" 15
+		"weapon capacity" 314
+	sprite "ship/model 64"
+	outfits
+		"mass" 690
+		weapon
+	turret "Korath Grab-Strike"
+		
+	explode "large explosion" 40
+	gun 16 -158 "Korath Piercer Launcher"
+		"Korath Warder" 2
+	explode "huge explosion" 6
+		"cost" 41280000
+		"drag" .9
+	gun 0 -159 "Korath Minelayer"
+		"cost" 24073000
+	attributes
+		"Large Heat Shunt" 2
+		"Korath Detainer" 2
+	explode "tiny explosion" 20
+		category "Fighter"
+	explode "large explosion" 20
+	explode "tiny explosion" 25
+		"heat dissipation" 1.3
+		"self destruct" .7
+		"fuel capacity" 600
+	explode "tiny explosion" 20
+		
+			"shield damage" 3200
+	turret -26 -53 "Korath Disruptor"
+	turret -102 188 "Korath Warder"
+		Hyperdrive
+		"Systems Core (Small)"
+
+		
 	"final explode" "final explosion large"
+	attributes
+			"hit force" 4800
+	attributes
+	"final explode" "final explosion large"
+		
+		
+	fighter -30 57 over
+	sprite "ship/met par tek 53"
+	turret 8 -145 "Korath Grab-Strike"
+		category "Heavy Warship"
+		"automaton" 1
+		weapon
+		"hull" 9800
+		"mass" 540
+		"Systems Core (Medium)"
+	sprite "ship/far lek 14"
+	turret -76 -219
+		"Steering (Asteroid Class)"
+		"Korath Repeater Turret" 6
+ship "Korath Raider" "Korath Raider (Crippled)"
+	turret -45 -243 "Korath Warder"
+
+		"Korath Warder" 3
+
+		"cost" 3725000
+	explode "tiny explosion" 160
+	thumbnail "thumbnail/met par tek 53"
+ship "Korath Raider" "Korath Raider (Ember)"
+ship "Korath Raider"
+
+		"Double Plasma Core"
+		"Korath Warder"
+	turret 76 -157 "Korath Banisher"
+		weapon
+	attributes
+		"self destruct" .74
+			"blast radius" 100
+			"shield damage" 3200
+		"Korath Disruptor" 3
+		"Jump Drive (Broken)"
+		Hyperdrive
+	explode "large explosion" 35
+	sprite "ship/chaser"
+		"Outfits Expansion" 4
+		
+	drone 61.5 83 over
+		"Korath Slicer Turret"
+		"engine capacity" 173
+	explode "large explosion" 50
+		"Large Heat Shunt" 3
+		"Large Heat Shunt" 3
+		"fuel capacity" 400
+		"Korath Repeater"
+		
+	sprite "ship/raider"
+		"Korath Slicer Turret" 3
+		weapon
+	turret "Korath Banisher"
+		"Korath Warder" 3
+		"outfit space" 65
+	outfits
+		"Outfits Expansion"
+	turret -23 -134 "Korath Slicer Turret"
+ship "Far Osk 27"
+		"Double Plasma Core"
+		"Thruster (Planetary Class)"
+	outfits
+		"heat dissipation" .5
+		weapon
+		"engine capacity" 107
+		
+		"Korath Repeater" 2
+		weapon
+		"heat dissipation" .8
+	outfits
+	description "Korath World-Ships are massive nomadic habitats that hold all that is left of their people."
+	turret 59 -135 "Korath Grab-Strike"
+	fighter -18.5 -163 over
+		"Korath Repeater Rifle" 196
+		"Reasoning Node" 3
+		"Control Transceiver"
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Defense)"
+	engine 20 130
+		
+			"shield damage" 6400
+		"hull" 13400
+	sprite "ship/world-ship c"
+	description "At the peak of their recent civil war, the Kor Sestor faction developed these automated attack drones, easy to manufacture and encased in an ultra-dense hull that can absorb a significant amount of damage."
+		"Large Heat Shunt" 2
+		"Korath Grab-Strike" 4
+
+	turret "Korath Grab-Strike"
+	drone 40 19 under
+	attributes
+		"cargo space" 43
+		"cost" 19552000
+		"Steering (Comet Class)"
+	turret -83 165 "Korath Warder"
+	drone 30 -106 under
+		"mass" 1350
+			"hit force" 6000
+		
+	outfits
+	
+		"Korath Warder" 2
+	turret "Korath Repeater Turret"
+
+		
+	gun -9 -220 "Korath Piercer Launcher"
+		
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+	engine 37 343 .8
+
+		"Generator (Candle Class)"
+
+		"Small Heat Shunt"
+#
+	turret -75 -112 "Korath Banisher"
+		"heat dissipation" 1.1
+		"Korath Piercer Launcher" 4
+	turret -91 286 "Korath Banisher"
+	
+		"engine capacity" 110
+		"Control Transceiver"
+		category "Medium Warship"
+		"mass" 580
+
+	
+
+		"Large Heat Shunt"
+		"Steering (Stellar Class)"
+		category "Heavy Warship"
+	sprite "ship/raider"
+		"heat dissipation" 1.0
+	
+		"Steering (Planetary Class)"
+		"shields" 15700
+		"Generator (Furnace Class)"
+			"hull damage" 2000
+	gun 11 -166 "Korath Minelayer"
+		"Korath Repeater Rifle" 150
+	engine -11 49
+		"engine capacity" 132
+		"Korath Warder" 3
+
+		"Thruster (Planetary Class)"
+	explode "medium explosion" 80
+		"Hyperdrive"
+
+	thumbnail "thumbnail/far lek 14"
+ship "Korath Chaser"
+		"Steering (Planetary Class)"
+		
+	engine -9 205
+	engine 8 28
+		"Systems Core (Large)"
+		"Hyperdrive"
+			"hit force" 75
+		"Systems Core (Medium)"
+	turret 102 188 "Korath Warder"
+	thumbnail "thumbnail/model 128"
+	explode "small explosion" 85
+		category "Heavy Warship"
+		"Korath Banisher" 3
+	turret -75 -112 "Korath Banisher"
+		"Korath Warder"
+			"hit force" 6900
+		"Korath Repeater Rifle" 196
+		"Korath Banisher" 3
+		"cargo space" 7
+		"Korath Mine" 17
+		"Double Plasma Core"
+		"Thruster (Asteroid Class)"
+	turret
+		"ramscoop" 3
+		
+		"fuel capacity" 400
+		"Systems Core (Medium)"
+		"mass" 40
+		"Large Heat Shunt" 2
+	gun 0 -92 "Korath Repeater"
+		Hyperdrive
+		"Systems Core (Medium)"
+		"drag" 9.0
+		shields 47000
+	outfits
+		"engine capacity" 114
+		"outfit space" 92
+	explode "tiny explosion" 120
+	turret "Korath Grab-Strike"
+	
+	thumbnail "thumbnail/model 256"
+	thumbnail "thumbnail/far osk 27"
+		"weapon capacity" 344
+		"Systems Core (Large)"
+		"drag" 5.7
+	turret 36 -45 "Korath Repeater Turret"
+		"weapon capacity" 149
+		"Control Transceiver"
+			"hit force" 6000
+		"Generator (Inferno Class)"
+		"Korath Repeater Rifle" 150
+	explode "large explosion" 40
+		"Triple Plasma Core"
+	explode "small explosion" 60
+			"hit force" 3300
+		"self destruct" .7
+		"drag" 21
+	explode "large explosion" 45
+		"Korath Mine" 52
+	sprite "ship/world-ship b"
+	turret 138 20 "Korath Slicer Turret"
+		"Thruster (Planetary Class)"
+
+		"Hyperdrive"
+	turret "Korath Grab-Strike"
+	"final explode" "final explosion large"
+		
+	drone 25 -50.5 over
+	turret "Korath Repeater Turret"
+	engine -10 99
+
+		"drag" 11.1
+	turret 34 77 "Korath Disruptor"
+		"outfit space" 611
 	description "This is the final state in the evolution of a Kor Mereti war drone: a perfect ring, with incredibly powerful shields and turrets firing in every direction."
+		"Hyperdrive"
+	explode "large explosion" 10
+	description "The Korath Chaser is a fighter carried by most of their capital ships."
+	turret
+		"bunks" 250
+		"Jump Drive"
+	drone 20.5 -65 over
+	turret -34 -143 "Korath Grab-Strike"
+	turret -10 -85 "Korath Warder"
+		weapon
+		"Large Heat Shunt" 3
+	turret -56 101 "Korath Disruptor"
+	explode "medium explosion" 40
+	engine 24 132
+	drone 42 55 under
+		"mass" 780
+	turret "Korath Grab-Strike"
+		"hull" 22200
+		"Korath Detainer"
+		"Triple Plasma Core"
+		"shields" 17900
+		"Korath Banisher" 2
+	turret -75 -112 "Korath Banisher"
+		"cargo space" 78
+	outfits
+
+	turret -89 32
+			"hit force" 180
+	thumbnail "thumbnail/model 32"
+	turret "Korath Grab-Strike"
+	explode "small explosion" 45
+	engine 19 159
+	explode "huge explosion" 50
+		"Korath Detainer" 2
+		
+		"Double Plasma Core"
+		weapon
+	turret 70 53 "Korath Banisher"
+		
+		"mass" 420
+		"outfit space" 713
+	outfits
+			"blast radius" 380
+			"shield damage" 2200
+		"Steering (Asteroid Class)"
+		"Korath Grab-Strike"
+		"Systems Core (Medium)"
+		
+		"Reasoning Node"
+	fighter -16.5 -32.5 over
+	outfits
+		"heat dissipation" .4
+#
+		"Steering (Planetary Class)"
+	turret -47 -140 "Korath Grab-Strike"
+		
+
+	turret "Korath Banisher"
+		"bunks" 1
+		"Korath Warder" 2
+		"bunks" 1492
+	gun 0 -99 "Korath Minelayer"
+	attributes
+		"automaton" 1
+		Hyperdrive
+		"Small Heat Shunt"
+		"fuel capacity" 400
+	fighter -62 24 under
+		
+		"cargo space" 29
+		"weapon capacity" 213
+		"Korath Banisher"
+	turret "Korath Banisher"
+			"blast radius" 320
+			"blast radius" 240
+	
+	turret "Korath Repeater Turret"
+		"engine capacity" 98
+		"Large Heat Shunt"
+	outfits
+	turret -35 -69 "Korath Disruptor"
+		"weapon capacity" 440
+		"Korath Piercer" 124
+		"Hyperdrive"
+	turret "Korath Grab-Strike"
+	engine 10 128
+		"Triple Plasma Core"
+	explode "medium explosion" 70
+			"hit force" 12000
+		
+		weapon
+	explode "medium explosion" 60
+		"Hyperdrive"
+	explode "medium explosion" 50
+	explode "tiny explosion" 20
+		"Thruster (Planetary Class)"
+		"Outfits Expansion"
+		"Korath Warder"
+
+		"Korath Repeater Rifle" 
+
+		"Triple Plasma Core"
+	turret "Korath Warder"
+	gun 10 -180 "Korath Piercer Launcher"
+
+		"Korath Mine" 17
+		"Jump Drive"
+		"Steering (Lunar Class)"
+		"outfit space" 220
+	turret -130 -33 "Korath Disruptor"
+		"Korath Disruptor"
+	turret "Korath Warder"
+		"Triple Plasma Core"
+		"self destruct" .6
+		"Korath Piercer Rack"
+		"automaton" 1
+		"outfit space" 426
+		"Generator (Furnace Class)"
+	explode "small explosion" 55
+	attributes
+	explode "medium explosion" 45
+	turret 0 -92 "Korath Warder"
+	fighter -54.5 55 over
+		"drag" 12
+		"Small Heat Shunt" 2
+	turret -91 290 "Korath Banisher"
+		"Korath Piercer" 140
+		category "Medium Warship"
+	turret -66 210 "Korath Warder"
+	turret "Korath Repeater Turret"
+		"Korath Repeater Turret" 6
+		"Korath Banisher" 3
+			"blast radius" 12
+	drone 60 58.5 under
+		"Outfits Expansion"
+	turret -73 38 "Korath Slicer Turret"
+	explode "medium explosion" 50
+	thumbnail "thumbnail/model 16"
+	turret 45 -247 "Korath Grab-Strike"
+			"hull damage" 2800
+	gun 0 -239 "Korath Piercer Launcher"
+		"engine capacity" 110
+	gun 0 -239 "Korath Detainer"
+		
+		
+	explode "huge explosion" 15
+		"outfit space" 994
+	gun 13 -8
+		"Outfits Expansion"
+		weapon
+		"Triple Plasma Core"
+ship "Korath World-Ship" "Korath World-Ship B (Ember)"
+		"Korath Warder"
+		"Thruster (Planetary Class)"
+	attributes
+		"ramscoop" 3
+	gun
+		"Steering (Comet Class)"
+		"Korath Warder" 3
+	turret -61 -6 "Korath Banisher"
+		"Double Plasma Core"
+ship "Korath World-Ship" "Korath World-Ship A (Jump)"
+	turret -36 -45 "Korath Repeater Turret"
+		"Korath Detainer"
+
+	turret 76 -157 "Korath Banisher"
+		"Korath Grab-Strike" 3
+		"Hyperdrive"
+	explode "small explosion" 115
+ship "Model 32"
+		"cost" 34920000
+ship "Kar Ik Vot 349"
+		"fuel capacity" 400
+		
+		weapon
+			"shield damage" 4000
+
+	turret 66 64 "Korath Slicer Turret"
+		"Hyperdrive"
+		"Korath Piercer Launcher" 2
+	turret -38 -132 "Korath Repeater Turret"
+		"Korath Warder"
+		"Reasoning Node"
+	explode "medium explosion" 50
+	thumbnail "thumbnail/tek far 78 osk"
+	description "This carrier is equipped with docking clamps for up to nine fighters. When loaded with a full complement of the powerful Kor Sestor robotic fighters, it is a formidable opponent."
+	engine 11 49
+	fighter -43.5 -103.5 over
+		"shields" 27600
+		"weapon capacity" 284
+		"Outfits Expansion"
+	gun "Korath Piercer Launcher"
+		"Small Heat Shunt"
+	turret -40 -8 "Korath Repeater Turret"
+		"Large Heat Shunt" 4
+		"Systems Core (Medium)"
+		hull 34000
+	engine 60 147
+	turret 91 -102 "Korath Disruptor"
+		"Korath Minelayer"
+
+		"Thruster (Planetary Class)"
+	turret 20 -74 "Korath Slicer Turret"
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+		"weapon capacity" 447
+
+		"Large Heat Shunt"
+		"Korath Piercer" 62
+			"hull damage" 160
+	turret 0 277 "Korath Banisher"
+	turret "Korath Grab-Strike"
+	description "The TF109 is designed almost solely for the purpose of carrying a fleet of Kor Sestor fighters and drones. Without them to serve as a protective screen, the ship itself is relatively helpless."
+
+	sprite "ship/world-ship b"
+		
+ship "Model 128"
+		"Korath Piercer Launcher" 2
+		"Korath Grab-Strike" 4
+ship "Korath World-Ship" "Korath World-Ship B (Crippled)"
+		
+		"shields" 27900
+		weapon
+	explode "small explosion" 70
+		"hull" 3320
+		"Triple Plasma Core"
+		"Korath Minelayer"
+		"mass" 720
+		"Steering (Planetary Class)"
+		"Thruster (Lunar Class)"
+	explode "small explosion" 45
+		"Korath Grab-Strike" 2
+		"fuel capacity" 400
+	outfits
+		"Generator (Inferno Class)"
+	turret "Korath Grab-Strike"
+	sprite "ship/tek far 78 osk"
+		"heat dissipation" 1.5
+		"Reasoning Node" 2
+		"fuel capacity" 400
+	gun 10 -180 "Korath Detainer"
+		"ramscoop" 3
+		"Outfits Expansion"
+		"Systems Core (Large)"
+	fighter -75 100
+
+	"final explode" "final explosion medium"
+		category "Heavy Warship"
+		"Double Plasma Core"

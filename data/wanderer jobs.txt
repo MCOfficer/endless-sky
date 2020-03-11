@@ -1,695 +1,695 @@
-# Copyright (c) 2014 by Michael Zahniser
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-mission "Wanderer Workers [0]"
-	name "Wanderer workers to <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer workers require transportation to <destination>. They will pay you <payment> to take them there.`
-	passengers 5 5 .1
-	to offer
-		has "language: Wanderer"
-		random < 70
-		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		attributes "factory" "urban"
-		government "Wanderer"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment
-		payment 10000
-		dialog phrase "generic passenger dropoff payment"
-
-mission "Wanderer Workers [1]"
-	name "Wanderer workers to <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer workers require transportation to <destination>. They will pay you <payment> to take them there.`
-	passengers 5 3 .08
-	to offer
-		has "language: Wanderer"
-		random < 60
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		attributes "factory" "urban"
-		government "Wanderer"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment
-		payment 15000
-		dialog phrase "generic passenger dropoff payment"
-
-mission "Wanderer Farmers [0]"
-	name "Wanderer farmers to <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer farmers require transportation to <destination>. They will pay you <payment> to take them there.`
-	passengers 5 5 .1
-	to offer
-		has "language: Wanderer"
-		random < 70
-		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		attributes "farming"
-		government "Wanderer"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment
-		payment 10000
-		dialog phrase "generic passenger dropoff payment"
-
-mission "Wanderer Farmers [1]"
-	name "Wanderer farmers to <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer farmers require transportation to <destination>. They will pay you <payment> to take them there.`
-	passengers 5 3 .05
-	to offer
-		has "language: Wanderer"
-		random < 60
-		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		attributes "farming"
-		government "Wanderer"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment
-		payment 15000
-		dialog phrase "generic passenger dropoff payment"
-
-mission "Wanderer Younglings [0]"
-	name "Wanderer younglings to <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer younglings are looking for transport to <destination> to learn more about the Wanderer terraforming process. The adult with them will pay you <payment>.`
-	passengers 5 8 .2
-	to offer
-		has "language: Wanderer"
-		random < 60
-		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment
-		payment 10000
-		dialog `The younglings depart your ship and meet up with another group of Wanderers across the spaceport. Before following after the younglings, the adult Wanderer thanks you and hands you <payment>.`
-
-mission "Wanderer Younglings [1]"
-	name "Wanderer younglings to <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer younglings are looking for transport to <destination> to learn more about the Wanderer terraforming process. The adult with them will pay you <payment>.`
-	passengers 5 5 .1
-	to offer
-		has "language: Wanderer"
-		random < 50
-		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment
-		payment 10000
-		dialog `The younglings depart your ship and meet up with another group of Wanderers across the spaceport. Before following after the younglings, the adult Wanderer thanks you and hands you <payment>.`
-
-mission "Wanderer Scientists (Pollution) [0]"
-	name "Spike in pollution on <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer scientists wish to get to <destination> with their <cargo> by <date> to investigate a strange spike in atmospheric pollutants. Payment will be <payment>.`
-	passengers 4 4 .1
-	cargo "scientific equipment" 5 2 .1
-	deadline
-	to offer
-		has "language: Wanderer"
-		random < 30
-		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		attributes "mining" "oil" "factory"
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo and passenger on visit"
-	on complete
-		payment 15000 180
-		dialog "You wish the scientists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
-
-mission "Wanderer Scientists (Pollution) [1]"
-	name "Spike in pollution on <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer scientists wish to get to <destination> with their <cargo> by <date> to investigate a strange spike in atmospheric pollutants. Payment will be <payment>.`
-	passengers 4 4 .05
-	cargo "scientific equipment" 5 2 .1
-	deadline
-	to offer
-		has "language: Wanderer"
-		random < 20
-		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		attributes "mining" "oil" "factory"
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo and passenger on visit"
-	on complete
-		payment 20000 180
-		dialog "You wish the scientists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
-
-mission "Wanderer Scientists (Phenomenon) [0]"
-	name "Natural phenomenon on <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer scientists wish to get to <destination> with their <cargo> by <date> to observe a rare natural phenomenon. Payment will be <payment>.`
-	passengers 4 4 .1
-	cargo "scientific equipment" 5 2 .1
-	deadline
-	to offer
-		has "language: Wanderer"
-		random < 30
-		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo and passenger on visit"
-	on complete
-		payment 15000 180
-		dialog "You wish the scientists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
-
-mission "Wanderer Scientists (Phenomenon) [1]"
-	name "Natural phenomenon on <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer scientists wish to get to <destination> with their <cargo> by <date> to observe a rare natural phenomenon. Payment will be <payment>.`
-	passengers 4 4 .05
-	cargo "scientific equipment" 5 2 .1
-	deadline
-	to offer
-		has "language: Wanderer"
-		random < 20
-		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo and passenger on visit"
-	on complete
-		payment 20000 180
-		dialog "You wish the scientists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
-
-mission "Wanderer Biologists [0]"
-	name "New animal found on <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer biologists wish to get to <destination> with their <cargo> to study a recently discovered animal species. Payment will be <payment>.`
-	passengers 4 4 .1
-	cargo "scientific equipment" 5 2 .1
-	to offer
-		has "language: Wanderer"
-		random < 60
-	source
-		government "Wanderer"
-		near "Ka'ch'chrai" 100
-	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo and passenger on visit"
-	on complete
-		payment
-		payment 15000
-		dialog "You wish the biologists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
-
-mission "Wanderer Biologists [1]"
-	name "New animal found on <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer biologists wish to get to <destination> with their <cargo> to study a recently discovered animal species. Payment will be <payment>.`
-	passengers 4 4 .05
-	cargo "scientific equipment" 5 2 .1
-	to offer
-		has "language: Wanderer"
-		random < 50
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo and passenger on visit"
-	on complete
-		payment
-		payment 20000
-		dialog "You wish the biologists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
-
-mission "Wanderer Botanists [0]"
-	name "New plant found on <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer botanists wish to get to <destination> with their <cargo> to study a recently discovered plant species. Payment will be <payment>.`
-	passengers 4 4 .1
-	cargo "scientific equipment" 5 2 .1
-	to offer
-		has "language: Wanderer"
-		random < 60
-	source
-		government "Wanderer"
-		near "Ka'ch'chrai" 100
-	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo and passenger on visit"
-	on complete
-		payment
-		payment 15000
-		dialog "You wish the botanists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
-
-mission "Wanderer Botanists [1]"
-	name "New plant found on <planet>"
-	job
-	repeat
-	description `These <bunks> Wanderer botanists wish to get to <destination> with their <cargo> to study a recently discovered plant species. Payment will be <payment>.`
-	passengers 4 4 .05
-	cargo "scientific equipment" 5 2 .1
-	to offer
-		has "language: Wanderer"
-		random < 50
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo and passenger on visit"
-	on complete
-		payment
-		payment 20000
-		dialog "You wish the botanists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
-
-mission "Wanderer Harvest [0]"
-	name "Food harvest on <planet>"
-	job
-	repeat
-	description `Bring these <bunks> Wanderers to <destination> to assist in the food harvest. Payment is <payment>.`
-	passengers 5 3 .02
-	to offer
-		has "language: Wanderer"
-		random < 50
-	source
-		government "Wanderer"
-		near "Ka'ch'chrai" 100
-	destination
-		distance 2 8
-		attributes "farming"
-		government "Wanderer"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment
-		payment 15000
-		dialog "You wish the Wanderers the best of luck on <planet> and collect your payment of <payment>."
-
-mission "Wanderer Harvest [1]"
-	name "Food harvest on <planet>"
-	job
-	repeat
-	description `Bring these <bunks> Wanderers to <destination> to assist in the food harvest. Payment is <payment>.`
-	passengers 5 3 .01
-	to offer
-		has "language: Wanderer"
-		random < 40
-	source
-		government "Wanderer"
-		near "Ka'ch'chrai" 100
-	destination
-		distance 2 8
-		attributes "farming"
-		government "Wanderer"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment
-		payment 20000
-		dialog "You wish the Wanderers the best of luck on <planet> and collect your payment of <payment>."
-
-mission "Wanderer Invasive Species [0]"
-	name "Quarantine an invasive species"
-	job
-	repeat
-	description `These <bunks> Wanderers need to get to <stopovers> with their <cargo> to contain an invasive animal species. Return the Wanderers to <origin> with the animals by <date> for a payment of <payment>.`
-	passengers 4 4 .1
-	cargo "containers" 5 2 .1
-	deadline
-	to offer
-		has "language: Wanderer"
-		random < 30
-		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
-	stopover
-		distance 2 8
-		government "Wanderer"
-	on stopover
-		dialog `The Wanderers quickly make their way out of your ship with their equipment to contain the invasive animals. After roughly an hour, they return to your ship with cages that they place into your cargo hold. Now return to <origin> for payment.`
-	on visit
-		dialog phrase "generic missing stopover or cargo and passengers"
-	on complete
-		payment 25000 200
-		dialog `After releasing the animals, the <bunks> Wanderers each thank you for assisting them in returning the animals to <planet> and hand you <payment>.`
-
-mission "Wanderer Invasive Species [1]"
-	name "Quarantine an invasive species"
-	job
-	repeat
-	description `These <bunks> Wanderers need to get to <stopovers> with their <cargo> to contain an invasive plant species. Return the Wanderers to <origin> with the plants by <date> for a payment of <payment>.`
-	passengers 4 4 .1
-	cargo "containers" 5 2 .1
-	deadline
-	to offer
-		has "language: Wanderer"
-		random < 30
-	source
-		government "Wanderer"
-		near "Ka'ch'chrai" 100
-	stopover
-		distance 2 8
-		government "Wanderer"
-	on stopover
-		dialog `The Wanderers quickly make their way out of your ship with their equipment to contain the invasive plant. After roughly an hour, they return to your ship with plants in containers of some sort that they place into your cargo hold. Now return to <origin> for payment.`
-	on visit
-		dialog phrase "generic missing stopover or cargo and passengers"
-	on complete
-		payment 30000 200
-		dialog `After handing the plants off to other Wanderers to plant elsewhere, the <bunks> Wanderers each thank you for assisting them in keeping the plants on <planet> and hand you <payment>.`
-
-
-
-phrase "wanderer cargo delivery payment"
-	word
-		`You drop off your cargo of <commodity>. The Wanderers thank you and you collect your payment of <payment>.`
-
-mission "Wanderer Cargo [0]"
-	name "Delivery to <planet>"
-	job
-	repeat
-	description `Deliver <cargo> to <destination>. Payment is <payment>.`
-	cargo random 4 4 .2
-	to offer
-		has "language: Wanderer"
-		random < 70
-		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment
-		payment 2000
 		dialog phrase "wanderer cargo delivery payment"
-
-mission "Wanderer Cargo [1]"
-	name "Delivery to <planet>"
-	job
-	repeat
-	description `Deliver <cargo> to <destination>. Payment is <payment>.`
-	cargo random 4 4 .17
-	to offer
-		has "language: Wanderer"
-		random < 60
-	source
+	destination
+	description `Bring these <bunks> Wanderers to <destination> to assist in the food harvest. Payment is <payment>.`
+		government "Wanderer"
 		government "Wanderer"
 		near "Ka'ch'chrai" 100
+		not "event: battle for sich'ka'ara ends"
+		not "event: battle for sich'ka'ara ends"
+	name "Quarantine an invasive species"
+	name "Wanderer workers to <planet>"
+		payment 14000
+	job
+		dialog phrase "generic cargo on visit"
+	source
+	job
+
+		random < 40
+		distance 2 8
+	word
+		dialog phrase "generic cargo on visit"
+	cargo "containers" 5 2 .1
+		random < 20
+		government "Wanderer"
+	job
+	cargo "scientific equipment" 5 2 .1
+	name "Bulk delivery to <planet>"
+	repeat
+	repeat
+		payment
+	on visit
+	on stopover
+		government "Wanderer"
+	repeat
+	on visit
+		payment 10000
+	cargo random 4 4 .15
+		payment
+		dialog phrase "generic cargo on visit"
+		payment 10000
+		attributes "farming"
+	on complete
+	description `Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+		has "language: Wanderer"
+		dialog phrase "generic cargo and passenger on visit"
+	name "Food harvest on <planet>"
+		has "language: Wanderer"
+	source
+	on visit
+	repeat
+		government "Wanderer"
+	on complete
+mission "Wanderer Cargo [3]"
+
+	to offer
+		government "Wanderer"
+		government "Wanderer"
+	source
+	source
+		dialog "You wish the biologists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
+	deadline
+	on complete
+		government "Wanderer"
+mission "Wanderer Cargo [2]"
+		government "Wanderer"
+		dialog phrase "wanderer cargo delivery payment"
+		distance 2 8
+		has "language: Wanderer"
+	destination
+		payment
+# Foundation, either version 3 of the License, or (at your option) any later version.
+	passengers 4 4 .05
+	destination
+	to offer
+	on visit
+mission "Wanderer Scientists (Phenomenon) [0]"
+	to offer
+	repeat
+		has "language: Wanderer"
+		distance 2 8
+		payment
+	description `These <bunks> Wanderer farmers require transportation to <destination>. They will pay you <payment> to take them there.`
+# terms of the GNU General Public License as published by the Free Software
+		government "Wanderer"
+	job
+
+	on visit
+	description `Deliver <cargo> to <destination>. Payment is <payment>.`
+	job
+		random < 40
+	job
+	name "Delivery to <planet>"
+	cargo random 4 4 .12
+
+		payment
+		government "Wanderer"
+		payment 20000
+		random < 30
+	source
+
+		has "language: Wanderer"
+	description `Deliver <cargo> to <destination>. Payment is <payment>.`
+	to offer
+	cargo random 10 15 .1
+	on complete
+	name "New animal found on <planet>"
+		dialog phrase "wanderer cargo delivery payment"
+	destination
+		dialog phrase "generic cargo and passenger on visit"
+	description `These <bunks> Wanderer scientists wish to get to <destination> with their <cargo> by <date> to observe a rare natural phenomenon. Payment will be <payment>.`
+	name "Quarantine an invasive species"
+		dialog phrase "generic passenger on visit"
+		payment 15000
+
+		payment 15000
+	cargo "scientific equipment" 5 2 .1
+	on visit
+	description `These <bunks> Wanderers need to get to <stopovers> with their <cargo> to contain an invasive animal species. Return the Wanderers to <origin> with the animals by <date> for a payment of <payment>.`
+	to offer
+mission "Wanderer Workers [1]"
+		dialog `The Wanderers quickly make their way out of your ship with their equipment to contain the invasive animals. After roughly an hour, they return to your ship with cages that they place into your cargo hold. Now return to <origin> for payment.`
+		has "language: Wanderer"
+	repeat
+		government "Wanderer"
+mission "Wanderer Younglings [0]"
+		random < 20
+		attributes "farming"
+	source
+	deadline
+	source
+		dialog "You wish the botanists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
+		dialog phrase "generic passenger on visit"
+		dialog phrase "generic cargo and passenger on visit"
+	to offer
+	description `These <bunks> Wanderer biologists wish to get to <destination> with their <cargo> to study a recently discovered animal species. Payment will be <payment>.`
+	name "Rush delivery to <planet>"
+mission "Wanderer Bulk Delivery [0]"
+
+		government "Wanderer"
 	destination
 		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo on visit"
+		dialog phrase "wanderer cargo delivery payment"
 	on complete
+	destination
+		attributes "factory" "urban"
+		dialog phrase "generic cargo and passenger on visit"
+		government "Wanderer"
+	destination
+		payment 15000 180
+	repeat
+	job
+		payment
+		payment 10000
+		not "event: battle for sich'ka'ara ends"
+		near "Ka'ch'chrai" 100
+		random < 60
+		distance 2 8
+	job
+		attributes "mining" "oil" "factory"
+	repeat
+	job
+		near "Ka'ch'chrai" 100
+		government "Wanderer"
+	on complete
+	destination
+mission "Wanderer Cargo [4]"
+	source
+	name "Bulk delivery to <planet>"
+	on visit
+		distance 2 8
+	passengers 5 5 .1
+	passengers 4 4 .1
+		dialog phrase "generic passenger on visit"
+		attributes "factory" "urban"
+		payment 10000
+		distance 2 8
+		distance 2 8
+	job
+		not "event: battle for sich'ka'ara ends"
+#
+	on complete
+		distance 2 8
+	destination
+		government "Wanderer"
+mission "Wanderer Scientists (Pollution) [0]"
+	on visit
+	repeat
+	on visit
+	description `These <bunks> Wanderer younglings are looking for transport to <destination> to learn more about the Wanderer terraforming process. The adult with them will pay you <payment>.`
+	deadline
+	description `Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+	job
+	to offer
+	on complete
+	on visit
+	name "Bulk delivery to <planet>"
+mission "Wanderer Cargo [0]"
+	job
+
+
+	source
+	source
+	stopover
+		dialog "You wish the Wanderers the best of luck on <planet> and collect your payment of <payment>."
+		payment 10000
+		government "Wanderer"
+	name "Delivery to <planet>"
+	description `These <bunks> Wanderer scientists wish to get to <destination> with their <cargo> by <date> to investigate a strange spike in atmospheric pollutants. Payment will be <payment>.`
+		payment
+	to offer
+		dialog phrase "generic cargo and passenger on visit"
+		payment 20000
+mission "Wanderer Scientists (Pollution) [1]"
 		payment
 		payment 4000
-		dialog phrase "wanderer cargo delivery payment"
-
-mission "Wanderer Cargo [2]"
-	name "Delivery to <planet>"
+		dialog `The younglings depart your ship and meet up with another group of Wanderers across the spaceport. Before following after the younglings, the adult Wanderer thanks you and hands you <payment>.`
 	job
 	repeat
-	description `Deliver <cargo> to <destination>. Payment is <payment>.`
-	cargo random 4 4 .15
-	to offer
-		has "language: Wanderer"
-		random < 50
+	description `These <bunks> Wanderer scientists wish to get to <destination> with their <cargo> by <date> to observe a rare natural phenomenon. Payment will be <payment>.`
+		distance 2 8
+	source
 		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
 	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment
-		payment 6000
+	description `These <bunks> Wanderer biologists wish to get to <destination> with their <cargo> to study a recently discovered animal species. Payment will be <payment>.`
+	source
+	destination
+mission "Wanderer Biologists [1]"
 		dialog phrase "wanderer cargo delivery payment"
-
-mission "Wanderer Cargo [3]"
-	name "Delivery to <planet>"
-	job
-	repeat
-	description `Deliver <cargo> to <destination>. Payment is <payment>.`
-	cargo random 4 4 .12
-	to offer
 		has "language: Wanderer"
-		random < 40
-	source
-		government "Wanderer"
-	destination
 		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment
-		payment 8000
-		dialog phrase "wanderer cargo delivery payment"
-
-mission "Wanderer Cargo [4]"
-	name "Delivery to <planet>"
-	job
-	repeat
-	description `Deliver <cargo> to <destination>. Payment is <payment>.`
-	cargo random 4 4 .1
-	to offer
+		random < 60
 		has "language: Wanderer"
-		random < 30
-	source
-		government "Wanderer"
-	destination
 		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment
-		payment 10000
-		dialog phrase "wanderer cargo delivery payment"
-
-
-mission "Wanderer Rush Delivery [0]"
-	name "Rush delivery to <planet>"
-	job
-	repeat
-	description `Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+		dialog "You wish the scientists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
 	cargo random 10 8 .1
-	deadline
-	to offer
-		has "language: Wanderer"
-		random < 50
-		not "event: battle for sich'ka'ara ends"
-	source
-		government "Wanderer"
 	destination
+
+	on visit
+
+		dialog phrase "generic passenger dropoff payment"
+		government "Wanderer"
+	repeat
+
+		government "Wanderer"
+	name "New animal found on <planet>"
+		random < 40
+	to offer
+	on visit
+mission "Wanderer Scientists (Phenomenon) [1]"
+	destination
+		dialog phrase "generic passenger dropoff payment"
+		not "event: battle for sich'ka'ara ends"
+		payment 10000
+	repeat
+mission "Wanderer Harvest [0]"
+	description `These <bunks> Wanderer workers require transportation to <destination>. They will pay you <payment> to take them there.`
+		not "event: battle for sich'ka'ara ends"
+		dialog phrase "generic cargo on visit"
+	passengers 4 4 .1
+		payment 15000 180
+		has "language: Wanderer"
 		distance 2 8
 		government "Wanderer"
-	on visit
 		dialog phrase "generic cargo on visit"
+		dialog phrase "generic cargo on visit"
+
+		government "Wanderer"
+	destination
+		government "Wanderer"
 	on complete
 		payment
-		payment 32000
+	on complete
+
+
+	on complete
+		random < 30
+		dialog phrase "generic cargo and passenger on visit"
+		dialog `After handing the plants off to other Wanderers to plant elsewhere, the <bunks> Wanderers each thank you for assisting them in keeping the plants on <planet> and hand you <payment>.`
+	job
+	job
+		random < 50
+		dialog phrase "wanderer cargo delivery payment"
+	job
+		government "Wanderer"
+	destination
+
+		dialog phrase "generic cargo on visit"
+	passengers 4 4 .1
+	repeat
+		dialog "You wish the scientists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
+		payment 15000
+		payment
+		distance 2 8
+
+		payment 20000 180
+	destination
+	on visit
+		dialog phrase "generic passenger on visit"
+		distance 2 8
+		payment 6000
+	name "Delivery to <planet>"
+	name "Wanderer workers to <planet>"
+	description `Deliver <cargo> to <destination>. Payment is <payment>.`
+		payment 20000
+	name "Natural phenomenon on <planet>"
+	on complete
+		distance 2 8
+		government "Wanderer"
+		government "Wanderer"
+	job
+	name "New plant found on <planet>"
+mission "Wanderer Botanists [1]"
+		random < 30
+		government "Wanderer"
+		has "language: Wanderer"
+# Copyright (c) 2014 by Michael Zahniser
+	job
+	to offer
+mission "Wanderer Rush Delivery [3]"
+		not "event: battle for sich'ka'ara ends"
+		dialog phrase "generic passenger on visit"
+		has "language: Wanderer"
+	cargo random 50 10 .1
+	passengers 4 4 .1
+	to offer
+mission "Wanderer Bulk Delivery [2]"
+		payment
+		dialog "You wish the botanists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
+	to offer
+		payment 50000
+	name "Food harvest on <planet>"
+		government "Wanderer"
+#
+	cargo random 4 4 .2
+	destination
+	on complete
+		dialog "You wish the Wanderers the best of luck on <planet> and collect your payment of <payment>."
+	name "Spike in pollution on <planet>"
+	to offer
+		dialog phrase "generic passenger on visit"
+	name "Delivery to <planet>"
+	source
+	on stopover
+		has "language: Wanderer"
+	name "Wanderer farmers to <planet>"
+		has "language: Wanderer"
+	cargo random 10 18 .1
+	to offer
+	repeat
+		government "Wanderer"
+	on complete
+		government "Wanderer"
+		dialog phrase "wanderer cargo delivery payment"
+mission "Wanderer Younglings [1]"
+		payment
+	description `Bring these <bunks> Wanderers to <destination> to assist in the food harvest. Payment is <payment>.`
+		random < 70
+	destination
+	destination
+	to offer
+		dialog "You wish the scientists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
+	deadline
+	job
+	on complete
+	to offer
+	destination
+		dialog phrase "generic cargo and passenger on visit"
+	on visit
+	description `These <bunks> Wanderer workers require transportation to <destination>. They will pay you <payment> to take them there.`
+		government "Wanderer"
+		random < 30
+	on visit
+	on visit
+	on complete
+		random < 60
+		dialog phrase "generic cargo and passenger on visit"
+	description `Deliver <cargo> to <destination>. Payment is <payment>.`
+	job
+mission "Wanderer Rush Delivery [2]"
+	job
+		dialog phrase "generic passenger dropoff payment"
+	to offer
+mission "Wanderer Bulk Delivery [1]"
+	destination
+		has "language: Wanderer"
+		government "Wanderer"
+	job
+		government "Wanderer"
+	repeat
+		payment
+		dialog phrase "generic passenger dropoff payment"
+	on complete
+		government "Wanderer"
+		payment
+	passengers 5 3 .02
+	to offer
+	on complete
+
+	to offer
+	description `These <bunks> Wanderer botanists wish to get to <destination> with their <cargo> to study a recently discovered plant species. Payment will be <payment>.`
+		payment 40000
+	on complete
+mission "Wanderer Workers [0]"
+	deadline
+	job
+	repeat
+
+	repeat
+		dialog phrase "wanderer cargo delivery payment"
+	job
+		government "Wanderer"
+		payment
+		government "Wanderer"
+		distance 2 8
+		government "Wanderer"
+		dialog phrase "generic missing stopover or cargo and passengers"
+		random < 50
+		attributes "mining" "oil" "factory"
+		has "language: Wanderer"
+	name "Wanderer younglings to <planet>"
+		government "Wanderer"
+	on complete
+		government "Wanderer"
+mission "Wanderer Invasive Species [0]"
+		payment 8000
+
+	on complete
+	on visit
+		government "Wanderer"
+		random < 60
+	to offer
+	cargo "scientific equipment" 5 2 .1
+		has "language: Wanderer"
+mission "Wanderer Rush Delivery [0]"
+		dialog "You wish the scientists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
+	on visit
+	destination
+	passengers 5 3 .08
+	passengers 4 4 .05
+		government "Wanderer"
+phrase "wanderer cargo delivery payment"
+	description `Deliver <cargo> to <destination>. Payment is <payment>.`
+	description `Deliver <cargo> to <destination>. Payment is <payment>.`
+	destination
+	source
+	to offer
+		random < 50
+	on complete
+	passengers 5 3 .05
+		government "Wanderer"
+	job
+	deadline
+		distance 2 8
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+	name "Natural phenomenon on <planet>"
+	passengers 4 4 .1
+
+	deadline
+		random < 60
+	description `Deliver <cargo> to <destination>. Payment is <payment>.`
+		has "language: Wanderer"
+	cargo random 30 4 .1
+		payment 20000
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+	destination
+		dialog phrase "generic passenger on visit"
+		has "language: Wanderer"
+		distance 2 8
+		random < 50
+		payment 30000 200
+		random < 30
+		random < 20
+		government "Wanderer"
+
+		near "Ka'ch'chrai" 100
+		has "language: Wanderer"
+		attributes "farming"
+		has "language: Wanderer"
+	source
+	repeat
+	repeat
+
+		not "event: battle for sich'ka'ara ends"
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+	name "Delivery to <planet>"
+		not "event: battle for sich'ka'ara ends"
+	job
+		payment 44000
+		government "Wanderer"
+	cargo random 4 4 .1
+mission "Wanderer Invasive Species [1]"
+	destination
+		payment
+		distance 2 8
+
+
+	to offer
+		payment
+	passengers 5 5 .1
+	source
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+	name "Rush delivery to <planet>"
+		dialog phrase "generic cargo on visit"
+		government "Wanderer"
+		dialog phrase "generic cargo on visit"
+	cargo "scientific equipment" 5 2 .1
+		has "language: Wanderer"
+		payment
+		distance 2 8
+	on complete
+		dialog phrase "wanderer cargo delivery payment"
+	on visit
+	cargo "containers" 5 2 .1
+	destination
+	repeat
+		not "event: battle for sich'ka'ara ends"
+	to offer
+		payment
+	cargo "scientific equipment" 5 2 .1
+		government "Wanderer"
+		government "Wanderer"
+	deadline
+		payment
+		random < 60
+		government "Wanderer"
+	repeat
+mission "Wanderer Botanists [0]"
+	to offer
+	source
+		near "Ka'ch'chrai" 100
+	destination
+	on visit
+
+		has "language: Wanderer"
 		dialog phrase "wanderer cargo delivery payment"
 
+	source
+	cargo "scientific equipment" 5 2 .1
+	cargo random 40 6 .1
+		has "language: Wanderer"
+		payment
+	passengers 4 4 .05
+	description `These <bunks> Wanderer farmers require transportation to <destination>. They will pay you <payment> to take them there.`
+
+	deadline
+	cargo random 4 4 .17
+	to offer
+		random < 30
+	on visit
+		not "event: battle for sich'ka'ara ends"
+	job
+	passengers 5 3 .01
+		random < 70
+		dialog phrase "generic cargo on visit"
+		distance 2 8
+	description `Deliver <cargo> to <destination>. Payment is <payment>.`
+	on complete
+		government "Wanderer"
+	passengers 4 4 .05
+
+	description `These <bunks> Wanderers need to get to <stopovers> with their <cargo> to contain an invasive plant species. Return the Wanderers to <origin> with the plants by <date> for a payment of <payment>.`
+		dialog phrase "generic cargo on visit"
+		random < 50
+		government "Wanderer"
+	source
+	on complete
+		has "language: Wanderer"
+		payment 15000
+		government "Wanderer"
+		near "Ka'ch'chrai" 100
+	job
+mission "Wanderer Farmers [1]"
+		dialog phrase "generic passenger on visit"
+	repeat
+		dialog `The younglings depart your ship and meet up with another group of Wanderers across the spaceport. Before following after the younglings, the adult Wanderer thanks you and hands you <payment>.`
+		payment
+	on complete
+	cargo "scientific equipment" 5 2 .1
+		government "Wanderer"
+	on complete
+	on visit
+
+
+		has "language: Wanderer"
+		distance 2 8
+	source
+		has "language: Wanderer"
 mission "Wanderer Rush Delivery [1]"
 	name "Rush delivery to <planet>"
-	job
 	repeat
-	description `Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+	repeat
+	to offer
+
+	source
 	cargo random 10 12 .1
-	deadline
-	to offer
 		has "language: Wanderer"
-		random < 40
-	source
-		government "Wanderer"
-		near "Ka'ch'chrai" 100
-	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment
-		payment 40000
-		dialog phrase "wanderer cargo delivery payment"
-
-mission "Wanderer Rush Delivery [2]"
-	name "Rush delivery to <planet>"
-	job
-	repeat
 	description `Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	cargo random 10 15 .1
-	deadline
-	to offer
-		has "language: Wanderer"
-		random < 30
-	source
 		government "Wanderer"
-	destination
 		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo on visit"
 	on complete
 		payment
-		payment 44000
-		dialog phrase "wanderer cargo delivery payment"
-
-mission "Wanderer Rush Delivery [3]"
+	description `These <bunks> Wanderer botanists wish to get to <destination> with their <cargo> to study a recently discovered plant species. Payment will be <payment>.`
+	repeat
+	destination
+	name "New plant found on <planet>"
+	repeat
+		dialog `The Wanderers quickly make their way out of your ship with their equipment to contain the invasive plant. After roughly an hour, they return to your ship with plants in containers of some sort that they place into your cargo hold. Now return to <origin> for payment.`
+	to offer
+	on visit
 	name "Rush delivery to <planet>"
-	job
-	repeat
-	description `Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
-	cargo random 10 18 .1
-	deadline
-	to offer
-		has "language: Wanderer"
-		random < 20
-	source
+		attributes "farming"
 		government "Wanderer"
-	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo on visit"
+	description `These <bunks> Wanderer younglings are looking for transport to <destination> to learn more about the Wanderer terraforming process. The adult with them will pay you <payment>.`
 	on complete
-		payment
-		payment 50000
-		dialog phrase "wanderer cargo delivery payment"
-
-
-mission "Wanderer Bulk Delivery [0]"
-	name "Bulk delivery to <planet>"
-	job
-	repeat
-	description `Deliver <cargo> to <destination>. Payment is <payment>.`
-	cargo random 30 4 .1
-	to offer
+	deadline
+	source
+	passengers 5 8 .2
+	source
+	source
 		has "language: Wanderer"
+	source
 		random < 50
-		not "event: battle for sich'ka'ara ends"
 	source
-		government "Wanderer"
-	destination
-		distance 2 8
-		government "Wanderer"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment
-		payment 10000
-		dialog phrase "wanderer cargo delivery payment"
-
-mission "Wanderer Bulk Delivery [1]"
-	name "Bulk delivery to <planet>"
-	job
-	repeat
-	description `Deliver <cargo> to <destination>. Payment is <payment>.`
-	cargo random 40 6 .1
-	to offer
-		has "language: Wanderer"
-		random < 40
-	source
-		government "Wanderer"
 		near "Ka'ch'chrai" 100
-	destination
-		distance 2 8
+mission "Wanderer Biologists [0]"
 		government "Wanderer"
+		random < 40
+		random < 50
+		distance 2 8
 	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment
-		payment 14000
-		dialog phrase "wanderer cargo delivery payment"
-
-mission "Wanderer Bulk Delivery [2]"
-	name "Bulk delivery to <planet>"
-	job
-	repeat
-	description `Deliver <cargo> to <destination>. Payment is <payment>.`
-	cargo random 50 10 .1
-	to offer
-		has "language: Wanderer"
-		random < 30
 	source
 		government "Wanderer"
-	destination
-		distance 2 8
+		payment 20000 180
+		`You drop off your cargo of <commodity>. The Wanderers thank you and you collect your payment of <payment>.`
+		dialog phrase "generic missing stopover or cargo and passengers"
+	source
+	stopover
 		government "Wanderer"
 	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
 		payment
-		payment 20000
+		government "Wanderer"
+		random < 30
+mission "Wanderer Cargo [1]"
+	passengers 4 4 .1
+		payment 25000 200
+	repeat
+		dialog "You wish the biologists the best of luck on <planet> as they carry their scientific equipment off of your ship and hand you your payment of <payment>."
+	repeat
+	on visit
+	job
+	to offer
+	on visit
+	repeat
+		distance 2 8
+	on visit
+	name "Wanderer younglings to <planet>"
+		not "event: battle for sich'ka'ara ends"
+
+	repeat
+		government "Wanderer"
+	job
+	to offer
+	on visit
+		distance 2 8
+		distance 2 8
 		dialog phrase "wanderer cargo delivery payment"
+
+		distance 2 8
+		near "Ka'ch'chrai" 100
+	on complete
+		payment 15000
+		has "language: Wanderer"
+	to offer
+	name "Spike in pollution on <planet>"
+	name "Wanderer farmers to <planet>"
+	passengers 5 5 .1
+		dialog `After releasing the animals, the <bunks> Wanderers each thank you for assisting them in returning the animals to <planet> and hand you <payment>.`
+		government "Wanderer"
+	source
+		dialog phrase "wanderer cargo delivery payment"
+		payment 2000
+		not "event: battle for sich'ka'ara ends"
+
+	description `These <bunks> Wanderer scientists wish to get to <destination> with their <cargo> by <date> to investigate a strange spike in atmospheric pollutants. Payment will be <payment>.`
+		has "language: Wanderer"
+		distance 2 8
+		random < 70
+	cargo "scientific equipment" 5 2 .1
+mission "Wanderer Harvest [1]"
+		dialog phrase "generic cargo on visit"
+mission "Wanderer Farmers [0]"
+	description `Deliver <cargo> to <destination> by <date>. Payment is <payment>.`
+		government "Wanderer"
+	source
+	on visit
+		payment 32000

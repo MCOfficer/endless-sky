@@ -1,153 +1,153 @@
+		dialog `Your passengers thank you for taking them on a journey around the Rim, and you collect your payment of <payment>.`
+		payment 15000 170
+	source
+		fleet "Small Southern Pirates"
+	source
+		month == 8
+mission "Han Sizer Month [2]"
+	stopover
+		distance 2 3
+# terms of the GNU General Public License as published by the Free Software
+		fleet "Small Southern Pirates"
+		dialog `Your passengers thank you for taking them on a journey around the Rim, and you collect your payment of <payment>.`
+	repeat
 # Copyright (c) 2017 by Michael Zahniser
+
+		distance 3 4
+	job
+		attributes "rim"
+		attributes "rim"
+	on complete
+		attributes "rim"
+	job
+		dialog `Your passengers thank you for taking them on a journey around the Rim, and you collect your payment of <payment>.`
+	repeat
+	source
+	to offer
+	to offer
+		distance 2 3
+	stopover
+		attributes "rim"
+	cargo "weapons" 5 2 .1
+		dialog phrase "generic cargo on visit"
+		dialog phrase "generic cargo on visit"
+	destination "Zug"
+	stopover
+	destination "Rust"
+		dialog phrase "generic cargo delivery payment"
+	npc
+	npc
+	to offer
+	description "Deliver <cargo> to <destination>, the home of Kraz Cybernetics, the largest weapons manufacturer in the region. Payment is <payment>."
+	repeat
+		dialog phrase "generic cargo delivery payment"
+		random < 10
+	source
+
+	job
+#
+		government "Pirate"
+		attributes "rim"
+mission "Han Sizer Month [1]"
+		attributes "rim"
+	on complete
+		government "Pirate"
+		fleet "Small Southern Pirates"
+		month == 8
+mission "Han Sizer Month [0]"
+	repeat
+		distance 5 10
+	name "Shipment to <planet>"
+mission "Southbound Shipment [1]"
+mission "Southbound Shipment [0]"
+	npc
+	name `Han Sizer celebration`
+	job
+	source
+
+	passengers 2 10 .8
+	on visit
+	destination "Zug"
+	description `In celebration of Han Sizer month, bring <fare> to all the marked systems and return to <destination> for <payment>.`
+		attributes "rim" "south"
+	on visit
+	stopover
+	to offer
+	cargo "weapons parts" 5 2 .1
+		payment 0 160
+		dialog phrase "generic cargo on visit"
+		month == 8
+
+		not government "Pirate"
+	cargo "ship alloys" 5 2 .1
+	on complete
+		random < 10
+	to offer
+	name `Han Sizer celebration`
+	source
+		government "Pirate"
+		attributes "rim" "south"
+	on complete
+
+	passengers 2 10 .9
+	description `In celebration of Han Sizer month, bring <fare> to all the marked systems and return to <destination> for <payment>.`
+
+	stopover
+	description `In celebration of Han Sizer month, bring <fare> to all the marked systems and return to <destination> for <payment>.`
+	name "Shipment to <planet>"
+mission "Kraz Shipment"
+
+	stopover
+		not government "Pirate"
+	description "Deliver <cargo> to <destination>, the home of Southbound Shipyards, the largest ship manufacturer in the region. Payment is <payment>."
+		attributes "rim" "south"
+	name "Shipment to <planet>"
+		random < 20
+		attributes "rim"
 #
 # Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+		near "Zubeneschamali" 2 10
+		attributes "rim"
 # PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-mission "Southbound Shipment [0]"
-	name "Shipment to <planet>"
-	job
-	repeat
-	description "Deliver <cargo> to <destination>, the home of Southbound Shipyards, the largest ship manufacturer in the region. Payment is <payment>."
-	cargo "weapons" 5 2 .1
-	to offer
-		random < 10
-	source
-		not government "Pirate"
-		near "Zubeneschamali" 2 10
-		attributes "rim" "south"
-	destination "Zug"
-	npc
-		government "Pirate"
-		personality heroic harvests plunders
-		fleet "Small Southern Pirates"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 0 160
-		dialog phrase "generic cargo delivery payment"
-
-mission "Southbound Shipment [1]"
-	name "Shipment to <planet>"
-	job
-	repeat
-	description "Deliver <cargo> to <destination>, the home of Southbound Shipyards, the largest ship manufacturer in the region. Payment is <payment>."
-	cargo "ship alloys" 5 2 .1
-	to offer
-		random < 10
-	source
-		not government "Pirate"
-		near "Zubeneschamali" 2 10
-		attributes "rim" "south"
-	destination "Zug"
-	npc
-		government "Pirate"
-		personality heroic harvests plunders
-		fleet "Small Southern Pirates"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 0 160
-		dialog phrase "generic cargo delivery payment"
-
-
-mission "Kraz Shipment"
-	name "Shipment to <planet>"
-	job
-	repeat
-	description "Deliver <cargo> to <destination>, the home of Kraz Cybernetics, the largest weapons manufacturer in the region. Payment is <payment>."
-	cargo "weapons parts" 5 2 .1
-	to offer
-		random < 10
-	source
-		not government "Pirate"
-		near "Kraz" 2 10
-		attributes "rim" "south"
-	destination "Rust"
-	npc
-		government "Pirate"
-		personality heroic harvests plunders
-		fleet "Small Southern Pirates"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 0 160
-		dialog phrase "generic cargo delivery payment"
-
-mission "Han Sizer Month [0]"
-	name `Han Sizer celebration`
-	job
-	repeat
-	description `In celebration of Han Sizer month, bring <fare> to all the marked systems and return to <destination> for <payment>.`
-	passengers 2 10 .9
-	to offer
-		random < 30
-		month == 8
-	source
 		attributes "rim"
 	stopover
+		personality heroic harvests plunders
+		personality heroic harvests plunders
+# Foundation, either version 3 of the License, or (at your option) any later version.
+	on complete
+		near "Zubeneschamali" 2 10
 		distance 2 4
-		attributes "rim"
-	stopover
-		distance 5 10
-		attributes "rim"
-	on complete
-		payment 10000 170
-		dialog `Your passengers thank you for taking them on a journey around the Rim, and you collect your payment of <payment>.`
-
-
-mission "Han Sizer Month [1]"
-	name `Han Sizer celebration`
-	job
-	repeat
-	description `In celebration of Han Sizer month, bring <fare> to all the marked systems and return to <destination> for <payment>.`
-	passengers 2 10 .8
-	to offer
-		random < 20
-		month == 8
-	source
-		attributes "rim"
-	stopover
-		distance 2 3
-		attributes "rim"
-	stopover
-		distance 3 4
-		attributes "rim"
-	stopover
-		distance 5 10
-		attributes "rim"
-	on complete
-		payment 15000 170
-		dialog `Your passengers thank you for taking them on a journey around the Rim, and you collect your payment of <payment>.`
-
-
-mission "Han Sizer Month [2]"
-	name `Han Sizer celebration`
-	job
-	repeat
-	description `In celebration of Han Sizer month, bring <fare> to all the marked systems and return to <destination> for <payment>.`
-	passengers 2 10 .7
-	to offer
-		random < 10
-		month == 8
-	source
-		attributes "rim"
-	stopover
-		distance 2 3
-		attributes "rim"
-	stopover
-		distance 3 4
-		attributes "rim"
-	stopover
-		distance 4 5
-		attributes "rim"
-	stopover
-		distance 5 10
-		attributes "rim"
-	on complete
 		payment 20000 170
-		dialog `Your passengers thank you for taking them on a journey around the Rim, and you collect your payment of <payment>.`
+	job
+		payment 0 160
+	repeat
+		personality heroic harvests plunders
+		attributes "rim"
+	on complete
+		distance 5 10
+	job
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+		payment 0 160
+	stopover
+	repeat
+	stopover
+		random < 10
+		not government "Pirate"
+	description "Deliver <cargo> to <destination>, the home of Southbound Shipyards, the largest ship manufacturer in the region. Payment is <payment>."
+	to offer
+		attributes "rim"
+
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+		random < 30
+		distance 3 4
+		random < 10
+		attributes "rim"
+
+	passengers 2 10 .7
+		distance 4 5
+		dialog phrase "generic cargo delivery payment"
+		distance 5 10
+		payment 10000 170
+		near "Kraz" 2 10
+	name `Han Sizer celebration`
+	on visit

@@ -1,594 +1,594 @@
-# Copyright (c) 2014-2016 by Michael Zahniser
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-# Ship names:
-phrase "korath"
-	word
-		"Sesk"
-		"Tek"
-		"Grak"
-		"Set"
-		"Prat"
-		"Pask"
-		"Sork"
-		"Met"
-		"Chik"
-		"Sker"
-		"Fer"
-		"Sob"
-		"Ber"
-		"Lek"
-		"Skor"
-		"Mak"
-		"Asik"
-		"Bek"
-		"Lem"
-		"Bar"
-		"Bask"
-		"Esk"
-		"Art"
-		"At"
-		"Erat"
-		"Urk"
-		"Uk"
-		"Um"
-		"Om"
-		"Op"
-		"Ad"
-		"Ask"
-		"Awk"
-		"Ent"
-		"Esk"
-		"Er"
-		"Ed"
-		"Isk"
-		"Iket"
-		"Iper"
-	word
-		"erat"
-		"efar"
-		"eskat"
-		"etak"
-		"et"
-		"op"
-		"uk"
-		"suk"
-		"sper"
-		"chata"
-		"chask"
-		"esk"
-		"oper"
-		"oder"
-		"orm"
-		"urik"
-		"ip"
-		"ork"
-		"frek"
-		"war"
-		"wask"
-		"went"
-		"far"
-		"par"
-		"pruk"
-		"urm"
-		"otor"
-		"istin"
-		" Ertak"
-		" Stak"
-		" Skar"
-		" Prat"
-		" Mark"
-		" Per"
-		" Terch"
-		" Grat"
-	word
-		"eskar"
-		"iki"
-		"istek"
-		"akfar"
-		"uket"
-		"tari"
-		"uto"
-		"atip"
-		"ast"
-		"ask"
-		"elect"
-		"ikt"
-		"ipta"
-		"oshtar"
-		"osk"
-		"ari"
-		"arati"
-		"orim"
-		"etar"
-		"eldar"
-		"waru"
-		"wasi"
-		"e"
-		"i"
-		"o"
-		"u"
-		"a"
-		"at"
-		"ak"
-		"sas"
-		"as"
-		"os"
-		"us"
-		"ap"
-		"or"
-		"ar"
-		"far"
-
-phrase "kor sestor"
-	phrase
-		"digit"
-	phrase
-		"digit"
-	word
-		"-"
-	phrase
-		"digit"
-	phrase
-		"digit"
-	phrase
-		"digit"
-	word
-		"."
-	phrase
-		"digit"
-
-phrase "kor sestor fighter"
-	phrase
-		"digit"
-	phrase
-		"digit"
-	phrase
-		"digit"
-	word
-		" "
-	phrase
-		"digit"
-	word
-		"-"
-	phrase
-		"digit"
-	phrase
-		"digit"
-	word
-		"."
-	phrase
-		"digit"
-
-phrase "kor mereti"
-	phrase
-		"digit"
-	phrase
-		"digit"
-	word
-		":"
-	phrase
-		"digit"
-	phrase
-		"digit"
-	word
-		":"
-	phrase
-		"digit"
-	phrase
-		"digit"
-	word
-		":"
-	phrase
-		"digit"
-
-
-fleet "Korath Raid"
-	government "Korath"
-	names "korath"
-	fighters "korath"
-	cargo 1
 	personality
-		disables plunders opportunistic harvests
-	variant
+		"Model 32"
 		"Korath Raider"
-		"Korath Chaser" 2
-
-fleet "Korath Ember Waste Raid"
-	government "Korath"
-	names "korath"
-	fighters "korath"
-	cargo 1
-	personality
-		disables plunders opportunistic harvests
-	variant
-		"Korath Raider (Ember)"
-		"Korath Chaser" 2
-
-fleet "Korath Home"
-	government "Korath"
-	names "korath"
-	fighters "korath"
-	cargo 3
-	personality
-		timid opportunistic
-	variant 12
-		"Korath World-Ship"
-	variant 12
-		"Korath World-Ship B"
-	variant 12
-		"Korath World-Ship C"
-
-
-fleet "Kor Efret Home"
-	government "Kor Efret"
-	names "korath"
-	fighters "korath"
-	cargo 3
-	personality
+		"Tek Far 71 - Lek (Close Quarters)"
+		"Ask"
+		"Sesk"
+		"Model 256"
+		"Met Par Tek 53 (Sniper)" 3
+	variant 2
+	variant 2
+		"Model 32"
+	variant 4
+		"Model 32"
+	fighters "kor mereti"
+		"Model 32"
+		opportunistic
 		timid
-	variant
-		"Korath World-Ship"
-	variant
-		"Korath World-Ship B"
-	variant
-		"Korath World-Ship C"
-
-
-fleet "Small Kor Sestor"
-	government "Kor Sestor"
-	names "kor sestor"
-	fighters "kor sestor fighter"
-	commodities Plastic Equipment Industrial Electronics "Heavy Metals"
-	variant 5
-		"Met Par Tek 53" 3
-	variant 5
-		"Met Par Tek 53" 2
 		"Met Par Tek 53 (Sniper)"
-	variant 5
-		"Met Par Tek 53"
-		"Met Par Tek 53 (Sniper)" 2
-	variant 5
-		"Met Par Tek 53 (Sniper)" 3
-	variant 8
-		"Tek Far 71 - Lek"
-		"Far Lek 14" 10
-	variant 5
-		"Tek Far 71 - Lek (Close Quarters)"
-		"Far Lek 14" 10
-	variant
-		"Tek Far 71 - Lek"
-		"Far Lek 14" 6
-	variant
-		"Tek Far 71 - Lek (Close Quarters)"
-		"Far Lek 14" 4
-	variant
-		"Tek Far 71 - Lek (Close Quarters)"
-		"Far Lek 14" 2
-	variant 6
-		"Tek Far 78 - Osk"
-		"Far Osk 27" 9
-	variant 4
-		"Tek Far 78 - Osk (Close Quarters)"
-		"Far Osk 27" 9
-	variant
-		"Tek Far 78 - Osk"
-		"Far Osk 27" 7
-	variant
-		"Tek Far 78 - Osk (Close Quarters)"
-		"Far Osk 27" 5
-	variant
-		"Tek Far 78 - Osk"
-		"Far Osk 27" 2
-	variant 3
-		"Tek Far 109"
-		"Far Lek 14" 9
-		"Far Osk 27" 7
-	variant
-		"Tek Far 109"
-		"Far Lek 14" 6
-		"Far Osk 27" 3
-	variant
-		"Tek Far 109"
-		"Far Lek 14" 3
-		"Far Osk 27" 2
-
-fleet "Large Kor Sestor"
-	government "Kor Sestor"
-	names "kor sestor"
-	fighters "kor sestor fighter"
-	commodities Plastic Equipment Industrial Electronics "Heavy Metals"
-	variant 8
-		"Kar Ik Vot 349"
-		"Tek Far 71 - Lek"
-		"Far Lek 14" 10
-		"Met Par Tek 53" 2
-	variant 4
-		"Kar Ik Vot 349 (Defense)"
-		"Tek Far 71 - Lek (Close Quarters)"
-		"Far Lek 14" 8
-		"Met Par Tek 53 (Sniper)" 2
-	variant 4
-		"Kar Ik Vot 349 (Offense)"
-		"Tek Far 71 - Lek"
-		"Far Lek 14" 9
-		"Met Par Tek 53"
-		"Met Par Tek 53 (Sniper)"
-	variant 4
-		"Kar Ik Vot 349 (Trapper)"
-		"Tek Far 71 - Lek (Close Quarters)"
-		"Far Lek 14" 7
-		"Met Par Tek 53"
-		"Met Par Tek 53 (Sniper)"
-	variant 8
-		"Kar Ik Vot 349"
-		"Tek Far 78 - Osk"
-		"Far Osk 27" 9
-		"Met Par Tek 53"
-	variant 4
-		"Kar Ik Vot 349 (Defense)"
-		"Tek Far 78 - Osk (Close Quarters)"
-		"Far Osk 27" 7
-		"Met Par Tek 53"
-	variant 4
-		"Kar Ik Vot 349 (Offense)"
-		"Tek Far 78 - Osk"
-		"Far Osk 27" 8
-		"Met Par Tek 53 (Sniper)"
-	variant 4
-		"Kar Ik Vot 349 (Trapper)"
-		"Tek Far 78 - Osk (Close Quarters)"
-		"Far Osk 27" 6
-		"Met Par Tek 53 (Sniper)"
-	variant 4
-		"Kar Ik Vot 349"
-		"Tek Far 71 - Lek"
-		"Far Lek 14" 10
-		"Tek Far 78 - Osk"
-		"Far Osk 27" 9
-	variant 2
-		"Kar Ik Vot 349 (Defense)"
-		"Tek Far 71 - Lek (Close Quarters)"
-		"Far Lek 14" 8
-		"Tek Far 78 - Osk"
-		"Far Osk 27" 8
-	variant 2
-		"Kar Ik Vot 349 (Offense)"
-		"Tek Far 71 - Lek"
-		"Far Lek 14" 9
-		"Tek Far 78 - Osk (Close Quarters)"
-		"Far Osk 27" 7
-	variant 2
-		"Kar Ik Vot 349 (Trapper)"
-		"Tek Far 71 - Lek (Close Quarters)"
-		"Far Lek 14" 7
-		"Tek Far 78 - Osk (Close Quarters)"
-		"Far Osk 27" 6
-	variant 2
-		"Kar Ik Vot 349"
-	variant 1
-		"Kar Ik Vot 349 (Defense)"
-	variant 1
-		"Kar Ik Vot 349 (Offense)"
-	variant 1
-		"Kar Ik Vot 349 (Trapper)"
-	variant 2
-		"Kar Ik Vot 349"
-		"Met Par Tek 53" 3
-	variant 1
-		"Kar Ik Vot 349 (Defense)"
-		"Met Par Tek 53" 2
-		"Met Par Tek 53 (Sniper)"
-	variant 1
-		"Kar Ik Vot 349 (Offense)"
-		"Met Par Tek 53"
-		"Met Par Tek 53 (Sniper)" 2
-	variant 1
-		"Kar Ik Vot 349 (Trapper)"
-		"Met Par Tek 53 (Sniper)" 3
-	variant 5
-		"Tek Far 109" 3
-		"Far Lek 14" 27
-		"Far Osk 27" 21
-	variant 3
-		"Tek Far 109"
-		"Tek Far 71 - Lek"
-		"Tek Far 78 - Osk"
-		"Far Lek 14" 17
-		"Far Osk 27" 13
-		"Met Par Tek 53 (Sniper)" 2
-	variant 3
-		"Tek Far 109"
-		"Tek Far 71 - Lek (Close Quarters)"
-		"Tek Far 78 - Osk (Close Quarters)"
-		"Far Lek 14" 17
-		"Far Osk 27" 13
-		"Met Par Tek 53" 2
-
-
-fleet "Small Kor Mereti"
-	government "Kor Mereti"
-	names "kor mereti"
-	fighters "kor mereti"
-	commodities Plastic Equipment Industrial Electronics "Heavy Metals"
-	personality
-		opportunistic
-	variant 1
-		"Model 64"
-		"Model 32"
-		"Model 16" 2
-	variant 2
-		"Model 64"
-		"Model 32" 2
-	variant 3
-		"Model 128"
-	variant 3
-		"Model 64"
-		"Model 32" 2
-		"Model 16" 1
-	variant 1
-		"Model 32"
-		"Model 16" 5
-	variant 3
-		"Model 32" 2
-		"Model 16" 3
-	variant 6
-		"Model 64"
-		"Model 32"
-		"Model 16"
-	variant 4
-		"Model 64"
-		"Model 32"
-	variant 3
-		"Model 32"
-		"Model 16" 4
-	variant 4
-		"Model 32"
-		"Model 16" 3
-	variant 5
-		"Model 32"
-		"Model 16" 2
-	variant 6
-		"Model 16" 3
-	variant 4
-		"Model 16" 2
-	variant 3
-		"Model 32"
-	variant 5
-		"Model 64"
-
-fleet "Large Kor Mereti"
-	government "Kor Mereti"
-	names "kor mereti"
-	fighters "kor mereti"
-	commodities Plastic Equipment Industrial Electronics "Heavy Metals"
-	personality
-		opportunistic
-	variant 5
-		"Model 512"
-		"Model 32"
-		"Model 16" 2
-	variant 4
-		"Model 512"
-	variant 2
-		"Model 512"
-		"Model 256"
-		"Model 128"
-		"Model 64"
-		"Model 32"
-		"Model 16"
-	variant 3
-		"Model 512"
-		"Model 256" 2
-	variant 1
-		"Model 512"
-		"Model 128" 2
-		"Model 64"
-		"Model 32" 2
-	variant 1
-		"Model 512"
-		"Model 32" 5
-		"Model 16" 8
-	variant 2
-		"Model 256"
-		"Model 128" 2
-		"Model 64" 3
-		"Model 32" 5
-		"Model 16" 8
-	variant 3
-		"Model 256" 2
-		"Model 64"
-		"Model 32" 3
-		"Model 16" 2
-	variant 6
-		"Model 256"
-		"Model 64" 4
-	variant 3
-		"Model 256" 3
-	variant 8
-		"Model 256"
-		"Model 128"
-		"Model 64"
-		"Model 32"
-		"Model 16"
-	variant 7
-		"Model 256" 2
-		"Model 128"
-	variant 14
-		"Model 256"
-		"Model 64" 2
-	variant 5
-		"Model 128" 3
-	variant 2
-		"Model 256"
-		"Model 128"
-		"Model 64"
-		"Model 32"
-		"Model 16"
-	variant 4
-		"Model 256" 2
-	variant 3
-		"Model 128" 2
-		"Model 64"
-		"Model 32" 2
-	variant 4
-		"Model 128" 2
-		"Model 64" 3
-		"Model 32" 5
-		"Model 16" 8
-	variant 5
-		"Model 256"
-		"Model 64"
-		"Model 32" 3
-		"Model 16" 2
-	variant 9
-		"Model 256"
-		"Model 64" 2
-	variant 3
-		"Model 256" 2
-	variant 8
-		"Model 128"
-		"Model 64"
-		"Model 32"
-		"Model 16"
-	variant 7
-		"Model 256"
-		"Model 128"
-	variant 14
-		"Model 256"
-		"Model 64"
-	variant 5
-		"Model 128" 2
-
-fleet "Kor Mereti Miners"
-	government "Kor Mereti"
-	names "kor mereti"
-	cargo 0
-	personality
-		mining harvests
-	variant 10
-		"Model 8"
-	variant 3
-		"Model 8" 2
-	variant 1
 		"Model 8" 3
-
-
-outfitter "Korath Basics"
-	"Korath Piercer Rack"
+		"Tek Far 78 - Osk (Close Quarters)"
+	phrase
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+		"Kar Ik Vot 349 (Offense)"
+	variant 10
+	phrase
+		"Tek Far 71 - Lek"
+		" Grat"
+		"Tek Far 71 - Lek"
+		"Tek Far 78 - Osk (Close Quarters)"
 	"Korath Mine Rack"
-	"Command Center"
-	"Hyperdrive"
-	"Small Bunk Room"
-	"Bunk Room"
+		"Kar Ik Vot 349"
+	variant 1
+		"arati"
+	variant 3
+		"Met Par Tek 53 (Sniper)" 2
+
+		"Far Osk 27" 2
+	phrase
+		"Met Par Tek 53"
+	variant 4
+
+		"Far Osk 27" 7
+	commodities Plastic Equipment Industrial Electronics "Heavy Metals"
+fleet "Korath Home"
+		"urik"
+		"Met Par Tek 53" 2
+		"Sork"
+	fighters "korath"
+	variant 5
+	variant 1
+		"digit"
+		"Model 32"
+	government "Kor Sestor"
+		"Esk"
+		"Met Par Tek 53"
+
+		"erat"
+	cargo 1
+		"Model 128" 2
+		"Kar Ik Vot 349 (Offense)"
+		"Uk"
+		"Urk"
+		"Met Par Tek 53 (Sniper)"
+	phrase
+		"Model 16" 2
+		"digit"
+	phrase
+	variant 1
+		"Bek"
+		"digit"
+	variant 4
+	cargo 3
+	fighters "kor sestor fighter"
+	variant 5
+		"eskar"
+	variant 4
+	variant 3
+		"Met Par Tek 53 (Sniper)" 2
+		"eskat"
+		"Model 128"
+		"Model 16" 2
+	word
+	variant
+		"Tek Far 78 - Osk (Close Quarters)"
+		"Model 32" 3
+		"Far Lek 14" 17
+	cargo 0
+		"par"
+		"etar"
+		"Tek"
+		"Far Osk 27" 9
+	variant 6
+		":"
+	government "Korath"
+		"Met Par Tek 53 (Sniper)"
+	fighters "korath"
+		"Far Lek 14" 10
+		"Far Lek 14" 9
+	variant 5
+		"Model 64" 3
+		"Model 32"
+		"oshtar"
+		"frek"
+		"ari"
+		"Chik"
+		"Model 16"
+		"Far Osk 27" 5
+	variant 7
+		"Far Osk 27" 9
+		"suk"
+		"Korath World-Ship B"
+		"Korath World-Ship C"
+		"Model 32"
+fleet "Korath Ember Waste Raid"
+		"Met Par Tek 53" 2
+		"Model 16"
+	commodities Plastic Equipment Industrial Electronics "Heavy Metals"
+fleet "Large Kor Mereti"
+		"Far Lek 14" 7
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+		"Model 16" 8
+		"Tek Far 109"
+	word
+		"ak"
+		"Met Par Tek 53"
+		"Korath Chaser" 2
+	fighters "kor mereti"
+		"Met Par Tek 53"
+	variant 3
+		"Ber"
+		"Far Osk 27" 9
+	word
+		"Skor"
+		"Bar"
+		"Tek Far 109" 3
+		"a"
+		"ip"
+		"Kar Ik Vot 349"
 	"Fuel Processor"
-	"Outfits Expansion"
-	"Cargo Expansion"
+		"Model 32" 2
+		"Far Lek 14" 2
+	variant 2
+		"Met Par Tek 53 (Sniper)"
+	word
+		"Model 64"
+	variant 3
+		"Kar Ik Vot 349 (Trapper)"
+	variant 1
+		"Korath World-Ship"
+	variant 3
+		"Set"
+		"Model 128"
+	variant
+		"orm"
+		"op"
+	variant 2
+		"or"
+		"Tek Far 71 - Lek (Close Quarters)"
+		"Model 256"
+		"Korath World-Ship C"
+	variant 3
+		"wask"
+		"Tek Far 109"
+	phrase
+		"Tek Far 78 - Osk (Close Quarters)"
+		"Isk"
+	commodities Plastic Equipment Industrial Electronics "Heavy Metals"
+		"Tek Far 78 - Osk"
+		"Ent"
+
+		"Model 256" 2
+		"Model 16" 1
+outfitter "Korath Basics"
+		"Far Lek 14" 7
+	variant 8
+		"Model 16" 3
+		"wasi"
+		"Far Osk 27" 8
+	cargo 1
+		"Far Osk 27" 7
+	variant 8
+	phrase
+		mining harvests
+		"chata"
+	variant
+		"iki"
+		"Grak"
+		"at"
+	variant
+		"elect"
+		"Kar Ik Vot 349 (Defense)"
+		"far"
+
+		"et"
+		"oper"
+	variant 5
+	variant 4
+		"Om"
+		"Model 256"
+	variant
+		"u"
+	variant 8
+		"uk"
+		"Tek Far 71 - Lek"
+	government "Kor Mereti"
+		"Far Lek 14" 10
+		"osk"
+fleet "Small Kor Mereti"
+
+	fighters "kor sestor fighter"
+		"digit"
+		"Model 256"
+		"Model 16"
+		"Model 16" 2
+		"Model 256" 2
+	government "Kor Mereti"
+	variant 6
+	variant
+	personality
+		"digit"
+	"Bunk Room"
+
+		"Model 16" 3
+
+		"Model 128" 2
+		"Kar Ik Vot 349 (Offense)"
+	names "kor sestor"
+	variant 7
+		"Model 128" 3
+		"digit"
+		"i"
+
+		"Model 64"
+	word
+	phrase
+	government "Kor Mereti"
+		"Tek Far 71 - Lek (Close Quarters)"
+		"Kar Ik Vot 349"
+# Foundation, either version 3 of the License, or (at your option) any later version.
+		"waru"
+		"Kar Ik Vot 349 (Defense)"
+		"Sker"
+		"Lem"
+		" Stak"
+		"Model 32" 5
+		"Kar Ik Vot 349 (Defense)"
+		" Mark"
+	phrase
+	government "Kor Efret"
+		"Far Osk 27" 7
+		"Model 32" 5
+		"Kar Ik Vot 349"
+	variant 2
+	variant 12
+	variant 3
+		"o"
+phrase "kor sestor fighter"
+	variant
+		"Ed"
+	personality
+#
+
+	phrase
+		"Tek Far 109"
+		"Esk"
+		"Tek Far 71 - Lek (Close Quarters)"
+	variant 14
+	variant 5
+		"Model 32" 2
+	variant 4
+		"Pask"
+		"Kar Ik Vot 349 (Trapper)"
+	government "Korath"
+		"Far Lek 14" 3
+	variant 2
+		"Model 64"
+	variant 1
+		opportunistic
+		"Met Par Tek 53"
+
+		"Model 512"
+		"Model 128"
+		"Met Par Tek 53"
+		"Model 512"
+	word
+		"Model 32"
+phrase "korath"
+		"Tek Far 78 - Osk"
+		"Model 128"
+		"Model 512"
+		"Sob"
+		"Kar Ik Vot 349"
+		"sas"
+		"Asik"
+		"Met Par Tek 53" 2
+		"Tek Far 78 - Osk"
+		"Model 64"
+		"digit"
+		"Model 256" 2
+		"Far Osk 27" 13
+		"Far Lek 14" 17
+# Ship names:
+		"Far Osk 27" 6
+		" Terch"
+		":"
+		"Model 256"
+		" Prat"
+		"Lek"
+		"Far Lek 14" 10
+		"istin"
+	names "kor mereti"
+		"."
+		timid opportunistic
+		"Er"
+		"Far Osk 27" 8
+		"Model 16" 3
+		"Model 256"
+		"Iper"
+	variant 14
+		"istek"
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+		"Model 16" 4
+		"tari"
+		"Kar Ik Vot 349 (Defense)"
+
+		"Um"
+		"Met Par Tek 53 (Sniper)" 2
+		"Far Lek 14" 8
+	variant 9
+
+		"Tek Far 71 - Lek"
+	variant 4
+	variant 1
+	phrase
+		"Tek Far 78 - Osk"
+	variant 12
+	variant 2
+	phrase
+		"Model 128"
+		"Model 8"
+	variant 1
+		"digit"
+		"Model 64"
+		"Tek Far 109"
+		" Per"
+		"Tek Far 71 - Lek (Close Quarters)"
+	word
+	phrase
+		"Far Lek 14" 6
+		"Kar Ik Vot 349 (Offense)"
+		"Model 256"
+	names "korath"
+	fighters "korath"
+		"Model 32"
+	variant 5
+		"Far Lek 14" 8
+		"Model 16"
+	personality
+		"Tek Far 71 - Lek"
+	names "kor sestor"
+		"Tek Far 78 - Osk (Close Quarters)"
+		" Skar"
+	word
+	phrase
+	variant 5
+		"sper"
+		"orim"
+	"Command Center"
+		"far"
+		"Prat"
+		"Far Lek 14" 4
+		":"
+	word
+		"Model 64"
+	commodities Plastic Equipment Industrial Electronics "Heavy Metals"
+		"ap"
+		"Awk"
+	personality
+		"Model 512"
+
+		"ar"
+		"Model 256" 2
+	variant 6
+		"Iket"
+	variant 4
+		"Far Lek 14" 27
+		"ask"
+		"Tek Far 109"
+		"Model 128" 2
+		"digit"
+	variant 5
+	variant 8
+phrase "kor mereti"
+		"Model 64" 3
+		" Ertak"
+	government "Korath"
+		"Erat"
+		"went"
+		"as"
+		"Far Lek 14" 9
+	phrase
+		"Model 64"
+		"Far Lek 14" 9
+	variant 1
+		"Model 32" 2
+		"Kar Ik Vot 349 (Trapper)"
+		"Korath Raider (Ember)"
+	names "korath"
+		"Model 32" 2
+	variant 8
+		"Far Osk 27" 3
+		"Model 64"
+	variant 4
+		"Tek Far 71 - Lek (Close Quarters)"
+	variant 3
+	variant 12
+	"Hyperdrive"
+	cargo 3
+		"-"
+	variant 5
+		"Met Par Tek 53 (Sniper)" 2
+		"Model 64" 2
+		"efar"
+		"Model 256"
+		"digit"
+		"ipta"
+
+		"Korath World-Ship"
+		"etak"
+		"Tek Far 78 - Osk (Close Quarters)"
+		"Korath World-Ship B"
+		"Model 16" 8
+	variant 3
+fleet "Small Kor Sestor"
+		"."
+	"Small Bunk Room"
+		"Tek Far 78 - Osk"
+		"Met Par Tek 53" 2
+		"atip"
+	variant
+	variant 4
+		"pruk"
+		"Korath Chaser" 2
+		"Met Par Tek 53 (Sniper)"
+		"Model 32"
+		"us"
+		"Model 128" 2
+	variant 1
+		"ork"
+	names "kor mereti"
+		"At"
+		"Tek Far 78 - Osk"
+fleet "Kor Mereti Miners"
+	variant 5
+		"Tek Far 71 - Lek"
+		"Model 64"
+		"Ad"
+		"esk"
+		"Model 16" 2
+		"digit"
+	variant 1
+		"Far Osk 27" 2
+		" "
+		"Fer"
+	personality
+		"Kar Ik Vot 349 (Trapper)"
+	variant 5
+		"war"
+		"digit"
+
+	names "korath"
+# terms of the GNU General Public License as published by the Free Software
+		"Kar Ik Vot 349 (Offense)"
+	"Korath Piercer Rack"
+	phrase
+	variant 3
+	variant 5
+		"Model 256"
+		"Model 64"
+		"Far Osk 27" 21
+	variant
+		"Model 64" 4
+		"akfar"
+fleet "Korath Raid"
+		"Model 512"
+		"Model 32" 3
+		disables plunders opportunistic harvests
+		"Tek Far 71 - Lek (Close Quarters)"
+		"digit"
+	variant 6
+		"Kar Ik Vot 349 (Defense)"
+		"Met Par Tek 53" 3
+		"Far Osk 27" 9
+		"ast"
+		"-"
+	variant 2
+		"os"
+	variant 1
+	phrase
+	variant
+	variant 4
+	variant
+		"Tek Far 78 - Osk (Close Quarters)"
+		"digit"
+	variant 3
+		"digit"
+		"e"
 	"Local Map"
+		"Model 64"
+	phrase
+#
+		"Model 256" 3
+		"Met Par Tek 53 (Sniper)" 3
+		"Far Osk 27" 13
+		"Far Osk 27" 6
+		"Far Lek 14" 10
+# Copyright (c) 2014-2016 by Michael Zahniser
+	phrase
+	variant
+		"Model 256" 2
+		"oder"
+		"Tek Far 71 - Lek"
+		"Model 16" 2
+		"Model 256"
+		"Met Par Tek 53" 3
+	names "kor mereti"
+		"Model 128"
+		"Met Par Tek 53 (Sniper)"
+		"Model 16" 5
+		"Tek Far 78 - Osk"
+	variant 4
+		"otor"
+		disables plunders opportunistic harvests
+	personality
+	"Outfits Expansion"
+		"Model 64"
+fleet "Kor Efret Home"
+		"Model 32"
+	fighters "korath"
+fleet "Large Kor Sestor"
+		"Model 32"
+	variant 4
+		"Kar Ik Vot 349 (Trapper)"
+		"Model 512"
+		"Model 32" 2
+		"Model 8" 2
+	word
+		"Model 32"
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+		"digit"
+		"digit"
+		"Model 64"
+		"Model 32" 5
+		"Far Lek 14" 6
+		"Tek Far 78 - Osk"
+		"Met"
+
+		"Model 64"
+		"Art"
+		"uket"
+		"Model 128" 2
+		"digit"
+	variant 3
+	variant
+
+		"ikt"
+	names "korath"
+	variant 2
+	variant 3
+	"Cargo Expansion"
+	variant 3
+		"Model 16" 2
+		"digit"
+		"digit"
+		"eldar"
+		"Far Osk 27" 7
+	word
+		"Model 64" 2
+
+		"Model 64"
+		"urm"
+		"Bask"
+phrase "kor sestor"
+		"chask"
+		"Tek Far 71 - Lek (Close Quarters)"
+		"Model 16" 8
+	government "Kor Sestor"
+	phrase
+		"Model 16"
+		"uto"
+	variant 4
+		"Mak"
+		"Op"
+		"Model 128"

@@ -1,254 +1,254 @@
-# Copyright (c) 2016 by Michael Zahniser
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-outfit "Drak Distancer"
-	category "Turrets"
+		"velocity" 36
+	"never disabled"
+effect "antimatter dust"
+		"velocity" 400
+	gun 0 -74 "Drak Antimatter Cannon"
+		"ramscoop" 100
 	cost 1000000
-	thumbnail "outfit/unknown"
-	"mass" 64
-	"outfit space" -64
-	"weapon capacity" -64
-	"turret mounts" -1
-	weapon
-		"fire effect" "distancer flare"
-		"turret turn" 4.
-		"velocity" 2000
-		"lifetime" 1
-		"reload" 1
-		"firing energy" 15
-		"firing heat" 10
-		"firing force" 60
-	description "This is a thruster that can produce force in any direction, allowing a Drak ship to keep a safe distance away from its target."
-
-effect "distancer flare"
-	sprite "effect/distancer"
-		"frame rate" 1.618
-	"lifetime" 0
-	"velocity scale" 1
-
-outfit "Drak Draining Field"
-	category "Turrets"
-	cost 1000000
-	thumbnail "outfit/unknown"
-	"mass" 84
-	"outfit space" -84
+	turret "Drak Turret"
 	"weapon capacity" -84
 	"turret mounts" -1
-	weapon
-		"turret turn" 4.
-		"velocity" 400
-		"lifetime" 1
-		"reload" 1
-		"firing energy" 20
-		"firing heat" 5
-		"firing force" 30
-		"hit force" 60
-		"shield damage" 50
-		"ion damage" .5
-	description "This device produces a field that drains energy from any ship within it."
-
-outfit "Drak Anti-Missile Field"
-	category "Turrets"
-	cost 1000000
-	thumbnail "outfit/unknown"
-	"mass" 66
-	"outfit space" -66
-	"weapon capacity" -66
-	"turret mounts" -1
-	weapon
-		"velocity" 400
-		"lifetime" 1
-		"reload" 1
-		"firing energy" 10
-		"firing heat" 1
-		"anti-missile" 100
-	description "This device produces a field that destroys any missiles that come within it."
-
-outfit "Drak Turret"
-	category "Turrets"
-	cost 1000000
-	thumbnail "outfit/unknown"
-	"mass" 48
-	"outfit space" -48
-	"weapon capacity" -48
-	"turret mounts" -1
-	weapon
-		sprite "projectile/drak bolt"
-			"frame rate" 13.318
-			"random start frame"
-		"hit effect" "drak bolt impact"
-		"inaccuracy" 1
-		"turret turn" 4.
-		"velocity" 36
-		"lifetime" 30
-		"reload" 16
-		"firing energy" 160
-		"firing heat" 160
-		"shield damage" 256
-		"hull damage" 256
-		"hit force" 120
-	description "This is a turret based cannon with significant range and accuracy."
-
-effect "drak bolt impact"
-	sprite "effect/drak bolt impact"
-		"no repeat"
-		"frame rate" 30
-	sound "explosion small"
-	"lifetime" 20
-	"random angle" 20
-	"random spin" 10
-	"velocity scale" -.05
-
-outfit "Drak Antimatter Cannon"
-	category "Guns"
-	cost 10000000
-	thumbnail "outfit/unknown"
-	"mass" 96
-	"outfit space" -96
-	"weapon capacity" -96
-	"gun ports" -1
-	"inscrutable" 1
-	weapon
-		"inaccuracy" 0
-		"velocity" 20
-		"lifetime" 1
-		"submunition" "Drak Antimatter Fragment" 3
-		"hit effect" "antimatter dust" 10
+# Foundation, either version 3 of the License, or (at your option) any later version.
+		"frame rate" 0.87
 		"hit effect" "nuke explosion"
-		"safe"
-		"reload" 187
-		"firing energy" 5610
+	"lifetime" 40
+	description "This is a thruster that can produce force in any direction, allowing a Drak ship to keep a safe distance away from its target."
 		"firing heat" 1870
-		"blast radius" 100
-		"hit force" 1000
-	description "This is the Drak's ultimate weapon."
+		"hull repair rate" 100
+	
+ship "Archon" "Archon B"
+		"mass" 1000
+	"mass" 96
+		"hit force" 60
+		"turret turn" 4.
+	"turret mounts" -1
 
-outfit "Drak Antimatter Fragment"
-	weapon
-		sprite "projectile/drak bolt"
-			"frame rate" 9.835
-			"random start frame"
-		"live effect" "antimatter spark" 249
-		"live effect" "antimatter dust" 249
-		"hit effect" "antimatter dust" 10
-		"hit effect" "nuke explosion"
+		"required crew" 1
+outfit "Drak Anti-Missile Field"
+		"heat generation" 17
+	noun "entity"
+		"Hyperdrive"
+	"never disabled"
+	thumbnail "outfit/unknown"
+		"firing heat" 1
+	"mass" 84
+	category "Turrets"
+	explode "nuke explosion" 3
+	category "Guns"
+		"shield damage" 5610
+	"random angle" 30
+	"mass" 64
+		"firing heat" 5
+
+	"velocity scale" .1
 		"safe"
+	"never disabled"
+	thumbnail "outfit/unknown"
+	turret -55 16 "Drak Distancer"
+	"never disabled"
+		"velocity" 400
+	outfits
+outfit "Drak Antimatter Cannon"
+	thumbnail "thumbnail/archon"
+
+
+		"lifetime" 1
+		"anti-missile" 100
+effect "antimatter spark"
+effect "drak bolt impact"
+		"hit force" 120
+
+
+		"shield damage" 256
+	category "Turrets"
+ship "Archon" "Archon C"
+	"mass" 48
 		"inaccuracy" 1
+		"hull damage" 256
+		"blast radius" 100
+	"velocity scale" -.05
+	weapon
+	sprite "ship/archon"
+	weapon
 		"lifetime" 499
 		"hit force" 1000
-		"shield damage" 5610
-		"hull damage" 5610
-		"blast radius" 100
 
-effect "antimatter spark"
-	sprite "effect/antimatter spark"
-		"frame rate" 3
-	"lifetime" 40
-	"random angle" 1
-	"random spin" .1
-	"random velocity" 8
-	"velocity scale" .6
-
-effect "antimatter dust"
-	sprite "effect/smoke"
-		"no repeat"
-		"frame rate" 30
-	"lifetime" 13
-	"random angle" 30
-	"random spin" 50
-	"random velocity" 12
-	"velocity scale" .1
-
-
-
-ship "Archon"
-	noun "entity"
-	sprite "ship/archon"
-		"frame rate" 0.87
-	thumbnail "thumbnail/archon"
-	"never disabled"
-	attributes
-		category "Heavy Warship"
-		"cost" 1000000000
-		"shields" 4000000
-		"hull" 1000000
-		"required crew" 1
-		"bunks" 1
-		"mass" 1000
-		"drag" 27
-		"heat dissipation" 40
-		"fuel capacity" 800
-		"cargo space" 0
-		"outfit space" 800
-		"weapon capacity" 600
-		"engine capacity" 200
-		"energy capacity" 10000
-		"energy generation" 500
-		"heat generation" 17
-		"shield generation" 100
-		"shield energy" 100
-		"hull repair rate" 100
-		"hull energy" 100
-		"ramscoop" 100
-		weapon
-			"blast radius" 200
-			"shield damage" 20000
-			"hull damage" 10000
-			"hit force" 30000
-	outfits
-		"Drak Antimatter Cannon"
-		"Drak Anti-Missile Field" 2
-		"Drak Draining Field"
-		"Drak Distancer" 2
-		"Drak Turret" 3
-		
-		"Medium Graviton Thruster"
-		"Medium Graviton Steering"
-		"Hyperdrive"
-		"Jump Drive"
-	
-	engine -17 92
-	engine 17 92
-	gun 0 -74 "Drak Antimatter Cannon"
-	turret 0 -10 "Drak Anti-Missile Field"
-	turret 0 -10 "Drak Anti-Missile Field"
-	turret 0 -10 "Drak Draining Field"
-	turret -40 -13 "Drak Turret"
-	turret 40 -13 "Drak Turret"
-	turret 0 81 "Drak Turret"
-	turret -55 16 "Drak Distancer"
-	turret 55 16 "Drak Distancer"
-	explode "nuke explosion" 3
-	"final explode" "final explosion large"
-
-ship "Archon" "Archon B"
-	"never disabled"
-	sprite "ship/archon b"
-		"frame rate" 0.87
-
-ship "Archon" "Archon C"
-	"never disabled"
-	sprite "ship/archon c"
-		"frame rate" 0.87
-
-ship "Archon" "Archon (Cloaked)"
-	sprite "ship/archon c"
-		"frame rate" 0.87
-	"never disabled"
-	add attributes
-		"cloak" .04
-	turret "Drak Anti-Missile Field"
-	turret "Drak Anti-Missile Field"
+		"inaccuracy" 1
 	turret "Drak Draining Field"
+	cost 10000000
+	thumbnail "outfit/unknown"
+	thumbnail "outfit/unknown"
+		"turret turn" 4.
 	turret "Drak Turret"
-	turret "Drak Turret"
-	turret "Drak Turret"
+		"firing energy" 10
+	"gun ports" -1
+# Copyright (c) 2016 by Michael Zahniser
+	"weapon capacity" -96
+	"turret mounts" -1
+	"outfit space" -84
+
+
+		"ion damage" .5
+	thumbnail "outfit/unknown"
+		"firing energy" 5610
+		"lifetime" 1
+		"turret turn" 4.
+		"firing energy" 15
+	attributes
+		"blast radius" 100
+	"outfit space" -64
+		"drag" 27
 	turret "Drak Distancer"
+	"random velocity" 8
+	"random velocity" 12
+			"hull damage" 10000
+	description "This is a turret based cannon with significant range and accuracy."
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+		"frame rate" 0.87
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
 	turret "Drak Distancer"
+		"hit effect" "antimatter dust" 10
+		"hull" 1000000
+	turret "Drak Anti-Missile Field"
+	"weapon capacity" -64
+		"live effect" "antimatter dust" 249
+		"reload" 1
+		"heat dissipation" 40
+
+	turret -40 -13 "Drak Turret"
+outfit "Drak Draining Field"
+		"shield generation" 100
+	weapon
+#
+			"blast radius" 200
+		"hull damage" 5610
+
+		"lifetime" 1
+	"lifetime" 20
+		"safe"
+		"firing energy" 160
+effect "distancer flare"
+	add attributes
+	cost 1000000
+		"frame rate" 1.618
+	turret 0 -10 "Drak Anti-Missile Field"
+		"frame rate" 3
+		"bunks" 1
+		"no repeat"
+	sound "explosion small"
+		"hit effect" "nuke explosion"
+	turret 40 -13 "Drak Turret"
+outfit "Drak Turret"
+	sprite "effect/drak bolt impact"
+		"shield energy" 100
+	description "This is the Drak's ultimate weapon."
+	"outfit space" -48
+		"velocity" 20
+		
+	turret 55 16 "Drak Distancer"
+	"turret mounts" -1
+#
+		"submunition" "Drak Antimatter Fragment" 3
+	sprite "effect/antimatter spark"
+	sprite "ship/archon c"
+	"lifetime" 0
+		"velocity" 2000
+		"inaccuracy" 0
+			"random start frame"
+		"fire effect" "distancer flare"
+		"outfit space" 800
+		"cost" 1000000000
+	turret 0 -10 "Drak Draining Field"
+		"Drak Turret" 3
+		"cargo space" 0
+		"reload" 1
+ship "Archon" "Archon (Cloaked)"
+		"weapon capacity" 600
+	turret "Drak Anti-Missile Field"
+	category "Turrets"
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+		"hit effect" "antimatter dust" 10
+		"reload" 187
+		"energy generation" 500
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+	sprite "effect/smoke"
+		sprite "projectile/drak bolt"
+		"frame rate" 0.87
+			"shield damage" 20000
+		"hit force" 1000
+	weapon
+	"weapon capacity" -48
+	engine 17 92
+	"outfit space" -66
+			"frame rate" 13.318
+	category "Turrets"
+		"Jump Drive"
+	turret 0 81 "Drak Turret"
+		"Drak Antimatter Cannon"
+	turret 0 -10 "Drak Anti-Missile Field"
+		category "Heavy Warship"
+		"firing heat" 10
+	"velocity scale" .6
+		"shields" 4000000
+
+		"frame rate" 30
+	description "This device produces a field that destroys any missiles that come within it."
+	"velocity scale" 1
+		"no repeat"
+	weapon
+		"frame rate" 30
+			"random start frame"
+
+	"random angle" 20
+		"cloak" .04
+	turret "Drak Turret"
+			"frame rate" 9.835
+		"lifetime" 1
+	cost 1000000
+		"engine capacity" 200
+		"Drak Draining Field"
+		"firing force" 60
+	"lifetime" 13
+
+	"random spin" .1
+		weapon
+
+		"live effect" "antimatter spark" 249
+
+		"Medium Graviton Thruster"
+		"reload" 1
+		"energy capacity" 10000
+		"lifetime" 30
+outfit "Drak Distancer"
+		"hull energy" 100
+	description "This device produces a field that drains energy from any ship within it."
+	"random spin" 50
+	sprite "ship/archon c"
+# terms of the GNU General Public License as published by the Free Software
+	engine -17 92
+	sprite "ship/archon b"
+		"reload" 16
+	sprite "effect/distancer"
+		"hit effect" "drak bolt impact"
+	"inscrutable" 1
+		"firing energy" 20
+			"hit force" 30000
+		"frame rate" 0.87
+		"Drak Anti-Missile Field" 2
+	cost 1000000
+	"weapon capacity" -66
+outfit "Drak Antimatter Fragment"
+		"shield damage" 50
+	"mass" 66
+	"random spin" 10
+		"firing force" 30
+	"random angle" 1
+ship "Archon"
+	weapon
+	"outfit space" -96
+	"final explode" "final explosion large"
+		"Medium Graviton Steering"
+		sprite "projectile/drak bolt"
+		"fuel capacity" 800
+		"Drak Distancer" 2
+		"firing heat" 160

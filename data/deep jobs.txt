@@ -1,342 +1,342 @@
+	word
+	on stopover
 # Copyright (c) 2014 by Michael Zahniser and Nate Graham
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+mission "Deep Mystery Cube [2]"
+	destination
+		attributes "deep"
+	job
+	name "Mystery delivery to <planet>"
+		dialog phrase "generic cargo on visit"
+	on accept
 
+#
+	npc
+	source
+	on complete
+		attributes "research"
+			distance 6 9
+		dialog phrase "generic cargo on visit"
+		"combat rating" > 35
+	repeat
+		`and pick up the mystery package. It is a small black cube, about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd.`
+		"mystery cube" ++
+		`leave the mystery cube by the side of the road a few kilometers away from the spaceport.`
+	word
+		attributes "deep"
+	word
+		random < 7
+		not attributes "station"
+		dialog phrase "generic cargo on visit"
+		not attributes "station"
+	description "The crew of the science vessel <npc> requests an escort to <stopovers> where they plan to study some unusual phenomena. Escort them there and then return them to <planet> for <payment>."
+		system
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+	source
+	cargo "mystery package" 1
+				"Scout"
+		`bury the cube out in the middle of nowhere before landing in the spaceport.`
+	word
+	word
+		distance 4 10
+		not attributes "station"
+		system
+		dialog phrase "deep mystery cube pickup"
+		dialog phrase "deep mystery cube pickup"
+		government "Bounty Hunter"
+	npc accompany save
+	on visit
+		attributes "quarg" "pirate" "volcanic" "frontier" "dirt belt" "north" "south"
+		fleet
+		payment
+	on visit
+		government "Bounty Hunter"
+		dialog phrase "generic cargo on visit"
+	description "Deliver a package to <destination>. Payment is <payment>."
+	npc
+		fleet "Bounty Hunters"
+		government "Bounty Hunter"
+		system
+	description "A team of <bunks> scientists needs some research notes analyzed at the facility on <stopovers>. Take the scientists there and then return them to <planet> for <payment>."
+	to offer
+		attributes "deep"
+	word
+		payment 5000 1000
+	npc
+		distance 6 50
+		` `
+		fleet "Bounty Hunters"
+		dialog phrase "deep mystery cube dropoff payment"
+		not attributes "station"
+
+		random < 10
+
+	cargo "mystery package" 1
+		dialog "The scientists have been giddily discussing the results of their research during the entire trip. You're happy for a bit of peace and quiet as they make tracks for a prominent research lab to have the results analyzed. You prepare for the return journey to <planet>."
+	word
+		dialog phrase "deep mystery cube pickup"
+	on visit
+mission "Deep Mystery Cube Station"
+		system
+
+	destination
+	cargo "mystery package" 1
+	to offer
+				"Star Queen"
+		random < 10
+	job
+		dialog phrase "generic cargo on visit"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Hai" "Quarg"
+	on accept
+		random < 25
+			distance 6 9
+		` `
+		dialog phrase "deep mystery cube dropoff payment"
+#
+
+
+		fleet "Bounty Hunters"
+			distance 10 17
+		personality nemesis disables waiting plunders
+	on complete
+		"combat rating" > 35
+			names "deep"
+
+	on complete
+		` `
+	to offer
+	description "Deliver a package to <destination>. Payment is <payment>."
 phrase "deep mystery cube pickup"
+		dialog "You bid goodbye to the captain of the <npc> and accept your payment of <payment>."
+	cargo "recording equipment" 1
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Hai" "Quarg"
+		payment
+
+		system
+		personality escort timid
+		distance 9 20
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 	word
-		`As instructed, you`
-		`You`
-	word
+		personality nemesis disables waiting plunders
+	repeat
 		` `
-	word
-		`open a deposit box`
-		`open a storage locker`
-	word
-		` `
-	word
+	repeat
+	to offer
+		attributes "deep"
+	description "Deliver a package to <destination>. Payment is <payment>."
+		`drop the cube into a laundry chute.`
+			distance 6 9
+		"combat rating" > 35
+	repeat
+mission "Transport scientists"
+	cargo "mystery package" 1
+
 		`in an unmarked and uninhabited warehouse`
+		random < 15
+		dialog phrase "generic missing stopover or passengers"
+	on accept
+# Foundation, either version 3 of the License, or (at your option) any later version.
+		`drop the cube at a warehouse. Nobody comes around to collect it.`
+		personality nemesis disables waiting plunders
+	name "Mystery delivery to <planet>"
+		random < 10
+	destination
+		random < 15
+		attributes "research" "quarg" "rich" "paradise"
+		` `
+	job
+		"mystery cube" ++
+		` "This has to be legal, or they couldn't post it to the job board," you remind yourself.`
+			distance 2 3
+	word
+		` `
+		`Your bank account immediately notifies you that the agreed-upon payment of <payment> has been deposited. You wonder how they knew.`
+	job
+		fleet "Bounty Hunters"
+	word
+		dialog phrase "deep mystery cube pickup"
+		dialog phrase "generic missing stopover or cargo"
+		`You transmit the video to your contact on <origin> and receive your payment of <payment>.`
+		dialog "The <npc> lands alongside you and teams of scientists wearing crisp white lab coats and serious-looking boots and gloves descend on the test site with all manner of exotic equipment. As they take their measurements, you prepare for the return journey to <planet>."
+		`leave the mystery cube in the second supplies cabinet you come across.`
+	word
+		"combat rating" > 35
+	to offer
+		dialog phrase "deep mystery cube dropoff station payment"
+	job
+		`As instructed, you`
+	on complete
+	source
+		dialog phrase "deep mystery cube dropoff payment"
+		system
+	word
+phrase "deep mystery cube dropoff station payment"
+	source
+	on complete
+mission "Deep Mystery Cube [0]"
+			distance 6 9
+	to offer
+			variant
+	word
+	word
+	on visit
+		``
+	npc
+		fleet "pirate raid"
+	destination
+		`The panelists are electrifying, speaking eloquently on a variety of cutting-edge topics in the sciences and humanities. The experience leaves you feeling remarkably optimistic about the future of humanity here in the stars.`
+
+		attributes "station"
+		fleet "Bounty Hunters"
+	name "Transport scientists"
+		attributes "deep"
+	job
+	source
+		payment 5000 1000
+		` `
+		personality nemesis disables waiting plunders
+		` `
+	to offer
+	stopover
+	source
+		system
+		distance 9 20
+		`open a storage locker`
+
+	name "Mystery delivery to <planet>"
+		personality nemesis disables waiting plunders
+		random < 10
+		distance 9 20
+	name "Mystery delivery to <planet>"
+		dialog phrase "generic cargo on visit"
+		payment 5000 1000
+mission "Escort science vessel"
+	repeat
+		dialog phrase "academic conference recording payment"
+		government "Bounty Hunter"
+				"Bounder"
+		government "Pirate"
+# terms of the GNU General Public License as published by the Free Software
+	stopover
+	description "Deliver a package to <destination>. Payment is <payment>."
+	on complete
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Hai" "Quarg"
+	repeat
+	job
+	on visit
+	npc
+	word
+mission "Mystery retrieval"
+	on complete
+	passengers 5 16
+		payment 5000 1000
+		payment 30000
+		"mystery cube" ++
+		"mystery cube" ++
+		"combat rating" > 35
+		`As instructed, you`
+		"mystery cube" ++
+	source
+	word
+			variant
+		attributes "research"
+		payment 5000 1000
+		distance 9 20
+		distance 9 20
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Hai" "Quarg"
+		`hand the cube to the first beggar woman you see planetside. She accepts it without a word, and leaves.`
+
+	word
+	npc
+		distance 7 16
+	repeat
+	destination
+		``
+
+	word
+		`leave the mystery cube behind a rickety-looking wooden tower.`
+		government "Bounty Hunter"
+		`leave the mystery cube in an unscrewed air vent.`
+		`You touch down on <planet> and make your way to the conference hall at a grand university. The provided credentials gain you access and you set up the recording equipment at the back of the room.`
+	on stopover
+phrase "academic conference recording payment"
+mission "Deep Mystery Cube [1]"
+mission "Record academic conference"
+		dialog phrase "deep mystery cube dropoff payment"
+	on accept
+	word
+	on visit
+	cargo "mystery package" 1
+		payment 5000 1000
+	on visit
+
+	description "Deliver a package to <destination>. Payment is <payment>."
+	description "Record an academic conference on <destination> for professors who cannot attend. Credentials and recording equipment will be provided. Payment is <payment>."
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+
+	npc
+
+		` `
+	
+	on stopover
+		distance 2 50
+phrase "deep mystery cube dropoff payment"
+		"mystery cube" ++
+	cargo "mystery package" 1
+	to offer
+	source
+	on complete
+		random < 15
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+	repeat
+	destination
+		`drop the cube into a copper trash can in the spaceport.`
+	name "Mystery delivery to <planet>"
+		dialog phrase "deep mystery cube pickup"
+		dialog phrase "deep mystery cube pickup"
+	word
+
+		dialog "You have reached <planet>, but you can't complete this mission until the <npc> has visited <stopovers> with you and then joined you here."
+		payment 5000 1000
+		personality nemesis disables waiting plunders
+		fleet "Bounty Hunters"
+	word
+		`hand the cube to the thrid tourist couple you see on the station. They accept it without a word.`
+		` "This has to be legal, or they couldn't post it to the job board," you remind yourself.`
+		government "Merchant"
+	on visit
+		payment 60000
+		`As instructed, you`
+		dialog phrase "deep mystery cube dropoff payment"
+		attributes "deep"
+	on accept
+		personality nemesis waiting plunders
+	to offer
+			variant
+	on visit
+	job
+		`open a deposit box`
+mission "Deep Mystery Cube [3]"
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Hai" "Quarg"
+		attributes "deep"
+		"combat rating" > 35
+	description "Retrieve a package from <stopovers>, then return to <destination>. Payment is <payment>."
+	source
+		government "Bounty Hunter"
+	job
+
+	word
+	repeat
+
+	stopover
+		attributes "deep"
 		`near your landing site`
 	word
-		` `
-	word
-		`and pick up the mystery package. It is a small black cube, about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd.`
-
-phrase "deep mystery cube dropoff payment"
-	word
-		`As instructed, you`
-	word
-		` `
-	word
-		`leave the mystery cube by the side of the road a few kilometers away from the spaceport.`
-		`leave the mystery cube behind a rickety-looking wooden tower.`
-		`bury the cube out in the middle of nowhere before landing in the spaceport.`
-		`hand the cube to the first beggar woman you see planetside. She accepts it without a word, and leaves.`
-		`drop the cube at a warehouse. Nobody comes around to collect it.`
-	word
-		``
-		` "This has to be legal, or they couldn't post it to the job board," you remind yourself.`
-	word
-		` `
-	word
-		`Your bank account immediately notifies you that the agreed-upon payment of <payment> has been deposited. You wonder how they knew.`
-
-phrase "deep mystery cube dropoff station payment"
-	word
-		`As instructed, you`
-	word
-		` `
-	word
-		`leave the mystery cube in the second supplies cabinet you come across.`
-		`leave the mystery cube in an unscrewed air vent.`
-		`hand the cube to the thrid tourist couple you see on the station. They accept it without a word.`
-		`drop the cube into a copper trash can in the spaceport.`
-		`drop the cube into a laundry chute.`
-	word
-		``
-		` "This has to be legal, or they couldn't post it to the job board," you remind yourself.`
-	word
-		` `
-	word
-		`Your bank account immediately notifies you that the agreed-upon payment of <payment> has been deposited. You wonder how they knew.`
-
-mission "Deep Mystery Cube [0]"
-	name "Mystery delivery to <planet>"
-	job
-	repeat
-	description "Deliver a package to <destination>. Payment is <payment>."
-	cargo "mystery package" 1
-	to offer
-		random < 25
-		"combat rating" > 35
-	source
-		attributes "deep"
-	destination
-		distance 7 16
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Hai" "Quarg"
-		not attributes "station"
-	on accept
-		dialog phrase "deep mystery cube pickup"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		"mystery cube" ++
-		payment 5000 1000
-		dialog phrase "deep mystery cube dropoff payment"
-	npc
-		government "Bounty Hunter"
-		personality nemesis disables waiting plunders
-		system
-			distance 6 9
-		fleet "Bounty Hunters"
-
-
-mission "Deep Mystery Cube [1]"
-	name "Mystery delivery to <planet>"
-	job
-	repeat
-	description "Deliver a package to <destination>. Payment is <payment>."
-	cargo "mystery package" 1
-	to offer
-		random < 10
-		"combat rating" > 35
-	source
-		attributes "deep"
-	destination
-		distance 9 20
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Hai" "Quarg"
-		not attributes "station"
-	on accept
-		dialog phrase "deep mystery cube pickup"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		"mystery cube" ++
-		payment 5000 1000
-		dialog phrase "deep mystery cube dropoff payment"
-	npc
-		government "Bounty Hunter"
-		personality nemesis disables waiting plunders
-		system
-			distance 6 9
-		fleet "Bounty Hunters"
-
-
-mission "Deep Mystery Cube [2]"
-	name "Mystery delivery to <planet>"
-	job
-	repeat
-	description "Deliver a package to <destination>. Payment is <payment>."
-	cargo "mystery package" 1
-	to offer
-		random < 10
-		"combat rating" > 35
-	source
-		attributes "deep"
-	destination
-		distance 9 20
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Hai" "Quarg"
-		not attributes "station"
-	on accept
-		dialog phrase "deep mystery cube pickup"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		"mystery cube" ++
-		payment 5000 1000
-		dialog phrase "deep mystery cube dropoff payment"
-	npc
-		government "Bounty Hunter"
-		personality nemesis disables waiting plunders
-		system
-			distance 6 9
-		fleet "Bounty Hunters"
-
-
-mission "Deep Mystery Cube [3]"
-	name "Mystery delivery to <planet>"
-	job
-	repeat
-	description "Deliver a package to <destination>. Payment is <payment>."
-	cargo "mystery package" 1
-	to offer
-		random < 10
-		"combat rating" > 35
-	source
-		attributes "deep"
-	destination
-		distance 9 20
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Hai" "Quarg"
-	on accept
-		dialog phrase "deep mystery cube pickup"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		"mystery cube" ++
-		payment 5000 1000
-		dialog phrase "deep mystery cube dropoff payment"
-	npc
-		government "Bounty Hunter"
-		personality nemesis disables waiting plunders
-		system
-			distance 6 9
-		fleet "Bounty Hunters"
-
-
-mission "Deep Mystery Cube Station"
-	name "Mystery delivery to <planet>"
-	job
-	repeat
-	description "Deliver a package to <destination>. Payment is <payment>."
-	cargo "mystery package" 1
-	to offer
-		random < 7
-		"combat rating" > 35
-	source
-		attributes "deep"
-	destination
-		distance 9 20
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Hai" "Quarg"
-		attributes "station"
-	on accept
-		dialog phrase "deep mystery cube pickup"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		"mystery cube" ++
-		payment 5000 1000
-		dialog phrase "deep mystery cube dropoff station payment"
-	npc
-		government "Bounty Hunter"
-		personality nemesis disables waiting plunders
-		system
-			distance 6 9
-		fleet "Bounty Hunters"
-
-
-mission "Mystery retrieval"
-	job
-	repeat
-	description "Retrieve a package from <stopovers>, then return to <destination>. Payment is <payment>."
-	cargo "mystery package" 1
-	to offer
-		random < 10
-		"combat rating" > 35
-	source
-		attributes "deep"
-	stopover
-		distance 9 20
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Hai" "Quarg"
-		not attributes "station"
-	on stopover
-		dialog phrase "deep mystery cube pickup"
-	on visit
-		dialog phrase "generic missing stopover or cargo"
-	on complete
-		"mystery cube" ++
-		payment 5000 1000
-		dialog phrase "deep mystery cube dropoff payment"
-	npc
-		government "Bounty Hunter"
-		personality nemesis disables waiting plunders
-		system
-			distance 10 17
-		fleet "Bounty Hunters"
-
-
-mission "Transport scientists"
-	name "Transport scientists"
-	description "A team of <bunks> scientists needs some research notes analyzed at the facility on <stopovers>. Take the scientists there and then return them to <planet> for <payment>."
-	job
-	repeat
-	to offer
-		random < 15
-	passengers 5 16
-	source
-		attributes "deep"
-	stopover
-		attributes "research"
-		distance 2 50
-	on stopover
-		dialog "The scientists have been giddily discussing the results of their research during the entire trip. You're happy for a bit of peace and quiet as they make tracks for a prominent research lab to have the results analyzed. You prepare for the return journey to <planet>."
-	on visit
-		dialog phrase "generic missing stopover or passengers"
-	on complete
 		dialog "You bid goodbye to the scientists and accept your payment of <payment>."
-		payment
-		payment 30000
-
-
-mission "Escort science vessel"
-	description "The crew of the science vessel <npc> requests an escort to <stopovers> where they plan to study some unusual phenomena. Escort them there and then return them to <planet> for <payment>."
-	job
-	repeat
-	to offer
-		random < 15
+		`You`
 		"combat rating" > 50
-	source
-		attributes "research"
-	stopover
-		attributes "quarg" "pirate" "volcanic" "frontier" "dirt belt" "north" "south"
-		distance 6 50
-	npc
-		government "Pirate"
-		personality nemesis waiting plunders
-		system
-			distance 2 3
-		fleet "pirate raid"
-	
-	npc accompany save
-		government "Merchant"
-		personality escort timid
-		fleet
-			names "deep"
-			variant
-				"Scout"
-			variant
-				"Bounder"
-			variant
-				"Star Queen"
-	on stopover
-		dialog "The <npc> lands alongside you and teams of scientists wearing crisp white lab coats and serious-looking boots and gloves descend on the test site with all manner of exotic equipment. As they take their measurements, you prepare for the return journey to <planet>."
-	on visit
-		dialog "You have reached <planet>, but you can't complete this mission until the <npc> has visited <stopovers> with you and then joined you here."
 	on complete
-		dialog "You bid goodbye to the captain of the <npc> and accept your payment of <payment>."
-		payment
-		payment 60000
+			distance 6 9
+	word
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Hai" "Quarg"
 
-phrase "academic conference recording payment"
-	word
-		`You touch down on <planet> and make your way to the conference hall at a grand university. The provided credentials gain you access and you set up the recording equipment at the back of the room.`
-	word
-		` `
-	word
-		`The panelists are electrifying, speaking eloquently on a variety of cutting-edge topics in the sciences and humanities. The experience leaves you feeling remarkably optimistic about the future of humanity here in the stars.`
-	word
-		` `
-	word
-		`You transmit the video to your contact on <origin> and receive your payment of <payment>.`
-
-mission "Record academic conference"
-	job
-	repeat
-	description "Record an academic conference on <destination> for professors who cannot attend. Credentials and recording equipment will be provided. Payment is <payment>."
-	cargo "recording equipment" 1
-	to offer
-		random < 15
-	source
-		attributes "deep"
-	destination
-		attributes "research" "quarg" "rich" "paradise"
-		distance 4 10
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		dialog phrase "academic conference recording payment"
-		payment 5000 1000
+		`Your bank account immediately notifies you that the agreed-upon payment of <payment> has been deposited. You wonder how they knew.`

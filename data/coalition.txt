@@ -1,983 +1,983 @@
-# Copyright (c) 2016 by Michael Zahniser
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-fleet "Heliarch"
-	government "Heliarch"
-	names "heliarch"
-	cargo 1
-	personality
-		heroic opportunistic
-	variant 40
-		"Heliarch Neutralizer"
-	variant 20
-		"Heliarch Interdictor"
-	variant 10
-		"Heliarch Punisher"
-	variant 4
-		"Heliarch Neutralizer (Missile)"
-	variant 4
-		"Heliarch Neutralizer (Nimble)"
-	variant 4
-		"Heliarch Neutralizer (Scrappy)"
-	variant 2
-		"Heliarch Interdictor (Bombardment)"
-	variant 1
-		"Heliarch Punisher (Interdicting)"
-	variant 1
-		"Heliarch Punisher (Missile)"
-	variant 1
-		"Heliarch Punisher (Scrappy)"
-
-fleet "Small Arach"
-	government "Coalition"
-	names "arach"
-	cargo 3
-	personality
-		timid
-	variant 20
-		"Arach Transport"
-		"Arach Courier"
-	variant 20
-		"Arach Freighter"
-		"Arach Courier"
-	variant 30
-		"Arach Courier" 2
-	variant 20
-		"Arach Courier"
-	variant 10
-		"Arach Freighter" 2
-	variant 5
-		"Arach Freighter"
-		"Kimek Thorn" 2
-	variant 5
-		"Arach Transport"
+		"at"
+		"."
+		"at the mercy of, I can not believe I am"
 		"Saryd Runabout"
-	variant 5
-		"Arach Courier"
-		"Saryd Runabout"
-
-fleet "Large Arach"
-	government "Coalition"
-	names "arach"
-	cargo 3
-	personality
-		timid
-	variant 30
-		"Arach Hulk"
-	variant 20
-		"Arach Spindle"
-	variant 40
-		"Arach Freighter"
-		"Arach Transport"
-		"Arach Courier" 2
-	variant 10
-		"Arach Hulk"
-		"Arach Spindle"
-	variant 10
-		"Arach Spindle"
-		"Arach Freighter"
-	variant 5
-		"Arach Freighter"
-		"Arach Transport"
-		"Kimek Thistle"
-	variant 5
-		"Arach Spindle"
-		"Kimek Briar"
-		"Saryd Visitor"
-
-fleet "Small Kimek"
-	government "Coalition"
-	names "kimek"
-	cargo 3
-	personality
-		timid
-	variant 40
-		"Kimek Thorn"
-	variant 30
-		"Kimek Thorn" 2
-	variant 20
-		"Kimek Thorn" 3
-	variant 20
-		"Kimek Briar"
-		"Kimek Thorn"
-	variant 10
-		"Kimek Thistle"
-	variant 10
-		"Kimek Thistle"
-		"Kimek Thorn"
-	variant 10
-		"Kimek Briar" 2
-	variant 5
-		"Kimek Briar"
-		"Saryd Runabout"
-	variant 5
-		"Kimek Thistle"
-		"Arach Courier"
-
-fleet "Large Kimek"
-	government "Coalition"
-	names "kimek"
-	cargo 3
-	personality
-		timid
-	variant 40
-		"Kimek Spire"
-	variant 30
-		"Kimek Spire"
-		"Kimek Thorn" 2
-	variant 20
-		"Kimek Thistle"
-		"Kimek Briar"
-		"Kimek Thorn"
-	variant 10
-		"Kimek Thistle" 3
-	variant 10
-		"Kimek Spire"
-		"Kimek Thistle"
-		"Kimek Briar"
-		"Kimek Thorn"
-	variant 5
-		"Kimek Spire" 2
-	variant 5
-		"Kimek Spire"
-		"Saryd Traveler"
-	variant 5
-		"Kimek Thistle"
-		"Kimek Thorn" 2
-		"Saryd Visitor"
-
-fleet "Small Saryd"
-	government "Coalition"
-	names "saryd"
-	cargo 3
-	personality
-		timid
-	variant 60
-		"Saryd Runabout"
-	variant 40
-		"Saryd Visitor"
-	variant 20
-		"Saryd Runabout" 2
-	variant 20
-		"Saryd Visitor"
-		"Saryd Runabout"
-	variant 10
-		"Saryd Visitor"
-		"Saryd Runabout" 2
-	variant 5
-		"Saryd Visitor"
-		"Kimek Thorn" 2
-	variant 5
-		"Saryd Visitor"
-		"Arach Courier"
-
-fleet "Large Saryd"
-	government "Coalition"
-	names "saryd"
-	cargo 3
-	personality
-		timid
-	variant 60
-		"Saryd Traveler"
-	variant 40
-		"Saryd Sojourner"
-	variant 30
-		"Saryd Traveler"
-		"Saryd Visitor"
-	variant 20
-		"Saryd Traveler"
-		"Saryd Visitor"
-		"Saryd Runabout"
-	variant 10
-		"Saryd Visitor" 3
-	variant 10
-		"Saryd Sojourner"
-		"Saryd Traveler"
-	variant 10
-		"Saryd Sojourner"
-		"Saryd Visitor" 2
-	variant 5
-		"Saryd Sojourner"
-		"Kimek Thorn" 4
-	variant 5
-		"Saryd Traveler"
-		"Arach Courier" 2
-		"Kimek Briar"
-
-
-outfitter "Coalition Basics"
-	"Small Collector Module"
-	"Small Battery Module"
-	"Small Shield Module"
-	"Small Repair Module"
-	"Cooling Module"
-	"Small Thrust Module"
-	"Small Steering Module"
-	"Cargo Expansion"
-	"Outfits Expansion"
-	"Hyperdrive"
-	"Local Map"
-
-outfitter "Coalition Advanced"
-	"Small Collector Module"
-	"Large Collector Module"
-	"Small Battery Module"
-	"Large Battery Module"
-	"Small Shield Module"
-	"Large Shield Module"
-	"Small Repair Module"
-	"Large Repair Module"
-	"Cooling Module"
-	"Small Thrust Module"
-	"Large Thrust Module"
-	"Small Steering Module"
-	"Large Steering Module"
-	"Cargo Expansion"
-	"Outfits Expansion"
-	"Luxury Accommodations"
-	"Hyperdrive"
-	"Local Map"
-
-outfitter "Heliarch"
-	"Small Reactor Module"
-	"Large Reactor Module"
-	"Scanning Module"
-	"Bombardment Cannon"
-	"Bombardment Turret"
-	"Finisher Pod"
-	"Finisher Torpedo"
-	"Heliarch Attractor"
-	"Heliarch Repulsor"
-	"Ion Rain Gun"
-	"Local Map"
-
-
-shipyard "Arach"
-	"Arach Courier"
-	"Arach Freighter"
-	"Arach Hulk"
-	"Arach Spindle"
-	"Arach Transport"
-
-shipyard "Kimek"
-	"Kimek Briar"
-	"Kimek Spire"
-	"Kimek Thistle"
-	"Kimek Thorn"
-
-shipyard "Saryd"
-	"Saryd Runabout"
-	"Saryd Sojourner"
-	"Saryd Traveler"
-	"Saryd Visitor"
-
-shipyard "Coalition Basics"
-	"Arach Courier"
-	"Kimek Thorn"
-	"Saryd Runabout"
-
-
-phrase "arach start"
+		"Mag"
 	word
-		"Mug"
-		"Glub"
-		"Blog"
-		"Blop"
-		"Blub"
-		"Mog"
-		"Mob"
-		"Dub"
-		"Drub"
-		"Lub"
-		"Log"
-		"Lug"
-		"Bloog"
-		"Loob"
-		"Bloob"
-		"Moog"
-		"Mup"
-		"Plug"
-		"Ploog"
-		"Plort"
-		"Pot"
+		"blag"
+phrase "arach next"
+		"is"
+		"Arach Spindle"
+phrase "kimek start"
+		"Arach Courier"
+		"Adamant"
+		"A"
+		"Saryd Sojourner"
+		"saryd middle"
+		"committed"
+		" "
+	"Large Repair Module"
+	phrase
+		"Saryd Traveler"
+		"Attacking"
+		timid
+phrase "heliarch"
+
+		"."
+	personality
 		"Put"
-		"Plub"
-		"Ploot"
-		"Toop"
-		"Tup"
-		"Tug"
-		"Tum"
-		"Flug"
-		"Floot"
-		"Flut"
-		"Flop"
-phrase "arach middle"
+	variant 20
+shipyard "Arach"
+	cargo 3
+	"Cargo Expansion"
+phrase "saryd middle"
 	word
 		"alug"
-		"abug"
-		"glug"
-		"glop"
-		"alop"
-		"ploot"
-		"plug"
-		"glub"
-		"blug"
-		"mug"
-		"mog"
-		"amug"
-		"amog"
-		"ap"
-		"ug"
-		"at"
-		"oot"
-		"up"
-		"ub"
-		"moog"
-		"goom"
-		"goot"
-		"poot"
-		"put"
-		"blut"
-		"glob"
-		"blag"
-		"talug"
-		"atug"
-		"tup"
-		"ptup"
-		"blot"
-		"arub"
+		"Con"
+		"Cross me, you'd better not, you"
+	"Small Battery Module"
+	"Scanning Module"
+	variant 5
+	personality
 		"oob"
-		"root"
-		"rup"
-		"rub"
-phrase "arach next"
+
+		"Overseer"
+		"to misuse our power"
+		"pi"
+	personality
+		"'i"
+phrase "hostile disabled heliarch"
+		"to demoralize"
 	word
+phrase "hostile heliarch"
+		"Heliarch Punisher (Missile)"
+		"I"
+		"Kimek Thistle"
+		"Pai"
+		"just government of merit"
+		"ree"
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+		"in friendship"
+	variant 5
+		"Judge"
+		"alliance"
+		"Tem"
+		"atur"
+	word
+		"to work together"
+	phrase
+		"Very difficult"
+		"um"
+		"All of us"
+		"Every one of our species"
+		".)"
+	"Kimek Spire"
+		"Arach Courier"
+		"pa"
+		""
+		" "
+		"Wakeful"
+		"We all"
+	variant 20
+		"tur"
+		"Kimek Spire"
+		"arach middle"
+		"to destroy"
+		"kimek middle"
+		"Saryd Sojourner"
+	cargo 3
+		"hostile heliarch phrase 2 (our only)"
+		"to create a prosperous society"
+phrase "hostile heliarch phrase 2 (the only)"
+		"military"
+		"for recognition or reward"
+#
+		"sum"
+		"Kimek Thorn"
+	variant 10
+		"Glub"
+		"Saryd Traveler"
+		"moog"
+	word
+		"Watcher"
+		"hostile heliarch phrase 2 (the+our)"
+		"as"
+		"Kimek Thorn"
+		"it is "
+		" "
+	variant 20
+		"!"
+		"cha"
+		"Capable"
+		"union"
+		" "
+		"Saryd Runabout"
+		"Guard"
+	variant 5
+		"Saryd Visitor"
+		"Arach Spindle"
+	word
+	word
+
+	word
+		"poot"
+outfitter "Coalition Basics"
+		"Friendly"
+		"alliance"
+		"Sentry"
+		"arach middle"
+		"to stand together"
+	word
+		"not be history"
+	word
+		"Observant"
+		"Ranger"
+		"Saryd Visitor"
+		"Friend"
+		"kee"
 		" "
 	phrase
-		"arach start"
-phrase "arach empty"
 	word
-		""
-phrase "arach"
-	phrase
-		"arach start"
-	phrase
-		"arach middle"
-	phrase
-		"arach middle"
-		"arach empty"
-		"arach next"
-	phrase
-		"arach middle"
-		"arach empty"
+	word
 		
-phrase "kimek start"
+	"Finisher Pod"
+		"rra"
+		"for the betterment of all"
+
+		"Kimek Briar" 2
+	cargo 3
 	word
-		"I"
-		"Ie"
-		"Ee"
-		"A"
-		"Ka"
-		"Ki"
+		"Every wise species"
+		"Com"
+
+		" "
+	word
+		"All sentient species"
+shipyard "Coalition Basics"
+		"Very hard"
+		"our"
+		"The Heliarch yell at you in an alien language."
 		"Chi"
-		"Ky"
-		"Ri"
-		"Ry"
-		"Ree"
-		"Pai"
-		"Pa"
-		"Pi"
+		"rrie"
+	"Arach Hulk"
+		"Ploog"
+		"Until the end of time"
+	word
+		"So that free you all may be"
+	word
+		"Unyielding"
+phrase "saryd"
+		"lit"
+		"Implacable"
+		"abug"
+
+		"Stalwart"
+		"met"
+		"or"
 phrase "kimek middle"
+		"indestructible"
+		"should try"
+	word
+	variant 40
+	"Small Battery Module"
+		"Destroying"
+	phrase
+		"All sentient beings"
+		"Ve"
+	variant 40
+	"Saryd Runabout"
+		"up"
+		"Au"
+		"for uniting"
+	names "saryd"
+	word
+		"Help, you must"
+		"Saryd Runabout"
+	personality
+fleet "Heliarch"
+	word
+		"Arach Transport"
+		" "
+		"saryd end"
+	variant 30
+shipyard "Kimek"
+		"Custodian"
+
+		"you will"
+phrase "hostile disabled heliarch"
+		"Quis"
+	variant 5
+		"Conquering"
+		"throughout the galaxy"
+		"Ali"
+phrase "kimek next"
+		"ser"
+
+		"and not"
+	"Small Steering Module"
+phrase "hostile heliarch phrase 2 (the+our)"
+		"citizens of the Coalition"
+	word
+	government "Coalition"
+		"Arach Spindle"
+		"Alone, you must leave me, you"
+		"Steady"
+		"."
+
+		"Shielding"
+		"rub"
+	variant 5
+
+	word
+	word
+		"u"
+		"not die"
+		"to please ourselves"
+		"ap"
+	variant 10
+		"Arach Spindle"
+		"Judicious"
+		timid
+		"are called"
+		"can aspire"
+		"Helpful"
+		"to be unified"
+	phrase
+		". "
+
+		"tat"
+	government "Heliarch"
+		"to be greater than"
+		"tu"
+	word
+	names "arach"
+		"a"
+		" "
+		"Saryd Traveler"
+	"Cargo Expansion"
+		"for joining"
+		"shall"
+		"Saryd Visitor"
+	variant 30
+	word
+		"kimek middle"
+		"Tug"
+		"Rigorous"
+	government "Coalition"
+		"Betraying"
+		"Stout"
+		"for our own benefit"
+		"."
+	word
+	word
+		" "
+	"Local Map"
+		"friendship"
+		"A "
+	"Small Collector Module"
+		"talug"
+	government "Coalition"
+		"Careful"
+	word
+		"lam"
+		"Sentient beings"
+		"qua"
+		"Arach Courier" 2
+		"Heliarch Neutralizer (Nimble)"
+		"Seeker"
+	cargo 3
+		"Strong"
+phrase "friendly heliarch"
+		"Kimek Briar"
+		"o"
+		" "
+		"peacekeeping"
+		"Mi"
+	"Cooling Module"
+		"Ut"
+		"To protect"
+		"Heliarch"
+		"For the greater good"
+	word
+		"Saryd Runabout" 2
+		"ploot"
+fleet "Large Kimek"
+		"Director"
+		"Do"
+		"Drub"
+	word
+		"Ka"
+		"rri"
+		"to form an alliance"
+		"lit"
+		"oot"
+		"Sit"
+	variant 60
+	names "saryd"
+		"Plub"
+	"Luxury Accommodations"
+		"will"
+	word
+		"For the sake of others"
+		"blot"
+		"Alert"
+		"can serve"
+		"Ul"
+		"ibus"
+		"Kimek Thistle"
+		"to unite together"
+		"to win honor"
+	word
+	"Small Shield Module"
+	word
+	"Large Battery Module"
+		"tup"
+		"we serve"
+		"Kimek Spire"
+	"Bombardment Cannon"
+	"Large Reactor Module"
+		"Patient"
+		"Dub"
+		"Log"
+		"can labor"
+		"our"
+	word
+	word
+	variant 4
+		"Ree"
+		"Arach Courier" 2
+		"Inspector"
+	"Large Thrust Module"
+
+		"Coalition"
+	word
+	"Small Repair Module"
+phrase "saryd end"
+
+		" "
+	variant 60
+fleet "Large Arach"
+		"should seek"
+		"Pa"
+		"("
+		"Kimek Briar"
+
+		"Plort"
+		"oathkeeping"
+		"advanced"
+	phrase
+	phrase
+phrase "hostile disabled heliarch"
+	word
+		"the"
+		"saryd middle"
+		"Away from me, you must stay, you"
+		"plug"
+		"saryd start"
+	variant 5
+		", you are"
+		"Shepherd"
+	"Large Collector Module"
+	word
+		"Mob"
+	word
+		"!"
+		"Appreciated, assistance would be"
+#
+	word
+		"and not ever"
+		" "
+	phrase
+	word
+shipyard "Saryd"
 	word
 		"ka"
-		"cha"
-		"pa"
-		"rra"
-		"ki"
-		"chi"
-		"pri"
-		"rri"
-		"ry"
-		"kee"
-		"chee"
-		"ree"
-		"kie"
-		"rrie"
-		"'a"
-		"'i"
-		"'ee"
-		"'ie"
-		"yee"
-		"ya"
-		"yi"
-phrase "kimek next"
-	word
 		" "
-	phrase
-		"kimek start"
-phrase "kimek"
-	phrase
-		"kimek start"
-	phrase
-		"kimek middle"
-	phrase
-		"kimek next"
-		"kimek middle"
-	phrase
-		"kimek next"
-		"kimek middle"
-	phrase
-		"kimek middle"
-		
-phrase "saryd start"
+		"Saryd Traveler"
+		"blug"
 	word
-		"Lo"
-		"Ip"
-		"Do"
-		"Sit"
-		"A"
-		"Con"
-		"Ad"
-		"El"
-		"Sed"
-		"Eius"
-		"Tem"
-		"In"
-		"Ut"
-		"Lab"
-		"Et"
-		"Mag"
-		"Ali"
-		"En"
-		"Mi"
-		"Ve"
-		"Quis"
-		"Nos"
-		"Exer"
-		"Ul"
-		"Nisi"
-		"Ex"
-		"Com"
-		"Au"
-		"I"
-		"Rep"
-phrase "saryd middle"
-	word
-		"rem"
-		"sum"
-		"lor"
-		"met"
-		"sec"
-		"tu"
-		"e"
-		"tur"
-		"lit"
-		"mod"
-		"por"
-		"cid"
-		"bor"
-		"na"
-		"qua"
-		"lam"
-		"mod"
-		"red"
-		"lup"
-		"tat"
-		"la"
-		"par"
-		"pi"
-		"dat"
-		"fic"
-		"ser"
-		"lit"
-phrase "saryd middle"
-	word
-		""
-phrase "saryd end"
-	word
-		"um"
-		"i"
-		"o"
-		"orum"
-		"is"
-		"as"
-		"a"
-		"ae"
-		"am"
-		"arum"
-		"o"
-		"est"
-		"et"
-		"umus"
-		"unt"
-		"ibus"
-		"us"
-		"um"
-		"u"
-		"ui"
-		"es"
-		"em"
-		"e"
-		"ebus"
-		"erum"
-		"or"
-		"aris"
-		"atur"
-		"amur"
-		"ar"
-		"aris"
-		"atur"
-phrase "saryd"
-	phrase
-		"saryd start"
-	phrase
-		"saryd middle"
-	phrase
-		"saryd end"
-	word
-		" "
-	phrase
-		"saryd start"
-	phrase
-		"saryd middle"
-	phrase
-		"saryd end"
-
-phrase "heliarch"
-	word
-		"Watchful"
-		"Patient"
-		"Kind"
-		"Helpful"
-		"Friendly"
-		"Pragmatic"
-		"Careful"
-		"Cautious"
-		"Attentive"
-		"Observant"
-		"Wary"
-		"Vigilant"
-		"Heedful"
-		"Wakeful"
-		"Judicious"
-		"Mindful"
-		"Prudent"
-		"Alert"
-		"Thoughtful"
-		"Rigorous"
-		"Fastidious"
-		"Assiduous"
-		"Shielding"
-		"Sheltering"
-		"Strong"
-		"Able"
-		"Capable"
-		"Durable"
-		"Forceful"
-		"Steady"
-		"Tenacious"
-		"Hardy"
-		"Mighty"
-		"Rugged"
-		"Stalwart"
-		"Staunch"
-		"Stout"
-		"Sturdy"
-		"Unyielding"
-		"Adamant"
-		"Implacable"
-		"Relentless"
-		"Unwavering"
-		"Obdurate"
-		"Unbending"
-	word
-		" "
-	word
-		"Guardian"
-		"Protector"
-		"Friend"
-		"Interpreter"
-		"Agent"
-		"Advocate"
-		"Ally"
-		"Guard"
-		"Custodian"
-		"Shield"
-		"Defender"
-		"Helper"
-		"Seeker"
-		"Escort"
-		"Warden"
-		"Sentinel"
-		"Sentry"
-		"Ward"
-		"Watcher"
-		"Curator"
-		"Governor"
-		"Officer"
-		"Overseer"
-		"Ranger"
-		"Shepherd"
-		"Champion"
-		"Chief"
-		"Superior"
-		"Director"
-		"Inspector"
-		"Judge"
-		"Manager"
-
-
-phrase "friendly heliarch"
-	word
-		"All sentient beings"
-		"Sentient beings"
-		"All sentient species"
-		"Sentient species"
-		"All of us"
-		"We all"
-		"Every species"
-		"Every sentient species"
-		"Every wise species"
-		"Every thoughtful species"
-		"Every one of our species"
-		"All our species"
-	word
-		" "
-	word
-		"to live together"
-		"to coexist"
-		"to work together"
-		"to join together"
-		"to unite together"
-		"to form an alliance"
+		"our"
 		"to form a coalition"
-		"to stand together"
-		"to stand as one people"
-		"to be unified"
-		"to join our Coalition"
-		"to join us"
-		"for living"
-		"for coexisting"
-		"for joining"
-		"for standing together"
-		"for uniting"
-	word
+		"our"
+		"ae"
+		"Watchful"
+		"amug"
+		"Kimek Thorn" 2
+		"Blub"
+	variant 5
+		"Sed"
+		"Kimek Briar"
+		"Saryd Visitor"
 		" "
+		"Lub"
+	variant 40
+		"A"
+	variant 20
+		"um"
+		" "
+		"Hardy"
+		"Officer"
+		"Heliarch Interdictor"
+phrase "saryd start"
+	"Cooling Module"
+	personality
+		"Saryd Runabout"
 	word
-		"in peace"
-		"in friendship"
-		"in goodwill"
-		"for a common cause"
-		"to create a just society"
-		"to create a prosperous society"
-		"in equal partnership"
-		"for each other's good"
-		"throughout the galaxy"
-		"to drive out the oppressors"
-		"to take control of our own fate"
-		"for the betterment of all"
-		"in prosperity"
+		"Kimek Thorn"
+		"Curator"
 		"in harmony"
-	word
-		" "
-	word
-		"are able"
-		"can aspire"
-		"can try"
-		"should seek"
-		"should choose"
-		"can learn"
-		"the capacity have"
-		"to be able ought to be"
-		"should try"
-		"can labor"
-		"can serve"
-		"are called"
-		"are capable"
-	word
-		"."
-
-phrase "friendly heliarch"
-	word
-		"To protect"
-		"To protect others"
-		"For protection"
-		"In order to shield the weak"
-		"For the sake of others"
-		"To preserve the Coalition"
-		"To defend against oppression"
-		"So that free you all may be"
-		"For the cause of justice"
-		"For the greater good"
-		"To fulfill our duty"
-	word
-		" "
-	word
-		"and not"
-		"rather than"
-		"instead of"
-		"above any need"
-		"without desire"
-		"and never"
-		"and not ever"
-	word
-		" "
-	word
-		"to enrich ourselves"
-		"for our own wellbeing"
-		"for our own benefit"
-		"for our own glory"
-		"for glory or power"
-		"to win honor"
-		"to please ourselves"
-		"to misuse our power"
-		"for the sake of your praise"
-		"for recognition or reward"
-	word
-		" "
-	word
-		"we serve"
+	variant 20
+	cargo 3
 		"you we serve"
-		"we vow"
-		"we are called"
-		"we have vowed"
-		"we have committed"
-		"we do serve"
-		"we do vow"
+	variant 5
+		"atug"
+		"'a"
+		"shakespearean insults"
+	"Heliarch Repulsor"
 	word
-		"."
-
-phrase "friendly disabled heliarch"
-	word
-		"Repairs, we do need"
-		"Disabled, our ship has become"
-		"Disabled, our ship is"
-	word
-		". "
-	word
-		"Board our ship, you must"
-		"Help, you must"
-		"Appreciated, assistance would be"
-	word
-		"."
-
-phrase "hostile heliarch phrase 1 (the+our)"
-	word
-		"the"
-		"our"
-	word
-		" "
-	word
-		"Coalition"
-		"alliance"
-		"union"
-		"friendship of sentient species"
-		"citizens of the Coalition"
-		"citizens"
-		"Coalition"
-		"alliance"
-		"union"
-
-phrase "hostile heliarch phrase 1 (our only)"
-	word
-		"our"
-	word
-		" "
-	word
-		"friendship"
-		"just government"
-		"just meritocracy"
-		"just government of merit"
-		"society"
-
-phrase "hostile heliarch"
-	word
-		"Destroying"
-		"Betraying"
-		"Dishonoring"
-		"Ruining"
-		"Invading"
-		"Attacking"
-		"Conquering"
-		"Oppressing"
-		"Backstabbing"
-	word
-		" "
+		"Kimek Thistle" 3
+		"Lug"
 	phrase
-		"hostile heliarch phrase 1 (the+our)"
-		"hostile heliarch phrase 1 (our only)"
-	word
-		" "
-	word
-		"you will"
-		"you shall"
-	word
-		" "
-	word
-		"not"
-		"never"
-	word
-		" "
-	word
-		"succeed"
-	word
 		"."
-		"!"
+		"Eius"
+	word
+	word
 
-phrase "hostile heliarch"
-	word
-		"Impossible"
-		"No chance"
-		"Little chance"
-		"Very difficult"
-		"Very hard"
-		"Not possible"
-	word
-		" "
-	word
-		"it is "
-	word
-		"to defeat"
-		"to destroy"
-		"to demoralize"
-		"to outpower"
-		"to be stronger than"
-		"to be greater than"
-	word
-		" "
-	word
-		"the"
-		"our"
-	word
-		" "
-	word
-		"indestructible"
-		"committed"
-		"advanced"
-		"disciplined"
-		"oathkeeping"
-		"peacekeeping"
-		"powerful"
-		"everlasting"
-		"legendary"
-	word
-		" "
-	word
-		"Heliarch"
-	word
-		" "
-	word
-		"military"
-		"law-enforcers"
-		"navy"
-	word
-		"."
-
-phrase "hostile heliarch phrase 2 (the+our)"
-	word
-		"the"
-		"our"
-	word
-		" "
-	word
-		"Coalition"
-		"friendship"
-		"friendship of sentient species"
-		"union"
-		"alliance"
-
-phrase "hostile heliarch phrase 2 (the only)"
-	word
-		"the"
-	word
-		" "
-	word
-		"anti-oppressors"
-
-phrase "hostile heliarch phrase 2 (our only)"
-	word
-		"our"
-	word
-		" "
-	word
-		"society"
-		"ideals"
-
-phrase "hostile heliarch"
-	word
-		"Forever"
-		"Until the end of time"
-		"Until the end of life"
-	word
-		" "
 	phrase
-		"hostile heliarch phrase 2 (the+our)"
-		"hostile heliarch phrase 2 (the only)"
-		"hostile heliarch phrase 2 (our only)"
-	word
-		" "
-	word
-		"will"
-		"shall"
-	word
-		" "
-	word
+		"Superior"
+		"to coexist"
+	government "Coalition"
+	variant 4
 		"live on"
-		"not be destroyed"
-		"not be history"
-		"not die"
-		"not be extinct"
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+		"arach next"
 	word
-		"!"
-
-phrase "hostile disabled heliarch"
-	word
-		"You"
-		"Alone, you must leave me, you"
-		"Meet me again, you'd better hope never happen, you"
-		"Cross me, you'd better not, you"
-		"Avenge me, my friends will, you"
-		"Away from me, you must stay, you"
-		"Board me, I dare the"
-	word
-		" "
+		"Protector"
 	phrase
-		"shakespearean insults"
-	word
-		"."
-		"!"
-
-phrase "hostile disabled heliarch"
-	word
-		"A "
-	phrase
-		"shakespearean insults"
-	word
+	"Small Collector Module"
+		"o"
+	variant 10
+		"bor"
 		" "
+		"For the cause of justice"
+	variant 10
+		"Kimek Thorn" 2
+		"Plug"
+		
+		"Agent"
+		"Exer"
+		"la"
+		"can learn"
+	variant 2
+fleet "Large Saryd"
 	word
-		", you are"
-		"at the mercy of, I can not believe I am"
-	word
-		"."
-		"!"
+		"Lab"
+		"Kimek Thorn" 4
+		"Saryd Visitor" 2
+		"kimek middle"
+	variant 40
+		"arach start"
+		timid
+		"Little chance"
+		"Arach Courier" 2
+		"Bloob"
+		"Invading"
+	variant 20
+phrase "kimek"
+	variant 30
+		"union"
+		"Rep"
+		"Kind"
+		heroic opportunistic
+		"rather than"
+		"succeed"
+phrase "hostile heliarch phrase 1 (the+our)"
+	variant 5
+		"Rugged"
 
-phrase "hostile disabled heliarch"
+		"Ee"
+		"Heliarch Neutralizer (Missile)"
 	word
-		"("
+		"ya"
+		"Champion"
+phrase "saryd middle"
+		"Helper"
+	variant 10
+		"in equal partnership"
+		"Toop"
+		"kimek middle"
+		"To defend against oppression"
+		"Saryd Visitor"
+		"'ee"
+		"yi"
+		""
+		"and never"
+	"Hyperdrive"
+		timid
+		"Oppressing"
+		"to join together"
+		"erum"
+		"we do serve"
+		"pri"
+		"sec"
 	word
-		"The Heliarch ship hails you, speaking in a language you do not understand."
-		"The Heliarch yell at you in an alien language."
 	word
-		" "
 	word
-		"Their translation device must be broken"
 		"You can only wonder what they're saying"
 	word
-		".)"
+		"alop"
+		"just government"
+		"disciplined"
+		"for each other's good"
+		"goot"
+		"navy"
+		"Every thoughtful species"
+		"!"
+		"shakespearean insults"
+		"es"
+		"Arach Hulk"
+		"Guardian"
+		"Kimek Thorn" 2
+		"Kimek Thistle"
+		"mog"
+		"amog"
+		"union"
+		"Durable"
+		"arach middle"
+		"Kimek Briar"
+		"ui"
+	variant 5
+		"e"
+		"Kimek Thorn"
+	word
+	word
+		"I"
+		"Chief"
+	"Arach Courier"
+		"Saryd Sojourner"
+		"Nos"
+		"Tenacious"
+	"Finisher Torpedo"
+		"Arach Freighter"
+		"Able"
+
+		"unt"
+	word
+		"Cautious"
+		"Heedful"
+	phrase
+		timid
+		"Ie"
+	word
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+		"Kimek Thorn" 3
+		"All our species"
+	word
+		"Saryd Runabout"
+		"Avenge me, my friends will, you"
+		"Shield"
+		"e"
+		"Ex"
+
+	"Arach Freighter"
+		"not be destroyed"
+		"hostile heliarch phrase 1 (the+our)"
+		"lup"
+		"Sentinel"
+	word
+		"Arach Transport"
+		"Obdurate"
+	word
+		"for our own glory"
+		"Tum"
+		"the"
+		"Tup"
+phrase "arach middle"
+	variant 30
+		"society"
+		"!"
+		"ar"
+		"above any need"
+		"saryd end"
+	variant 4
+	word
+phrase "arach start"
+	word
+		"Lo"
+	word
+	phrase
+
+		"Flug"
+		"to be stronger than"
+		"not"
+		"Heliarch Neutralizer (Scrappy)"
+fleet "Small Saryd"
+	"Kimek Thistle"
+		"arach empty"
+		"Kimek Spire" 2
+		"in goodwill"
+	"Small Repair Module"
+		"glug"
+		" "
+		"Mindful"
+		"not be extinct"
+	government "Coalition"
+phrase "hostile heliarch"
+		"Backstabbing"
+	"Saryd Sojourner"
+		"for a common cause"
+	variant 20
+		"never"
+	word
+	"Local Map"
+		"Interpreter"
+		"Heliarch Neutralizer"
+	"Bombardment Turret"
+		" "
+		"Arach Hulk"
+	word
+		"Arach Freighter"
+	phrase
+	"Saryd Visitor"
+	names "heliarch"
+		" "
+		"et"
+		"kie"
+		"friendship of sentient species"
+		"glub"
+
+	variant 10
+		"Kimek Spire"
+		"'ie"
+	phrase
+		"atur"
+		"to join our Coalition"
+
+	word
+		"Arach Courier"
+		"Floot"
+	variant 10
+		"Ally"
+	variant 5
+		"To protect others"
+		"In order to shield the weak"
+	variant 5
+		"chi"
+	variant 10
+	word
+phrase "arach"
+	variant 40
+		"can try"
+		"Blop"
+	names "kimek"
+	word
+		"ki"
+		"."
+	variant 20
+		"are able"
+	"Outfits Expansion"
+		"Arach Freighter" 2
+		"to live together"
+		"In"
+		"we vow"
+		"Sturdy"
+		"Until the end of life"
+		"we have vowed"
+	word
+	word
+		"Kimek Thorn" 2
+		"mod"
+		"Kimek Spire"
+		"chee"
+	"Large Shield Module"
+		"Heliarch Punisher"
+		"Loob"
+		"Warden"
+	word
+		"ideals"
+		"You"
+	word
+	variant 5
+	variant 1
+		"to defeat"
+		"glop"
+		"Arach Courier"
+	"Small Shield Module"
+		"Not possible"
+phrase "hostile heliarch phrase 1 (our only)"
+		"Moog"
+		"Arach Freighter"
+		"to take control of our own fate"
+		"est"
+		"Meet me again, you'd better hope never happen, you"
+		"friendship of sentient species"
+		"to create a just society"
+phrase "hostile heliarch"
+	word
+		"Saryd Visitor"
+		"The Heliarch ship hails you, speaking in a language you do not understand."
+		"the"
+	"Heliarch Attractor"
+	word
+
+		"Relentless"
+	phrase
+		"ug"
+		" "
+
+		"Mog"
+# Copyright (c) 2016 by Michael Zahniser
+		"Nisi"
+
+		"umus"
+	word
+	"Kimek Thorn"
+		"Staunch"
+		"El"
+	"Kimek Briar"
+		"Kimek Thistle"
+		"mug"
+		"for living"
+		"ub"
+	"Saryd Traveler"
+		"Pragmatic"
+		"Board our ship, you must"
+	word
+		"arub"
+		"Et"
+		"red"
+		"Blog"
+		"Arach Courier"
+		"i"
+		"law-enforcers"
+	word
+	"Local Map"
+	cargo 1
+		"Arach Courier"
+		" "
+		"Attentive"
+		"in peace"
+		"Board me, I dare the"
+		"Impossible"
+		"em"
+	"Kimek Thorn"
+		"Kimek Thorn" 2
+	word
+		"Kimek Thistle"
+		"just meritocracy"
+	word
+		"na"
+		"Unbending"
+	"Small Steering Module"
+
+	variant 10
+		"to drive out the oppressors"
+	word
+		"Saryd Runabout"
+		"ptup"
+	personality
+		"Every sentient species"
+	word
+	variant 10
+	phrase
+		"us"
+		"kimek next"
+
+	"Small Reactor Module"
+fleet "Small Arach"
+		"hostile heliarch phrase 2 (the only)"
+		"Ky"
+	variant 5
+		"to join us"
+	phrase
+	variant 20
+		"dat"
+	word
+		"kimek start"
+		"put"
+		"powerful"
+		"Defender"
+		"Vigilant"
+	word
+		"rem"
+	"Small Thrust Module"
+		"Kimek Thistle"
+
+		"Saryd Visitor" 3
+		"Saryd Sojourner"
+		"for the sake of your praise"
+		"Ruining"
+		"goom"
+		"root"
+		"arum"
+	variant 20
+		"Pi"
+		"Saryd Visitor"
+	variant 30
+	government "Coalition"
+	phrase
+		"are capable"
+	word
+	phrase
+		"Prudent"
+		"To preserve the Coalition"
+phrase "arach empty"
+		"Heliarch Punisher (Interdicting)"
+		"ebus"
+		"Mup"
+		"Mighty"
+	word
+		"Arach Freighter"
+		"cid"
+		" "
+		"Flut"
+		" "
+	variant 10
+		"Coalition"
+		"Ki"
+		"we are called"
+		"mod"
+		"fic"
+	variant 10
+	"Outfits Expansion"
+	personality
+	variant 40
+		"anti-oppressors"
+		"am"
+		"Kimek Thorn"
+	word
+outfitter "Heliarch"
+	variant 10
+		"we do vow"
+		"for standing together"
+		"in prosperity"
+
+		"Kimek Briar"
+		"citizens"
+
+
+		"Pot"
+	phrase
+		"Ip"
+	"Hyperdrive"
+		"blut"
+
+	"Saryd Runabout"
+		" "
+		"without desire"
+		"Arach Transport"
+		"Ri"
+		"for our own wellbeing"
+		"Disabled, our ship is"
+		"our"
+		"to stand as one people"
+# terms of the GNU General Public License as published by the Free Software
+		"Manager"
+		"to enrich ourselves"
+		"Repairs, we do need"
+		"Wary"
+		"the"
+		"Saryd Traveler"
+		"to be able ought to be"
+		"Sentient species"
+		"instead of"
+		"Forceful"
+		"ry"
+	word
+	"Large Steering Module"
+		"Heliarch Punisher (Scrappy)"
+	"Arach Spindle"
+		"glob"
+	variant 1
+
+
+		" "
+		"Ry"
+		"Mug"
+		"the capacity have"
+		"you shall"
+	"Arach Transport"
+	word
+		"Flop"
+		"Sheltering"
+		"Their translation device must be broken"
+		"rup"
+		"Unwavering"
+# Foundation, either version 3 of the License, or (at your option) any later version.
+		"Ad"
+	cargo 3
+		"should choose"
+		" "
+		"Bloog"
+
+	word
+		"Fastidious"
+	word
+		"To fulfill our duty"
+		"orum"
+	variant 1
+		"amur"
+		"Advocate"
+phrase "friendly disabled heliarch"
+		"Saryd Visitor"
+		"Kimek Briar"
+		timid
+		"Every species"
+		"hostile heliarch phrase 1 (our only)"
+	word
+		"par"
+		"aris"
+		"Disabled, our ship has become"
+		"Saryd Traveler"
+		"Saryd Visitor"
+		"Arach Freighter"
+		"Saryd Runabout" 2
+	variant 20
+		" "
+		"friendship"
+		"yee"
+outfitter "Coalition Advanced"
+		"For protection"
+		"Ward"
+		" "
+		"everlasting"
+		"arach empty"
+		"Escort"
+		"No chance"
+		"Heliarch Interdictor (Bombardment)"
+		"for glory or power"
+		"En"
+	"Ion Rain Gun"
+		"Ploot"
+		"Arach Transport"
+		"Assiduous"
+		"for coexisting"
+		"Thoughtful"
+		"legendary"
+		"Governor"
+		"Forever"
+		"kimek start"
+phrase "hostile heliarch phrase 2 (our only)"
+		" "
+		"to outpower"
+		"society"
+		"aris"
+	names "kimek"
+		"lor"
+		"."
+		"arach start"
+	"Small Thrust Module"
+		"Coalition"
+		"kimek next"
+	"Arach Courier"
+	names "arach"
+		"alliance"
+fleet "Small Kimek"
+		"Dishonoring"
+		"por"
+phrase "friendly heliarch"
+		"we have committed"
+		" "
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+		"Kimek Thistle"
+		"saryd start"

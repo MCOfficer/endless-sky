@@ -1,340 +1,340 @@
-# Copyright (c) 2017 by Michael Zahniser
-#
-# Endless Sky is free software: you can redistribute it and/or modify it under the
-# terms of the GNU General Public License as published by the Free Software
-# Foundation, either version 3 of the License, or (at your option) any later version.
-#
-# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-mission "Drought Relief"
-	name `Drought relief to <planet>`
-	job
-	repeat
-	description `The farming world of <destination> is currently experiencing a drought. Deliver <cargo> to the planet by <date> for <payment>.`
-	cargo "drought relief supplies" 25 2 .05
-	deadline
-	to offer
-		random < 10
-	source
-		government "Republic"
-		not attributes "farming"
-	destination
-		distance 3 10
-		attributes "dirt belt"
 		attributes "farming"
-	on visit
-		dialog phrase "generic cargo on visit"
+		attributes "dirt belt"
+	repeat
+		random < 15
+	destination
+	destination
+	npc
+				day >= 21
+		government "Merchant"
+		month == 2
+mission "From Remembrance Day celebration [0]"
+		payment
+	deadline
+	description `Deliver <cargo> to <destination> by <date> in preparation for the Remembrance Day celebration on February 19th. Payment is <payment>.`
+				random < 15
+			variant
+		government "Pirate"
+				random < 20
+	to fail
+		personality nemesis entering harvests plunders
+	name `Drought relief to <planet>`
+	passengers 4 4 .5
+	description `Bring <fare> home to <destination> after the Remembrance Day celebration. Payment is <payment>.`
+		attributes "near earth" "paradise"
+		payment 100000
+		attributes "dirt belt"
+		fleet "Large Northern Pirates"
+				month == 2
+	to offer
+	to offer
+		fleet
+		payment 1000
 	on complete
-		payment 10000 160
+		dialog "The captain of the <npc> thanks you for escorting their ships safely, and pays you <payment>."
+			and
+	description `Bring <fare> to <destination> by <date> for the Remembrance Day celebration on February 19th. Payment is <payment>.`
+		dialog phrase "generic cargo on visit"
+				month == 1
+		system destination
+		attributes "dirt belt"
+	
+	job
+				random < 60
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+				day >= 21
+		fleet "Small Northern Pirates"
+
+	on complete
+			and
+	
+			and
+	source
+		day == 19
+		system destination
+				month == 4
+		personality nemesis harvests plunders
+			and
+	npc
+
+
+			and
+				random < 40
+		system destination
+		distance 2 8
+
+	to offer
+				month == 2
+	to offer
+		fleet "Small Northern Pirates"
+				random < 10
+		day == 19
+		fleet "Large Northern Pirates"
+		government "Pirate"
+	description `The captain of the <npc>, leading a small convoy of ships carrying food, will pay you <payment> to escort them to <destination> by <date>.`
+		personality nemesis entering harvests plunders
+		fleet "Large Northern Pirates"
+		payment 1000 180
+		fleet "Small Northern Pirates" 2
+		government "Merchant"
+		distance 3 15
+	destination
+			and
+				month == 2
+				month == 2
+	source
+		payment 220000
+				random < 20
+		distance 3 15
+		dialog `Your passengers thank you for returning them to <planet>, and you collect your payment of <payment>.`
+		dialog "You wish your <passengers> the best of luck on <planet>. The children run off your ship in green face paint, and the parents pay you <payment>."
+		dialog "The captain of the <npc> thanks you for escorting their ships safely, and pays you <payment>."
+			and
+	deadline
+	source
+		government "Merchant"
+#
+mission "From Remembrance Day celebration [1]"
+		system destination
+				day >= 21
+		random < 30
+				"Behemoth"
+		attributes "dirt belt"
+	on visit
+			names "civilian"
+	passengers 4 4 .3
+		dialog phrase "generic arrived-without-npc dialog"
+	npc
+	name `Remembrance Day celebration`
+				month == 4
+		or
+		system destination
+				day < 20
+		attributes "dirt belt"
+	passengers 4 4 .5
+	destination
+	on complete
+	repeat
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+		government "Pirate"
+	npc
+			and
+		not attributes "farming"
+	source
+	repeat
+				day > 19
+	repeat
+	destination
+	to offer
+		payment 1000 180
+			and
+	source
+	
+				month == 2
+		distance 3 15
+		attributes "dirt belt"
+				day > 19
+		personality nemesis entering harvests plunders
+	npc accompany save
+				random < 10
+		system destination
+			names "civilian"
+	to offer
+		personality nemesis staying harvests plunders
+	job
+		distance 3 15
+		attributes "dirt belt"
+	name `Remembrance Day celebration`
+		dialog `Your passengers thank you for returning them to <planet>, and you collect your payment of <payment>.`
+		month == 2
+		dialog `Spaceport workers already festively dressed for Remembrance Day remove the cargo of <commodity> from your ship and hand you your payment of <payment>.`
+mission "To Remembrance Day celebration [1]"
+	repeat
+	repeat
+				random < 10
+	cargo random 5 2 .1
+		system destination
+		government "Pirate"
+		personality nemesis harvests plunders
+	on complete
+	npc
+	cargo "drought relief supplies" 25 2 .05
+		fleet "Large Northern Pirates"
+	description `The captain of the <npc>, leading a large convoy of ships carrying food, will pay you <payment> to escort them to <destination> by <date>.`
+	repeat
+
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+	on complete
+				month == 12
+		dialog "The captain of the <npc> thanks you for escorting their ships safely, and pays you <payment>."
+				month == 12
+	npc
+		or
+	destination
+				random < 60
+	on visit
+# Copyright (c) 2017 by Michael Zahniser
+		attributes "dirt belt"
+		distance 3 10
+		dialog `Spaceport workers already festively dressed for Remembrance Day remove the cargo of <commodity> from your ship and hand you your payment of <payment>.`
+	name `Food convoy to <planet>`
+
+			and
+	on visit
+	deadline
+	npc
+		system destination
+		fleet
+mission "To Remembrance Day celebration [2]"
+			confusion 20
+		distance 3 9
+	on visit
 		dialog "You drop off your cargo of <commodity> and collect your payment of <payment>. A group of <planet> citizens thank you and bid you farewell."
 
+		or
+				day < 19
 
+	repeat
+
+				day < 20
+		system destination
+		fleet
+		dialog phrase "generic cargo on visit"
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+			and
+				month == 1
+				random < 20
+			variant
+	to offer
+		fleet "Small Northern Pirates"
+		dialog phrase "generic passenger on visit"
 mission "To Remembrance Day celebration [0]"
-	name `Remembrance Day celebration`
-	job
-	repeat
-	description `Bring <fare> to <destination> by <date> for the Remembrance Day celebration on February 19th. Payment is <payment>.`
-	passengers 4 4 .5
-	to offer
-		or
-			and
-				random < 20
-				month == 12
-				day >= 21
-			and
-				random < 30
-				month == 1
-			and
-				random < 10
-				month == 2
-				day < 19
-	to fail
-		month == 2
-		day == 19
-	source
-		attributes "dirt belt"
-	destination
-		distance 3 15
-		attributes "dirt belt"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment 1000 180
-		dialog "You wish your <passengers> the best of luck on <planet>. The children run off your ship in green face paint, and the parents pay you <payment>."
-
-
-mission "To Remembrance Day celebration [1]"
-	name `Remembrance Day celebration`
-	job
-	repeat
-	description `Deliver <cargo> to <destination> by <date> in preparation for the Remembrance Day celebration on February 19th. Payment is <payment>.`
-	cargo random 5 2 .1
-	to offer
-		or
-			and
-				random < 40
-				month == 12
-				day >= 21
-			and
-				random < 60
-				month == 1
-			and
-				random < 20
-				month == 2
-				day < 19
-	to fail
-		month == 2
-		day == 19
-	source
-		attributes "dirt belt"
-	destination
-		distance 3 15
-		attributes "dirt belt"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 1000 180
-		dialog `Spaceport workers already festively dressed for Remembrance Day remove the cargo of <commodity> from your ship and hand you your payment of <payment>.`
-
-mission "To Remembrance Day celebration [2]"
-	name `Remembrance Day celebration`
-	job
-	repeat
-	description `Deliver <cargo> to <destination> by <date> in preparation for the Remembrance Day celebration on February 19th. Payment is <payment>.`
-	cargo random 5 2 .1
-	to offer
-		or
-			and
-				random < 40
-				month == 12
-				day >= 21
-			and
-				random < 60
-				month == 1
-			and
-				random < 20
-				month == 2
-				day < 19
-	to fail
-		month == 2
-		day == 19
-	source
-		attributes "dirt belt"
-	destination
-		distance 3 15
-		attributes "dirt belt"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment 1000 180
-		dialog `Spaceport workers already festively dressed for Remembrance Day remove the cargo of <commodity> from your ship and hand you your payment of <payment>.`
-
-
-mission "From Remembrance Day celebration [0]"
-	name `Return from Remembrance Day`
-	job
-	repeat
-	description `Bring <fare> home to <destination> after the Remembrance Day celebration. Payment is <payment>.`
-	passengers 4 4 .5
-	to offer
-		or
-			and
-				random < 25
-				month == 2
-				day > 19
-			and
-				random < 15
-				month == 3
-			and
-				random < 10
-				month == 4
-				day < 20
-	source
-		attributes "dirt belt"
-	destination
-		distance 3 15
-		attributes "dirt belt"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment
-		payment 1000
-		dialog `Your passengers thank you for returning them to <planet>, and you collect your payment of <payment>.`
-
-
-mission "From Remembrance Day celebration [1]"
-	name `Return from Remembrance Day`
-	job
-	repeat
-	description `Bring <fare> home to <destination> after the Remembrance Day celebration. Payment is <payment>.`
-	passengers 4 4 .3
-	to offer
-		or
-			and
-				random < 20
-				month == 2
-				day > 19
-			and
-				random < 10
-				month == 3
-			and
-				random < 5
-				month == 4
-				day < 20
-	source
-		attributes "dirt belt"
-	destination
-		distance 3 15
-		attributes "dirt belt"
-	on visit
-		dialog phrase "generic passenger on visit"
-	on complete
-		payment
-		payment 1000
-		dialog `Your passengers thank you for returning them to <planet>, and you collect your payment of <payment>.`
-
-
-mission "Food Convoy [0]"
+		payment 10000 160
 	name `Food convoy to <planet>`
+#
 	job
-	repeat
-	deadline
-	description `The captain of the <npc>, leading a small convoy of ships carrying food, will pay you <payment> to escort them to <destination> by <date>.`
-	to offer
-		random < 30
-		"combat rating" > 30
-	source
-		attributes "dirt belt"
-	destination
-		distance 2 8
-		attributes "near earth" "paradise"
-	npc
-		government "Pirate"
-		personality nemesis harvests plunders
-			confusion 20
-		system destination
-		fleet "Small Northern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis harvests plunders
-			confusion 20
-		system destination
-		fleet "Small Northern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis entering harvests plunders
-			confusion 20
-		system destination
-		fleet "Small Northern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis staying harvests plunders
-			confusion 20
-		system destination
-		fleet "Small Northern Pirates" 2
-	
-	npc accompany save
-		government "Merchant"
-		personality escort timid
-		fleet
-			names "civilian"
-			variant
-				"Freighter" 3
-	on complete
-		payment 100000
-		dialog "The captain of the <npc> thanks you for escorting their ships safely, and pays you <payment>."
-	on visit
-		dialog phrase "generic arrived-without-npc dialog"
-
-
-mission "Food Convoy [1]"
-	name `Food convoy to <planet>`
-	job
-	repeat
-	deadline
-	description `The captain of the <npc>, leading a convoy of ships carrying food, will pay you <payment> to escort them to <destination> by <date>.`
-	to offer
-		random < 25
-		"combat rating" > 60
-	source
-		attributes "dirt belt"
-	destination
-		distance 3 9
-		attributes "near earth" "paradise"
-	npc
-		government "Pirate"
-		personality nemesis harvests plunders
-		system destination
-		fleet "Large Northern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis entering harvests plunders
-		system destination
-		fleet "Small Northern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis staying harvests plunders
-		system destination
-		fleet "Large Northern Pirates"
-	
-	npc accompany save
-		government "Merchant"
-		personality escort timid
-		fleet
-			names "civilian"
-			variant
-				"Behemoth"
-				"Freighter" 2
-	on complete
 		payment 160000
-		dialog "The captain of the <npc> thanks you for escorting their ships safely, and pays you <payment>."
-	on visit
-		dialog phrase "generic arrived-without-npc dialog"
-
-
-mission "Food Convoy [2]"
-	name `Food convoy to <planet>`
-	job
+				day < 19
 	repeat
-	deadline
-	description `The captain of the <npc>, leading a large convoy of ships carrying food, will pay you <payment> to escort them to <destination> by <date>.`
-	to offer
-		random < 15
-		"combat rating" > 90
-	source
-		attributes "dirt belt"
-	destination
-		distance 4 10
-		attributes "near earth" "paradise"
-	npc
-		government "Pirate"
-		personality nemesis harvests plunders
-		system destination
-		fleet "Small Northern Pirates"
-		fleet "Large Northern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis entering harvests plunders
-		system destination
-		fleet "Large Northern Pirates"
-	npc
-		government "Pirate"
-		personality nemesis staying harvests plunders
-		system destination
-		fleet "Small Northern Pirates"
-		fleet "Large Northern Pirates"
-	
+		random < 10
 	npc accompany save
-		government "Merchant"
-		personality escort timid
-		fleet
-			names "civilian"
-			variant
-				"Behemoth" 2
-	on complete
-		payment 220000
-		dialog "The captain of the <npc> thanks you for escorting their ships safely, and pays you <payment>."
+		attributes "dirt belt"
+			and
+mission "Food Convoy [1]"
+	name `Remembrance Day celebration`
+	cargo random 5 2 .1
+		personality nemesis staying harvests plunders
+	npc
+		dialog phrase "generic arrived-without-npc dialog"
+		payment
+	npc accompany save
+			and
+		"combat rating" > 60
+
+		fleet "Large Northern Pirates"
 	on visit
+		dialog phrase "generic cargo on visit"
+		personality nemesis harvests plunders
+				month == 3
+				"Freighter" 3
+		government "Pirate"
+		or
+				random < 20
+		fleet "Small Northern Pirates"
+			confusion 20
+		day == 19
+
+			and
+		fleet "Small Northern Pirates"
+		attributes "dirt belt"
+				random < 5
+	job
+	to fail
+		dialog phrase "generic passenger on visit"
+	description `Deliver <cargo> to <destination> by <date> in preparation for the Remembrance Day celebration on February 19th. Payment is <payment>.`
+		payment 1000
+		attributes "dirt belt"
+
+		personality escort timid
+		government "Pirate"
+		"combat rating" > 30
+	on complete
+# Foundation, either version 3 of the License, or (at your option) any later version.
+
+	on complete
+		month == 2
+		personality nemesis harvests plunders
+	source
+		attributes "near earth" "paradise"
+	source
+		personality escort timid
+		fleet "Small Northern Pirates"
+	on complete
+				random < 40
+	on visit
+	to offer
+	job
+mission "Drought Relief"
+			names "civilian"
+	job
+		government "Pirate"
+mission "Food Convoy [0]"
+	job
+		attributes "near earth" "paradise"
+	source
+		government "Pirate"
+	on visit
+# terms of the GNU General Public License as published by the Free Software
+	destination
+			and
+
+			confusion 20
+		government "Pirate"
+	npc
+		distance 4 10
+	destination
+	on complete
+				"Freighter" 2
+		personality escort timid
+				random < 30
+		attributes "dirt belt"
+	job
+	description `The farming world of <destination> is currently experiencing a drought. Deliver <cargo> to the planet by <date> for <payment>.`
+		system destination
+		dialog phrase "generic passenger on visit"
+				month == 12
+	to offer
+		or
+	description `The captain of the <npc>, leading a convoy of ships carrying food, will pay you <payment> to escort them to <destination> by <date>.`
+		government "Pirate"
+	description `Bring <fare> home to <destination> after the Remembrance Day celebration. Payment is <payment>.`
+	on visit
+	destination
+		government "Republic"
+	to fail
+	source
+				random < 25
+
+				"Behemoth" 2
+	name `Return from Remembrance Day`
+		random < 25
+		distance 3 15
+		attributes "dirt belt"
+mission "Food Convoy [2]"
+	deadline
+		personality nemesis staying harvests plunders
+
+			variant
+	name `Return from Remembrance Day`
+	job
+			confusion 20
+				month == 3
+		attributes "dirt belt"
+		payment 1000 180
+	npc
+		"combat rating" > 90
+	on visit
+				day < 19
+	name `Food convoy to <planet>`
+				month == 1
 		dialog phrase "generic arrived-without-npc dialog"
