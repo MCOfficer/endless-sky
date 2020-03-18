@@ -17,7 +17,7 @@ mv AppDir/usr/local/share/games/endless-sky/* AppDir/
 # Now build the actual AppImage
 curl -L https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage -o linuxdeploy && chmod +x linuxdeploy
 
-if  lsmod | grep fusse; then
+if  lsmod | grep fuse; then
     LINUXDEPLOY=./linuxdeploy
 else # Fallback: extract and execute
     ./linuxdeploy --appimage-extract
