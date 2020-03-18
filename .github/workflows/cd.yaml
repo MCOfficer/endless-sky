@@ -40,7 +40,6 @@ jobs:
       ARCH: x86_64
       OUTPUT: endless-sky-x86_64-${{ github.sha }}.AppImage
     steps:
-      - run: lsb_release -a
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: |
