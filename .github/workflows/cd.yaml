@@ -35,7 +35,7 @@ jobs:
 
   appimage_x86_64:
     runs-on: ubuntu-latest
-    container: mcofficer/endless-sky-actions:xenial
+    container: docker://docker.pkg.github.com/mcofficer/endless-sky-docker-images/xenial
     env:
       ARCH: x86_64
       OUTPUT: endless-sky-x86_64-${{ github.sha }}.AppImage
