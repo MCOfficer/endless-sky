@@ -1,4 +1,4 @@
-name: Build & Publish
+name: Build CI/CD Docker Containers
 
 on:
   push:
@@ -17,4 +17,4 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: docker.pkg.github.com
-        dockerfile: xenial/Dockerfile
+        dockerfile: utils/docker-images/xenial/Dockerfile
