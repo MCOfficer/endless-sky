@@ -4,6 +4,7 @@ on:
   push:
     paths:
     - 'utils/docker-images/**'
+    - .github/workflows/publish_docker_images.yaml
 
 jobs:
   xenial:
