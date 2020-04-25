@@ -91,6 +91,8 @@ jobs:
       OUTPUT: EndlessSky-macOS-continuous.zip
     steps:
       - uses: actions/checkout@v2
+      - name: Debugging with tmate
+        uses: mxschmitt/action-tmate@v2
       - name: Install dependencies
         run: brew install libpng libjpeg-turbo libmad sdl2 p7zip
       - name: Adjust library paths
