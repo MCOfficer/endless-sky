@@ -172,7 +172,13 @@ jobs:
         key: ${{ matrix.os }}-artifacts-${{ hashFiles('.github/workflows/**') }}-${{ hashFiles('source/**') }}-${{ hashFiles('EndlessSky.xcodeproj/**') }} # Any of these files will trigger a rebuild
     - name: Move restored artifact
       if: steps.cache-artifact.outputs.cache-hit == 'true'
-      run: mv artifact/${{ env.ARTIFACT }} .
+      run: |
+        mv artifact/${{ env.ARTIFACT }} .
+        # MacOS Artifacts also include datafiles and images. We need to update them.
+        tar -xf ${{ env.ARTIFACT }}
+        rm -rf Endless\ Sky.app/Contents/Resources ${{ env.ARTIFACT }}
+        cp -r data/ images/ sounds/ credits.txt endless-sky.icns keys.txt license.txt Endless\ Sky.app/Contents/Resources
+        tar -cf ${{ env.ARTIFACT }} Endless\ Sky.app
     - name: Install dependencies
       if: steps.cache-artifact.outputs.cache-hit != 'true'
       run: |
