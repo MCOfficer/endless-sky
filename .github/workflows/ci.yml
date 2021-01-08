@@ -20,6 +20,7 @@ on:
     # Run for pushes to master or a version branch, e.g. a PR was merged ...
     branches:
       - master
+      - patch-4
       - v[0-9]+.[0-9]+.[0-9]+
     # ... and only when we've possibly changed how the game will function.
     paths:
