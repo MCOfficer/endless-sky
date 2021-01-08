@@ -269,9 +269,7 @@ jobs:
       run: brew update
     - name: Install dependencies
       if: steps.cache-artifact.outputs.cache-hit != 'true'
-      run: |
-        brew update
-        brew install -f libpng libjpeg-turbo libmad sdl2
+      run: brew install -f libpng libjpeg-turbo libmad sdl2
     - name: Compile
       if: steps.cache-artifact.outputs.cache-hit != 'true'
       run: xcodebuild -configuration "Release" -jobs $(sysctl -n hw.logicalcpu) -quiet
